@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "Vault",
+  "templates_folder": "/",
   "templates_pairs": [
     [
       "",
@@ -16,7 +16,7 @@
   "folder_templates": [
     {
       "folder": "/",
-      "template": "Vault/template.md"
+      "template": "template.md"
     }
   ],
   "enable_file_templates": false,
