@@ -19,7 +19,7 @@ Geek Playground
 
 Dự án chia sẻ tất tần tật hiểu biết và Pet project của mình thực hiện trong thời gian rảnh
 
-About me
+# About me
 
 2024: Founder of NA.AI STUDIO, nghiên cứu các giải pháp AI phục vụ thử nghiệm các mô hình kinh doanh mới
 2023: Product Lead Bách Hoá Xanh online + Nhà thuốc An Khang at MWG

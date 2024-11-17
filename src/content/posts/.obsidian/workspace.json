@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Post without properties.md",
+                "file": "This a new post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Post without properties"
+              "title": "This a new post"
             }
           }
         ],
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Post without properties.md",
+                "file": "This a new post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Liên kết đến của Post without properties"
+              "title": "Liên kết đến của This a new post"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Post without properties.md",
+                "file": "This a new post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Liên kết đi ra từ Post without properties"
+              "title": "Liên kết đi ra từ This a new post"
             }
           },
           {
@@ -154,10 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Post without properties.md"
+                "file": "This a new post.md"
               },
               "icon": "lucide-list",
-              "title": "Đề cương của Post without properties"
+              "title": "Đề cương của This a new post"
             }
           }
         ]
@@ -177,10 +177,10 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "570664725fe13752",
+  "active": "011ca614655d0556",
   "lastOpenFiles": [
-    "This a new post.md",
     "Post without properties.md",
+    "This a new post.md",
     "a_theme_like_no_other.md"
   ]
 }
