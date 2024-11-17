@@ -11,10 +11,14 @@
             "id": "7b7d29b0ec3edb7c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Chưa đặt tên.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Tab mới"
+              "title": "Chưa đặt tên"
             }
           }
         ]
@@ -170,10 +174,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5e225d6e942921e8",
+  "active": "7b7d29b0ec3edb7c",
   "lastOpenFiles": [
-    "Chưa đặt tên.md",
     "This a new post.md",
+    "Chưa đặt tên.md",
     "a_theme_like_no_other.md",
     "Vault/template.md",
     "Vault",
