@@ -1,12 +1,10 @@
 ---
 title: A theme like no other
-description: "There's probably another theme like this one right? There just has to be! There's only one in the entire internet? I'm a tad skeptical about that."
+description: There's probably another theme like this one right? There just has to be! There's only one in the entire internet? I'm a tad skeptical about that.
 pubDate: 10/2/2024
 author: ginger
-tags: 
-    - test
-    - example
-    - "this is how tags are set up"
+tags:
+  - example
 type: announcement
 ---
 
