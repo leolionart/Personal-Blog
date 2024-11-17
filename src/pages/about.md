@@ -17,7 +17,7 @@ ROI at first
 
 > You don’t know what you don’t know
 
-# About me
+## About me
 
 - 2024: Founder of NA.AI STUDIO, nghiên cứu các giải pháp AI phục vụ thử nghiệm các mô hình kinh doanh mới
 - 2023: Product Lead Bách Hoá Xanh online + Nhà thuốc An Khang at MWG
