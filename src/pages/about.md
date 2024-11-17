@@ -2,8 +2,6 @@
 
 ---
 
-![BD592921-B16E-4BEF-BF48-1DD8F8CAD641-56015-00000A0C2E58828B.jpeg](Tra%CC%82%CC%80n%20Quang%20A%CC%81i%20-%20a%20product%20guy%2048f669ccff2b4e6baf5fe55aa38ca781/BD592921-B16E-4BEF-BF48-1DD8F8CAD641-56015-00000A0C2E58828B.jpeg)
-
 - Product x Engineer mindset
 - CX/UX Obsession
 - Hypothesis driven
@@ -61,17 +59,3 @@ Dự án chia sẻ tất tần tật hiểu biết và Pet project của mình t
 - Data & AI (Data Strategy; AI/ML for industries)
 
 </aside>
-
----
-
-[Books Recaps](Tra%CC%82%CC%80n%20Quang%20A%CC%81i%20-%20a%20product%20guy%2048f669ccff2b4e6baf5fe55aa38ca781/Books%20Recaps%20fd5c4aba661941eaa73b057e0dbbf5d8.csv)
-
----
-
-[Stories](Tra%CC%82%CC%80n%20Quang%20A%CC%81i%20-%20a%20product%20guy%2048f669ccff2b4e6baf5fe55aa38ca781/Stories%20bcd3c423ae5c406ea3e721f023d07720.csv)
-
-[Personal thoughts](Tra%CC%82%CC%80n%20Quang%20A%CC%81i%20-%20a%20product%20guy%2048f669ccff2b4e6baf5fe55aa38ca781/Personal%20thoughts%2081d57e894c954536ad5b18dc9d3d2710.csv)
-
----
-
-[Bookmarks](Tra%CC%82%CC%80n%20Quang%20A%CC%81i%20-%20a%20product%20guy%2048f669ccff2b4e6baf5fe55aa38ca781/Bookmarks%207e257039daae4dcbbbdf83a12175772b.csv)
