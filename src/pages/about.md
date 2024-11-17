@@ -6,26 +6,24 @@ Product x Engineer mindset
 CX/UX Obsession
 Hypothesis driven
 ROI at first
-Product Manager in domain:
 
-Ecommerce (Tiki, Bachhoaxanh)
-Pharmacy (AnKhang)
-OTA (CiTravel, Gotadi)
-CRM, SAP, HMS (CiHMS, MWG)
-POD (BurgerPrint)
-You don’t know what you don’t know
+## Product Manager in domain:
 
-Geek Playground
+- Ecommerce (Tiki, Bachhoaxanh)
+- Pharmacy (AnKhang)
+- OTA (CiTravel, Gotadi)
+- CRM, SAP, HMS (CiHMS, MWG)
+- POD (BurgerPrint)
 
-Dự án chia sẻ tất tần tật hiểu biết và Pet project của mình thực hiện trong thời gian rảnh
+> You don’t know what you don’t know
 
 # About me
 
-2024: Founder of NA.AI STUDIO, nghiên cứu các giải pháp AI phục vụ thử nghiệm các mô hình kinh doanh mới
-2023: Product Lead Bách Hoá Xanh online + Nhà thuốc An Khang at MWG
-2021: Product Owner of Hospitality Management System at VinHMS (Vingroup)
-2019: Product Manager of Seller Success (Accquire & Grow seller biz) at Tiki Seller Central
-2017: Develop MVP version of BurgerPrint (POD platform)
+- 2024: Founder of NA.AI STUDIO, nghiên cứu các giải pháp AI phục vụ thử nghiệm các mô hình kinh doanh mới
+- 2023: Product Lead Bách Hoá Xanh online + Nhà thuốc An Khang at MWG
+- 2021: Product Owner of Hospitality Management System at VinHMS (Vingroup)
+- 2019: Product Manager of Seller Success (Accquire & Grow seller biz) at Tiki Seller Central
+- 2017: Develop MVP version of BurgerPrint (POD platform)
 
 ## Other tech used
 
