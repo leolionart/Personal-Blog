@@ -2,8 +2,7 @@
 title: Chia sẻ kinh nghiệm làm user interview của product manager
 description: There's probably another theme like this one right? There just has to be! There's only one in the entire internet? I'm a tad skeptical about that.
 pubDate: 2023-02-20
-author:
-  - leolion
+author: leolion
 tags:
   - user-research
 type: announcement
