@@ -7,4 +7,4 @@
  * export const YEAR_ESTABLISHED = 2020
  */
 
-export const SITE_NAME = 'Company Name';
+export const SITE_NAME = 'AI TRAN (leolion)';
