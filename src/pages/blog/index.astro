@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import Section from "../../components/Section.astro";
 import { getCollection, getEntry } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import SectionSpacer from "../../components/SectionSpacer.astro";
 
 const title = "Your companies blog"
 const subtitle = "This is where your company can post things that will then be read by users or potential customers!"
@@ -12,8 +13,8 @@ const posts = await getCollection('posts');
 ---
 <Layout title={title}>
     <Header gridBg>
-        <h1 class="text-20 leading-20">{title}</h1>
-        <h2 class="text-16 leading-16 c-gray-600">{subtitle}</h2>
+        <h1 class="text-12 leading-[1.2] lg:text-20">{title}</h1>
+        <h2 class="text-8 leading-[1.2] lg:text-16 c-gray-600">{subtitle}</h2>
     </Header>
     <main>
         <Section fullWidthBorder>
@@ -34,5 +35,6 @@ const posts = await getCollection('posts');
                 })}
             </ul>
         </Section>
+        <SectionSpacer size="lg"/>
     </main>
 </Layout>
