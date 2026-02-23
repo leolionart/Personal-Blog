@@ -7,6 +7,7 @@ export interface GitHubRepo {
   stargazers_count: number;
   fork: boolean;
   archived: boolean;
+  owner: { login: string };
 }
 
 const GITHUB_API = "https://api.github.com";
@@ -25,7 +26,8 @@ export async function fetchPublicRepos(
     headers["Authorization"] = `Bearer ${token}`;
   }
 
-  const url = `${GITHUB_API}/users/${username}/repos?per_page=100&type=public`;
+  // Fetch repos the user has starred, then keep only their own
+  const url = `${GITHUB_API}/users/${username}/starred?per_page=100`;
 
   const res = await fetch(url, { headers });
 
@@ -39,6 +41,11 @@ export async function fetchPublicRepos(
   const data: GitHubRepo[] = await res.json();
 
   return data
-    .filter((repo) => !repo.fork && !repo.archived && repo.description)
+    .filter(
+      (repo) =>
+        repo.owner.login.toLowerCase() === username.toLowerCase() &&
+        !repo.archived &&
+        repo.description
+    )
     .sort((a, b) => b.stargazers_count - a.stargazers_count);
 }
