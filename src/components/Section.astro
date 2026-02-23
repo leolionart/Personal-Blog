@@ -26,11 +26,11 @@ const {
         _class, 
         variant, 
         variant === 'dark' ? 'bg-gray-900 c-gray-200' : '',
-        fullWidthBorder ? 'border-t-1 border-gray-200' : ''
+        fullWidthBorder ? 'border-t-1 border-gray-200 dark:border-gray-800' : ''
     ]}>
     <div class:list={[
             "wrapper border-x-1 dark:border-gray-800 relative",
-            !fullWidthBorder ? 'border-t-1 border-gray-200' : '',
+            !fullWidthBorder ? 'border-t-1 border-gray-200 dark:border-gray-800' : '',
             /* @unocss-include */
             `${variantInside}-inside`,
         ]}>

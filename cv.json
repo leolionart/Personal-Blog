@@ -1,0 +1,321 @@
+{
+  "basics": {
+    "name": "Tran Quang Ai",
+    "label": "Product Manager × Engineer",
+    "image": "/me_avatar.jpg",
+    "email": "aitran158@gmail.com",
+    "phone": "",
+    "url": "https://geek.naai.studio",
+    "summary": "Product Manager with ~10 years of experience across e-commerce, pharmacy, OTA, hospitality and POD platforms. Product × Engineer mindset, CX/UX obsession, hypothesis-driven and ROI-focused. Currently building AI-powered solutions at NA.AI STUDIO. Passionate about IoT, smart home automation, and optimizing product development processes.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Ho Chi Minh",
+      "countryCode": "VN",
+      "region": "Vietnam"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "leolion",
+        "url": "https://linkedin.com/in/leolion"
+      },
+      {
+        "network": "GitHub",
+        "username": "leolionart",
+        "url": "https://github.com/leolionart"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "NA.AI STUDIO",
+      "position": "Founder",
+      "location_type": "Remote",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "https://geek.naai.studio",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "Researching and building AI-powered solutions for testing new business models. Developing tools and platforms that leverage AI, automation, and IoT.",
+      "responsibilities": [
+        "Designing and prototyping AI-driven products from concept to MVP",
+        "Building automation workflows with n8n, RAG chatbots, and AI APIs",
+        "Developing open-source tools for smart home, media processing, and developer productivity"
+      ],
+      "achievements": [
+        "Built Create Image Studio — AI image generation tool using Gemini API",
+        "Developed Just Chat — embeddable RAG chatbot widget connected to n8n backend",
+        "Created Mac Audio Remote — native macOS app for controlling audio via iOS Shortcuts (10+ GitHub stars)"
+      ],
+      "skills": [
+        "AI/LLM",
+        "n8n",
+        "TypeScript",
+        "Swift",
+        "Docker"
+      ]
+    },
+    {
+      "name": "MWG (Mobile World Group)",
+      "position": "Product Lead",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "https://www.thegioididong.com",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-01",
+      "summary": "Led product strategy for Bach Hoa Xanh online grocery and An Khang pharmacy digital platforms under Mobile World Group.",
+      "responsibilities": [
+        "Defined product roadmap and prioritized features for online grocery and pharmacy platforms",
+        "Collaborated with engineering, design, and business teams to ship features at scale",
+        "Analyzed user behavior data to drive product decisions and optimize conversion funnels"
+      ],
+      "achievements": [
+        "Led digital transformation for Bach Hoa Xanh online operations",
+        "Launched key e-pharmacy features for Nha Thuoc An Khang platform"
+      ],
+      "skills": [
+        "Product Strategy",
+        "E-commerce",
+        "Data Analysis",
+        "Agile"
+      ]
+    },
+    {
+      "name": "VinHMS (Vingroup)",
+      "position": "Product Owner",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "https://vinhms.com",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-01",
+      "summary": "Owned the Hospitality Management System (CiHMS) product — a comprehensive hotel/resort management platform for Vingroup's hospitality ecosystem.",
+      "responsibilities": [
+        "Managed product backlog and sprint planning for CiHMS platform development",
+        "Worked with stakeholders across Vinpearl resorts to gather requirements and validate solutions",
+        "Designed CRM, SAP integration, and booking management workflows"
+      ],
+      "achievements": [
+        "Delivered CiHMS platform serving Vingroup's hospitality chain",
+        "Integrated CRM and SAP systems for unified hotel operations"
+      ],
+      "skills": [
+        "HMS",
+        "CRM",
+        "SAP",
+        "Scrum"
+      ]
+    },
+    {
+      "name": "Tiki",
+      "position": "Product Manager — Seller Success",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "https://tiki.vn",
+      "startDate": "2019-01-01",
+      "endDate": "2020-12-01",
+      "summary": "Managed seller acquisition and growth features on Tiki Seller Central — Vietnam's leading e-commerce marketplace.",
+      "responsibilities": [
+        "Designed and optimized seller onboarding flows to increase seller acquisition",
+        "Built growth tools and analytics dashboards for seller performance management",
+        "Collaborated with cross-functional teams to improve seller experience and retention"
+      ],
+      "achievements": [
+        "Improved seller onboarding conversion through UX optimization",
+        "Launched seller growth tools on Tiki Seller Central platform"
+      ],
+      "skills": [
+        "E-commerce",
+        "Marketplace",
+        "Growth",
+        "Analytics"
+      ]
+    },
+    {
+      "name": "BurgerPrints",
+      "position": "Co-founder / Product Developer",
+      "location_type": "Remote",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "https://burgerprints.com",
+      "startDate": "2017-01-01",
+      "endDate": "2018-12-01",
+      "summary": "Built the MVP of BurgerPrint — a Print-on-Demand platform enabling sellers to create and sell custom-designed products.",
+      "responsibilities": [
+        "Developed MVP from scratch — product design, architecture, and implementation",
+        "Managed the full product lifecycle from ideation to launch"
+      ],
+      "achievements": [
+        "Successfully launched POD platform serving multiple sellers"
+      ],
+      "skills": [
+        "MVP Development",
+        "Full Stack",
+        "POD"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "FPT Arena Multimedia",
+      "url": "https://arena.fpt.edu.vn",
+      "area": "Multimedia Design",
+      "studyType": "Diploma",
+      "startDate": "2013-01-01",
+      "endDate": "2015-12-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "certificates": [],
+  "skills": [
+    {
+      "name": "Product Management",
+      "level": "Expert",
+      "keywords": ["Strategy", "Roadmap", "User Research", "Agile"]
+    },
+    {
+      "name": "AI/LLM",
+      "level": "Intermediate",
+      "keywords": ["Gemini", "Claude", "RAG", "Prompt Engineering"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "Backend", "Frontend"]
+    },
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "keywords": ["Automation", "Scripting", "AI"]
+    },
+    {
+      "name": "Home Assistant",
+      "level": "Expert",
+      "keywords": ["IoT", "Smart Home", "Automation"]
+    },
+    {
+      "name": "Docker",
+      "level": "Intermediate",
+      "keywords": ["DevOps", "Containerization"]
+    },
+    {
+      "name": "n8n",
+      "level": "Intermediate",
+      "keywords": ["Workflow Automation", "Integration"]
+    },
+    {
+      "name": "Swift",
+      "level": "Beginner",
+      "keywords": ["macOS", "iOS"]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "SSG"]
+    },
+    {
+      "name": "Figma",
+      "level": "Expert",
+      "keywords": ["Design", "Prototyping", "UI/UX"]
+    },
+    {
+      "name": "Git",
+      "level": "Intermediate",
+      "keywords": ["Version Control"]
+    },
+    {
+      "name": "Grafana",
+      "level": "Intermediate",
+      "keywords": ["Monitoring", "Dashboard"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Vietnamese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working"
+    }
+  ],
+  "interests": [
+    {
+      "name": "IoT & Smart Home",
+      "keywords": ["Home Assistant", "Network Automation", "Mikrotik"]
+    },
+    {
+      "name": "AI & Automation",
+      "keywords": ["LLM", "Workflow Automation", "n8n"]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Smart Home System",
+      "isActive": true,
+      "description": "Complete IoT smart home system built over years — documenting everything from network setup to automation workflows.",
+      "highlights": [
+        "Home Assistant based with custom integrations",
+        "Mikrotik network monitoring with Grafana dashboards",
+        "Vietnamese news summary automation for HA"
+      ],
+      "url": "https://smarthome.naai.studio",
+      "github": "https://github.com/leolionart/smarthome"
+    },
+    {
+      "name": "Mac Audio Remote",
+      "isActive": true,
+      "description": "Native macOS menu bar app for controlling microphone and speaker audio remotely via iOS Shortcuts.",
+      "highlights": [
+        "Built with Swift for native macOS experience",
+        "10+ GitHub stars"
+      ],
+      "url": "",
+      "github": "https://github.com/leolionart/Mac-Audio-Remote"
+    },
+    {
+      "name": "Create Image Studio",
+      "isActive": true,
+      "description": "AI image creation studio using Gemini API — a creative tool for generating images with AI through VS Code.",
+      "highlights": [
+        "Built with TypeScript",
+        "Powered by Gemini API"
+      ],
+      "url": "",
+      "github": "https://github.com/leolionart/Create-Image-Studio"
+    },
+    {
+      "name": "Just Chat",
+      "isActive": true,
+      "description": "Embeddable popup chat widget that connects to n8n backend for deploying RAG chatbots on any website.",
+      "highlights": [
+        "TypeScript-based widget",
+        "n8n backend integration for RAG workflows"
+      ],
+      "url": "https://geek.naai.studio",
+      "github": "https://github.com/leolionart/just-chat"
+    },
+    {
+      "name": "CLIProxyAPI Dashboard",
+      "isActive": true,
+      "description": "Reporting system integrated into CLIProxyAPI for monitoring usage and setting up data plan limit alerts.",
+      "highlights": [
+        "Usage monitoring and alerting",
+        "5+ GitHub stars"
+      ],
+      "url": "",
+      "github": "https://github.com/leolionart/CLIProxyAPI-Dashboard"
+    },
+    {
+      "name": "Raycast AI Translator",
+      "isActive": true,
+      "description": "Raycast extension for AI-powered translation using proxy API.",
+      "highlights": [
+        "Built with TypeScript for Raycast ecosystem"
+      ],
+      "url": "",
+      "github": "https://github.com/leolionart/raycast-ai-translator"
+    }
+  ]
+}

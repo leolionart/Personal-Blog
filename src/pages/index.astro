@@ -1,75 +1,166 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import CountUp from '../components/CountUp.astro';
-import Section from '../components/Section.astro';
-import { getCollection } from 'astro:content';
-import ProjectCard from '../components/ProjectCard.astro';
-import SectionSpacer from '../components/SectionSpacer.astro';
-import StatsGrid from '../components/StatsGrid.astro';
-import InvestorGrid from '../components/InvestorGrid.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
+import { getCollection, getEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 
-const projects = await getCollection('projects');
+const title = "Blog"
+const subtitle = "Thoughts on product, tech & beyond"
+
+const posts = (await getCollection('posts')).sort(
+    (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+function slugToFilename(slug: string) {
+    return slug.replace(/\s+/g, '-').toLowerCase() + '.md';
+}
 ---
-
-<Layout title="Welcome to Astro.">
-	<Header gridBg>
-		<small class="small">can you believe this text is so small?</small>
-		<h2 class="text-12 leading-12 lg:text-20 lg:leading-20"><span class="font-mono">NAID</span> - A template for doers</h2>
-		<p class="subtitle w-85% lg:w-50% mx-auto mt-5">A short manifesto about how this project is going to change the world.</p>
-	</Header>
-	<main>
-		<Section index source="projects.json" fullWidthBorder>
-			<h2 class="title">Projects</h2>
-			<p class="subtitle-small">A short blurb about the projects you are deciding to list here and what they are about. Make it pithy and worth investing in.</p>
-			<ul class="my-5 project-list ignore-content-container border-y-1 border-y-gray-200 border-y-dotted">
-				{projects.map((proj: any) => <ProjectCard {...proj.data} />)}
-			</ul>
-			<div class="grid md:grid-cols-[1fr_250px] py-12.5">
-				<div class="grid-col-1 pr-12.5">
-					<h3 class="mb-3 project-title">Mission</h3>
-					<p class="subtitle-small">Another pithy statement about the nature of these projects. Talk more about how they're beneficial to all developers/users and really underline how helpful they are in improving DX/UX.</p>
-				</div>
-				<div class="font-mono">
-					<small>$ cmd to run</small><br/><br/>
-					<small>{'{An animation of some kind.}'}</small>
-				</div>
-			</div>
-		</Section>
-		<SectionSpacer size="md" />
-		<Section fullWidthBorder={false}>
-			<h2 class="text-xl my-10">Our projects are trusted. By everyone? You bet! Names you recognize? Probably! Used all over the world? Absolutely!</h2>
-		</Section>
-		<StatsGrid entryName='downloads' />
-		<SectionSpacer size="md" />
-		<Section variant="dark" index source="statement.md" fullWidthBorder>
-			<div class="lg:w-[60%] md:w-[70%] mx-auto">
-				<h2 class="title">Belief Statement</h2>
-				<p class="subtitle-mall">We believe in things that exist and are pragmatic. This can include buzzwords that make investors feel all warm inside.</p>
-				<ul class="flex flex-col gap-row-3 mt-3 subtitle-small">
-					<li><strong class="text-[1.2em]">Teamwork:</strong> Things and people should work together seamlessly for a better world and a better DX</li>
-					<li><strong class="text-[1.2em]">Performant:</strong> If you're not first you're last - some guy on TV once</li>
-					<li><strong class="text-[1.2em]">Even Tempered:</strong> Too blessed to be stressed. And too stressed to let the little things get to us</li>
-					<li><strong class="text-[1.2em]">On Kilter:</strong> When the going gets tough, the tough politely ask the weak to step up like just a little bit, if you don't mind</li>
-				</ul>
-			</div>
-		</Section>
-		<SectionSpacer size="md" />
-		<Section index source="investors.md" fullWidthBorder>
-			<div class="pb-12.5">
-				<h2 class="title">People who give us money!</h2>
-				<p class="subtitle-small md:w-[50%]">There's literally dozens of them, and they all want to be listed below to get some sort of credit for our work.</p>
-			</div>
-			<InvestorGrid />
-		</Section>
-		<SectionSpacer />
-		<Section index source="Component.framework" fullWidthBorder variantInside="dark">
-			<div class="grid lg:grid-cols-[4fr_1fr] place-items-center gap-5">
-				<h2 class="text-pretty title text-8 leading-8 font-bold c-gray-800 dark:c-gray-100">Interested in this theme? Like the look of it and need more in your life?<br/><span class="c-gray-500 dark:c-gray-300 text-[0.9em]">We know! It's pretty great.</span></h2>
-				<div>
-					<a href="https://github.com/studiolumina/naid" class="block fw-bold bg-gray-800 c-gray-100 text-5 text-center py-4 px-7">Visit Repo</a>
-				</div>
-			</div>
-		</Section>
-	</main>
+<Layout title={title}>
+    <Header gridBg>
+        <h1 class="text-12 leading-[1.2] lg:text-20 font-900">{title}</h1>
+        <h2 class="text-5 leading-[1.2] lg:text-8 c-gray-600 dark:c-gray-400 font-300">{subtitle}</h2>
+    </Header>
+    <main>
+        {posts.map(async (post, i) => {
+            const author = await getEntry('authors', post.data.author.id);
+            const { Content } = await post.render();
+            return (
+                <Section
+                    index
+                    source={slugToFilename(post.slug)}
+                    fullWidthBorder
+                    class="post-section"
+                >
+                    <article class="relative post-article">
+                        <div class="post-meta">
+                            <span class="text-xs opacity-60">
+                                <FormattedDate date={post.data.pubDate} />
+                            </span>
+                            {post.data.tags && (
+                                <div class="flex gap-2 flex-wrap">
+                                    {post.data.tags.map((tag: string) => (
+                                        <span class="text-xs px-2 py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400">#{tag}</span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <h2 class="text-8 lg:text-12 leading-[1.15] font-900 mt-4 c-gray-900 dark:c-gray-100">{post.data.title}</h2>
+                        {post.data.description && (
+                            <p class="text-4 lg:text-5 leading-[1.4] mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
+                        )}
+                        <div class="post-content-preview mt-6 text-sm leading-[1.6] overflow-hidden c-gray-700 dark:c-gray-300">
+                            <div class="content-wrapper post-preview-inner">
+                                <Content />
+                            </div>
+                        </div>
+                        <div class="post-fade"></div>
+                        <div class="mt-6 flex items-center justify-between">
+                            <small class="text-xs c-gray-500">by {author?.data.name}</small>
+                            <span class="text-xs flex items-center gap-1 c-gray-500 hover:c-gray-900 dark:hover:c-gray-200">
+                                Read more →
+                            </span>
+                        </div>
+                        <a href={`/blog/${post.slug}`} class="after:content-[''] after:absolute after:inset-0 after:z-1">
+                            <span class="sr-only">Read {post.data.title}</span>
+                        </a>
+                    </article>
+                </Section>
+            )
+        })}
+    </main>
 </Layout>
+<style>
+    .post-section :global(.content-container) {
+        position: relative;
+    }
+    .post-article {
+        padding-inline: 3.125rem;
+    }
+    .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .post-content-preview {
+        max-height: 200px;
+        position: relative;
+    }
+    .post-content-preview :global(img) {
+        display: none;
+    }
+    .post-content-preview :global(aside) {
+        display: none;
+    }
+    .post-preview-inner :global(:is(h1,h2,h3,h4,h5,h6)) {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-top: 0.75em;
+    }
+    .post-preview-inner :global(p) {
+        margin-top: 0.5em;
+    }
+    .post-preview-inner :global(ul),
+    .post-preview-inner :global(ol) {
+        margin-top: 0.5em;
+        padding-left: 0;
+        list-style: none;
+    }
+    .post-preview-inner :global(li) {
+        padding-left: 1.5em;
+        position: relative;
+    }
+    .post-preview-inner :global(ul > li)::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        opacity: 0.5;
+    }
+    .post-preview-inner :global(ol) {
+        counter-reset: ol-counter;
+    }
+    .post-preview-inner :global(ol > li) {
+        counter-increment: ol-counter;
+    }
+    .post-preview-inner :global(ol > li)::before {
+        content: counter(ol-counter) '.';
+        position: absolute;
+        left: 0;
+        font-size: 0.875em;
+        opacity: 0.5;
+    }
+    .post-preview-inner :global(blockquote) {
+        border-left: 2px solid currentColor;
+        padding-left: 1em;
+        opacity: 0.7;
+        margin-top: 0.5em;
+    }
+    .post-preview-inner :global(a) {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    .post-preview-inner :global(:is(h1,h2,h3,h4,h5,h6)),
+    .post-preview-inner :global(p),
+    .post-preview-inner :global(ul),
+    .post-preview-inner :global(ol),
+    .post-preview-inner :global(blockquote) {
+        padding-inline: 0;
+    }
+    .post-fade {
+        position: absolute;
+        bottom: 3.5rem;
+        left: 0;
+        right: 0;
+        height: 120px;
+        pointer-events: none;
+        z-index: 0;
+        background: linear-gradient(to bottom, transparent, white);
+    }
+    :global(.dark) .post-fade {
+        background: linear-gradient(to bottom, transparent, rgb(17 24 39));
+    }
+    .post-section:hover :global(.section--source) {
+        text-decoration: underline;
+    }
+</style>

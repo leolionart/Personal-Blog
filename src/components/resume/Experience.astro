@@ -1,0 +1,122 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { work } = cv;
+---
+
+<Section title="Experience" class={className}>
+	<ul class="flex flex-col">
+		{work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
+			const startYear = new Date(startDate).getFullYear();
+			const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
+
+			return (
+				<li class="relative border-b-1 border-gray-100 dark:border-gray-800 last:border-b-0 py-5 first:pt-0 print:py-2">
+					<div class="grid sm:grid-cols-[120px_1fr] gap-1 sm:gap-4">
+						<div class="text-xs c-gray-500 dark:c-gray-400 pt-1">
+							{startYear} - {endYear}
+						</div>
+						<div class="flex flex-col gap-2">
+							<div>
+								<h4 class="text-sm font-semibold dark:c-gray-100">
+									{position}
+									<span class="c-gray-400 dark:c-gray-500 font-normal"> @ </span>
+									{url ? (
+										<a class="c-gray-700 dark:c-gray-300 hover:c-gray-900 dark:hover:c-gray-100 underline underline-offset-3 decoration-dotted" href={url} target="_blank">{name}</a>
+									) : (
+										<span class="c-gray-700 dark:c-gray-300">{name}</span>
+									)}
+								</h4>
+								{(location || location_type) && (
+									<div class="text-xs c-gray-500 dark:c-gray-400 mt-0.5">
+										{location}{location && location_type && ' · '}{location_type}
+									</div>
+								)}
+							</div>
+
+							{summary && (
+								<p class="text-sm c-gray-600 dark:c-gray-400">{summary}</p>
+							)}
+
+							{(responsibilities || achievements) && (
+								<div class="expandable-content overflow-hidden transition-all duration-300" style="max-height: 0px;" data-expandable>
+									{responsibilities && (
+										<div class="flex flex-col gap-1 mb-3">
+											<h5 class="text-xs c-gray-500 dark:c-gray-400 uppercase">Responsibilities</h5>
+											<ul class="text-sm c-gray-600 dark:c-gray-400 list-disc ml-4 flex flex-col gap-1">
+												{responsibilities.map(r => <li>{r}</li>)}
+											</ul>
+										</div>
+									)}
+									{achievements && (
+										<div class="flex flex-col gap-1">
+											<h5 class="text-xs c-gray-500 dark:c-gray-400 uppercase">Achievements</h5>
+											<ul class="text-sm c-gray-600 dark:c-gray-400 list-disc ml-4 flex flex-col gap-1">
+												{achievements.map(a => <li>{a}</li>)}
+											</ul>
+										</div>
+									)}
+								</div>
+							)}
+
+							{(responsibilities || achievements) && (
+								<button
+									data-expand-toggle
+									class="print:hidden flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 cursor-pointer transition-colors w-fit"
+								>
+									<span data-expand-text>Show more</span>
+									<svg class="expand-chevron w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+								</button>
+							)}
+
+							{skills && skills.length > 0 && (
+								<ul class="flex flex-wrap gap-1.5 print:hidden" aria-label="Technologies used">
+									{skills.map(skill => (
+										<li class="text-xs px-2 py-0.5 border-1 border-gray-200 dark:border-gray-700 c-gray-600 dark:c-gray-400">
+											{skill}
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
+					</div>
+				</li>
+			);
+		})}
+	</ul>
+</Section>
+
+<script>
+	function initExpandables() {
+		document.querySelectorAll('[data-expand-toggle]').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const li = btn.closest('li');
+				const content = li?.querySelector('[data-expandable]') as HTMLElement;
+				const text = btn.querySelector('[data-expand-text]');
+				const chevron = btn.querySelector('.expand-chevron');
+				if (!content) return;
+
+				const isExpanded = content.getAttribute('data-expanded') === 'true';
+
+				if (isExpanded) {
+					content.style.maxHeight = '0px';
+					content.setAttribute('data-expanded', 'false');
+					if (text) text.textContent = 'Show more';
+					chevron?.classList.remove('rotate-180');
+				} else {
+					content.style.maxHeight = content.scrollHeight + 'px';
+					content.setAttribute('data-expanded', 'true');
+					if (text) text.textContent = 'Show less';
+					chevron?.classList.add('rotate-180');
+				}
+			});
+		});
+	}
+	initExpandables();
+	document.addEventListener('astro:after-swap', initExpandables);
+</script>

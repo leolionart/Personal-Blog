@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { skills } = cv;
+---
+
+<Section title="Skills" class={className}>
+	<ul class="flex flex-wrap gap-2">
+		{skills.map(({ name }) => (
+			<li class="text-xs px-2.5 py-1 border-1 border-gray-200 dark:border-gray-700 c-gray-700 dark:c-gray-300 print:border-none print:bg-transparent print:p-0 print:c-gray-800">
+				{name}
+			</li>
+		))}
+	</ul>
+</Section>

@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import ModeToggle from '../components/ModeToggle.astro';
 import { SITE_NAME } from '../consts';
 
 interface Props {
@@ -7,10 +8,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const navLinks = { 
-	"/":"Home",
-	"/blog":"Blog",
-	"/about":"About"
+const navLinks = {
+	"/":"Blog",
+	"/resume":"Resume"
 }
 ---
 
@@ -22,19 +22,33 @@ const navLinks = {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px"><text y=".9em" font-size="90">0️⃣</text></svg>' />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 		<title>{title || SITE_NAME}</title>
+		<script is:inline>
+			(function() {
+				const theme = localStorage.getItem('theme');
+				if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
 	</head>
-	<body>
-		<nav class="border-b-1 border-b-gray-200">
-			<div class="flex items-center justify-between border-x-1 border-gray-200 pl-5 wrapper mx-auto">
-				<h1 class="font-mono text-xl">AI TRAN</h1>
-				<ul class={`grid grid-auto-flow-col`}>
-					{Object.entries(navLinks).map(([href, title]) => {
-						return <li class="grid-col-[span_1] block">
-							<a href={href} class="text-sm px-5 py-8 tracking-0.1 block">{title}</a>
-						</li>
-					})}
-				</ul>
+	<body class="font-mono bg-white dark:bg-gray-900 c-gray-900 dark:c-gray-100 transition-colors">
+		<nav class="border-b-1 border-b-gray-200 dark:border-b-gray-800">
+			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-5 wrapper mx-auto">
+				<h1 class="text-xl">AI TRAN</h1>
+				<div class="flex items-center">
+					<ul class={`grid grid-auto-flow-col`}>
+						{Object.entries(navLinks).map(([href, title]) => {
+							return <li class="grid-col-[span_1] block">
+								<a href={href} class="text-sm px-5 py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
+							</li>
+						})}
+					</ul>
+					<ModeToggle />
+				</div>
 			</div>
 		</nav>
 		<slot />
@@ -55,34 +69,277 @@ const navLinks = {
 		flex: 1;
 	}
 	.content-wrapper {
-        :is(h2,h3,h4,h5,h6) {
-            font-weight: 600;
-            margin-top: 1ex;
-        }
-        p {
-            margin-top: 1ex;
-        }
-        h2 {
-            font-size: 1.875rem;
-        }
-        h3 {
-            font-size: 1.5rem;
-        }
-        h4 {
-            font-size: 1.35rem;
-        }
-        h5, h6 {
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-		ul {
-			list-style-type:square;
-			list-style-position: inside;
-			margin-top: 1ex;
+		/* ── Headings ── */
+		:is(h1,h2,h3,h4,h5,h6) {
+			font-weight: 700;
+			margin-top: 2em;
+			margin-bottom: 0.5em;
+			line-height: 1.3;
 		}
+		:is(h1,h2,h3,h4,h5,h6):first-child {
+			margin-top: 0;
+		}
+		h1 { font-size: 2.25rem; }
+		h2 { font-size: 1.875rem; }
+		h3 { font-size: 1.5rem; }
+		h4 { font-size: 1.35rem; }
+		h5, h6 {
+			font-weight: 600;
+			font-size: 1.1rem;
+		}
+
+		/* ── Paragraphs ── */
+		p {
+			margin-top: 1em;
+			line-height: 1.7;
+		}
+
+		/* ── Links ── */
+		a {
+			text-decoration: underline;
+			text-underline-offset: 3px;
+			text-decoration-thickness: 1px;
+			transition: opacity 0.15s;
+		}
+		a:hover {
+			opacity: 0.7;
+		}
+
+		/* ── Bold, Italic, Strikethrough ── */
+		strong { font-weight: 700; }
+		em { font-style: italic; }
+		del {
+			text-decoration: line-through;
+			opacity: 0.6;
+		}
+
+		/* ── Lists (GitBook-style alignment) ── */
+		ul, ol {
+			margin-top: 1em;
+			padding-left: 0;
+			list-style: none;
+		}
+		li {
+			margin-top: 0.4em;
+			line-height: 1.7;
+			padding-left: 1.5em;
+			position: relative;
+		}
+		/* Custom bullet markers for consistent alignment */
+		ul > li::before {
+			content: '•';
+			position: absolute;
+			left: 0;
+			color: currentColor;
+			opacity: 0.5;
+		}
+		ol {
+			counter-reset: ol-counter;
+		}
+		ol > li {
+			counter-increment: ol-counter;
+		}
+		ol > li::before {
+			content: counter(ol-counter) '.';
+			position: absolute;
+			left: 0;
+			font-size: 0.875em;
+			opacity: 0.5;
+		}
+		/* Nested lists */
+		li > ul, li > ol {
+			margin-top: 0.25em;
+			padding-left: 0;
+		}
+		li > ol {
+			counter-reset: ol-counter;
+		}
+
+		/* ── Task Lists (GFM) ── */
+		ul:has(> li > input[type="checkbox"]) > li::before {
+			content: none;
+		}
+		ul:has(> li > input[type="checkbox"]) > li {
+			padding-left: 0;
+		}
+		li > input[type="checkbox"] {
+			margin-right: 0.5em;
+			vertical-align: middle;
+		}
+
+		/* ── Blockquote ── */
+		blockquote {
+			margin-top: 1em;
+			border-left: 3px solid currentColor;
+			padding-left: 1.25em;
+			opacity: 0.85;
+			font-style: italic;
+		}
+		blockquote > blockquote {
+			margin-top: 0.5em;
+		}
+
+		/* ── Inline Code ── */
+		:not(pre) > code {
+			font-size: 0.875em;
+			padding: 0.15em 0.4em;
+			border-radius: 3px;
+			background-color: rgb(229 231 235); /* gray-200 */
+		}
+		:global(.dark) & :not(pre) > code {
+			background-color: rgb(55 65 81); /* gray-700 */
+		}
+
+		/* ── Code Blocks ── */
 		pre {
-			margin-top: 1ex;
-			padding-block: 1.5rem;
+			margin-top: 1em;
+			padding: 1.25rem;
+			border-radius: 4px;
+			overflow-x: auto;
+			font-size: 0.875rem;
+			line-height: 1.6;
+			background-color: rgb(31 41 55) !important; /* gray-800 */
+			color: rgb(229 231 235); /* gray-200 */
 		}
-    }
+		pre > code {
+			background: none;
+			padding: 0;
+			border-radius: 0;
+			font-size: inherit;
+		}
+
+		/* ── Images ── */
+		img {
+			margin-top: 1.5em;
+			margin-bottom: 1.5em;
+			max-width: 100%;
+			height: auto;
+			border-radius: 4px;
+			border: 1px solid rgb(229 231 235);
+		}
+		:global(.dark) & img {
+			border-color: rgb(55 65 81);
+		}
+
+		/* ── Tables ── */
+		table {
+			margin-top: 1.5em;
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 0.875rem;
+			overflow-x: auto;
+			display: block;
+		}
+		thead {
+			border-bottom: 2px solid currentColor;
+		}
+		th {
+			font-weight: 700;
+			text-align: left;
+			padding: 0.5em 1em;
+		}
+		td {
+			padding: 0.5em 1em;
+			border-bottom: 1px solid rgb(229 231 235);
+		}
+		:global(.dark) & td {
+			border-bottom-color: rgb(55 65 81);
+		}
+		tr:last-child td {
+			border-bottom: none;
+		}
+
+		/* ── Horizontal Rule ── */
+		hr {
+			margin-top: 2em;
+			margin-bottom: 2em;
+			border: none;
+			border-top: 1px solid rgb(209 213 219); /* gray-300 */
+		}
+		:global(.dark) & hr {
+			border-top-color: rgb(75 85 99); /* gray-600 */
+		}
+
+		/* ── Definition Lists ── */
+		dl { margin-top: 1em; }
+		dt {
+			font-weight: 700;
+			margin-top: 1em;
+		}
+		dd {
+			padding-left: 1.5em;
+			margin-top: 0.25em;
+		}
+
+		/* ── Abbreviations ── */
+		abbr[title] {
+			text-decoration: underline dotted;
+			cursor: help;
+		}
+
+		/* ── Keyboard / Mark ── */
+		kbd {
+			font-size: 0.875em;
+			padding: 0.1em 0.4em;
+			border: 1px solid rgb(209 213 219);
+			border-radius: 3px;
+			box-shadow: 0 1px 0 rgb(209 213 219);
+		}
+		:global(.dark) & kbd {
+			border-color: rgb(75 85 99);
+			box-shadow: 0 1px 0 rgb(75 85 99);
+		}
+		mark {
+			background-color: rgb(254 240 138); /* yellow-200 */
+			padding: 0.1em 0.2em;
+			border-radius: 2px;
+		}
+
+		/* ── Footnotes (remark-gfm) ── */
+		.footnotes {
+			margin-top: 3em;
+			padding-top: 1.5em;
+			border-top: 1px solid rgb(209 213 219);
+			font-size: 0.875rem;
+		}
+		:global(.dark) & .footnotes {
+			border-top-color: rgb(75 85 99);
+		}
+		sup a {
+			font-size: 0.75em;
+			text-decoration: none;
+			padding: 0 0.2em;
+		}
+
+		/* ── Details / Summary ── */
+		details {
+			margin-top: 1em;
+			border: 1px solid rgb(229 231 235);
+			border-radius: 4px;
+			padding: 0.75em 1em;
+		}
+		:global(.dark) & details {
+			border-color: rgb(55 65 81);
+		}
+		summary {
+			cursor: pointer;
+			font-weight: 600;
+		}
+		details[open] summary {
+			margin-bottom: 0.5em;
+		}
+
+		/* ── Aside / Callout ── */
+		aside {
+			margin-top: 1.5em;
+			padding: 1em 1.25em;
+			border-left: 3px solid rgb(59 130 246); /* blue-500 */
+			background-color: rgb(239 246 255); /* blue-50 */
+			border-radius: 0 4px 4px 0;
+			font-size: 0.9rem;
+		}
+		:global(.dark) & aside {
+			background-color: rgb(30 58 138 / 0.2); /* blue-900/20 */
+		}
+	}
 </style>

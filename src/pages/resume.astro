@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/resume/Hero.astro';
+import About from '../components/resume/About.astro';
+import Experience from '../components/resume/Experience.astro';
+import Education from '../components/resume/Education.astro';
+import Skills from '../components/resume/Skills.astro';
+import Projects from '../components/resume/Projects.astro';
+import cv from '@cv';
+
+const { name, label } = cv.basics;
+---
+
+<Layout title={`${name} — ${label}`}>
+	<main class="wrapper mx-auto border-x-1 border-gray-200 dark:border-gray-800">
+		<div class="grid md:grid-cols-[280px_1fr] gap-0">
+			<!-- Sidebar -->
+			<div class="p-8 md:border-r-1 border-gray-200 dark:border-gray-800 space-y-8 print:space-y-4">
+				<Hero />
+				<About />
+			</div>
+			<!-- Main Content -->
+			<div class="p-8 space-y-10 print:space-y-4">
+				<Experience />
+				<Projects class="print:hidden" />
+				<Skills class="print:hidden" />
+				<Education />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style is:global>
+	@media print {
+		nav, footer { display: none !important; }
+		.wrapper { max-width: none !important; border: none !important; }
+	}
+	@page {
+		size: auto;
+		margin: 10mm;
+	}
+</style>
