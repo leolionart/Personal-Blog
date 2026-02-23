@@ -34,8 +34,10 @@
 </style>
 
 <script>
-	const backToTopBtn = document.getElementById('backToTopBtn');
-	if (backToTopBtn) {
+	function initBackToTop() {
+		const backToTopBtn = document.getElementById('backToTopBtn');
+		if (!backToTopBtn) return;
+
 		// Show/hide button based on scroll position
 		const toggleBackToTopBtn = () => {
 			if (window.scrollY > 300) {
@@ -59,4 +61,10 @@
 		// Initial check
 		toggleBackToTopBtn();
 	}
+
+	// Initialize on page load
+	initBackToTop();
+
+	// Re-initialize on view transitions
+	document.addEventListener('astro:after-swap', initBackToTop);
 </script>
