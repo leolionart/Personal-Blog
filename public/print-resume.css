@@ -1,0 +1,147 @@
+/* Resume print stylesheet - loaded directly by browser, bypasses Vite HMR */
+@media print {
+  /* Hide everything that's not resume content */
+  .no-print,
+  nav,
+  body > footer,
+  footer[class*="border-t"],
+  .astro-dev-toolbar {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Remove wrapper constraints */
+  .resume-main {
+    max-width: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Single-column layout */
+  .resume-grid {
+    display: block !important;
+  }
+
+  .resume-sidebar {
+    padding: 0 !important;
+    padding-bottom: 0.75rem !important;
+    border: none !important;
+  }
+
+  .resume-content {
+    padding: 0 !important;
+  }
+
+  .resume-content > * + * {
+    margin-top: 1rem;
+  }
+
+  /* Show collapsed expandable content */
+  .expandable-content {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Prevent page breaks inside entries */
+  li {
+    break-inside: avoid;
+  }
+
+  /* ── Visual hierarchy for print ── */
+
+  body {
+    background: white !important;
+    color: #1f2937 !important; /* gray-800 base */
+  }
+
+  /* Level 1: Name — blackest, biggest */
+  h1 {
+    color: #000 !important;
+    font-size: 1.75rem !important;
+  }
+
+  /* Level 2: Subtitle / label */
+  h2 {
+    color: #374151 !important; /* gray-700 */
+  }
+
+  /* Level 3: Section titles (EXPERIENCE, ABOUT, EDUCATION) — bold, dark */
+  section > h3 {
+    color: #000 !important;
+    border-color: #000 !important;
+    border-bottom-width: 1.5px !important;
+    padding-bottom: 0.25rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* Level 4: Job titles — near-black, prominent */
+  h4 {
+    color: #111827 !important; /* gray-900 */
+    font-weight: 600 !important;
+  }
+  h4 a {
+    color: #111827 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Level 5: Sub-headers (RESPONSIBILITIES, ACHIEVEMENTS) */
+  h5 {
+    color: #374151 !important; /* gray-700 */
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* Body text — readable dark gray */
+  p {
+    color: #1f2937 !important; /* gray-800 */
+    line-height: 1.5 !important;
+  }
+
+  /* List items — same as body */
+  li {
+    color: #1f2937 !important; /* gray-800 */
+  }
+
+  /* Muted text: dates, locations */
+  time,
+  .resume-grid li > div:first-child > div:first-child {
+    color: #6b7280 !important; /* gray-500 */
+  }
+
+  /* Links in body */
+  a {
+    color: #1f2937 !important;
+  }
+
+  /* Generic spans, divs inherit */
+  span, div {
+    color: inherit !important;
+  }
+
+  /* Entry separators — light */
+  .resume-grid li {
+    border-color: #d1d5db !important; /* gray-300, more visible */
+  }
+
+  /* Contact info in print header */
+  .print-only {
+    color: #4b5563 !important; /* gray-600 */
+  }
+
+  /* Location text under job title */
+  h4 + div {
+    color: #6b7280 !important; /* gray-500 */
+  }
+}
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
