@@ -143,295 +143,297 @@ const navLinks = {
 	body > main {
 		flex: 1;
 	}
-	.content-wrapper {
-		/* ── Headings ── */
-		:is(h1,h2,h3,h4,h5,h6) {
-			font-weight: 700;
-			margin-top: 2em;
-			margin-bottom: 0.5em;
-			line-height: 1.3;
-		}
-		:is(h1,h2,h3,h4,h5,h6):first-child {
-			margin-top: 0;
-		}
-		h1 { font-size: 1.5rem; }
-		h2 { font-size: 1.35rem; }
-		h3 { font-size: 1.2rem; }
-		h4 { font-size: 1.1rem; }
-		h5, h6 {
-			font-weight: 600;
-			font-size: 1rem;
-		}
-		@media (min-width: 768px) {
-			h1 { font-size: 2.25rem; }
-			h2 { font-size: 1.875rem; }
-			h3 { font-size: 1.5rem; }
-			h4 { font-size: 1.35rem; }
-			h5, h6 { font-size: 1.1rem; }
-		}
+	/* ── Headings ── */
+	.content-wrapper :is(h1,h2,h3,h4,h5,h6) {
+		font-weight: 700;
+		margin-top: 2em;
+		margin-bottom: 0.5em;
+		line-height: 1.3;
+	}
+	.content-wrapper :is(h1,h2,h3,h4,h5,h6):first-child {
+		margin-top: 0;
+	}
+	.content-wrapper h1 { font-size: 1.5rem; }
+	.content-wrapper h2 { font-size: 1.35rem; }
+	.content-wrapper h3 { font-size: 1.2rem; }
+	.content-wrapper h4 { font-size: 1.1rem; }
+	.content-wrapper h5,
+	.content-wrapper h6 {
+		font-weight: 600;
+		font-size: 1rem;
+	}
+	@media (min-width: 768px) {
+		.content-wrapper h1 { font-size: 2.25rem; }
+		.content-wrapper h2 { font-size: 1.875rem; }
+		.content-wrapper h3 { font-size: 1.5rem; }
+		.content-wrapper h4 { font-size: 1.35rem; }
+		.content-wrapper h5,
+		.content-wrapper h6 { font-size: 1.1rem; }
+	}
 
-		/* ── Paragraphs ── */
-		p {
-			margin-top: 1em;
-			line-height: 1.7;
-		}
+	/* ── Paragraphs ── */
+	.content-wrapper p {
+		margin-top: 1em;
+		line-height: 1.7;
+	}
 
-		/* ── Links ── */
-		a {
-			text-decoration: underline;
-			text-underline-offset: 3px;
-			text-decoration-thickness: 1px;
-			transition: opacity 0.15s;
-		}
-		a:hover {
-			opacity: 0.7;
-		}
+	/* ── Links ── */
+	.content-wrapper a {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 1px;
+		transition: opacity 0.15s;
+	}
+	.content-wrapper a:hover {
+		opacity: 0.7;
+	}
 
-		/* ── Bold, Italic, Strikethrough ── */
-		strong { font-weight: 700; }
-		em { font-style: italic; }
-		del {
-			text-decoration: line-through;
-			opacity: 0.6;
-		}
+	/* ── Bold, Italic, Strikethrough ── */
+	.content-wrapper strong { font-weight: 700; }
+	.content-wrapper em { font-style: italic; }
+	.content-wrapper del {
+		text-decoration: line-through;
+		opacity: 0.6;
+	}
 
-		/* ── Lists (GitBook-style alignment) ── */
-		ul, ol {
-			margin-top: 1em;
-			padding-left: 0;
-			list-style: none;
-		}
-		li {
-			margin-top: 0.4em;
-			line-height: 1.7;
-			padding-left: 1.5em;
-			position: relative;
-		}
-		/* Custom bullet markers for consistent alignment */
-		ul > li::before {
-			content: '•';
-			position: absolute;
-			left: 0;
-			color: currentColor;
-			opacity: 0.5;
-		}
-		ol {
-			counter-reset: ol-counter;
-		}
-		ol > li {
-			counter-increment: ol-counter;
-		}
-		ol > li::before {
-			content: counter(ol-counter) '.';
-			position: absolute;
-			left: 0;
-			font-size: 0.875em;
-			opacity: 0.5;
-		}
-		/* Nested lists */
-		li > ul, li > ol {
-			margin-top: 0.25em;
-			padding-left: 0;
-		}
-		li > ol {
-			counter-reset: ol-counter;
-		}
+	/* ── Lists (GitBook-style alignment) ── */
+	.content-wrapper ul,
+	.content-wrapper ol {
+		margin-top: 1em;
+		padding-left: 0;
+		list-style: none;
+	}
+	.content-wrapper li {
+		margin-top: 0.4em;
+		line-height: 1.7;
+		padding-left: 1.5em;
+		position: relative;
+	}
+	/* Custom bullet markers for consistent alignment */
+	.content-wrapper ul > li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: currentColor;
+		opacity: 0.5;
+	}
+	.content-wrapper ol {
+		counter-reset: ol-counter;
+	}
+	.content-wrapper ol > li {
+		counter-increment: ol-counter;
+	}
+	.content-wrapper ol > li::before {
+		content: counter(ol-counter) '.';
+		position: absolute;
+		left: 0;
+		font-size: 0.875em;
+		opacity: 0.5;
+	}
+	/* Nested lists */
+	.content-wrapper li > ul,
+	.content-wrapper li > ol {
+		margin-top: 0.25em;
+		padding-left: 0;
+	}
+	.content-wrapper li > ol {
+		counter-reset: ol-counter;
+	}
 
-		/* ── Task Lists (GFM) ── */
-		ul:has(> li > input[type="checkbox"]) > li::before {
-			content: none;
-		}
-		ul:has(> li > input[type="checkbox"]) > li {
-			padding-left: 0;
-		}
-		li > input[type="checkbox"] {
-			margin-right: 0.5em;
-			vertical-align: middle;
-		}
+	/* ── Task Lists (GFM) ── */
+	.content-wrapper ul:has(> li > input[type="checkbox"]) > li::before {
+		content: none;
+	}
+	.content-wrapper ul:has(> li > input[type="checkbox"]) > li {
+		padding-left: 0;
+	}
+	.content-wrapper li > input[type="checkbox"] {
+		margin-right: 0.5em;
+		vertical-align: middle;
+	}
 
-		/* ── Blockquote ── */
-		blockquote {
-			margin-top: 1em;
-			border-left: 3px solid currentColor;
-			padding-left: 1.25em;
-			opacity: 0.85;
-			font-style: italic;
-		}
-		blockquote > blockquote {
-			margin-top: 0.5em;
-		}
+	/* ── Blockquote ── */
+	.content-wrapper blockquote {
+		margin-top: 1em;
+		border-left: 3px solid currentColor;
+		padding-left: 1.25em;
+		opacity: 0.85;
+		font-style: italic;
+	}
+	.content-wrapper blockquote > blockquote {
+		margin-top: 0.5em;
+	}
 
-		/* ── Inline Code ── */
-		:not(pre) > code {
-			font-size: 0.875em;
-			padding: 0.15em 0.4em;
-			border-radius: 3px;
-			background-color: rgb(229 231 235); /* gray-200 */
-		}
-		:global(.dark) & :not(pre) > code {
-			background-color: rgb(55 65 81); /* gray-700 */
-		}
+	/* ── Inline Code ── */
+	.content-wrapper :not(pre) > code {
+		font-size: 0.875em;
+		padding: 0.15em 0.4em;
+		border-radius: 3px;
+		background-color: rgb(229 231 235); /* gray-200 */
+	}
+	.dark .content-wrapper :not(pre) > code {
+		background-color: rgb(55 65 81); /* gray-700 */
+	}
 
-		/* ── Code Blocks ── */
-		pre {
-			margin-top: 1em;
-			padding: 0.75rem;
-			border-radius: 4px;
-			overflow-x: auto;
-			font-size: 0.75rem;
-			line-height: 1.6;
-			background-color: rgb(31 41 55) !important; /* gray-800 */
-			color: rgb(229 231 235); /* gray-200 */
-		}
-		@media (min-width: 768px) {
-			pre {
-				padding: 1.25rem;
-				font-size: 0.875rem;
-			}
-		}
-		pre > code {
-			background: none;
-			padding: 0;
-			border-radius: 0;
-			font-size: inherit;
-		}
-
-		/* ── Images ── */
-		img {
-			margin-top: 1.5em;
-			margin-bottom: 1.5em;
-			max-width: 100%;
-			height: auto;
-			border-radius: 4px;
-			border: 1px solid rgb(229 231 235);
-		}
-		:global(.dark) & img {
-			border-color: rgb(55 65 81);
-		}
-
-		/* ── Tables ── */
-		table {
-			margin-top: 1.5em;
-			width: 100%;
-			border-collapse: collapse;
-			font-size: 0.75rem;
-			overflow-x: auto;
-			display: block;
-		}
-		@media (min-width: 768px) {
-			table { font-size: 0.875rem; }
-		}
-		thead {
-			border-bottom: 2px solid currentColor;
-		}
-		th {
-			font-weight: 700;
-			text-align: left;
-			padding: 0.5em 0.5em;
-		}
-		td {
-			padding: 0.5em 0.5em;
-			border-bottom: 1px solid rgb(229 231 235);
-		}
-		:global(.dark) & td {
-			border-bottom-color: rgb(55 65 81);
-		}
-		tr:last-child td {
-			border-bottom: none;
-		}
-
-		/* ── Horizontal Rule ── */
-		hr {
-			margin-top: 2em;
-			margin-bottom: 2em;
-			border: none;
-			border-top: 1px solid rgb(209 213 219); /* gray-300 */
-		}
-		:global(.dark) & hr {
-			border-top-color: rgb(75 85 99); /* gray-600 */
-		}
-
-		/* ── Definition Lists ── */
-		dl { margin-top: 1em; }
-		dt {
-			font-weight: 700;
-			margin-top: 1em;
-		}
-		dd {
-			padding-left: 1.5em;
-			margin-top: 0.25em;
-		}
-
-		/* ── Abbreviations ── */
-		abbr[title] {
-			text-decoration: underline dotted;
-			cursor: help;
-		}
-
-		/* ── Keyboard / Mark ── */
-		kbd {
-			font-size: 0.875em;
-			padding: 0.1em 0.4em;
-			border: 1px solid rgb(209 213 219);
-			border-radius: 3px;
-			box-shadow: 0 1px 0 rgb(209 213 219);
-		}
-		:global(.dark) & kbd {
-			border-color: rgb(75 85 99);
-			box-shadow: 0 1px 0 rgb(75 85 99);
-		}
-		mark {
-			background-color: rgb(254 240 138); /* yellow-200 */
-			padding: 0.1em 0.2em;
-			border-radius: 2px;
-		}
-
-		/* ── Footnotes (remark-gfm) ── */
-		.footnotes {
-			margin-top: 3em;
-			padding-top: 1.5em;
-			border-top: 1px solid rgb(209 213 219);
+	/* ── Code Blocks ── */
+	.content-wrapper pre {
+		margin-top: 1em;
+		padding: 0.75rem;
+		border-radius: 4px;
+		overflow-x: auto;
+		font-size: 0.75rem;
+		line-height: 1.6;
+		background-color: rgb(31 41 55) !important; /* gray-800 */
+		color: rgb(229 231 235); /* gray-200 */
+	}
+	@media (min-width: 768px) {
+		.content-wrapper pre {
+			padding: 1.25rem;
 			font-size: 0.875rem;
 		}
-		:global(.dark) & .footnotes {
-			border-top-color: rgb(75 85 99);
-		}
-		sup a {
-			font-size: 0.75em;
-			text-decoration: none;
-			padding: 0 0.2em;
-		}
+	}
+	.content-wrapper pre > code {
+		background: none;
+		padding: 0;
+		border-radius: 0;
+		font-size: inherit;
+	}
 
-		/* ── Details / Summary ── */
-		details {
-			margin-top: 1em;
-			border: 1px solid rgb(229 231 235);
-			border-radius: 4px;
-			padding: 0.75em 1em;
-		}
-		:global(.dark) & details {
-			border-color: rgb(55 65 81);
-		}
-		summary {
-			cursor: pointer;
-			font-weight: 600;
-		}
-		details[open] summary {
-			margin-bottom: 0.5em;
-		}
+	/* ── Images ── */
+	.content-wrapper img {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+		max-width: 100%;
+		height: auto;
+		border-radius: 4px;
+		border: 1px solid rgb(229 231 235);
+	}
+	.dark .content-wrapper img {
+		border-color: rgb(55 65 81);
+	}
 
-		/* ── Aside / Callout ── */
-		aside {
-			margin-top: 1.5em;
-			padding: 1em 1.25em;
-			border-left: 3px solid rgb(59 130 246); /* blue-500 */
-			background-color: rgb(239 246 255); /* blue-50 */
-			border-radius: 0 4px 4px 0;
-			font-size: 0.9rem;
-		}
-		:global(.dark) & aside {
-			background-color: rgb(30 58 138 / 0.2); /* blue-900/20 */
-		}
+	/* ── Tables ── */
+	.content-wrapper table {
+		margin-top: 1.5em;
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.75rem;
+		overflow-x: auto;
+		display: block;
+	}
+	@media (min-width: 768px) {
+		.content-wrapper table { font-size: 0.875rem; }
+	}
+	.content-wrapper thead {
+		border-bottom: 2px solid currentColor;
+	}
+	.content-wrapper th {
+		font-weight: 700;
+		text-align: left;
+		padding: 0.5em 0.5em;
+	}
+	.content-wrapper td {
+		padding: 0.5em 0.5em;
+		border-bottom: 1px solid rgb(229 231 235);
+	}
+	.dark .content-wrapper td {
+		border-bottom-color: rgb(55 65 81);
+	}
+	.content-wrapper tr:last-child td {
+		border-bottom: none;
+	}
+
+	/* ── Horizontal Rule ── */
+	.content-wrapper hr {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border: none;
+		border-top: 1px solid rgb(209 213 219); /* gray-300 */
+	}
+	.dark .content-wrapper hr {
+		border-top-color: rgb(75 85 99); /* gray-600 */
+	}
+
+	/* ── Definition Lists ── */
+	.content-wrapper dl { margin-top: 1em; }
+	.content-wrapper dt {
+		font-weight: 700;
+		margin-top: 1em;
+	}
+	.content-wrapper dd {
+		padding-left: 1.5em;
+		margin-top: 0.25em;
+	}
+
+	/* ── Abbreviations ── */
+	.content-wrapper abbr[title] {
+		text-decoration: underline dotted;
+		cursor: help;
+	}
+
+	/* ── Keyboard / Mark ── */
+	.content-wrapper kbd {
+		font-size: 0.875em;
+		padding: 0.1em 0.4em;
+		border: 1px solid rgb(209 213 219);
+		border-radius: 3px;
+		box-shadow: 0 1px 0 rgb(209 213 219);
+	}
+	.dark .content-wrapper kbd {
+		border-color: rgb(75 85 99);
+		box-shadow: 0 1px 0 rgb(75 85 99);
+	}
+	.content-wrapper mark {
+		background-color: rgb(254 240 138); /* yellow-200 */
+		padding: 0.1em 0.2em;
+		border-radius: 2px;
+	}
+
+	/* ── Footnotes (remark-gfm) ── */
+	.content-wrapper .footnotes {
+		margin-top: 3em;
+		padding-top: 1.5em;
+		border-top: 1px solid rgb(209 213 219);
+		font-size: 0.875rem;
+	}
+	.dark .content-wrapper .footnotes {
+		border-top-color: rgb(75 85 99);
+	}
+	.content-wrapper sup a {
+		font-size: 0.75em;
+		text-decoration: none;
+		padding: 0 0.2em;
+	}
+
+	/* ── Details / Summary ── */
+	.content-wrapper details {
+		margin-top: 1em;
+		border: 1px solid rgb(229 231 235);
+		border-radius: 4px;
+		padding: 0.75em 1em;
+	}
+	.dark .content-wrapper details {
+		border-color: rgb(55 65 81);
+	}
+	.content-wrapper summary {
+		cursor: pointer;
+		font-weight: 600;
+	}
+	.content-wrapper details[open] summary {
+		margin-bottom: 0.5em;
+	}
+
+	/* ── Aside / Callout ── */
+	.content-wrapper aside {
+		margin-top: 1.5em;
+		padding: 1em 1.25em;
+		border-left: 3px solid rgb(59 130 246); /* blue-500 */
+		background-color: rgb(239 246 255); /* blue-50 */
+		border-radius: 0 4px 4px 0;
+		font-size: 0.9rem;
+	}
+	.dark .content-wrapper aside {
+		background-color: rgb(30 58 138 / 0.2); /* blue-900/20 */
 	}
 
 	/* ── Scroll Reveal Animations ── */
