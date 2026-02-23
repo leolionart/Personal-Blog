@@ -28,7 +28,7 @@ const { tags } = Astro.props;
 	}
 
 	const posts: Post[] = [];
-	const tagBtns = document.querySelectorAll('.tag-btn');
+	let tagBtns: NodeListOf<Element>;
 	let selectedTags = new Set<string>();
 
 	// Collect all posts with their tags
@@ -40,6 +40,49 @@ const { tags } = Astro.props;
 			posts.push({
 				element: section as HTMLElement,
 				tags: tags,
+			});
+		});
+	}
+
+	// Re-query buttons and set up event listeners
+	function setupButtonListeners() {
+		tagBtns = document.querySelectorAll('.tag-btn');
+
+		// Remove old listeners
+		tagBtns.forEach((btn) => {
+			const newBtn = btn.cloneNode(true);
+			btn.parentNode?.replaceChild(newBtn, btn);
+		});
+
+		// Re-query after replacing
+		tagBtns = document.querySelectorAll('.tag-btn');
+
+		// Add new listeners
+		tagBtns.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const tag = btn.getAttribute('data-tag');
+
+				if (tag === 'all') {
+					selectedTags.clear();
+					tagBtns.forEach((b) => b.classList.remove('active'));
+					btn.classList.add('active');
+				} else {
+					if (selectedTags.has(tag!)) {
+						selectedTags.delete(tag!);
+						btn.classList.remove('active');
+					} else {
+						selectedTags.add(tag!);
+						btn.classList.add('active');
+						// Remove 'all' active state when selecting specific tags
+						tagBtns.forEach((b) => {
+							if (b.getAttribute('data-tag') === 'all') {
+								b.classList.remove('active');
+							}
+						});
+					}
+				}
+
+				filterPosts();
 			});
 		});
 	}
@@ -91,40 +134,12 @@ const { tags } = Astro.props;
 		}
 	}
 
-	// Handle tag button clicks
-	tagBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			const tag = btn.getAttribute('data-tag');
-
-			if (tag === 'all') {
-				selectedTags.clear();
-				tagBtns.forEach((b) => b.classList.remove('active'));
-				btn.classList.add('active');
-			} else {
-				if (selectedTags.has(tag!)) {
-					selectedTags.delete(tag!);
-					btn.classList.remove('active');
-				} else {
-					selectedTags.add(tag!);
-					btn.classList.add('active');
-					// Remove 'all' active state when selecting specific tags
-					tagBtns.forEach((b) => {
-						if (b.getAttribute('data-tag') === 'all') {
-							b.classList.remove('active');
-						}
-					});
-				}
-			}
-
-			filterPosts();
-		});
-	});
-
 	// Initialize on page load
 	function initialize() {
 		posts.length = 0; // Clear previous posts
 		selectedTags.clear(); // Clear selected tags
 		collectPosts();
+		setupButtonListeners();
 		initializeFromURL();
 	}
 
