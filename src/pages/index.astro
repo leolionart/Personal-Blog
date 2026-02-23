@@ -18,8 +18,8 @@ function slugToFilename(slug: string) {
 ---
 <Layout title={title}>
     <Header gridBg>
-        <h1 class="text-12 leading-[1.2] lg:text-20 font-900">{title}</h1>
-        <h2 class="text-5 leading-[1.2] lg:text-8 c-gray-600 dark:c-gray-400 font-300">{subtitle}</h2>
+        <h1 class="text-8 md:text-12 lg:text-20 leading-[1.2] font-900">{title}</h1>
+        <h2 class="text-3.5 md:text-5 lg:text-8 leading-[1.2] c-gray-600 dark:c-gray-400 font-300">{subtitle}</h2>
     </Header>
     <main>
         {posts.map(async (post, i) => {
@@ -45,9 +45,9 @@ function slugToFilename(slug: string) {
                                 </div>
                             )}
                         </div>
-                        <h2 class="text-8 lg:text-12 leading-[1.15] font-900 mt-4 c-gray-900 dark:c-gray-100">{post.data.title}</h2>
+                        <h2 class="text-5 md:text-8 lg:text-12 leading-[1.15] font-900 mt-4 c-gray-900 dark:c-gray-100">{post.data.title}</h2>
                         {post.data.description && (
-                            <p class="text-4 lg:text-5 leading-[1.4] mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
+                            <p class="text-3.5 md:text-4 lg:text-5 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
                         )}
                         <div class="post-content-preview mt-6 text-sm leading-[1.6] overflow-hidden c-gray-700 dark:c-gray-300">
                             <div class="content-wrapper post-preview-inner">
@@ -75,7 +75,12 @@ function slugToFilename(slug: string) {
         position: relative;
     }
     .post-article {
-        padding-inline: 3.125rem;
+        padding-inline: 1.25rem;
+    }
+    @media (min-width: 768px) {
+        .post-article {
+            padding-inline: 3.125rem;
+        }
     }
     .post-meta {
         display: flex;

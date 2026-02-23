@@ -25,6 +25,7 @@ const navLinks = {
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/print-resume.css" media="print" />
 		<title>{title || SITE_NAME}</title>
 		<script is:inline>
 			(function() {
@@ -37,13 +38,13 @@ const navLinks = {
 	</head>
 	<body class="font-mono bg-white dark:bg-gray-900 c-gray-900 dark:c-gray-100 transition-colors">
 		<nav class="border-b-1 border-b-gray-200 dark:border-b-gray-800">
-			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-5 wrapper mx-auto">
-				<h1 class="text-xl">AI TRAN</h1>
+			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-4 md:pl-5 wrapper mx-auto">
+				<h1 class="text-base md:text-xl">AI TRAN</h1>
 				<div class="flex items-center">
 					<ul class={`grid grid-auto-flow-col`}>
 						{Object.entries(navLinks).map(([href, title]) => {
 							return <li class="grid-col-[span_1] block">
-								<a href={href} class="text-sm px-5 py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
+								<a href={href} class="text-xs md:text-sm px-3 md:px-5 py-4 md:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
 							</li>
 						})}
 					</ul>
@@ -79,13 +80,20 @@ const navLinks = {
 		:is(h1,h2,h3,h4,h5,h6):first-child {
 			margin-top: 0;
 		}
-		h1 { font-size: 2.25rem; }
-		h2 { font-size: 1.875rem; }
-		h3 { font-size: 1.5rem; }
-		h4 { font-size: 1.35rem; }
+		h1 { font-size: 1.5rem; }
+		h2 { font-size: 1.35rem; }
+		h3 { font-size: 1.2rem; }
+		h4 { font-size: 1.1rem; }
 		h5, h6 {
 			font-weight: 600;
-			font-size: 1.1rem;
+			font-size: 1rem;
+		}
+		@media (min-width: 768px) {
+			h1 { font-size: 2.25rem; }
+			h2 { font-size: 1.875rem; }
+			h3 { font-size: 1.5rem; }
+			h4 { font-size: 1.35rem; }
+			h5, h6 { font-size: 1.1rem; }
 		}
 
 		/* ── Paragraphs ── */
@@ -193,13 +201,19 @@ const navLinks = {
 		/* ── Code Blocks ── */
 		pre {
 			margin-top: 1em;
-			padding: 1.25rem;
+			padding: 0.75rem;
 			border-radius: 4px;
 			overflow-x: auto;
-			font-size: 0.875rem;
+			font-size: 0.75rem;
 			line-height: 1.6;
 			background-color: rgb(31 41 55) !important; /* gray-800 */
 			color: rgb(229 231 235); /* gray-200 */
+		}
+		@media (min-width: 768px) {
+			pre {
+				padding: 1.25rem;
+				font-size: 0.875rem;
+			}
 		}
 		pre > code {
 			background: none;
@@ -226,9 +240,12 @@ const navLinks = {
 			margin-top: 1.5em;
 			width: 100%;
 			border-collapse: collapse;
-			font-size: 0.875rem;
+			font-size: 0.75rem;
 			overflow-x: auto;
 			display: block;
+		}
+		@media (min-width: 768px) {
+			table { font-size: 0.875rem; }
 		}
 		thead {
 			border-bottom: 2px solid currentColor;
@@ -236,10 +253,10 @@ const navLinks = {
 		th {
 			font-weight: 700;
 			text-align: left;
-			padding: 0.5em 1em;
+			padding: 0.5em 0.5em;
 		}
 		td {
-			padding: 0.5em 1em;
+			padding: 0.5em 0.5em;
 			border-bottom: 1px solid rgb(229 231 235);
 		}
 		:global(.dark) & td {

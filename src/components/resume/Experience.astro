@@ -44,7 +44,7 @@ const { work } = cv;
 							)}
 
 							{(responsibilities || achievements) && (
-								<div class="expandable-content overflow-hidden transition-all duration-300" style="max-height: 0px;" data-expandable>
+								<div class="expandable-content overflow-hidden transition-all duration-300 print:!overflow-visible" style="max-height: 0px;" data-expandable>
 									{responsibilities && (
 										<div class="flex flex-col gap-1 mb-3">
 											<h5 class="text-xs c-gray-500 dark:c-gray-400 uppercase">Responsibilities</h5>
@@ -67,7 +67,7 @@ const { work } = cv;
 							{(responsibilities || achievements) && (
 								<button
 									data-expand-toggle
-									class="print:hidden flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 cursor-pointer transition-colors w-fit"
+									class="no-print flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 cursor-pointer transition-colors w-fit"
 								>
 									<span data-expand-text>Show more</span>
 									<svg class="expand-chevron w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -75,7 +75,7 @@ const { work } = cv;
 							)}
 
 							{skills && skills.length > 0 && (
-								<ul class="flex flex-wrap gap-1.5 print:hidden" aria-label="Technologies used">
+								<ul class="no-print flex flex-wrap gap-1.5" aria-label="Technologies used">
 									{skills.map(skill => (
 										<li class="text-xs px-2 py-0.5 border-1 border-gray-200 dark:border-gray-700 c-gray-600 dark:c-gray-400">
 											{skill}

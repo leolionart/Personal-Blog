@@ -12,18 +12,18 @@ const { name, label } = cv.basics;
 ---
 
 <Layout title={`${name} — ${label}`}>
-	<main class="wrapper mx-auto border-x-1 border-gray-200 dark:border-gray-800">
-		<div class="grid md:grid-cols-[280px_1fr] gap-0">
+	<main class="resume-main wrapper mx-auto border-x-1 border-gray-200 dark:border-gray-800">
+		<div class="resume-grid grid md:grid-cols-[280px_1fr] gap-0">
 			<!-- Sidebar -->
-			<div class="p-8 md:border-r-1 border-gray-200 dark:border-gray-800 space-y-8 print:space-y-4">
+			<div class="resume-sidebar px-5 py-6 md:p-8 border-b-1 md:border-b-0 md:border-r-1 border-gray-200 dark:border-gray-800 space-y-6 md:space-y-8">
 				<Hero />
 				<About />
 			</div>
 			<!-- Main Content -->
-			<div class="p-8 space-y-10 print:space-y-4">
+			<div class="resume-content px-5 py-6 md:p-8 space-y-8 md:space-y-10">
 				<Experience />
-				<Projects class="print:hidden" />
-				<Skills class="print:hidden" />
+				<div class="no-print"><Projects /></div>
+				<div class="no-print"><Skills /></div>
 				<Education />
 			</div>
 		</div>
@@ -31,12 +31,32 @@ const { name, label } = cv.basics;
 </Layout>
 
 <style is:global>
-	@media print {
-		nav, footer { display: none !important; }
-		.wrapper { max-width: none !important; border: none !important; }
-	}
-	@page {
-		size: auto;
-		margin: 10mm;
+	/* Print-only elements: hidden on screen, shown on print (via print-resume.css) */
+	.print-only {
+		display: none !important;
 	}
 </style>
+
+<script>
+	// Switch to light mode when printing, restore after
+	function setupPrintMode() {
+		const html = document.documentElement;
+
+		window.addEventListener('beforeprint', () => {
+			html.classList.remove('dark');
+			html.dataset.wasDark = 'true';
+		});
+
+		window.addEventListener('afterprint', () => {
+			if (html.dataset.wasDark === 'true') {
+				const theme = localStorage.getItem('theme');
+				const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (theme === 'dark' || (!theme && systemDark)) {
+					html.classList.add('dark');
+				}
+			}
+			delete html.dataset.wasDark;
+		});
+	}
+	setupPrintMode();
+</script>
