@@ -1,0 +1,112 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: leolionart/Personal-blog
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  # --- Blog Posts ---
+  - name: posts
+    label: Blog Posts
+    folder: src/content/posts
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Publish Date, name: pubDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+      - { label: Author, name: author, widget: hidden, default: leolion }
+      - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string } }
+      - { label: Type, name: type, widget: select, options: [announcement, release, post], default: post, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  # --- Resume (cv.json) ---
+  - name: resume
+    label: Resume
+    files:
+      - label: Resume Data
+        name: cv
+        file: cv.json
+        fields:
+          - label: Basics
+            name: basics
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Label, name: label, widget: string }
+              - { label: Image, name: image, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Phone, name: phone, widget: string, required: false }
+              - { label: URL, name: url, widget: string, required: false }
+              - { label: Summary, name: summary, widget: text }
+              - label: Location
+                name: location
+                widget: object
+                fields:
+                  - { label: City, name: city, widget: string }
+                  - { label: Country Code, name: countryCode, widget: string }
+                  - { label: Region, name: region, widget: string }
+                  - { label: Address, name: address, widget: string, required: false }
+                  - { label: Postal Code, name: postalCode, widget: string, required: false }
+              - label: Profiles
+                name: profiles
+                widget: list
+                fields:
+                  - { label: Network, name: network, widget: string }
+                  - { label: Username, name: username, widget: string }
+                  - { label: URL, name: url, widget: string }
+          - label: Work Experience
+            name: work
+            widget: list
+            fields:
+              - { label: Company, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Location Type, name: location_type, widget: select, options: [Remote, "On site", Hybrid] }
+              - { label: Location, name: location, widget: string }
+              - { label: URL, name: url, widget: string, required: false }
+              - { label: Start Date, name: startDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+              - { label: End Date, name: endDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false, required: false }
+              - { label: Summary, name: summary, widget: text }
+              - { label: Responsibilities, name: responsibilities, widget: list, field: { label: Item, name: item, widget: string } }
+              - { label: Achievements, name: achievements, widget: list, field: { label: Item, name: item, widget: string } }
+              - { label: Skills, name: skills, widget: list, field: { label: Skill, name: skill, widget: string } }
+          - label: Education
+            name: education
+            widget: list
+            fields:
+              - { label: Institution, name: institution, widget: string }
+              - { label: URL, name: url, widget: string, required: false }
+              - { label: Area, name: area, widget: string }
+              - { label: Study Type, name: studyType, widget: string }
+              - { label: Start Date, name: startDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+              - { label: End Date, name: endDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false, required: false }
+              - { label: Score, name: score, widget: string, required: false }
+              - { label: Courses, name: courses, widget: list, required: false, field: { label: Course, name: course, widget: string } }
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Level, name: level, widget: select, options: [Beginner, Intermediate, Expert] }
+              - { label: Keywords, name: keywords, widget: list, field: { label: Keyword, name: keyword, widget: string } }
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Active, name: isActive, widget: boolean }
+              - { label: Description, name: description, widget: text }
+              - { label: Highlights, name: highlights, widget: list, field: { label: Item, name: item, widget: string } }
+              - { label: URL, name: url, widget: string, required: false }
+              - { label: GitHub, name: github, widget: string, required: false }
+          - { label: Languages, name: languages, widget: list, fields: [{ label: Language, name: language, widget: string }, { label: Fluency, name: fluency, widget: string }] }
+          - { label: Interests, name: interests, widget: list, fields: [{ label: Name, name: name, widget: string }, { label: Keywords, name: keywords, widget: list, field: { label: Keyword, name: keyword, widget: string } }] }
+          - { label: Volunteer, name: volunteer, widget: list, required: false }
+          - { label: Certificates, name: certificates, widget: list, required: false }
+          - { label: References, name: references, widget: list, required: false }
