@@ -29,6 +29,17 @@ const { Content } = await post.render();
         <FormattedDate date={new Date(post.data.pubDate)} />
     </Header>
     <main>
+        {post.data.tags && post.data.tags.length > 0 && (
+            <Section fullWidthBorder class="post-tags-section">
+                <div class="flex flex-wrap gap-2">
+                    {post.data.tags.map((tag: string) => (
+                        <a href={`/?tag=${encodeURIComponent(tag)}`} class="text-xs px-3 py-1.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
+                            #{tag}
+                        </a>
+                    ))}
+                </div>
+            </Section>
+        )}
         <Section source={`by ${author?.data.name}`} fullWidthBorder class="content-wrapper">
             <Content />
         </Section>
