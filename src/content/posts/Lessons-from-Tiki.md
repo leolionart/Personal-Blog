@@ -5,10 +5,8 @@ pubDate: 2024-06-15
 author: leolion
 tags:
   - Product Management
-  - E-commerce
-  - Metrics
   - UX Design
-  - User Research
+  - Business
 type: post
 ---
 

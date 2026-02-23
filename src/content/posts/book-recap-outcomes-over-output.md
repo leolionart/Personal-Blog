@@ -6,8 +6,7 @@ author: leolion
 tags:
   - Book Summary
   - Product Management
-  - Metrics
-  - Strategy
+  - Business
 type: post
 ---
 

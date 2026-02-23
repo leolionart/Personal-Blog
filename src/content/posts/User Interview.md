@@ -4,7 +4,7 @@ description: Kinh nghiệm thực tế từ Tiki về cách thực hiện user i
 pubDate: 2023-02-20
 author: leolion
 tags:
-  - user-research
+  - UX Design
 type: announcement
 ---
 

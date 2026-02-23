@@ -6,8 +6,7 @@ author: leolion
 tags:
   - AI
   - UX Design
-  - Web Development
-  - Product Design
+  - Technology
 type: post
 ---
 

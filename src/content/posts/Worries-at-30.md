@@ -5,9 +5,7 @@ pubDate: 2025-01-15
 author: leolion
 tags:
   - Product Management
-  - Career Development
-  - Personal Reflection
-  - Remote Work
+  - Career
 type: post
 ---
 

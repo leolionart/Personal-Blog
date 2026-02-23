@@ -13,7 +13,6 @@ const posts = (await getCollection('posts')).sort(
     (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 
-// Extract all unique tags
 const allTags = Array.from(
     new Set(posts.flatMap(post => post.data.tags || []))
 ).sort() as string[];

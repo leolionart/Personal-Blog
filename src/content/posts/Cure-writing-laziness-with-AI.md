@@ -5,10 +5,8 @@ pubDate: 2025-02-10
 author: leolion
 tags:
   - AI
-  - Productivity
   - Writing
-  - Reading
-  - Personal Development
+  - Productivity
 type: post
 ---
 

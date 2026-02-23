@@ -4,12 +4,8 @@ description: Hành trình tự học toàn bộ kiến thức kỹ thuật qua h
 pubDate: 2024-12-01
 author: leolion
 tags:
-  - IoT
-  - Embedded Systems
-  - Network Engineering
-  - Self-Education
-  - DIY Electronics
-  - Smart Home
+  - Technology
+  - Career
 type: post
 ---
 

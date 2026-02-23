@@ -4,8 +4,7 @@ description: Biết gì viết nấy, chắc sai nhiều
 pubDate: 2022-10-20
 author: leolion
 tags:
-  - Web3
-  - Blockchain
+  - Technology
 type: announcement
 ---
 

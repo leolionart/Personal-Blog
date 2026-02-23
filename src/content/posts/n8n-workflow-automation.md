@@ -5,9 +5,6 @@ pubDate: 2025-02-20
 author: leolion
 tags:
   - Automation
-  - n8n
-  - No-Code
-  - Workflow
   - Productivity
 type: post
 ---

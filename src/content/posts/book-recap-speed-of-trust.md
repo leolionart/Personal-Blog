@@ -6,8 +6,6 @@ author: leolion
 tags:
   - Book Summary
   - Leadership
-  - Trust
-  - Business Strategy
 type: post
 ---
 

@@ -6,9 +6,7 @@ author: leolion
 tags:
   - Product Management
   - Leadership
-  - Retail
-  - Team Management
-  - Professional Growth
+  - Business
 type: post
 ---
 
