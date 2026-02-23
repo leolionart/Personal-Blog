@@ -1,0 +1,180 @@
+---
+interface Props {
+	tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="tag-filter-container">
+	<div class="tag-filter-wrapper">
+		<button class="tag-btn tag-btn-reset" data-tag="all">
+			All
+		</button>
+		{tags.map((tag) => (
+			<button class="tag-btn" data-tag={tag}>
+				#{tag}
+			</button>
+		))}
+	</div>
+</div>
+
+<script>
+	interface Post {
+		element: HTMLElement;
+		tags: string[];
+	}
+
+	const posts: Post[] = [];
+	const tagBtns = document.querySelectorAll('.tag-btn');
+	let selectedTags = new Set<string>();
+
+	// Collect all posts with their tags
+	function collectPosts() {
+		const postSections = document.querySelectorAll('.post-section');
+		postSections.forEach((section) => {
+			const tagsText = section.getAttribute('data-tags');
+			const tags = tagsText ? tagsText.split(',').map((t) => t.trim()) : [];
+			posts.push({
+				element: section as HTMLElement,
+				tags: tags,
+			});
+		});
+	}
+
+	function filterPosts() {
+		posts.forEach((post) => {
+			if (selectedTags.size === 0) {
+				// Show all posts if no tags selected
+				post.element.style.display = '';
+			} else {
+				// Show post if it contains any of the selected tags
+				const hasTag = Array.from(selectedTags).some((tag) =>
+					post.tags.includes(tag)
+				);
+				post.element.style.display = hasTag ? '' : 'none';
+			}
+		});
+	}
+
+	// Handle tag button clicks
+	tagBtns.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const tag = btn.getAttribute('data-tag');
+
+			if (tag === 'all') {
+				selectedTags.clear();
+				tagBtns.forEach((b) => b.classList.remove('active'));
+				btn.classList.add('active');
+			} else {
+				if (selectedTags.has(tag!)) {
+					selectedTags.delete(tag!);
+					btn.classList.remove('active');
+				} else {
+					selectedTags.add(tag!);
+					btn.classList.add('active');
+					// Remove 'all' active state when selecting specific tags
+					tagBtns.forEach((b) => {
+						if (b.getAttribute('data-tag') === 'all') {
+							b.classList.remove('active');
+						}
+					});
+				}
+			}
+
+			filterPosts();
+		});
+	});
+
+	// Initialize
+	collectPosts();
+	tagBtns[0].classList.add('active'); // Set 'All' as initially active
+</script>
+
+<style>
+	.tag-filter-container {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		background-color: rgb(255 255 255);
+		padding: 1rem 0;
+		border-bottom: 1px solid rgb(229 231 235);
+	}
+
+	:global(.dark) .tag-filter-container {
+		background-color: rgb(17 24 39);
+		border-bottom-color: rgb(55 65 81);
+	}
+
+	.tag-filter-wrapper {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		padding-inline: 1rem;
+		border-x-1 border-gray-200 dark:border-gray-800;
+		max-width: 100vw;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 640px) {
+		.tag-filter-wrapper {
+			padding-inline: 1.5rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.tag-filter-wrapper {
+			padding-inline: 2rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.tag-filter-wrapper {
+			padding-inline: 2.5rem;
+		}
+	}
+
+	.tag-btn {
+		padding: 0.5rem 1rem;
+		border: 1px solid rgb(229 231 235);
+		border-radius: 4px;
+		background-color: transparent;
+		color: rgb(55 65 81);
+		cursor: pointer;
+		font-size: 0.875rem;
+		transition: all 0.15s ease;
+		white-space: nowrap;
+		font-family: inherit;
+	}
+
+	:global(.dark) .tag-btn {
+		border-color: rgb(55 65 81);
+		color: rgb(209 213 219);
+	}
+
+	.tag-btn:hover {
+		border-color: rgb(107 114 128);
+		background-color: rgb(249 250 251);
+	}
+
+	:global(.dark) .tag-btn:hover {
+		border-color: rgb(107 114 128);
+		background-color: rgb(31 41 55);
+	}
+
+	.tag-btn.active {
+		background-color: rgb(55 65 81);
+		color: rgb(255 255 255);
+		border-color: rgb(55 65 81);
+	}
+
+	:global(.dark) .tag-btn.active {
+		background-color: rgb(209 213 219);
+		color: rgb(17 24 39);
+		border-color: rgb(209 213 219);
+	}
+
+	.tag-btn-reset {
+		font-weight: 600;
+	}
+</style>

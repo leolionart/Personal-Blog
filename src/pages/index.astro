@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
+import TagFilter from "../components/TagFilter.astro";
 import { getCollection, getEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
@@ -12,6 +13,11 @@ const posts = (await getCollection('posts')).sort(
     (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 
+// Extract all unique tags
+const allTags = Array.from(
+    new Set(posts.flatMap(post => post.data.tags || []))
+).sort() as string[];
+
 function slugToFilename(slug: string) {
     return slug.replace(/\s+/g, '-').toLowerCase() + '.md';
 }
@@ -21,6 +27,7 @@ function slugToFilename(slug: string) {
         <h1 class="text-6 sm:text-8 md:text-12 lg:text-18 xl:text-20 leading-[1.2] font-900">{title}</h1>
         <h2 class="text-2.5 sm:text-3.5 md:text-5 lg:text-7 xl:text-8 leading-[1.2] c-gray-600 dark:c-gray-400 font-300">{subtitle}</h2>
     </Header>
+    {allTags.length > 0 && <TagFilter tags={allTags} />}
     <main>
         {posts.map(async (post, i) => {
             const author = await getEntry('authors', post.data.author.id);
@@ -31,6 +38,7 @@ function slugToFilename(slug: string) {
                     source={slugToFilename(post.slug)}
                     fullWidthBorder
                     class="post-section"
+                    data-tags={post.data.tags?.join(',') || ''}
                 >
                     <article class="relative post-article">
                         <div class="post-meta">

@@ -8,26 +8,28 @@ interface Props {
     variantInside?: 'dark'|'light';
     fullWidthBorder?: boolean;
     as?: HTMLElementTagNameMap;
+    [key: string]: any;
 }
-const { 
-    variant = 'light', 
-    variantInside = 'light', 
-    fullWidthBorder = false, 
-    index = false, 
-    source = false, 
-    class: _class = '', 
+const {
+    variant = 'light',
+    variantInside = 'light',
+    fullWidthBorder = false,
+    index = false,
+    source = false,
+    class: _class = '',
     padBlock = true,
-    as: Tag = 'section'
+    as: Tag = 'section',
+    ...rest
 } = Astro.props;
 ---
 <Tag class:list={[
-        "section mx-auto flex flex-col", 
-        index && 'section--has-index', 
-        _class, 
-        variant, 
+        "section mx-auto flex flex-col",
+        index && 'section--has-index',
+        _class,
+        variant,
         variant === 'dark' ? 'bg-gray-900 c-gray-200' : '',
         fullWidthBorder ? 'border-t-1 border-gray-200 dark:border-gray-800' : ''
-    ]}>
+    ]} {...rest}>
     <div class:list={[
             "wrapper border-x-1 dark:border-gray-800 relative",
             !fullWidthBorder ? 'border-t-1 border-gray-200 dark:border-gray-800' : '',
