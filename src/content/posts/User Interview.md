@@ -167,20 +167,20 @@ _Tham khảo: [uxlagi.com](https://uxlagi.com/#!#15)_
 
 ### **Bước 2. Giới thiệu** 📝
 
-> _"What participants need to know before they begin?"_
+> _"Người tham gia cần biết gì trước khi bắt đầu?"_
 
 **Dẫn dắt bối cảnh**:
-- Dùng situation scenario để giúp user **tưởng tượng** mình trong trường hợp nào đó
-- Giúp họ có **mindset phù hợp**
+- Dùng tình huống giả định để giúp user **tưởng tượng** mình trong trường hợp nào đó
+- Giúp họ có **tư duy phù hợp**
 
 **Ví dụ**:
-- "Imagine that you want to buy a gift for a friend."
-- "You need to buy a Wi-Fi printer for your company."
-- "You're in the market to buy a Bluetooth headset."
-- "You took photos at a party and you want to share them with your friends."
-- "You need to buy a fingerprint scanner for your company."
-- "You're the owner of a coffee shop and you need a website."
-- "You just received an email from your manager telling you to check out this site."
+- "Hãy tưởng tượng bạn muốn mua quà cho một người bạn."
+- "Bạn cần mua máy in WiFi cho công ty."
+- "Bạn đang tìm mua tai nghe Bluetooth."
+- "Bạn vừa chụp ảnh ở một bữa tiệc và muốn chia sẻ với bạn bè."
+- "Bạn cần mua máy quét vân tay cho công ty."
+- "Bạn là chủ một quán cà phê và cần một website."
+- "Bạn vừa nhận được email từ quản lý yêu cầu xem trang web này."
 
 **Điểm quan trọng**:
 - Nêu rõ mình cần gì từ user

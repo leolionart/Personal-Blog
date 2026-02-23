@@ -14,28 +14,29 @@ type: post
 
 ## 🤖 Giới thiệu về n8n
 
-**n8n** là một **no-code automation platform** cho phép bạn tạo workflows tự động hóa mà **không cần viết code**.
+**n8n** là một **nền tảng tự động hóa no-code** cho phép bạn tạo workflows tự động hóa mà **không cần viết code**.
 
-**Đặc biệt**: Dễ tiếp cận cho **cả technical và non-technical** users.
+**Đặc biệt**: Dễ tiếp cận cho **cả người dùng technical và non-technical**.
 
 ---
 
 ## 📋 Mục lục
 
 1. [Cấu trúc cơ bản](#-cấu-trúc-cơ-bản)
-2. [Core advantages](#-core-advantages)
+2. [Ưu điểm cốt lõi](#-ưu-điểm-cốt-lõi)
 3. [Ứng dụng thực tế](#-ứng-dụng-thực-tế)
-4. [MCP Integration](#-mcp-integration)
+4. [Tích hợp MCP](#-tích-hợp-mcp)
 
 ---
 
-## 🏗️ Cấu trúc cơ bản 
+## 🏗️ Cấu trúc cơ bản
 
 ### 3 thành phần bắt buộc:
 
 ```
 ┌─────────────┐    ┌──────────┐    ┌────────┐
-│  TRIGGER    │───▶│ CONDITION│───▶│ ACTION │
+│  KÍCH HOẠT  │───▶│ ĐIỀU KIỆN│───▶│ HÀNH   │
+│  (TRIGGER)  │    │          │    │ ĐỘNG   │
 └─────────────┘    └──────────┘    └────────┘
 ```
 
@@ -54,8 +55,8 @@ Ví dụ:
 
 **Có nên tiếp tục không?**
 
-- `if user_type == premium` → continue
-- `if date > start_date && date < end_date` → continue
+- `if user_type == premium` → tiếp tục
+- `if date > start_date && date < end_date` → tiếp tục
 - Không thì → dừng lại
 
 #### 3️⃣ **Action** ✅
@@ -64,192 +65,192 @@ Ví dụ:
 
 - 📤 Gửi email
 - 💾 Lưu vào database
-- 📝 Update Notion
+- 📝 Cập nhật Notion
 - 💬 Gửi message Slack
 - 🤖 Gọi AI API
-- ... vô số actions khác
+- ... vô số hành động khác
 
 ---
 
-## ⭐ Core Advantages 
+## ⭐ Ưu điểm cốt lõi
 
-### 1. Visual Drag-and-Drop Interface
+### 1. Giao diện kéo thả trực quan
 
 - 🎨 Không cần code
 - 👁️ Nhìn thấy toàn bộ flow
 - 🔧 Dễ debug
 
-### 2. Input/Output Visibility
+### 2. Hiển thị Input/Output
 
 **Đặc biệt mạnh mẽ**:
-- Bạn có thể **drag input fields trực tiếp** vào node parameters
-- Thay vì phải nhớ field names
-- **Thay đổi 1 chỗ → tự động update** ở các nơi khác
+- Bạn có thể **kéo trực tiếp các trường input** vào tham số node
+- Thay vì phải nhớ tên trường
+- **Thay đổi 1 chỗ → tự động cập nhật** ở các nơi khác
 
-### 3. Rich Ecosystem
+### 3. Hệ sinh thái phong phú
 
-- 1000+ integrations
-- Open API cho custom integrations
-- Active community
+- 1000+ tích hợp
+- API mở cho tích hợp tùy chỉnh
+- Cộng đồng năng động
 
 ---
 
-## 💡 Ứng dụng thực tế 
+## 💡 Ứng dụng thực tế
 
 ### 1️⃣ Tóm tắt tin nhắn tự động
 
 **Workflow**:
 ```
-Slack message received
+Nhận tin nhắn Slack
   ↓
-Extract text content
+Trích xuất nội dung văn bản
   ↓
-Call ChatGPT API
+Gọi ChatGPT API
   ↓
-Post summary back to Slack
+Đăng bản tóm tắt lại Slack
 ```
 
-**Benefit**: Không phải đọc toàn bộ tin nhắn dài dòng
+**Lợi ích**: Không phải đọc toàn bộ tin nhắn dài dòng
 
 ---
 
-### 2️⃣ Compile tài liệu thuế
+### 2️⃣ Tổng hợp tài liệu thuế
 
 **Workflow**:
 ```
-Monthly reminder trigger
+Nhắc nhở hàng tháng
   ↓
-Query database for receipts
+Truy vấn database lấy hóa đơn
   ↓
-Generate PDF report
+Tạo báo cáo PDF
   ↓
-Email to accountant
+Gửi email cho kế toán
 ```
 
-**Benefit**: Tự động, không phải manual mỗi tháng
+**Lợi ích**: Tự động, không phải làm thủ công mỗi tháng
 
 ---
 
-### 3️⃣ Contract milestone tracking
+### 3️⃣ Theo dõi mốc hợp đồng
 
 **Workflow**:
 ```
-Contract signed (Slack notification)
+Hợp đồng được ký (thông báo Slack)
   ↓
-Extract milestone dates
+Trích xuất ngày mốc quan trọng
   ↓
-Create calendar events
+Tạo sự kiện trên lịch
   ↓
-Set reminders 1 week before
+Đặt nhắc nhở 1 tuần trước
 ```
 
-**Benefit**: Không quên deadline quan trọng
+**Lợi ích**: Không quên deadline quan trọng
 
 ---
 
-### 4️⃣ Financial management
+### 4️⃣ Quản lý tài chính
 
 **Workflow**:
 ```
-Transaction received (email/SMS)
+Nhận giao dịch (email/SMS)
   ↓
-Categorize automatically
+Phân loại tự động
   ↓
-Update budget tracking
+Cập nhật theo dõi ngân sách
   ↓
-Alert if over budget
+Cảnh báo nếu vượt ngân sách
 ```
 
-**Benefit**: Real-time budget awareness
+**Lợi ích**: Nhận thức ngân sách theo thời gian thực
 
 ---
 
-### 5️⃣ Knowledge base automation
+### 5️⃣ Tự động hóa kho kiến thức
 
 **Workflow**:
 ```
-Bookmark saved (Raindrop)
+Bookmark được lưu (Raindrop)
   ↓
-Extract summary & keywords
+Trích xuất tóm tắt & từ khóa
   ↓
-Add to Notion database
+Thêm vào database Notion
   ↓
-Tag by category
+Gắn thẻ theo danh mục
 ```
 
-**Benefit**: Second brain được cập nhật tự động
+**Lợi ích**: Bộ não thứ hai được cập nhật tự động
 
 ---
 
-### 6️⃣ Voice assistant integration
+### 6️⃣ Tích hợp trợ lý giọng nói
 
 **Workflow**:
 ```
-Voice command received
+Nhận lệnh giọng nói
   ↓
-Process natural language
+Xử lý ngôn ngữ tự nhiên
   ↓
-Execute action (e.g., create task)
+Thực thi hành động (ví dụ: tạo task)
   ↓
-Confirm back via voice
+Xác nhận lại bằng giọng nói
 ```
 
-**Benefit**: Hands-free automation
+**Lợi ích**: Tự động hóa không cần tay
 
 ---
 
-## 🔌 MCP Integration 
+## 🔌 Tích hợp MCP
 
 ### Model Context Protocol + n8n
 
 **MCP** cho phép:
-- ✅ AI tools (ChatGPT, Claude) gọi n8n workflows
-- ✅ Workflows gọi AI để xử lý data
-- ✅ Seamless AI-powered automation
+- ✅ AI tools (ChatGPT, Claude) gọi workflows n8n
+- ✅ Workflows gọi AI để xử lý dữ liệu
+- ✅ Tự động hóa được hỗ trợ bởi AI liền mạch
 
 ### Ví dụ:
 
 ```
-User request (ChatGPT)
+Yêu cầu từ người dùng (ChatGPT)
   ↓
-ChatGPT calls n8n MCP endpoint
+ChatGPT gọi endpoint MCP của n8n
   ↓
-n8n executes complex workflow
+n8n thực thi workflow phức tạp
   ↓
-Returns result to ChatGPT
+Trả kết quả về ChatGPT
   ↓
-ChatGPT formats response to user
+ChatGPT định dạng phản hồi cho người dùng
 ```
 
-**Use case**: AI-powered personal assistant
+**Ứng dụng**: Trợ lý cá nhân được hỗ trợ bởi AI
 
 ---
 
 ## 🚀 Bắt đầu với n8n
 
-### Step 1: Setup
+### Bước 1: Thiết lập
 
-- 🌐 Self-host hoặc dùng n8n.cloud
-- 📝 Tạo account
-- 🎓 Xem tutorials cơ bản
+- 🌐 Tự host hoặc dùng n8n.cloud
+- 📝 Tạo tài khoản
+- 🎓 Xem hướng dẫn cơ bản
 
-### Step 2: Lập kế hoạch
+### Bước 2: Lập kế hoạch
 
 - 📋 Liệt kê tasks bạn muốn tự động hóa
-- 🔍 Identify trigger & action
+- 🔍 Xác định trigger & action
 - 🤔 Xác định condition (nếu cần)
 
-### Step 3: Build
+### Bước 3: Xây dựng
 
-- 🎨 Drag-drop nodes
-- 🧪 Test
-- 🚀 Deploy
+- 🎨 Kéo thả các node
+- 🧪 Kiểm tra
+- 🚀 Triển khai
 
-### Step 4: Iterate
+### Bước 4: Cải tiến
 
-- 📊 Monitor execution
-- 🐛 Debug issues
-- ⚡ Optimize
+- 📊 Theo dõi quá trình thực thi
+- 🐛 Debug các vấn đề
+- ⚡ Tối ưu hóa
 
 ---
 
@@ -261,4 +262,4 @@ ChatGPT formats response to user
 - ⚡ Tiết kiệm thời gian + năng lượng
 - 🧠 Tập trung vào việc quan trọng hơn
 
-> Start small, iterate, automate everything! 🚀
+> Bắt đầu nhỏ, cải tiến liên tục, tự động hóa mọi thứ! 🚀

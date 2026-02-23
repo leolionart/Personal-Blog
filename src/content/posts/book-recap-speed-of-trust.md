@@ -1,5 +1,5 @@
 ---
-title: "Book Recap: The Speed of Trust"
+title: "Tóm tắt sách: The Speed of Trust"
 description: 'Tóm tắt "The Speed of Trust: The One Thing That Changes Everything" - công thức xây dựng niềm tin trong tổ chức'
 pubDate: 2024-10-01
 author: leolion
@@ -15,308 +15,308 @@ type: post
 
 **"The Speed of Trust"** - cuốn sách về **tác động của niềm tin** tới mọi thứ.
 
-**Thesis chính**:
-> Trust là yếu tố cơ bản ảnh hưởng tới **tốc độ, chi phí, hiệu suất, và mối quan hệ** trong kinh doanh.
+**Luận điểm chính**:
+> Niềm tin là yếu tố cơ bản ảnh hưởng tới **tốc độ, chi phí, hiệu suất, và mối quan hệ** trong kinh doanh.
 
 ---
 
 ## 📋 Mục lục
 
-1. [Core premise](#-core-premise)
-2. [The 5 waves of trust](#-five-waves)
-3. [The 4 cores of credibility](#-four-cores)
-4. [13 high-trust behaviors](#-13-behaviors)
+1. [Tiền đề cốt lõi](#-tiền-đề-cốt-lõi)
+2. [5 làn sóng niềm tin](#-năm-làn-sóng-niềm-tin)
+3. [4 yếu tố cốt lõi của sự tín nhiệm](#-bốn-yếu-tố-cốt-lõi)
+4. [13 hành vi lãnh đạo tin cậy cao](#-13-hành-vi-lãnh-đạo-tin-cậy-cao)
 
 ---
 
-## 💡 Core premise 
+## 💡 Tiền đề cốt lõi
 
-### Trust is the ONE thing
+### Niềm tin là YẾU TỐ DUY NHẤT
 
-**Without trust**:
-- ❌ Everything moves slower (more approvals, checks)
-- ❌ Costs increase (redundancy, turnover)
-- ❌ Performance suffers (low engagement)
-- ❌ Relationships break down
+**Không có niềm tin**:
+- ❌ Mọi thứ chuyển động chậm hơn (nhiều quy trình phê duyệt, kiểm tra)
+- ❌ Chi phí tăng (dư thừa, tỉ lệ nghỉ việc cao)
+- ❌ Hiệu suất giảm (mức gắn kết thấp)
+- ❌ Các mối quan hệ tan vỡ
 
-**With trust**:
-- ✅ Everything accelerates
-- ✅ Costs decrease
-- ✅ Performance improves
-- ✅ Stronger relationships
+**Có niềm tin**:
+- ✅ Mọi thứ tăng tốc
+- ✅ Chi phí giảm
+- ✅ Hiệu suất cải thiện
+- ✅ Mối quan hệ bền chặt hơn
 
-### The "Speed of Trust" Curve
+### Đường cong "Tốc độ của Niềm tin"
 
 ```
-High trust organizations
+Tổ chức tin cậy cao
     ↑
     │     ╱
     │    ╱
-    │   ╱ Speed accelerates
+    │   ╱ Tốc độ tăng nhanh
     │  ╱
     │ ╱
-────┴──────────► Trust level
+────┴──────────► Mức độ niềm tin
 ```
 
 ---
 
-## 🌊 The 5 Waves of Trust 
+## 🌊 Năm làn sóng Niềm tin
 
-Trust operates at **5 different levels**:
+Niềm tin hoạt động ở **5 cấp độ khác nhau**:
 
-### Wave 1️⃣: **SELF TRUST** 👤
+### Làn sóng 1️⃣: **TIN BẢN THÂN** 👤
 
-**What is it**: Personal credibility & integrity
-- Do you keep your own commitments?
-- Do you know your values?
-- Are you consistent with yourself?
+**Là gì**: Sự tín nhiệm và chính trực cá nhân
+- Bạn có giữ cam kết với chính mình không?
+- Bạn có biết rõ giá trị của mình không?
+- Bạn có nhất quán với chính mình không?
 
-**Build it**:
-- ✅ Clarify your values
-- ✅ Make commitments to yourself
-- ✅ Keep them
-- ✅ Build personal integrity
+**Xây dựng bằng cách**:
+- ✅ Làm rõ giá trị của bạn
+- ✅ Đặt cam kết với bản thân
+- ✅ Giữ cam kết đó
+- ✅ Xây dựng sự chính trực cá nhân
 
-**Impact**: Foundation for everything else
-
----
-
-### Wave 2️⃣: **RELATIONSHIP TRUST** 👥
-
-**What is it**: How others perceive you
-- Does your behavior align with your words?
-- Do you keep promises to others?
-- Are you reliable?
-
-**Build it**:
-- ✅ Be consistent
-- ✅ Follow through
-- ✅ Listen actively
-- ✅ Show genuine interest
-
-**Impact**: People want to work with you
+**Tác động**: Nền tảng cho mọi thứ khác
 
 ---
 
-### Wave 3️⃣: **ORGANIZATIONAL TRUST** 🏢
+### Làn sóng 2️⃣: **TIN TRONG QUAN HỆ** 👥
 
-**What is it**: Alignment & institutional integrity
-- Does the company walk its talk?
-- Are policies applied consistently?
-- Is there psychological safety?
+**Là gì**: Cách người khác nhìn nhận bạn
+- Hành vi của bạn có phù hợp với lời nói không?
+- Bạn có giữ lời hứa với người khác không?
+- Bạn có đáng tin cậy không?
 
-**Build it**:
-- ✅ Clear, consistent policies
-- ✅ Leadership models trust behaviors
-- ✅ Psychological safety culture
-- ✅ Accountability across levels
+**Xây dựng bằng cách**:
+- ✅ Nhất quán
+- ✅ Làm theo những gì đã nói
+- ✅ Lắng nghe tích cực
+- ✅ Thể hiện sự quan tâm thực sự
 
-**Impact**: Teams self-organize effectively
-
----
-
-### Wave 4️⃣: **MARKET TRUST** 🌍
-
-**What is it**: Customer & stakeholder reputation
-- Do customers trust your brand?
-- Do business partners want to work with you?
-- Is your reputation strong?
-
-**Build it**:
-- ✅ Deliver consistently
-- ✅ Be transparent
-- ✅ Handle mistakes with integrity
-- ✅ Build brand over time
-
-**Impact**: Easier to acquire customers & partnerships
+**Tác động**: Mọi người muốn làm việc với bạn
 
 ---
 
-### Wave 5️⃣: **SOCIETAL TRUST** 🌎
+### Làn sóng 3️⃣: **TIN TRONG TỔ CHỨC** 🏢
 
-**What is it**: Community contribution & ethics
-- Does company contribute to society?
-- Are you ethical & responsible?
-- Do people respect your values?
+**Là gì**: Sự đồng thuận và chính trực thể chế
+- Công ty có làm đúng như những gì nói không?
+- Các chính sách có áp dụng nhất quán không?
+- Có an toàn tâm lý không?
 
-**Build it**:
-- ✅ Corporate responsibility programs
-- ✅ Ethical business practices
-- ✅ Transparency
-- ✅ Long-term thinking
+**Xây dựng bằng cách**:
+- ✅ Chính sách rõ ràng, nhất quán
+- ✅ Lãnh đạo làm gương về các hành vi tin cậy
+- ✅ Văn hóa an toàn tâm lý
+- ✅ Trách nhiệm giải trình ở mọi cấp
 
-**Impact**: Attract values-aligned talent & customers
-
----
-
-## 🏛️ The 4 Cores of Credibility 
-
-To build trust, you need **4 core elements**:
-
-### 1️⃣ **INTEGRITY** 🎯
-- Do what you say
-- Align words & actions
-- Be honest
-
-### 2️⃣ **INTENT** ❤️
-- Show genuine care
-- Put others' interests too
-- Not just self-serving
-
-### 3️⃣ **CAPABILITIES** 💪
-- Have relevant skills
-- Stay current
-- Deliver results
-
-### 4️⃣ **RESULTS** ✅
-- Deliver what you promised
-- Track record matters
-- Consistent performance
-
-**All 4 matter**: If you're missing 1, trust drops significantly.
+**Tác động**: Các team tự tổ chức hiệu quả
 
 ---
 
-## 🎬 13 High-Trust Leader Behaviors 
+### Làn sóng 4️⃣: **TIN TRÊN THỊ TRƯỜNG** 🌍
 
-### The 13 behaviors:
+**Là gì**: Uy tín với khách hàng và các bên liên quan
+- Khách hàng có tin tưởng thương hiệu của bạn không?
+- Đối tác kinh doanh có muốn làm việc với bạn không?
+- Danh tiếng của bạn có mạnh không?
 
-1. **Talk Straight** 🗣️
-   - Be honest & direct
-   - No hidden agendas
-   - Clear communication
+**Xây dựng bằng cách**:
+- ✅ Nhất quán trong việc thực hiện
+- ✅ Minh bạch
+- ✅ Xử lý sai lầm với sự chính trực
+- ✅ Xây dựng thương hiệu theo thời gian
 
-2. **Demonstrate Respect** 👏
-   - Value people's time
-   - Listen actively
-   - Treat fairly
-
-3. **Create Transparency** 📢
-   - Share information openly
-   - Explain decisions
-   - Acknowledge uncertainty
-
-4. **Right Wrongs** ⚖️
-   - Acknowledge mistakes
-   - Apologize sincerely
-   - Make amends
-
-5. **Show Loyalty** 🤝
-   - Defend people respectfully
-   - Give credit publicly
-   - Address issues privately
-
-6. **Deliver Results** 🎁
-   - Follow through
-   - Exceed expectations
-   - Consistent performance
-
-7. **Get Better** 📈
-   - Continuous learning
-   - Ask for feedback
-   - Adapt & improve
-
-8. **Confront Reality** 🔍
-   - Address problems directly
-   - Don't avoid difficult conversations
-   - Face facts
-
-9. **Clarify Expectations** 📋
-   - Make requirements clear
-   - Confirm understanding
-   - Document agreements
-
-10. **Practice Accountability** 📊
-    - Own your commitments
-    - Don't blame others
-    - Report progress honestly
-
-11. **Listen First** 👂
-    - Understand before responding
-    - Ask questions
-    - Seek different perspectives
-
-12. **Keep Commitments** ✔️
-    - Do what you say
-    - Small promises matter
-    - Reliability builds trust
-
-13. **Extend Trust** 🎁
-    - Give others benefit of doubt
-    - Assume good intent
-    - Don't be paranoid
+**Tác động**: Dễ dàng thu hút khách hàng và đối tác
 
 ---
 
-## 🔄 The Trust-Performance Connection
+### Làn sóng 5️⃣: **TIN XÃ HỘI** 🌎
+
+**Là gì**: Đóng góp cộng đồng và đạo đức
+- Công ty có đóng góp cho xã hội không?
+- Bạn có đạo đức và có trách nhiệm không?
+- Mọi người có tôn trọng giá trị của bạn không?
+
+**Xây dựng bằng cách**:
+- ✅ Chương trình trách nhiệm xã hội
+- ✅ Thực hành kinh doanh có đạo đức
+- ✅ Minh bạch
+- ✅ Tư duy dài hạn
+
+**Tác động**: Thu hút nhân tài và khách hàng có cùng giá trị
+
+---
+
+## 🏛️ Bốn yếu tố cốt lõi
+
+Để xây dựng niềm tin, bạn cần **4 yếu tố cốt lõi**:
+
+### 1️⃣ **TÍNH CHÍNH TRỰC** 🎯
+- Làm những gì bạn nói
+- Đồng nhất lời nói và hành động
+- Trung thực
+
+### 2️⃣ **ĐỘNG CƠ** ❤️
+- Thể hiện sự quan tâm thực sự
+- Đặt lợi ích của người khác vào cân nhắc
+- Không chỉ vì lợi ích bản thân
+
+### 3️⃣ **NĂNG LỰC** 💪
+- Có kỹ năng phù hợp
+- Cập nhật liên tục
+- Tạo ra kết quả
+
+### 4️⃣ **KẾT QUẢ** ✅
+- Thực hiện những gì đã hứa
+- Thành tích là thước đo quan trọng
+- Hiệu suất nhất quán
+
+**Cả 4 đều quan trọng**: Nếu thiếu 1, niềm tin sẽ giảm đáng kể.
+
+---
+
+## 🎬 13 hành vi lãnh đạo tin cậy cao
+
+### Danh sách 13 hành vi:
+
+1. **Nói thẳng** 🗣️
+   - Trung thực và thẳng thắn
+   - Không có ý đồ ẩn
+   - Giao tiếp rõ ràng
+
+2. **Thể hiện sự tôn trọng** 👏
+   - Trân trọng thời gian của người khác
+   - Lắng nghe tích cực
+   - Đối xử công bằng
+
+3. **Tạo sự minh bạch** 📢
+   - Chia sẻ thông tin cởi mở
+   - Giải thích các quyết định
+   - Thừa nhận sự không chắc chắn
+
+4. **Sửa sai** ⚖️
+   - Thừa nhận lỗi lầm
+   - Xin lỗi chân thành
+   - Bồi thường khi cần
+
+5. **Thể hiện sự trung thành** 🤝
+   - Bảo vệ mọi người một cách tôn trọng
+   - Trao công nhận công khai
+   - Giải quyết vấn đề riêng tư
+
+6. **Mang lại kết quả** 🎁
+   - Thực hiện đúng cam kết
+   - Vượt kỳ vọng
+   - Hiệu suất nhất quán
+
+7. **Không ngừng cải thiện** 📈
+   - Học hỏi liên tục
+   - Xin phản hồi
+   - Thích nghi và cải thiện
+
+8. **Đối mặt với thực tế** 🔍
+   - Giải quyết vấn đề trực tiếp
+   - Không tránh né cuộc trò chuyện khó
+   - Đối mặt với sự thật
+
+9. **Làm rõ kỳ vọng** 📋
+   - Làm rõ yêu cầu
+   - Xác nhận sự hiểu biết
+   - Ghi lại các thỏa thuận
+
+10. **Thực hành trách nhiệm giải trình** 📊
+    - Chịu trách nhiệm về cam kết của mình
+    - Không đổ lỗi cho người khác
+    - Báo cáo tiến độ trung thực
+
+11. **Lắng nghe trước** 👂
+    - Hiểu trước khi phản hồi
+    - Đặt câu hỏi
+    - Tìm kiếm quan điểm khác nhau
+
+12. **Giữ cam kết** ✔️
+    - Làm những gì bạn nói
+    - Những lời hứa nhỏ cũng quan trọng
+    - Sự tin cậy được xây dựng từ độ đáng tin
+
+13. **Trao niềm tin** 🎁
+    - Cho người khác hưởng lợi của sự nghi ngờ
+    - Giả định thiện chí
+    - Không quá ngờ vực
+
+---
+
+## 🔄 Mối liên hệ Niềm tin - Hiệu suất
 
 ```
-High Trust
+Niềm tin cao
     ↓
-Faster decision-making
+Ra quyết định nhanh hơn
     ↓
-Lower bureaucracy
+Ít quan liêu hơn
     ↓
-Higher engagement
+Gắn kết cao hơn
     ↓
-Better results
+Kết quả tốt hơn
     ↓
-Even more trust (virtuous cycle)
+Niềm tin ngày càng tăng (vòng xoáy tích cực)
 ```
 
-vs.
+so với:
 
 ```
-Low Trust
+Niềm tin thấp
     ↓
-Slower decisions (more approvals)
+Quyết định chậm hơn (nhiều phê duyệt hơn)
     ↓
-Higher bureaucracy
+Quan liêu cao hơn
     ↓
-Lower engagement
+Gắn kết thấp hơn
     ↓
-Worse results
+Kết quả tệ hơn
     ↓
-Even less trust (vicious cycle)
+Niềm tin ngày càng giảm (vòng xoáy tiêu cực)
 ```
 
 ---
 
-## 🎯 Key takeaways
+## 🎯 Điểm mấu chốt
 
-| Level | Focus |
+| Cấp độ | Trọng tâm |
 |-------|-------|
-| Self | Build personal integrity |
-| Relationship | Be consistent & reliable |
-| Organization | Create psychological safety |
-| Market | Build brand reputation |
-| Society | Contribute responsibly |
+| Bản thân | Xây dựng chính trực cá nhân |
+| Quan hệ | Nhất quán và đáng tin cậy |
+| Tổ chức | Tạo an toàn tâm lý |
+| Thị trường | Xây dựng uy tín thương hiệu |
+| Xã hội | Đóng góp có trách nhiệm |
 
 ---
 
-## 💡 How to apply
+## 💡 Cách áp dụng
 
-### For **Leaders**:
-1. Model the 13 behaviors
-2. Create organizational culture of trust
-3. Measure & reward trust-building
+### Cho **Lãnh đạo**:
+1. Làm gương 13 hành vi
+2. Tạo văn hóa niềm tin trong tổ chức
+3. Đo lường và khen thưởng hành vi xây dựng niềm tin
 
-### For **Individuals**:
-1. Practice the 13 behaviors daily
-2. Focus on one at a time
-3. Build reputation over time
+### Cho **Cá nhân**:
+1. Thực hành 13 hành vi hàng ngày
+2. Tập trung vào từng hành vi một
+3. Xây dựng danh tiếng theo thời gian
 
-### For **Organizations**:
-1. Invest in trust-building
-2. Remove unnecessary processes
-3. Empower teams
+### Cho **Tổ chức**:
+1. Đầu tư vào xây dựng niềm tin
+2. Loại bỏ các quy trình không cần thiết
+3. Trao quyền cho các team
 
 ---
 
-## 📝 Final thought
+## 📝 Suy nghĩ cuối
 
-> **Speed of Trust is not about being nice. It's about results.**
+> **Tốc độ của Niềm tin không phải về việc tốt bụng. Đó là về kết quả.**
 
-Organizations with high trust move **faster, cost less, perform better**.
+Tổ chức có niềm tin cao di chuyển **nhanh hơn, tốn ít chi phí hơn, hiệu suất tốt hơn**.
 
-Start today by choosing **1 behavior** to practice this week. 🚀
+Hãy bắt đầu hôm nay bằng cách chọn **1 hành vi** để thực hành trong tuần này. 🚀

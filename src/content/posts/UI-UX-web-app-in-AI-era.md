@@ -13,7 +13,7 @@ type: post
 
 ## 🤖 Giới thiệu
 
-Thiết kế UI/UX trong thời đại của AI đòi hỏi một **paradigm shift** hoàn toàn.
+Thiết kế UI/UX trong thời đại của AI đòi hỏi một sự **thay đổi tư duy** hoàn toàn.
 
 Không còn chỉ tối ưu hóa cho con người, mà **AI agents** cũng trở thành một "user" quan trọng của ứng dụng của bạn.
 
@@ -21,13 +21,13 @@ Không còn chỉ tối ưu hóa cho con người, mà **AI agents** cũng trở
 
 ## 📋 Mục lục
 
-1. [AI Agent-Friendly Design](#-ai-agent-friendly-design)
+1. [Thiết kế thân thiện với AI Agent](#-thiết-kế-thân-thiện-với-ai-agent)
 2. [Prompt Engineering là một kỹ năng](#-prompt-engineering-là-một-kỹ-năng)
-3. [Future Product Architecture](#-future-product-architecture)
+3. [Kiến trúc sản phẩm tương lai](#-kiến-trúc-sản-phẩm-tương-lai)
 
 ---
 
-## 🎯 AI Agent-Friendly Design 
+## 🎯 Thiết kế thân thiện với AI Agent
 
 ### Thách thức mới:
 
@@ -36,9 +36,9 @@ Không còn chỉ tối ưu hóa cho con người, mà **AI agents** cũng trở
 - Cấu trúc nội dung tối ưu cho **mắt nhân loại**
 
 **Thời đại AI** 🤖
-- Designers phải tính đến **cách AI parse nội dung**
+- Designers phải tính đến **cách AI xử lý nội dung**
 - API phải được thiết kế để **AI có thể hành động hiệu quả**
-- Content structure phải **rõ ràng, có cấu trúc**
+- Cấu trúc nội dung phải **rõ ràng, có tổ chức**
 
 ### Ví dụ thực tế:
 
@@ -46,65 +46,65 @@ Khi bạn thiết kế một form, cần:
 
 ✅ **Rõ ràng cho AI**:
 ```
-- Field labels: chi tiết, không viết tắt
-- Required fields: đánh dấu rõ
-- Validation messages: mô tả chính xác lỗi
-- Data format: consistent và predictable
+- Nhãn trường: chi tiết, không viết tắt
+- Trường bắt buộc: đánh dấu rõ
+- Thông báo lỗi: mô tả chính xác lỗi
+- Định dạng dữ liệu: nhất quán và có thể dự đoán
 ```
 
 ❌ **Không nên**:
 ```
-- Creative ambiguous labels
-- Implicit required fields
-- Vague error messages
-- Inconsistent data formats
+- Nhãn mơ hồ, sáng tạo
+- Trường bắt buộc không rõ ràng
+- Thông báo lỗi chung chung
+- Định dạng dữ liệu không nhất quán
 ```
 
 ---
 
-## 💡 Prompt Engineering là một kỹ năng 
+## 💡 Prompt Engineering là một kỹ năng
 
 ### Sự tương đồng:
 
-**Giống như domain expertise**:
+**Giống như kiến thức chuyên ngành**:
 - Kỹ sư dầu khí học hỏi từ kinh nghiệm → **đặt câu hỏi tốt hơn**
-- Prompt engineers học hỏi từ thử-sai → **soạn prompt tốt hơn**
+- Người viết prompt học hỏi từ thử-sai → **soạn prompt tốt hơn**
 
 **Làm sao để prompt tốt**?
 
 1. **Rõ ràng mục tiêu**
    - Không "hãy viết cái gì đó hay"
-   - Thay vào đó: "viết email bán hàng 5 câu, tone formal"
+   - Thay vào đó: "viết email bán hàng 5 câu, giọng văn trang trọng"
 
-2. **Cung cấp context**
-   - Cho biết target audience
-   - Cho biết style guide, brand voice
-   - Cho biết constraints (từ, format, v.v.)
+2. **Cung cấp bối cảnh**
+   - Cho biết đối tượng mục tiêu
+   - Cho biết hướng dẫn phong cách, giọng thương hiệu
+   - Cho biết ràng buộc (số từ, định dạng, v.v.)
 
-3. **Yêu cầu output structure**
-   - "Output dưới dạng JSON với keys: title, body, cta"
+3. **Yêu cầu cấu trúc đầu ra**
+   - "Đầu ra dưới dạng JSON với các trường: title, body, cta"
    - Thay vì "viết cái gì đó"
 
 ---
 
-## 🏗️ Future Product Architecture 
+## 🏗️ Kiến trúc sản phẩm tương lai
 
 ### Xu hướng:
 
-> **Tương lai: Sản phẩm = MCP-based connections + AI orchestrator**
+> **Tương lai: Sản phẩm = Kết nối dựa trên MCP + AI điều phối**
 
 ### Giải thích:
 
 **MCP** = Model Context Protocol
 - Cho phép **AI tools giao tiếp** với các services
-- Giống như **API** nhưng cho AI agents
+- Giống như **API** nhưng dành cho AI agents
 
-### Architecture mới:
+### Kiến trúc mới:
 
 ```
 ┌─────────────────┐
 │   AI Agent      │
-│  (ChatGPT, etc) │
+│  (ChatGPT, ...) │
 └────────┬────────┘
          │
     ┌────┴─────┐
@@ -117,10 +117,10 @@ Khi bạn thiết kế một form, cần:
 ```
 
 **Ưu điểm**:
-- ✅ AI có thể **tự động kết nối** giữa services
-- ✅ Không cần UI trung gian
-- ✅ **Faster workflow execution**
-- ✅ **Seamless integration**
+- ✅ AI có thể **tự động kết nối** giữa các services
+- ✅ Không cần giao diện trung gian
+- ✅ **Thực thi workflow nhanh hơn**
+- ✅ **Tích hợp liền mạch**
 
 ---
 
@@ -129,7 +129,7 @@ Khi bạn thiết kế một form, cần:
 **Designers năm 2025 phải**:
 1. 🤖 Hiểu AI agents hoạt động như thế nào
 2. 🔌 Thiết kế API để AI có thể tương tác
-3. 📝 Cung cấp clear, structured content
-4. 🎯 Optimize cho **AI-first experience**
+3. 📝 Cung cấp nội dung rõ ràng, có cấu trúc
+4. 🎯 Tối ưu hóa cho **trải nghiệm AI-first**
 
-Đây không phải thay thế UX con người, mà là **lớp thêm** để làm sản phẩm của bạn **AI-ready**.
+Đây không phải thay thế UX con người, mà là **lớp thêm** để làm sản phẩm của bạn **sẵn sàng cho AI**.

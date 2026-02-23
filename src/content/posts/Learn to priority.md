@@ -195,7 +195,7 @@ Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
 
 ---
 
-### Thực hành "Planning to Unplanned"
+### Thực hành "Lập kế hoạch cho những điều ngoài kế hoạch"
 
 **Kinh nghiệm**:
 - Lập kế hoạch → luôn bị chen ngang → buộc thay đổi
@@ -213,13 +213,13 @@ Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
 
 ---
 
-### 📅 Meeting schedule của tôi:
+### 📅 Lịch họp của tôi:
 
-#### **Weekly**: 1 on 1 với quản lý trực tiếp
+#### **Hàng tuần**: 1-1 với quản lý trực tiếp
 - Đảm bảo thứ tự ưu tiên
 - Còn là ưu tiên cao của họ không?
 
-#### **Bi-weekly**: Với các trưởng bộ phận khác
+#### **2 tuần/lần**: Với các trưởng bộ phận khác
 - Xác nhận ưu tiên
 - Chia sẻ tiến độ
 - Giải quyết vấn đề phát sinh
@@ -230,7 +230,7 @@ Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
 
 ---
 
-### 🆘 "Chạy vô phòng sếp" strategy
+### 🆘 Chiến lược "Chạy vô phòng sếp"
 
 **Khi không có thời gian họp**:
 - Tôi **chạy vô phòng sếp** 😄
@@ -242,7 +242,7 @@ Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
 **Kết quả**:
 - Mỗi sprint: TOP 10 danh sách
 - Trong đó: TOP 5 ưu tiên cao
-- TOP 3 là những công việc có **impact lớn** tới bộ phận khác
+- TOP 3 là những công việc có **tác động lớn** tới bộ phận khác
 
 ---
 
@@ -250,7 +250,7 @@ Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
 
 ### Thực tế:
 
-> **73% of Product Managers spend time on feature prioritization**
+> **73% Product Manager dành thời gian cho việc sắp xếp ưu tiên tính năng**
 >
 > [Liên kết](/)
 
