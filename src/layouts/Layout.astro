@@ -26,7 +26,7 @@ const navLinks = {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px"><text y=".9em" font-size="90">0️⃣</text></svg>' />
+		<link rel="icon" type="image/jpeg" href="/me_avatar.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<SEO
 			title={title || SITE_NAME}
@@ -71,7 +71,7 @@ const navLinks = {
 			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-3 sm:pl-4 md:pl-5 wrapper mx-auto">
 				<a href="/" class="text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-70 transition-opacity cursor-pointer font-700" title="Back to home">AI TRAN</a>
 				<div class="flex items-center">
-					<ul class={`grid grid-auto-flow-col`}>
+					<ul class="grid grid-auto-flow-col list-none m-0 p-0">
 						{Object.entries(navLinks).map(([href, title]) => {
 							return <li class="grid-col-[span_1] block">
 								<a href={href} class="text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
