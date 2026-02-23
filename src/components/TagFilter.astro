@@ -120,9 +120,18 @@ const { tags } = Astro.props;
 		});
 	});
 
-	// Initialize
-	collectPosts();
-	initializeFromURL();
+	// Initialize on page load
+	function initialize() {
+		posts.length = 0; // Clear previous posts
+		selectedTags.clear(); // Clear selected tags
+		collectPosts();
+		initializeFromURL();
+	}
+
+	initialize();
+
+	// Re-initialize on view transitions
+	document.addEventListener('astro:after-swap', initialize);
 </script>
 
 <style>
