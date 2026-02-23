@@ -452,7 +452,15 @@ const navLinks = {
 		}, { threshold: 0.1 });
 
 		document.querySelectorAll('.animate-on-scroll').forEach(el => {
-			observer.observe(el);
+			// Check if element is already in viewport
+			const rect = el.getBoundingClientRect();
+			if (rect.top < window.innerHeight && rect.bottom > 0) {
+				// Element is in viewport, show immediately
+				el.classList.add('is-visible');
+			} else {
+				// Element is below viewport, observe for scroll
+				observer.observe(el);
+			}
 		});
 	}
 	initScrollReveal();
