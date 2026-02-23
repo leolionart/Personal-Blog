@@ -18,14 +18,14 @@ Dưới đây là thống kê đã được kiểm chứng đúng với đa số
 
 ## 📋 Mục lục
 
-1. [Quản lý tài liệu sản phẩm](#insight-1)
-2. [Ưu tiên tính năng](#insight-2)
-3. [Giao tiếp với khách hàng](#insight-3)
-4. [Khả năng đồng cảm](#insight-4)
-5. [Quản lý chỉ số đo lường](#insight-5--6)
-6. [Làm việc với kỹ sư](#insight-7)
-7. [Kỹ năng viết và trình bày](#insight-8)
-8. [Tỉ lệ giữ chân khách hàng](#insight-9)
+1. [Quản lý tài liệu sản phẩm](#-insight-1-quản-lý-tài-liệu-sản-phẩm)
+2. [Ưu tiên tính năng](#-insight-2-ưu-tiên-tính-năng)
+3. [Giao tiếp với khách hàng](#-insight-3-giao-tiếp-với-khách-hàng)
+4. [Khả năng đồng cảm](#-insight-4-khả-năng-đồng-cảm)
+5. [Quản lý chỉ số đo lường](#-insight-5-6-quản-lý-chỉ-số-đo-lường)
+6. [Làm việc với kỹ sư](#-insight-7-làm-việc-với-kỹ-sư)
+7. [Kỹ năng viết và trình bày](#-insight-8-kỹ-năng-viết-và-trình-bày)
+8. [Tỉ lệ giữ chân khách hàng](#-insight-9-tỉ-lệ-giữ-chân-khách-hàng)
 
 ---
 

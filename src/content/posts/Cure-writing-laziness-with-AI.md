@@ -25,11 +25,11 @@ Bạn có bao giờ:
 
 ## 📋 Mục lục
 
-1. [Problem 1: Reading incompleteness](#problem-1)
-2. [Problem 2: Information retention](#problem-2)
-3. [Problem 3: Writing paralysis](#problem-3)
-4. [Consistent writing routine](#consistent-routine)
-5. [Key insights](#key-insights)
+1. [Problem 1: Reading incompleteness](#-problem-1-reading-incompleteness)
+2. [Problem 2: Information retention](#-problem-2-information-retention)
+3. [Problem 3: Writing paralysis](#-problem-3-writing-paralysis)
+4. [Consistent writing routine](#-consistent-writing-routine)
+5. [Key insights](#-key-insights)
 
 ---
 

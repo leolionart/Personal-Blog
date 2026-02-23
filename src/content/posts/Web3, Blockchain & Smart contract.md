@@ -19,9 +19,9 @@ type: announcement
 
 ## 📋 Mục lục
 
-1. [Lược qua lịch sử Web](#lich-su-web)
-2. [Quan điểm cá nhân](#quan-diem)
-3. [Kết luận](#ket-luan)
+1. [Lược qua lịch sử Web](#-lược-qua-lịch-sử-web)
+2. [Quan điểm cá nhân](#-quan-điểm-cá-nhân-về-công-nghệ-blockchain)
+3. [Kết luận](#-kết-luận)
 
 ---
 

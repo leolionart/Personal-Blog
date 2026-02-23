@@ -22,8 +22,8 @@ Tôi đã dành **6+ năm** làm Product Manager tại **Tiki**, bắt đầu t�
 
 ## 📋 Mục lục
 
-1. [Part 2: Leadership insights](#part-2-leadership-insights)
-2. [Part 1: Practical lessons](#part-1-practical-lessons)
+1. [Part 2: Leadership insights](#-part-2-leadership-insights)
+2. [Part 1: Practical lessons](#-part-1-practical-lessons)
 
 ---
 

@@ -21,11 +21,11 @@ Bây giờ đã đến lúc **suy ngẫm**: Điều gì thực sự quan trọng
 
 ## 📋 Mục lục
 
-1. [Crossroads của sự nghiệp](#career-crossroads)
-2. [Mong muốn về lối sống](#lifestyle-aspirations)
-3. [Áp lực kinh tế](#economic-pressures)
-4. [Những lo lắng cá nhân](#personal-concerns)
-5. [Con đường phía trước](#path-forward)
+1. [Crossroads của sự nghiệp](#-career-crossroads)
+2. [Mong muốn về lối sống](#-mong-muốn-về-lối-sống)
+3. [Áp lực kinh tế](#-áp-lực-kinh-tế)
+4. [Những lo lắng cá nhân](#-những-lo-lắng-cá-nhân)
+5. [Con đường phía trước](#-con-đường-phía-trước)
 
 ---
 

@@ -18,10 +18,10 @@ type: announcement
 
 ## 📋 Mục lục
 
-1. [Nguyên tắc 5/25](#nguyen-tac-5-25)
-2. [Đặt tất cả công việc lên bàn](#dat-tat-ca)
-3. [Sử dụng quyền trợ giúp](#su-dung-quyen-tro-giup)
-4. [Tổng kết](#tong-ket)
+1. [Nguyên tắc 5/25](#-nguyên-tắc-525)
+2. [Đặt tất cả công việc lên bàn](#-đặt-tất-cả-công-việc-lên-bàn-và-sắp-xếp)
+3. [Sử dụng quyền trợ giúp](#-sử-dụng-quyền-trợ-giúp)
+4. [Tổng kết](#-tổng-kết)
 
 ---
 

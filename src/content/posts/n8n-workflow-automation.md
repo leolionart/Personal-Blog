@@ -22,10 +22,10 @@ type: post
 
 ## 📋 Mục lục
 
-1. [Cấu trúc cơ bản](#cau-truc-co-ban)
-2. [Core advantages](#core-advantages)
-3. [Ứng dụng thực tế](#ung-dung-thuc-te)
-4. [MCP Integration](#mcp-integration)
+1. [Cấu trúc cơ bản](#-cấu-trúc-cơ-bản)
+2. [Core advantages](#-core-advantages)
+3. [Ứng dụng thực tế](#-ứng-dụng-thực-tế)
+4. [MCP Integration](#-mcp-integration)
 
 ---
 

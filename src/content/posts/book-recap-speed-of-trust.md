@@ -22,10 +22,10 @@ type: post
 
 ## 📋 Mục lục
 
-1. [Core premise](#core-premise)
-2. [The 5 waves of trust](#five-waves)
-3. [The 4 cores of credibility](#four-cores)
-4. [13 high-trust behaviors](#13-behaviors)
+1. [Core premise](#-core-premise)
+2. [The 5 waves of trust](#-five-waves)
+3. [The 4 cores of credibility](#-four-cores)
+4. [13 high-trust behaviors](#-13-behaviors)
 
 ---
 

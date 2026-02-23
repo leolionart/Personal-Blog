@@ -21,11 +21,11 @@ Tuy nhiên, hầu hết công ty **vẫn đo output** thay vì outcomes.
 
 ## 📋 Mục lục
 
-1. [Outputs vs Outcomes](#outputs-vs-outcomes)
-2. [Why outcomes matter](#why-outcomes)
-3. [Key concepts](#key-concepts)
-4. [How to measure](#how-to-measure)
-5. [Action items](#action-items)
+1. [Outputs vs Outcomes](#-outputs-vs-outcomes)
+2. [Why outcomes matter](#-why-outcomes-matter)
+3. [Key concepts](#-key-concepts)
+4. [How to measure](#-how-to-measure)
+5. [Action items](#-action-items)
 
 ---
 

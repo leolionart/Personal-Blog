@@ -26,10 +26,10 @@ _Minh họa từ [uxknowledgebase.com](https://uxknowledgebase.com/@krisztina.sz
 
 ## 📋 Mục lục
 
-1. [Case Study: Thiết kế ứng dụng note](#case-study)
-2. [Các bước phỏng vấn](#cac-buoc)
-3. [Câu hỏi nên và không nên hỏi](#cau-hoi)
-4. [Tips ghi lại phỏng vấn](#tips)
+1. [Case Study: Thiết kế ứng dụng note](#-case-study)
+2. [Các bước phỏng vấn](#-các-bước-phỏng-vấn)
+3. [Câu hỏi nên và không nên hỏi](#-câu-hỏi-nên-và-không-nên-hỏi)
+4. [Tips ghi lại phỏng vấn](#-tips-ghi-lại-phỏng-vấn)
 
 ---
 

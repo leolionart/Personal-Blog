@@ -25,9 +25,9 @@ type: post
 
 ## 📋 Mục lục
 
-1. [Initial objectives](#objectives)
-2. [Key lessons learned](#lessons)
-3. [Critical insights](#insights)
+1. [Initial objectives](#-initial-objectives)
+2. [Key lessons learned](#-key-lessons-learned)
+3. [Critical insights](#-critical-insights)
 
 ---
 

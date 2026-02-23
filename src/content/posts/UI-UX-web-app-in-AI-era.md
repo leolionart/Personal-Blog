@@ -21,9 +21,9 @@ Không còn chỉ tối ưu hóa cho con người, mà **AI agents** cũng trở
 
 ## 📋 Mục lục
 
-1. [AI Agent-Friendly Design](#ai-agent-friendly)
-2. [Prompt Engineering là một kỹ năng](#prompt-engineering)
-3. [Future Product Architecture](#future-architecture)
+1. [AI Agent-Friendly Design](#-ai-agent-friendly-design)
+2. [Prompt Engineering là một kỹ năng](#-prompt-engineering-là-một-kỹ-năng)
+3. [Future Product Architecture](#-future-product-architecture)
 
 ---
 

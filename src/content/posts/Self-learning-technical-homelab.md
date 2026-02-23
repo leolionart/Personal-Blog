@@ -27,10 +27,10 @@ Từ **2022 đến nay**, tôi bắt đầu một hành trình **self-directed l
 
 ## 📋 Mục lục
 
-1. [IoT project beginnings](#iot-beginnings)
-2. [Application deployment](#app-deployment)
-3. [Network infrastructure](#network)
-4. [Solar energy systems](#solar)
+1. [IoT project beginnings](#-iot-beginnings)
+2. [Application deployment](#-app-deployment)
+3. [Network infrastructure](#-network-infrastructure)
+4. [Solar energy systems](#-solar-energy-systems)
 
 ---
 
