@@ -9,312 +9,178 @@ tags:
 type: post
 ---
 
-## 📖 Giới thiệu
+## Giới thiệu
 
-**"The Speed of Trust"** - cuốn sách về **tác động của niềm tin** tới mọi thứ.
+*The Speed of Trust* nói một điều rất thẳng: niềm tin không phải khái niệm “mềm”, mà là biến số ảnh hưởng trực tiếp đến **tốc độ**, **chi phí** và **hiệu suất** của tổ chức.
 
-**Luận điểm chính**:
-> Niềm tin là yếu tố cơ bản ảnh hưởng tới **tốc độ, chi phí, hiệu suất, và mối quan hệ** trong kinh doanh.
-
----
-
-## 📋 Mục lục
-
-1. [Tiền đề cốt lõi](#-tiền-đề-cốt-lõi)
-2. [5 làn sóng niềm tin](#-năm-làn-sóng-niềm-tin)
-3. [4 yếu tố cốt lõi của sự tín nhiệm](#-bốn-yếu-tố-cốt-lõi)
-4. [13 hành vi lãnh đạo tin cậy cao](#-13-hành-vi-lãnh-đạo-tin-cậy-cao)
+Đây là cuốn sách mình thấy hữu ích cho cả người làm quản lý lẫn người làm chuyên môn.
 
 ---
 
-## 💡 Tiền đề cốt lõi
+## Mục lục
 
-### Niềm tin là YẾU TỐ DUY NHẤT
-
-**Không có niềm tin**:
-- ❌ Mọi thứ chuyển động chậm hơn (nhiều quy trình phê duyệt, kiểm tra)
-- ❌ Chi phí tăng (dư thừa, tỉ lệ nghỉ việc cao)
-- ❌ Hiệu suất giảm (mức gắn kết thấp)
-- ❌ Các mối quan hệ tan vỡ
-
-**Có niềm tin**:
-- ✅ Mọi thứ tăng tốc
-- ✅ Chi phí giảm
-- ✅ Hiệu suất cải thiện
-- ✅ Mối quan hệ bền chặt hơn
-
-### Đường cong "Tốc độ của Niềm tin"
-
-```
-Tổ chức tin cậy cao
-    ↑
-    │     ╱
-    │    ╱
-    │   ╱ Tốc độ tăng nhanh
-    │  ╱
-    │ ╱
-────┴──────────► Mức độ niềm tin
-```
+1. [Tiền đề cốt lõi](#tiền-đề-cốt-lõi)
+2. [5 làn sóng niềm tin](#5-làn-sóng-niềm-tin)
+3. [4 yếu tố tạo tín nhiệm](#4-yếu-tố-tạo-tín-nhiệm)
+4. [13 hành vi của người có độ tin cậy cao](#13-hành-vi-của-người-có-độ-tin-cậy-cao)
 
 ---
 
-## 🌊 Năm làn sóng Niềm tin
+## Tiền đề cốt lõi
 
-Niềm tin hoạt động ở **5 cấp độ khác nhau**:
+Ý chính của sách có thể tóm gọn như sau:
 
-### Làn sóng 1️⃣: **TIN BẢN THÂN** 👤
+- **Niềm tin thấp** → ra quyết định chậm, thêm tầng kiểm soát, chi phí tăng, hiệu suất giảm.
+- **Niềm tin cao** → ít ma sát hơn, phối hợp nhanh hơn, chi phí thấp hơn, kết quả tốt hơn.
 
-**Là gì**: Sự tín nhiệm và chính trực cá nhân
-- Bạn có giữ cam kết với chính mình không?
-- Bạn có biết rõ giá trị của mình không?
-- Bạn có nhất quán với chính mình không?
-
-**Xây dựng bằng cách**:
-- ✅ Làm rõ giá trị của bạn
-- ✅ Đặt cam kết với bản thân
-- ✅ Giữ cam kết đó
-- ✅ Xây dựng sự chính trực cá nhân
-
-**Tác động**: Nền tảng cho mọi thứ khác
+Nói cách khác, trust tạo ra “speed dividend”, còn distrust tạo ra “tax”.
 
 ---
 
-### Làn sóng 2️⃣: **TIN TRONG QUAN HỆ** 👥
+## 5 làn sóng niềm tin
 
-**Là gì**: Cách người khác nhìn nhận bạn
-- Hành vi của bạn có phù hợp với lời nói không?
-- Bạn có giữ lời hứa với người khác không?
-- Bạn có đáng tin cậy không?
+Tác giả chia niềm tin thành 5 cấp độ.
 
-**Xây dựng bằng cách**:
-- ✅ Nhất quán
-- ✅ Làm theo những gì đã nói
-- ✅ Lắng nghe tích cực
-- ✅ Thể hiện sự quan tâm thực sự
+### 1) Self trust (tin bản thân)
 
-**Tác động**: Mọi người muốn làm việc với bạn
+Nền tảng bắt đầu từ cá nhân:
 
----
+- Có rõ hệ giá trị của mình không?
+- Có giữ cam kết với chính mình không?
+- Lời nói và hành động có nhất quán không?
 
-### Làn sóng 3️⃣: **TIN TRONG TỔ CHỨC** 🏢
+### 2) Relationship trust (tin trong quan hệ)
 
-**Là gì**: Sự đồng thuận và chính trực thể chế
-- Công ty có làm đúng như những gì nói không?
-- Các chính sách có áp dụng nhất quán không?
-- Có an toàn tâm lý không?
+Đây là cách người khác nhìn bạn:
 
-**Xây dựng bằng cách**:
-- ✅ Chính sách rõ ràng, nhất quán
-- ✅ Lãnh đạo làm gương về các hành vi tin cậy
-- ✅ Văn hóa an toàn tâm lý
-- ✅ Trách nhiệm giải trình ở mọi cấp
+- Có đáng tin không?
+- Có nói đi đôi với làm không?
+- Có lắng nghe và tôn trọng người khác không?
 
-**Tác động**: Các team tự tổ chức hiệu quả
+### 3) Organizational trust (tin trong tổ chức)
 
----
+Ở cấp tổ chức, trust đến từ:
 
-### Làn sóng 4️⃣: **TIN TRÊN THỊ TRƯỜNG** 🌍
+- Chính sách nhất quán.
+- Lãnh đạo làm gương.
+- Môi trường có psychological safety.
+- Trách nhiệm rõ ràng.
 
-**Là gì**: Uy tín với khách hàng và các bên liên quan
-- Khách hàng có tin tưởng thương hiệu của bạn không?
-- Đối tác kinh doanh có muốn làm việc với bạn không?
-- Danh tiếng của bạn có mạnh không?
+### 4) Market trust (tin trên thị trường)
 
-**Xây dựng bằng cách**:
-- ✅ Nhất quán trong việc thực hiện
-- ✅ Minh bạch
-- ✅ Xử lý sai lầm với sự chính trực
-- ✅ Xây dựng thương hiệu theo thời gian
+Đây là uy tín với khách hàng và đối tác.
 
-**Tác động**: Dễ dàng thu hút khách hàng và đối tác
+Nó tích lũy qua thời gian bằng sự nhất quán, minh bạch và cách xử lý sai lầm.
+
+### 5) Societal trust (tin ở cấp xã hội)
+
+Mức cao nhất liên quan đến đạo đức, trách nhiệm cộng đồng và giá trị dài hạn mà tổ chức tạo ra.
 
 ---
 
-### Làn sóng 5️⃣: **TIN XÃ HỘI** 🌎
+## 4 yếu tố tạo tín nhiệm
 
-**Là gì**: Đóng góp cộng đồng và đạo đức
-- Công ty có đóng góp cho xã hội không?
-- Bạn có đạo đức và có trách nhiệm không?
-- Mọi người có tôn trọng giá trị của bạn không?
+Theo sách, độ tin cậy của một cá nhân/tổ chức được tạo bởi 4 thành phần:
 
-**Xây dựng bằng cách**:
-- ✅ Chương trình trách nhiệm xã hội
-- ✅ Thực hành kinh doanh có đạo đức
-- ✅ Minh bạch
-- ✅ Tư duy dài hạn
+1. **Integrity**: nói thật, làm thật.
+2. **Intent**: động cơ đúng, không chỉ vì lợi ích cá nhân.
+3. **Capabilities**: có năng lực thực sự để làm.
+4. **Results**: tạo ra kết quả đều đặn.
 
-**Tác động**: Thu hút nhân tài và khách hàng có cùng giá trị
+Thiếu một trong bốn yếu tố này, trust sẽ bị khuyết.
 
 ---
 
-## 🏛️ Bốn yếu tố cốt lõi
+## 13 hành vi của người có độ tin cậy cao
 
-Để xây dựng niềm tin, bạn cần **4 yếu tố cốt lõi**:
+Danh sách 13 hành vi trong sách gồm:
 
-### 1️⃣ **TÍNH CHÍNH TRỰC** 🎯
-- Làm những gì bạn nói
-- Đồng nhất lời nói và hành động
-- Trung thực
+1. Nói thẳng.
+2. Tôn trọng.
+3. Minh bạch.
+4. Sửa sai.
+5. Trung thành với người vắng mặt.
+6. Tạo kết quả.
+7. Liên tục cải thiện.
+8. Đối mặt thực tế.
+9. Làm rõ kỳ vọng.
+10. Thực hành accountability.
+11. Lắng nghe trước.
+12. Giữ cam kết.
+13. Trao niềm tin.
 
-### 2️⃣ **ĐỘNG CƠ** ❤️
-- Thể hiện sự quan tâm thực sự
-- Đặt lợi ích của người khác vào cân nhắc
-- Không chỉ vì lợi ích bản thân
+Trong thực tế công việc, mình thấy 3 hành vi tạo khác biệt nhanh nhất là:
 
-### 3️⃣ **NĂNG LỰC** 💪
-- Có kỹ năng phù hợp
-- Cập nhật liên tục
-- Tạo ra kết quả
-
-### 4️⃣ **KẾT QUẢ** ✅
-- Thực hiện những gì đã hứa
-- Thành tích là thước đo quan trọng
-- Hiệu suất nhất quán
-
-**Cả 4 đều quan trọng**: Nếu thiếu 1, niềm tin sẽ giảm đáng kể.
+- Làm rõ kỳ vọng từ đầu.
+- Báo sớm khi có rủi ro (thay vì im lặng đến sát hạn).
+- Giữ lời với những cam kết nhỏ.
 
 ---
 
-## 🎬 13 hành vi lãnh đạo tin cậy cao
+## Mối liên hệ giữa trust và hiệu suất
 
-### Danh sách 13 hành vi:
-
-1. **Nói thẳng** 🗣️
-   - Trung thực và thẳng thắn
-   - Không có ý đồ ẩn
-   - Giao tiếp rõ ràng
-
-2. **Thể hiện sự tôn trọng** 👏
-   - Trân trọng thời gian của người khác
-   - Lắng nghe tích cực
-   - Đối xử công bằng
-
-3. **Tạo sự minh bạch** 📢
-   - Chia sẻ thông tin cởi mở
-   - Giải thích các quyết định
-   - Thừa nhận sự không chắc chắn
-
-4. **Sửa sai** ⚖️
-   - Thừa nhận lỗi lầm
-   - Xin lỗi chân thành
-   - Bồi thường khi cần
-
-5. **Thể hiện sự trung thành** 🤝
-   - Bảo vệ mọi người một cách tôn trọng
-   - Trao công nhận công khai
-   - Giải quyết vấn đề riêng tư
-
-6. **Mang lại kết quả** 🎁
-   - Thực hiện đúng cam kết
-   - Vượt kỳ vọng
-   - Hiệu suất nhất quán
-
-7. **Không ngừng cải thiện** 📈
-   - Học hỏi liên tục
-   - Xin phản hồi
-   - Thích nghi và cải thiện
-
-8. **Đối mặt với thực tế** 🔍
-   - Giải quyết vấn đề trực tiếp
-   - Không tránh né cuộc trò chuyện khó
-   - Đối mặt với sự thật
-
-9. **Làm rõ kỳ vọng** 📋
-   - Làm rõ yêu cầu
-   - Xác nhận sự hiểu biết
-   - Ghi lại các thỏa thuận
-
-10. **Thực hành trách nhiệm giải trình** 📊
-    - Chịu trách nhiệm về cam kết của mình
-    - Không đổ lỗi cho người khác
-    - Báo cáo tiến độ trung thực
-
-11. **Lắng nghe trước** 👂
-    - Hiểu trước khi phản hồi
-    - Đặt câu hỏi
-    - Tìm kiếm quan điểm khác nhau
-
-12. **Giữ cam kết** ✔️
-    - Làm những gì bạn nói
-    - Những lời hứa nhỏ cũng quan trọng
-    - Sự tin cậy được xây dựng từ độ đáng tin
-
-13. **Trao niềm tin** 🎁
-    - Cho người khác hưởng lợi của sự nghi ngờ
-    - Giả định thiện chí
-    - Không quá ngờ vực
-
----
-
-## 🔄 Mối liên hệ Niềm tin - Hiệu suất
-
-```
-Niềm tin cao
-    ↓
-Ra quyết định nhanh hơn
-    ↓
-Ít quan liêu hơn
-    ↓
-Gắn kết cao hơn
-    ↓
-Kết quả tốt hơn
-    ↓
-Niềm tin ngày càng tăng (vòng xoáy tích cực)
+```text
+Trust cao
+→ quyết định nhanh hơn
+→ ít quan liêu hơn
+→ team gắn kết hơn
+→ kết quả tốt hơn
+→ trust tăng tiếp
 ```
 
-so với:
+Ngược lại:
 
+```text
+Trust thấp
+→ cần nhiều phê duyệt
+→ chậm và nặng
+→ hiệu suất giảm
+→ kết quả xấu
+→ trust giảm tiếp
 ```
-Niềm tin thấp
-    ↓
-Quyết định chậm hơn (nhiều phê duyệt hơn)
-    ↓
-Quan liêu cao hơn
-    ↓
-Gắn kết thấp hơn
-    ↓
-Kết quả tệ hơn
-    ↓
-Niềm tin ngày càng giảm (vòng xoáy tiêu cực)
-```
+
+Đây là vòng lặp tăng tốc hoặc vòng lặp trì trệ, tùy bạn nuôi vòng nào.
 
 ---
 
-## 🎯 Điểm mấu chốt
+## Điểm mấu chốt
 
 | Cấp độ | Trọng tâm |
-|-------|-------|
-| Bản thân | Xây dựng chính trực cá nhân |
-| Quan hệ | Nhất quán và đáng tin cậy |
-| Tổ chức | Tạo an toàn tâm lý |
-| Thị trường | Xây dựng uy tín thương hiệu |
-| Xã hội | Đóng góp có trách nhiệm |
+|---|---|
+| Bản thân | Integrity cá nhân |
+| Quan hệ | Nhất quán và đáng tin |
+| Tổ chức | Psychological safety + accountability |
+| Thị trường | Uy tín thương hiệu |
+| Xã hội | Trách nhiệm và giá trị dài hạn |
 
 ---
 
-## 💡 Cách áp dụng
+## Cách áp dụng
 
-### Cho **Lãnh đạo**:
-1. Làm gương 13 hành vi
-2. Tạo văn hóa niềm tin trong tổ chức
-3. Đo lường và khen thưởng hành vi xây dựng niềm tin
+### Với lãnh đạo
 
-### Cho **Cá nhân**:
-1. Thực hành 13 hành vi hàng ngày
-2. Tập trung vào từng hành vi một
-3. Xây dựng danh tiếng theo thời gian
+1. Làm gương qua hành vi hằng ngày.
+2. Thiết kế văn hóa dựa trên trust, không dựa trên sợ hãi.
+3. Đo và ghi nhận hành vi xây dựng trust.
 
-### Cho **Tổ chức**:
-1. Đầu tư vào xây dựng niềm tin
-2. Loại bỏ các quy trình không cần thiết
-3. Trao quyền cho các team
+### Với cá nhân
+
+1. Chọn 1 hành vi để luyện trong tuần.
+2. Giữ cam kết nhỏ trước khi nói chuyện cam kết lớn.
+3. Xây danh tiếng bằng sự nhất quán dài hạn.
+
+### Với tổ chức
+
+1. Rà lại các quy trình sinh ra vì thiếu trust.
+2. Loại bỏ bước kiểm soát không tạo giá trị.
+3. Tăng quyền tự chủ đi kèm trách nhiệm rõ.
 
 ---
 
-## 📝 Suy nghĩ cuối
+## Suy nghĩ cuối
 
-> **Tốc độ của Niềm tin không phải về việc tốt bụng. Đó là về kết quả.**
+Điều mình thích nhất từ cuốn sách này là: trust không phải chuyện “làm người tốt” cho đẹp hình ảnh.
 
-Tổ chức có niềm tin cao di chuyển **nhanh hơn, tốn ít chi phí hơn, hiệu suất tốt hơn**.
+Trust là đòn bẩy hiệu suất thật sự. Tổ chức nào xây được trust sớm sẽ đi nhanh hơn với chi phí thấp hơn.
 
-Hãy bắt đầu hôm nay bằng cách chọn **1 hành vi** để thực hành trong tuần này. 🚀
+Nếu cần bắt đầu ngay, hãy chọn một hành vi nhỏ trong 13 hành vi và làm thật đều trong 1 tuần.

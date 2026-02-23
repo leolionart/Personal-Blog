@@ -10,342 +10,232 @@ tags:
 type: post
 ---
 
-## 📖 Vấn đề
+## Vấn đề
 
-Bạn có bao giờ:
-- 📚 Muốn đọc sách nhưng **không bao giờ kết thúc**?
-- ✍️ Muốn viết article nhưng **luôn hoãn lại**?
-- 🧠 Đọc xong nhưng **quên kiến thức ngay**?
+Bạn có từng rơi vào vòng lặp này chưa:
 
-**Tôi cũng vậy.**
+- Muốn đọc sách nhưng đọc mãi không xong.
+- Muốn viết bài nhưng cứ dời hết lần này tới lần khác.
+- Đọc xong thì nhớ được vài hôm rồi quên.
 
----
-
-## 📋 Mục lục
-
-1. [Vấn đề 1: Đọc dở dang](#-vấn-đề-1-đọc-dở-dang)
-2. [Vấn đề 2: Ghi nhớ thông tin](#-vấn-đề-2-ghi-nhớ-thông-tin)
-3. [Vấn đề 3: Tê liệt khi viết](#-vấn-đề-3-tê-liệt-khi-viết)
-4. [Thói quen viết đều đặn](#-thói-quen-viết-đều-đặn)
-5. [Nhận thức quan trọng](#-nhận-thức-quan-trọng)
+Mình đã từng như vậy trong thời gian dài.
 
 ---
 
-## 🚫 Vấn đề 1: Đọc dở dang
+## Mục lục
 
-### Tình huống:
-
-**Trước**:
-- Mua 10 cuốn sách
-- 📖 Đọc chapter 1-2 mỗi cuốn
-- ❌ Bỏ dở tất cả
-
-**Tại sao**:
-- Sách nặng & dài
-- Khó nắm main ideas từ đầu
-- Mất động lực khi chưa thấy value
+1. [Vấn đề 1: Đọc dở dang](#vấn-đề-1-đọc-dở-dang)
+2. [Vấn đề 2: Khó ghi nhớ kiến thức](#vấn-đề-2-khó-ghi-nhớ-kiến-thức)
+3. [Vấn đề 3: Tê liệt khi viết](#vấn-đề-3-tê-liệt-khi-viết)
+4. [Xây thói quen viết đều](#xây-thói-quen-viết-đều)
+5. [Những điều mình rút ra](#những-điều-mình-rút-ra)
 
 ---
 
-### ✅ Giải pháp: Tóm tắt trước bằng AI
+## Vấn đề 1: Đọc dở dang
 
-**Quy trình**:
+### Tình huống cũ
 
+Trước đây mình thường:
+
+- Mua rất nhiều sách.
+- Mỗi cuốn đọc 1-2 chương.
+- Rồi bỏ dở gần như tất cả.
+
+Lý do rất đơn giản:
+
+- Sách dài, thông tin dày.
+- Vào thẳng nội dung nên khó nắm ý chính.
+- Chưa thấy giá trị sớm nên nhanh nản.
+
+### Cách mình xử lý: Tóm tắt trước bằng AI
+
+Mình làm theo flow này:
+
+```text
+1) Chọn cuốn mình quan tâm
+2) Copy mục lục vào ChatGPT
+3) Yêu cầu tóm tắt ngắn (khoảng 500 từ)
+4) Đọc bản tóm tắt trước
+5) Sau đó mới đọc bản đầy đủ
 ```
-1. Chọn cuốn sách quan tâm
-   ↓
-2. Copy mục lục vào ChatGPT
-   ↓
-3. "Tóm tắt cuốn sách này trong 500 từ"
-   ↓
-4. Đọc bản tóm tắt TRƯỚC khi đọc nguyên văn
-   ↓
-5. Có bối cảnh → đọc nguyên văn = thú vị hơn
-```
 
-### Ví dụ prompt:
+Prompt mẫu:
 
-```
-Bạn là chuyên gia sách. Hãy cung cấp tóm tắt ngắn gọn
-về các ý tưởng chính và bài học từ cuốn sách này:
+```text
+Bạn là người review sách. Hãy tóm tắt các ý chính và bài học quan trọng của cuốn sau:
 
 [Tên sách]
 [Mục lục]
 
-Định dạng như sau:
+Đầu ra gồm:
 - Luận điểm cốt lõi (1 câu)
 - 3 ý tưởng chính
 - 3 bài học quan trọng
-- Phù hợp cho: [loại độc giả]
+- Cuốn này hợp với nhóm độc giả nào
 ```
 
-### Lợi ích:
+Kết quả là:
 
-✅ Biết sách có giá trị không **trước khi đầu tư thời gian**
-✅ Có **bản xem trước** → đọc sâu hơn
-✅ **Tăng động lực** từ việc hiểu giá trị từ sớm
+- Mình biết sớm cuốn nào đáng đầu tư thời gian.
+- Có bối cảnh trước nên đọc sâu dễ hơn.
+- Động lực tăng rõ rệt vì hiểu mình đang đọc để làm gì.
 
 ---
 
-## 🧠 Vấn đề 2: Ghi nhớ thông tin
+## Vấn đề 2: Khó ghi nhớ kiến thức
 
-### Tình huống:
+### Tình huống cũ
 
-**Trước**:
-- Đọc xong sách
-- 1 tuần sau → **quên hết**
-- Ghi chú lộn xộn, không có tổ chức
+- Đọc xong thấy rất hay.
+- Một tuần sau quên gần hết.
+- Ghi chú rời rạc, lúc cần thì không tìm nổi.
 
-**Tại sao**:
-- Không có hệ thống để **tổng hợp kiến thức**
-- Ghi chú chỉ là **text ngẫu nhiên**
-- Không ôn lại
+Nguyên nhân chính:
+
+- Không có hệ thống tổng hợp kiến thức.
+- Ghi chú kiểu chắp vá.
+- Không có vòng ôn lại.
+
+### Cách mình xử lý: Mindmap + AI hỗ trợ cấu trúc
+
+Flow mình đang dùng:
+
+```text
+1) Đọc theo từng chapter
+2) Sau mỗi chapter, chốt 5 ý quan trọng
+3) Nhờ AI gợi ý cấu trúc mindmap
+4) Sắp xếp lại note theo cấu trúc đó
+5) Tạo một trang tóm tắt cuối cùng
+```
+
+Prompt mẫu:
+
+```text
+Mình có các ghi chú sau từ một chapter:
+[ghi chú]
+
+Hãy đề xuất cấu trúc mindmap gồm:
+- Trung tâm: ý tưởng chính
+- Các nhánh: khái niệm hỗ trợ
+- Nhánh ứng dụng: ví dụ thực tế
+
+Xuất ra dạng cây markdown hoặc JSON.
+```
+
+Lợi ích:
+
+- Ghi nhớ tốt hơn vì kiến thức được trực quan hóa.
+- Ôn lại nhanh hơn vì thông tin có cấu trúc.
+- Đỡ tốn thời gian sắp ý thủ công.
 
 ---
 
-### ✅ Giải pháp: Sơ đồ tư duy + AI phác thảo
+## Vấn đề 3: Tê liệt khi viết
 
-**Quy trình**:
+### Tình huống cũ
 
-```
-1. Đọc sách từng chapter
-   ↓
-2. Sau mỗi chapter → tóm tắt 5 điểm chính
-   ↓
-3. Dùng AI tạo cấu trúc sơ đồ tư duy
-   ↓
-4. Sắp xếp lại ghi chú theo sơ đồ tư duy
-   ↓
-5. Tạo "trang tóm tắt sách" với hình ảnh trực quan
-```
+- Muốn viết, mở Google Docs ra.
+- Đứng hình trước trang trắng.
+- Nghĩ quá nhiều, không bắt đầu được.
+- Cuối cùng lại “nghiên cứu thêm” để trì hoãn.
 
-### Ví dụ prompt:
+Nguyên nhân quen thuộc:
 
-```
-Tôi đã đọc các điểm chính từ một chapter sách:
-[Ghi chú của bạn]
+- Sợ viết dở.
+- Không biết mở bài từ đâu.
+- Cầu toàn quá mức.
 
-Hãy tạo cấu trúc sơ đồ tư duy với:
-- Trung tâm: Ý tưởng chính
-- Nhánh 1: Khái niệm hỗ trợ 1
-- Nhánh 2: Khái niệm hỗ trợ 2
-- Nhánh 3: Ứng dụng/Ví dụ thực tế
+### Cách mình xử lý: Quy trình viết 3 bước với AI
 
-Đầu ra dưới dạng:
-- Cây markdown
-- Hoặc JSON để trực quan hóa
+#### Bước 1: Brainstorm
+
+Nhờ AI gợi ý góc tiếp cận, đối tượng độc giả, ý chính.
+
+Prompt mẫu:
+
+```text
+Mình muốn viết về: [chủ đề]
+
+Hãy đề xuất 5 góc tiếp cận khác nhau.
+Mỗi góc gồm 3 ý chính.
+Ưu tiên góc nhìn đa dạng theo từng nhóm độc giả.
 ```
 
-### Lợi ích:
+Mục tiêu: có nhiều hướng để chọn, thay vì kẹt ở một hướng duy nhất.
 
-✅ **Học trực quan** → ghi nhớ tốt hơn
-✅ **Kiến thức có tổ chức** → dễ ôn lại
-✅ **AI giúp cấu trúc** → không phải vẽ thủ công
+#### Bước 2: Lên dàn ý
 
----
+Nhờ AI dựng outline rõ ràng để giảm ma sát khi viết.
 
-## ✍️ Vấn đề 3: Tê liệt khi viết
-
-### Tình huống:
-
-**Trước**:
-- Muốn viết article
-- Mở Google Docs → **hội chứng trang trắng**
-- 😰 Nghĩ quá nhiều + không bắt đầu được
-- **Trì hoãn** bằng cách "nghiên cứu thêm"
-
-**Tại sao**:
-- Sợ viết không tốt
-- Không biết bắt đầu từ đâu
-- Chủ nghĩa hoàn hảo
-
----
-
-### ✅ Giải pháp: Viết 3 bước với AI
-
-**Quy trình**:
-
-#### **Bước 1: Brainstorming** 🧠
-
-**Dùng AI để:**
-- Tạo phác thảo từ 1 câu ý tưởng
-- Gợi ý 5 góc độ để viết chủ đề
-- Tạo bullet points cho từng phần
-
-**Prompt**:
-```
-Tôi muốn viết về: [Chủ đề]
-
-Tạo 5 góc độ khác nhau để tiếp cận chủ đề này,
-mỗi góc độ với 3 bullet points.
-
-Hãy đa dạng - các góc nhìn khác nhau,
-đối tượng mục tiêu khác nhau.
-```
-
-**Lợi ích**: Có **nhiều lựa chọn** → chọn cái tốt nhất
-
----
-
-#### **Bước 2: Phác thảo** 📋
-
-**Dùng AI để:**
-- Tạo phác thảo chi tiết
-- Gợi ý chuyển tiếp giữa các phần
-- Thêm tiêu đề và tiêu đề phụ
-
-**Prompt**:
-```
-Tạo phác thảo chi tiết cho bài viết:
-Tiêu đề: [Tiêu đề của bạn]
-Góc độ chính: [Góc độ bạn chọn]
-Đối tượng mục tiêu: [Ai?]
+```text
+Tạo outline chi tiết cho bài viết:
+- Tiêu đề: [tiêu đề]
+- Góc tiếp cận: [đã chọn]
+- Độc giả mục tiêu: [ai]
 
 Bao gồm:
-- Mở bài gây chú ý
+- Mở bài
 - 3-4 phần chính
-- Mỗi phần: 3-4 phần con
-- Kết bài với CTA
+- Mỗi phần có các ý con
+- Kết bài có CTA
 
-Định dạng Markdown.
+Định dạng markdown.
 ```
 
-**Lợi ích**: **Lộ trình rõ ràng** → viết nhanh hơn
+#### Bước 3: Viết nháp nhanh rồi chỉnh
+
+1. Viết nháp thô trong 30 phút, chưa cần hay.
+2. Dán vào AI để cải thiện độ rõ ràng, flow, ví dụ.
+3. Chỉnh lại theo giọng văn cá nhân trước khi publish.
+
+Điểm quan trọng: AI giúp tăng tốc phần “nặng”, còn tiếng nói cuối cùng vẫn là của mình.
 
 ---
 
-#### **Bước 3: Tinh chỉnh lặp lại** ✨
+## Xây thói quen viết đều
 
-**Quy trình**:
-1. **Viết bản nháp thô** nhanh (30 phút)
-   - Không quan tâm đến sự hoàn hảo
-   - Chỉ cần đưa nội dung ra
+Điều mình thấy hiệu quả nhất là:
 
-2. **Dán vào AI**
-   - "Cải thiện bản nháp này về sự rõ ràng và hấp dẫn"
-   - "Làm cho nó thân thiện hơn"
-   - "Thêm ví dụ"
+> Time block cố định hiệu quả hơn quản lý task kiểu cứng.
 
-3. **Chỉnh sửa & hoàn thiện**
-   - Đọc lại
-   - Điều chỉnh theo ý cá nhân
-   - Hoàn thiện
+Trước đây mình coi viết là một “dự án” trong Notion nên hay bỏ qua.
+Hiện tại mình chốt một khung cố định: **thứ Tư, 9-10h sáng**.
 
-**Lợi ích**:
-- ✅ Bản nháp **nhanh chóng**
-- ✅ AI xử lý **công việc chỉnh sửa nặng nhọc**
-- ✅ Bạn tập trung vào **giọng văn cá nhân**
+Quy tắc đi kèm:
 
----
+- Bật airplane mode.
+- Mục tiêu đơn giản: viết nháp hoặc hoàn thiện một phần.
+- Không đặt chuẩn “phải hoàn hảo”.
 
-## 📅 Thói quen viết đều đặn
+Kết quả:
 
-### Khám phá quan trọng:
-
-> **Khung thời gian nhất quán > Quản lý dự án cứng nhắc**
-
-### Thử nghiệm:
-
-**Trước**:
-- Dùng Notion quản lý task
-- Đặt "viết article" là dự án
-- ❌ Rất cứng nhắc, dễ bỏ qua
-
-**Sau**:
-- **Mỗi thứ Tư 9-10h sáng**: Giờ viết
-- Thiết bị ở chế độ máy bay
-- Task đơn giản: "Viết hoặc phác thảo 1 article"
-
-### Kết quả:
-
-✅ **Output đều đặn hơn**
-✅ **Ít kiệt sức khi quyết định** (cùng thời gian, cùng địa điểm)
-✅ **Hình thành thói quen** → dễ hơn theo thời gian
-
-### Mẹo:
-
-1. **Chọn thời gian cụ thể** 🕐
-   - Buổi sáng khi đầu óc tươi tỉnh
-   - Cùng thời gian mỗi ngày/tuần
-
-2. **Bảo vệ khung giờ** 🛡️
-   - Chặn lịch
-   - Chế độ máy bay
-   - Nói với người khác: đừng làm phiền
-
-3. **Giảm rào cản khi bắt đầu** 📝
-   - Không phải "viết article hoàn hảo"
-   - Mà là "viết 500 từ"
-   - Ma sát thấp = tính nhất quán cao
-
-4. **Theo dõi chuỗi ngày** 📊
-   - Lịch đơn giản: ✓ hoặc ✗
-   - Động lực trực quan
-   - Đừng phá chuỗi
+- Tần suất viết ổn định hơn.
+- Giảm mệt mỏi vì phải ra quyết định liên tục.
+- Dần tạo thành nhịp tự nhiên.
 
 ---
 
-## 💡 Nhận thức quan trọng
+## Những điều mình rút ra
 
-### 1️⃣ AI không phải người viết, mà là chất xúc tác
-
-❌ Đừng: Mong AI viết thay cho bạn
-✅ Hãy: Dùng AI để **vượt qua rào cản tâm lý**
-
-### 2️⃣ Đọc tóm tắt trước rất mạnh
-
-📚 Đọc tóm tắt → Đọc nguyên văn → Hiểu sâu hơn
-🚫 Tránh: Đọc nguyên văn mà không hiểu giá trị
-
-### 3️⃣ Hệ thống thắng ý chí
-
-💪 Ý chí có giới hạn
-🔄 Hệ thống (thói quen nhất quán) bền vững
-
-### 4️⃣ Hoàn hảo là kẻ thù của hoàn thành
-
-Bài viết hoàn hảo 100% = không bao giờ xuất bản
-Bài viết khá ổn 80% = ship ngay hôm nay
-
-### 5️⃣ Công cụ là hệ số nhân
-
-🤖 AI + Quy trình tốt = Hiệu suất gấp 10 lần
-🤖 AI đơn thuần = vẫn bị kẹt
-✅ Tìm nhịp điệu của riêng bạn với AI
+1. **AI không viết thay bạn, AI giúp bạn bắt đầu.**
+2. **Đọc tóm tắt trước** giúp tăng tốc hiểu sâu.
+3. **Hệ thống tốt luôn thắng ý chí nhất thời.**
+4. **Done tốt hơn perfect** nếu muốn tiến lên đều.
+5. **Công cụ chỉ là đòn bẩy**, quy trình mới là gốc.
 
 ---
 
-## 🎯 Hành động cụ thể
+## Hành động ngay trong tuần này
 
-### Bắt đầu ngay hôm nay:
-
-1. **Đọc sách**:
-   - [ ] Chọn 1 cuốn sách muốn đọc
-   - [ ] Dùng ChatGPT tóm tắt trước
-   - [ ] Xem liệu nó có đáng thời gian không
-
-2. **Viết lách**:
-   - [ ] Lên lịch 1 giờ viết
-   - [ ] Dùng quy trình AI 3 bước
-   - [ ] Ship thứ gì đó trong tuần này
-
-3. **Tính nhất quán**:
-   - [ ] Chọn ngày/giờ viết
-   - [ ] Chặn lịch
-   - [ ] Nói với ai đó (giữ trách nhiệm)
+- Chọn 1 cuốn sách và thử đọc tóm tắt trước bằng AI.
+- Chốt 1 khung giờ viết cố định trong tuần.
+- Dùng quy trình 3 bước để ra 1 bản nháp đầu tiên.
 
 ---
 
-## 🚀 Kết luận
+## Kết luận
 
-**Lười viết & đọc không phải lỗi**. Nó là dấu hiệu của:
-- ❌ Quy trình sai
-- ❌ Rào cản quá cao
-- ❌ Thiếu cấu trúc
+“Lười đọc, lười viết” thường không phải do thiếu kỷ luật, mà do hệ thống chưa đúng và ngưỡng bắt đầu quá cao.
 
-**Lời khuyên**:
-> Dùng AI để **giảm ma sát**, không phải để **thay thế nỗ lực**.
-
-AI + Thói quen nhất quán + Tiêu chuẩn thấp hơn = **Cỗ máy tạo ra nội dung**
-
-Bản thân tương lai của bạn sẽ cảm ơn bạn. 🙏
+Nếu biết dùng AI để giảm ma sát, cộng với thói quen đều đặn, bạn sẽ đi rất xa.

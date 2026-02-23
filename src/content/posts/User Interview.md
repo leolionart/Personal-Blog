@@ -8,313 +8,215 @@ tags:
 type: announcement
 ---
 
-## 📌 Giới thiệu
+## Giới thiệu
 
-Bài viết dưới đây dựa trên **kinh nghiệm thực tế** từ những buổi:
-- 🔍 **Usability testing**
-- 👥 **User interview**
+Bài viết này tổng hợp lại kinh nghiệm mình làm **usability testing** và **user interview** trong quá trình làm sản phẩm tại Tiki.
 
-được thực hiện tại **Tiki**.
-
-> Có nhiều phần mình sưu tầm lại từ các bài viết khác mà mình sẽ dẫn link trực tiếp trong bài.
+Một số phần có tham khảo từ tài liệu bên ngoài, mình để link trực tiếp trong bài để bạn đọc tiếp nếu muốn đào sâu.
 
 ![](https://i.imgur.com/BZvzaE1.jpeg)
 
-_Minh họa từ [uxknowledgebase.com](https://uxknowledgebase.com/@krisztina.szerovayb%E1%BA%A1n) - có nhiều bài viết cực hay và chuyên sâu, được diễn tả bằng mindmap_
+_Minh họa tham khảo từ [uxknowledgebase.com](https://uxknowledgebase.com/@krisztina.szerovayb%E1%BA%A1n)_
 
 ---
 
-## 📋 Mục lục
+## Mục lục
 
-1. [Case Study: Thiết kế ứng dụng note](#-case-study)
-2. [Các bước phỏng vấn](#-các-bước-phỏng-vấn)
-3. [Câu hỏi nên và không nên hỏi](#-câu-hỏi-nên-và-không-nên-hỏi)
-4. [Tips ghi lại phỏng vấn](#-tips-ghi-lại-phỏng-vấn)
-
----
-
-## 🎯 Case Study: Thiết kế ứng dụng Note 
-
-### 📍 Bước 1: Xác định đối tượng phỏng vấn
-
-**Câu hỏi**:
-- Bạn sẽ hỏi ai?
-- Người dùng của tôi là ai?
-- Tìm họ ở đâu?
-
-**Cách làm**:
-- Tìm **5 đối tượng** ở các nhóm khác nhau
-- Ví dụ cho ứng dụng note:
-  - 👨‍🎓 Sinh viên
-  - 💼 Quản lý IT của trường học
-  - 👨‍🏫 Giáo viên
-  - ... và những nhóm khác
+1. [Case study: thiết kế app note](#case-study-thiết-kế-app-note)
+2. [Quy trình một buổi phỏng vấn](#quy-trình-một-buổi-phỏng-vấn)
+3. [Câu hỏi nên hỏi và nên tránh](#câu-hỏi-nên-hỏi-và-nên-tránh)
+4. [Cách ghi lại và chia sẻ insight](#cách-ghi-lại-và-chia-sẻ-insight)
 
 ---
 
-### 📍 Bước 2: Tránh những cái bẫy
+## Case study: thiết kế app note
 
-❌ **KHÔNG nên làm**:
-- Hỏi về User Flow, tối ưu visual, những chi tiết quá cụ thể
-- Điều này gây **phân tâm** vì người dùng sẽ nghĩ họ biết họ muốn gì
+### Bước 1: Chọn đúng nhóm người để phỏng vấn
 
-✅ **NÊN làm**:
-- Tìm **vấn đề thực sự** của họ
-- Xác định nó có **tiềm năng** hay không
-- Ghi nhớ: Đôi khi phỏng vấn vài người bạn không tìm thấy vấn đề đủ lớn
+Câu hỏi đầu tiên luôn là:
 
----
+- User mục tiêu của mình là ai?
+- Mình tìm họ ở đâu?
+- Mỗi nhóm đại diện cho nhu cầu gì?
 
-### 📍 Bước 3: Nhận ra vấn đề từ cuộc phỏng vấn
+Với app note, mình cố gắng có người từ nhiều nhóm khác nhau (ví dụ sinh viên, giáo viên, quản lý IT...). Mục tiêu là tránh thiên lệch từ một nhóm duy nhất.
 
-Sau khi phỏng vấn vài user, bạn sẽ đúc kết được **insight pattern** như:
+### Bước 2: Tránh sa đà vào chi tiết giải pháp quá sớm
 
-> "Lý do cô ấy dùng Evernote là vì nó mang cảm giác tờ note, thiên về suy nghĩ và chi tiết. Còn Google Docs kiểu như văn bản, không phải ghi chú nhỏ gọn"
+Điều nên tránh:
 
-**Kết luận**: Cần làm tính năng **di động, gọn nhẹ** giống tờ note, không cồng cềnh như văn bản.
+- Hỏi quá sâu về UI flow hoặc visual detail từ đầu.
 
----
+Điều nên làm:
 
-### 📍 Bước 4: Phát triển ý tưởng
+- Tập trung vào vấn đề thật họ đang gặp.
+- Kiểm tra xem vấn đề đó có đủ lớn để giải quyết không.
 
-**Giả thuyết mới**:
-> "Nếu chúng ta có Google Docs + tính năng làm việc nhóm + khả năng ghi chú nhỏ, được thiết kế nhiều hơn cho ghi chú → thì sẽ hút người dùng"
+Nhiều buổi phỏng vấn không ra “insight vàng”, chuyện này bình thường.
 
----
+### Bước 3: Tìm pattern trong lời kể của user
 
-### 📍 Bước 5: Xác thực ý tưởng
+Sau vài buổi, bạn sẽ thấy các mẫu lặp lại.
 
-**Câu hỏi quan trọng**:
-- ✅ Bạn đã có ý tưởng
-- ✅ Có giải pháp hợp lý
-- ❓ Nhưng **đã đủ chưa**? Đủ để thuyết phục user chuyển đổi?
+Ví dụ insight kiểu này:
 
-**2 cách xác thực**:
+> “Tôi dùng Evernote vì cảm giác giống ghi note nhanh. Google Docs thì giống soạn văn bản hơn.”
 
-#### Cách 1️⃣: Phỏng vấn với prototype
-- Vẽ wireframe → làm low prototype
-- Mang đi gặp user
+Từ đó có thể rút ra giả thuyết: người dùng cần trải nghiệm nhẹ, nhanh, linh hoạt như tờ note thật.
 
-**⚠️ Tuyệt đối KHÔNG hỏi**: "Tính năng này có tốt không?"
+### Bước 4: Hình thành giả thuyết sản phẩm
 
-✅ **Thay vào đó**:
-- Nói về chuyện phiếm, cuộc sống của họ
-- Càng hiểu họ sâu → hiểu **bối cảnh** họ đang sống
-- Hiểu **tại sao** họ muốn những gì họ muốn
+Một giả thuyết có thể là:
 
-**Tips**:
-- Đóng vai là người **không làm sản phẩm** để feedback phê bình
-- Dùng cấu trúc **"Yes, and…"** để nói theo kiểu đóng góp
-- Ví dụ cách nói:
-  - _"Tôi cảm thấy điều quan trọng là…"_
-  - _"Đây là suy nghĩ của tôi về vấn đề này…"_
-  - _"Tôi không đồng ý về việc này bởi vì…"_
-  - _"Điều thực sự quan trọng đối với tôi là…"_
+> “Nếu kết hợp khả năng cộng tác kiểu docs với trải nghiệm note gọn nhẹ, sản phẩm sẽ hấp dẫn hơn.”
 
-#### Cách 2️⃣: Làm MVP nhanh
-- Tung **MVP thực sự** ra thị trường
-- Dùng thử → đánh giá
+### Bước 5: Xác thực giả thuyết
 
-**Lý do**:
-- Bạn sẽ **mất 3 tháng** làm cả bộ Google Docs
-- Thay vào đó, làm **một tính năng nhỏ xíu** (ví dụ: browser extension)
-- **Đánh giá**: Nó có hữu ích cho user không?
+Bạn có ý tưởng rồi, nhưng câu hỏi quan trọng là: **đủ mạnh để user chuyển đổi chưa?**
 
-**⚠️ Chìa khóa**: Nếu không thực thi ra → **rất khó đánh giá kết quả**
+Có 2 cách mình hay dùng:
 
-**💡 Sự thật**: Khi user phải trả tiền → họ sẽ thực sự dùng. Nếu chỉ vì $5 mà không trả → họ cũng chẳng háo hức lắm.
+#### Cách 1: Test với prototype
 
----
+- Làm wireframe hoặc low-fidelity prototype.
+- Mang đi test trực tiếp với user.
 
-### 📍 Bước 6: Phỏng vấn user của đối thủ
+Điều cần tránh:
 
-**Nhận xét**:
-- Bạn sẽ nhận được **hàng tá kết quả** về những khó khăn, yêu cầu tính năng mới
-- ❌ NHƯNG **KHÔNG nên** coi đó là vấn đề lớn
+- Đừng hỏi “Bạn thấy tính năng này hay không?” vì câu này dễ tạo câu trả lời xã giao.
 
-**Lý do**: Nếu họ đã dùng dịch vụ đối thủ và sẵn sàng bỏ qua những vấn đề này → **đó không phải vấn đề lớn nhất**
+Nên làm:
 
-**Kết luận**: Phải **so sánh mức độ tranh luận** giữa các nhóm đối tượng khác nhau
+- Hỏi về bối cảnh sống và công việc thật của họ.
+- Khai thác hành vi hiện tại và lý do phía sau.
+
+#### Cách 2: Launch MVP nhỏ
+
+- Thay vì xây full product 3 tháng, làm một phiên bản rất nhỏ để test nhanh.
+- Đưa ra thị trường thật, đo hành vi thật.
+
+Một nguyên tắc thực tế: user sẵn sàng trả tiền (dù ít) là tín hiệu mạnh hơn rất nhiều so với “nói là sẽ dùng”.
+
+### Bước 6: Phỏng vấn user đang dùng đối thủ
+
+Nhóm này cho bạn nhiều phản hồi, nhưng không phải phản hồi nào cũng là “vấn đề lớn nhất”.
+
+Nếu họ vẫn đang dùng đối thủ dù có than phiền, có thể pain đó chưa đủ lớn để họ rời bỏ.
+
+### Bước 7: Phỏng vấn cả người chưa từng dùng sản phẩm loại đó
+
+Đây là nhóm cực quan trọng nếu bạn muốn mở rộng thị trường.
+
+Chỉ nói chuyện với user hiện tại thường chỉ giúp tối ưu sản phẩm hiện có, khó tìm được rào cản để mở tệp mới.
 
 ---
 
-### 📍 Bước 7: Phỏng vấn những người "không phải user"
-
-**Nhóm này**: Người chưa bao giờ dùng ứng dụng note
-
-**Tại sao quan trọng**:
-- Những điều từ nhóm này **mới là quan trọng nhất**
-- Đó là **rào cản** chặn đứng sự mở rộng của bạn
-- Nếu chỉ nói chuyện với user hiện tại → **không tìm được cách mở rộng thị trường**
-
----
-
-## 🎤 Các bước phỏng vấn 
+## Quy trình một buổi phỏng vấn
 
 ![](https://i.imgur.com/3NTvTEM.png)
 
 _Tham khảo: [uxlagi.com](https://uxlagi.com/#!#15)_
 
-### **Bước 1. Xin chào** 👋
+### Bước 1: Chào hỏi
 
-- 😊 Cười nồn nả
-- 🥤 Mời nước
-- 💬 **Làm người đối diện thoải mái**
+Mục tiêu là tạo không khí thoải mái để người tham gia nói thật.
 
-> **Càng thoải mái** → họ chia sẻ càng nhiều
+### Bước 2: Giới thiệu bối cảnh
 
----
+Nói rõ:
 
-### **Bước 2. Giới thiệu** 📝
+- Buổi này nhằm mục đích gì.
+- Họ có thể kỳ vọng điều gì.
+- Quyền từ chối, quyền dừng bất kỳ lúc nào.
+- Chính sách bảo mật thông tin.
 
-> _"Người tham gia cần biết gì trước khi bắt đầu?"_
+Bạn có thể dùng tình huống giả định để họ dễ nhập vai.
 
-**Dẫn dắt bối cảnh**:
-- Dùng tình huống giả định để giúp user **tưởng tượng** mình trong trường hợp nào đó
-- Giúp họ có **tư duy phù hợp**
+### Bước 3: Khám phá bằng câu hỏi mở
 
-**Ví dụ**:
-- "Hãy tưởng tượng bạn muốn mua quà cho một người bạn."
-- "Bạn cần mua máy in WiFi cho công ty."
-- "Bạn đang tìm mua tai nghe Bluetooth."
-- "Bạn vừa chụp ảnh ở một bữa tiệc và muốn chia sẻ với bạn bè."
-- "Bạn cần mua máy quét vân tay cho công ty."
-- "Bạn là chủ một quán cà phê và cần một website."
-- "Bạn vừa nhận được email từ quản lý yêu cầu xem trang web này."
+Ví dụ tốt:
 
-**Điểm quan trọng**:
-- Nêu rõ mình cần gì từ user
-- User có thể mong chờ gì từ bạn
-- Giải thích cam kết bảo mật, quà thưởng, mục đích, quyền từ chối, và khả năng ngừng bất cứ lúc nào
+- “Bạn thường làm gì khi chuẩn bị đi công tác?”
 
----
+Ví dụ kém:
 
-### **Bước 3. Khám phá** 🔍
+- “Bạn có mua đồ ăn trước khi đi không?”
 
-Không ai giống ai. Dùng **câu hỏi gợi mở**.
+Câu hỏi đóng sẽ vô tình dẫn hướng câu trả lời.
 
-**✅ Ví dụ câu hỏi TỐT**:
-- "Bạn thường làm gì khi chuẩn bị đi chơi xa?"
-- Giúp bạn hiểu **họ là ai** và **họ hay làm gì**
+### Bước 4: Quan sát dùng thử
 
-**❌ Ví dụ câu hỏi XẤU (câu hỏi đóng)**:
-- "Khi chuẩn bị đi chơi xa, bạn có mua đồ ăn đem theo không?"
-- Khiến user **tập trung chỉ vào mua đồ ăn** thôi
+Cho user dùng sản phẩm/prototype (giấy, low-fi, high-fi đều được) và khuyến khích họ “think aloud”.
+
+### Bước 5: Tổng kết
+
+Tóm tắt lại những gì đã nghe và hỏi thêm:
+
+> “Bạn còn điều gì muốn chia sẻ mà mình chưa hỏi tới không?”
+
+### Bước 6: Kết thúc
+
+Kết thúc nhẹ nhàng, cảm ơn họ đã dành thời gian.
 
 ---
 
-### **Bước 4. Dùng thử** 🧪
+## Câu hỏi nên hỏi và nên tránh
 
-- Quan sát user **sử dụng sản phẩm** hoặc dùng thử nháp:
-  - 📋 Nháp giấy
-  - 🎨 Nháp sơ cấp
-  - 📐 Nháp cao cấp
+### Nên tránh
 
-**Tips**: Khuyến khích user **tưởng tượng và nói ra** những gì họ đang nghĩ
+| Nên tránh | Vì sao |
+|---|---|
+| Hỏi dẫn dắt | Dễ áp suy nghĩ của mình lên user |
+| Hỏi kép (2 câu một lúc) | User khó trả lời rõ |
+| Hỏi người quá “tiện” | Mẫu không đủ đại diện |
+| Chốt sẵn giải pháp trong câu hỏi | Mất cơ hội khám phá vấn đề thật |
 
----
+### Nên làm
 
-### **Bước 5. Tổng kết** 📋
-
-- Tóm tắt lại những gì **hai bạn đã nói**
-- Hỏi: **"Có gì bạn muốn chia sẻ mà chưa được hỏi không?"**
-- Để user nói hết những gì muốn nói
-
----
-
-### **Bước 6. Tạm biệt** 👋
-
-- Dọn dần sách vở từ trước → user **biết phỏng vấn chuẩn bị kết thúc**
-- **Cảm ơn** họ đã dành thời gian
-
-> Trong nhà bạn không bao giờ đuổi khách về đột ngột đúng không?
+- Tìm user trong các cộng đồng phù hợp (group, forum, cộng đồng nghề nghiệp).
+- Hỏi theo hướng hành vi đã xảy ra, không chỉ ý định tương lai.
 
 ---
 
-## 🎯 Câu hỏi nên và không nên hỏi 
+## Cách ghi lại và chia sẻ insight
 
-### ❌ KHÔNG nên làm:
+### Ghi âm/ghi hình khi có sự đồng ý
 
-| ❌ | Lý do |
-|-----|-------|
-| Đưa sản phẩm ra cho họ xem | Chẳng khác gì nói về tính năng |
-| Hỏi về định hướng tính năng | Kiểu "Bạn có sẵn sàng trả phí để theo dõi?" → áp đặt suy nghĩ |
-| Hỏi những người **dễ gặp** | Không có thông tin tốt nhất |
-| **Thừa nhận** về user | Áp đặt suy nghĩ của bạn |
-| **Hỏi dẫn dắc** | Áp đặt suy nghĩ khi hỏi |
-| **Hỏi kép** | Hỏi nhiều câu một lúc |
-| **Hỏi loạn** | Làm user bị rối |
+Mình thường ưu tiên ghi âm hoặc ghi hình (được user đồng ý trước) thay vì ghi chép quá nhiều trong lúc trò chuyện.
 
-**✅ Thay vào đó**:
-- Đào bới trong **groups, forum** về lĩnh vực bạn quan tâm
+Lý do:
 
----
+- Giữ được sự tập trung vào cuộc đối thoại.
+- Có thể phát lại để team nghe đúng cảm xúc và ngữ điệu của user.
 
-## 💡 Tips ghi lại phỏng vấn 
+### Ưu tiên phỏng vấn trực tiếp hoặc video call
 
-### Cách thuyết phục team làm một tính năng
+Phỏng vấn qua email thường thiếu chiều sâu vì không có tương tác qua lại ngay lập tức.
 
-Sau khi phỏng vấn xong, mình thường:
-- 🎙️ **Ghi âm** lại các buổi phỏng vấn
-- 📹 **Quay video** các buổi trao đổi chuyên môn
+### Kỹ thuật đào sâu
 
-**Tại sao**?
+Khi user nói một ý quan trọng, mình hay dùng câu gợi mở như:
 
-1️⃣ **Không phải ghi chú**
-   - Ghi chú tạo cảm giác khó chịu
-   - Cảm giác như không thực sự tham gia cuộc trò chuyện
+- “Bạn kể rõ hơn chỗ này được không?”
+- “Lúc đó cụ thể bạn đã làm gì?”
 
-2️⃣ **Phát lại cho team nghe**
-   - Mọi người sẽ nghe được **giọng nói, cảm xúc** của user
-   - Xác nhận hơn về nhu cầu thực tế
+Các câu này đơn giản nhưng thường mở ra insight rất tốt.
 
----
+### Feedback tools và user interview bổ sung cho nhau
 
-### Luôn là phỏng vấn trực tiếp
+- Feedback tools giúp thấy lỗi và vấn đề bề mặt.
+- User interview giúp hiểu vì sao vấn đề xảy ra.
 
-**✅ Nên dùng**:
-- 👥 **Gặp mặt trực tiếp**
-- 📹 **Video chat**
+Nếu nguồn lực hạn chế, phỏng vấn user của đối thủ là một hướng đáng thử vì họ đã có nhu cầu và hành vi nền.
 
-**❌ Tránh**:
-- ✉️ Email (không có tính tương tác cao)
+### Khi nào cần phỏng vấn lại
+
+Chân dung user thay đổi theo từng giai đoạn sản phẩm. Nhóm user quan trọng ở 6 tháng đầu có thể khác hẳn sau 2-3 năm.
+
+Vì vậy, user interview phải là hoạt động lặp lại, không phải làm một lần cho có.
 
 ---
 
-### Kỹ thuật "phỏng vấn sâu"
+## Tóm tắt
 
-Trong những buổi phỏng vấn, bạn có thể **làm cho họ nói nhiều** bằng cách:
-
-- Dùng câu: **"Ồ hay đó, bạn nói rõ hơn đi"**
-- **Bật chế độ do thám** nhẹ nhàng: "Ồ hay quá!"
-- Bạn sẽ lấy được **kha khá thông tin hữu ích** về user
-- **Làm cho họ thoải mái chia sẻ** 🤝
-
----
-
-### Feedback tools vs. User interview
-
-**📊 Feedback tools trên trang**:
-- ✅ Siêu quan trọng
-- ✅ Giúp phát hiện **bugs** trước khi tung sản phẩm
-- ❌ KHÔNG cho biết bạn cần làm **gì**
-- ✅ Cho biết những điều **chưa tốt** về thứ đã làm
-
-**📋 Khi nguồn lực hạn chế**:
-- Tập trung vào phỏng vấn **user của đối thủ**
-- Tại sao? Vì họ đã có **hứng thú** với hành vi cần
-- Công việc của bạn chỉ là **thuyết phục họ chuyển đổi**
-- Dễ hơn so với **tạo hành vi mới** chưa có
-
----
-
-### Khi phải phỏng vấn lại?
-
-**Đối tượng thay đổi theo thời gian**:
-- Những người quan trọng **trong 6 tháng đầu** ≠ những người **3 năm sau**
-- **Bắt buộc** phỏng vấn **thường xuyên**
-- Nếu không → tính năng tiếp theo sẽ không tốt như lúc đầu
-
----
-
-**🎯 Tóm tắt**: Phỏng vấn user là quá trình liên tục, không phải một lần. Kiên trì, đồng cảm, và lắng nghe là chìa khóa thành công.
+User interview là một năng lực cần luyện liên tục. Làm tốt phần này đòi hỏi ba thứ: kiên nhẫn, đồng cảm và kỷ luật lắng nghe.

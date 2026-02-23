@@ -10,179 +10,161 @@ type: announcement
 
 ## Mở đầu
 
-Người ta thường nói **PM là mini-CEO của sản phẩm**. Tuy nhiên thực tế ở mỗi công ty, tính chất công việc của PM có nhiều điểm khác nhau.
+Nhiều người hay nói PM là “mini-CEO của sản phẩm”. Cách gọi đó không sai, nhưng nếu đi vào thực tế thì phạm vi công việc PM ở mỗi công ty sẽ khác nhau khá nhiều.
 
-Dưới đây là thống kê đã được kiểm chứng đúng với đa số Product Manager ở nhiều công ty. Tôi sẽ nêu kinh nghiệm thực tế và đúc kết của bản thân trên mỗi **Insight** mà tôi thu thập được về yêu cầu đối với một Product Manager.
-
----
-
-## 📋 Mục lục
-
-1. [Quản lý tài liệu sản phẩm](#-insight-1-quản-lý-tài-liệu-sản-phẩm)
-2. [Ưu tiên tính năng](#-insight-2-ưu-tiên-tính-năng)
-3. [Giao tiếp với khách hàng](#-insight-3-giao-tiếp-với-khách-hàng)
-4. [Khả năng đồng cảm](#-insight-4-khả-năng-đồng-cảm)
-5. [Quản lý chỉ số đo lường](#-insight-5-6-quản-lý-chỉ-số-đo-lường)
-6. [Làm việc với kỹ sư](#-insight-7-làm-việc-với-kỹ-sư)
-7. [Kỹ năng viết và trình bày](#-insight-8-kỹ-năng-viết-và-trình-bày)
-8. [Tỉ lệ giữ chân khách hàng](#-insight-9-tỉ-lệ-giữ-chân-khách-hàng)
+Bài này mình tổng hợp các insight phổ biến từ thị trường tuyển dụng, kèm góc nhìn cá nhân sau khi đi làm sản phẩm trong nhiều bối cảnh.
 
 ---
 
-## 📚 Insight 1: Quản lý tài liệu sản phẩm 
+## Mục lục
 
-> **65%** tin tuyển dụng có yêu cầu PM quản lý tài liệu sản phẩm
-
-### Các loại tài liệu phải viết:
-
-- **Tài liệu yêu cầu sản phẩm**
-  - User Flow
-  - Bản vẽ mô tả (BVMN)
-  - Thông số kỹ thuật / quy tắc giao diện
-
-- **Phân tích và báo cáo** nghiên cứu thị trường
-- **Câu chuyện người dùng** (User stories)
-
-### 💡 Quan điểm cá nhân
-
-Ở nhiều công ty, họ bỏ qua quy trình viết tài liệu. Tuy nhiên **tổ chức tài liệu mô tả đi theo quá trình phát triển sản phẩm là điều không thể thiếu**.
-
-Lý do:
-- Sau một thời gian vận hành, bạn sẽ quên vì sao một tính năng được làm như vậy
-- Không ghi lại những **quy luật ngầm** sẽ dẫn tới lãng phí thời gian, tiền bạc đập đi xây lại
+1. [Quản lý tài liệu sản phẩm](#insight-1-quản-lý-tài-liệu-sản-phẩm)
+2. [Ưu tiên tính năng](#insight-2-ưu-tiên-tính-năng)
+3. [Giao tiếp với khách hàng](#insight-3-giao-tiếp-với-khách-hàng)
+4. [Khả năng đồng cảm](#insight-4-khả-năng-đồng-cảm)
+5. [Quản lý metrics](#insight-5--6-quản-lý-metrics)
+6. [Làm việc với engineering](#insight-7-làm-việc-với-engineering)
+7. [Kỹ năng viết và trình bày](#insight-8-kỹ-năng-viết-và-trình-bày)
+8. [Retention](#insight-9-retention)
 
 ---
 
-## ⚖️ Insight 2: Ưu tiên tính năng 
+## Insight 1: Quản lý tài liệu sản phẩm
 
-> **73%** Product Managers dành thời gian cho việc sắp xếp ưu tiên tính năng
+> Khoảng 65% tin tuyển dụng yêu cầu PM có năng lực quản lý product documentation.
 
-Đây là **phần khó nhất của làm sản phẩm**. Có nhiều phương pháp để PM phân chia thứ tự ưu tiên (chi tiết ở bài riêng).
+Các nhóm tài liệu PM thường phải đụng đến:
 
-### Thực tế trong công việc:
+- Product requirement: user flow, spec, acceptance criteria.
+- Tài liệu phân tích thị trường và đề xuất.
+- User stories và luồng xử lý.
 
-- Mỗi sprint có những buổi họp đa bộ phận để quyết định ưu tiên
-- Cần **kiểm soát kỳ vọng** của stakeholders
-- Đảm bảo **sự đồng thuận** trên thứ tự ưu tiên bạn đề ra
+### Quan điểm cá nhân
 
----
+Nhiều team bỏ qua tài liệu vì thấy mất thời gian. Nhưng khi dự án chạy đủ lâu, thiếu tài liệu sẽ gây hậu quả rất rõ:
 
-## 👥 Insight 3: Giao tiếp với khách hàng 
+- Team quên vì sao một quyết định được đưa ra.
+- Người mới vào không nắm được bối cảnh.
+- Dễ tốn công “đập đi làm lại”.
 
-> **Ít hơn 50%** PM được kỳ vọng nói chuyện với khách hàng
-
-Đây là **điểm yếu của tôi**. Vì sự bias (nghĩ không có insight gì mới), tôi không nhìn ra tầm quan trọng của việc **gặp gỡ và nói chuyện với khách hàng thường xuyên**.
-
-### Điều cần biết:
-
-- User interview là kỹ thuật không hề dễ với nhiều người
-- Sẽ có bài viết riêng chi tiết về cách triển khai
+Nói ngắn gọn: tài liệu là bộ nhớ dài hạn của team.
 
 ---
 
-## ❤️ Insight 4: Khả năng đồng cảm 
+## Insight 2: Ưu tiên tính năng
 
-> **Empathy** là một trong những kỹ năng cá nhân quan trọng nhất của Product Manager
+> Khoảng 73% thời gian của PM rơi vào bài toán ưu tiên.
 
-### Tại sao điều này quan trọng:
+Đây là phần khó nhất, vì ý tưởng thì luôn nhiều còn nguồn lực thì luôn hữu hạn.
 
-Tôi thích tạo ra **niềm vui**. Tôi vẫn nhớ cảm giác được khen khi:
-- Làm ra một tính năng hay để **giúp user cải thiện cuộc sống**
-- Hay những lúc bực tức vì bug ảnh hưởng tới hoạt động của nhiều user
+Trong thực tế, PM phải làm tốt 3 việc:
 
-### Bài học:
-
-Để giải quyết vấn đề, bạn phải **tin là nó tồn tại và nó quan trọng** trước tiên, rồi mới:
-1. Dồn tâm trí tìm kiếm dữ liệu
-2. Chứng minh giả thuyết của bạn
-
-**Kết quả thực tế**: Nhiều lần tôi phát triển tính năng dựa trên định tính, bị thuyết phục bởi đồng cảm → quyết định ưu tiên đó → **đạt được niềm tin của user**.
+- Chọn thứ tự ưu tiên có căn cứ.
+- Quản trị kỳ vọng stakeholder.
+- Tạo đồng thuận để team chạy cùng hướng.
 
 ---
 
-## 📊 Insight 5 & 6: Quản lý chỉ số đo lường 
+## Insight 3: Giao tiếp với khách hàng
 
-### Insight 5: Không phải PM nào cũng sở hữu các metrics để đo lường công việc
+> Dưới 50% PM được kỳ vọng nói chuyện với khách hàng trong JD.
 
-**Thử thách lớn**: Dịch từ _business metrics_ sang _product metrics_ để:
-- Gắn mục tiêu phát triển tính năng
-- Kết nối với mục tiêu lớn của công ty
-- Sử dụng **OKR** để chia nhỏ các mục tiêu đo đạc được
+Mình từng xem nhẹ phần này vì nghĩ analytics là đủ. Sau này mới thấy đó là một bias rất tốn kém.
 
-### Insight 6: PM được yêu cầu data-driven nhưng không sở hữu metrics
+User interview không dễ, nhưng nó cho được thứ dữ liệu định lượng khó cho: bối cảnh, động cơ và nguyên nhân thật phía sau hành vi.
 
-**Sự thật**: Dù tốc độ phát triển sản phẩm bao nhiêu nhanh, bạn cũng cần **suy nghĩ về metrics** để:
-- Đo đạc nỗ lực của team
-- Xác định metrics cho từng tính năng
-- Hoặc ít nhất có một **dashboard tổng thể**
+---
 
-### 📈 Dashboard của tôi theo 3 nhóm:
+## Insight 4: Khả năng đồng cảm
+
+**Empathy** là kỹ năng nền tảng của PM.
+
+Đồng cảm không có nghĩa là chiều theo mọi ý kiến của user, mà là đủ gần để hiểu vấn đề của họ có thật và đủ quan trọng để giải quyết.
+
+Khi tin đúng vấn đề, bạn mới có động lực:
+
+1. Tìm dữ liệu phù hợp.
+2. Kiểm chứng giả thuyết nghiêm túc.
+
+Nhiều quyết định ưu tiên của mình xuất phát từ insight định tính và đã giúp xây lại trust với user.
+
+---
+
+## Insight 5 & 6: Quản lý metrics
+
+### Insight 5: Không phải PM nào cũng thật sự “sở hữu” metrics
+
+Thách thức lớn là nối được **business metrics** với **product metrics** để team có thể hành động được.
+
+### Insight 6: Bị yêu cầu data-driven nhưng thiếu hệ đo lường
+
+Dù tốc độ phát triển nhanh tới đâu, PM vẫn cần một khung metrics tối thiểu để:
+
+- Đo hiệu quả nỗ lực của team.
+- Theo dõi impact của từng tính năng.
+- Ra quyết định bằng dữ liệu thay vì cảm giác.
+
+Một dashboard cơ bản mình hay dùng:
 
 | Metrics | Ý nghĩa |
-|---------|---------|
-| **Traffics** | Có bao nhiêu người xem? |
-| **CTR, BR** | Tỉ lệ bấm từ người xem |
-| **CR** | Tỉ lệ chuyển đổi / mua hàng |
+|---|---|
+| Traffic | Có bao nhiêu người truy cập |
+| CTR / BR | Người dùng có tương tác hay rời đi |
+| CR | Tỉ lệ chuyển đổi/mua hàng |
 
 ---
 
-## ⚙️ Insight 7: Làm việc với kỹ sư 
+## Insight 7: Làm việc với engineering
 
-> PM chịu trách nhiệm triển khai tính năng tới người dùng cuối
+PM không chỉ giao task cho engineering, mà phải cùng đội kỹ thuật tìm ra giải pháp khả thi và có impact.
 
-**Khâu làm việc với engineering** là điều quan trọng để đưa ý tưởng tới kết quả như ý.
+Ba điểm mình thấy quan trọng:
 
-### 💡 Tips thực tế:
-
-#### 1️⃣ **Đưa kỹ sư vào quá trình ra quyết định**
-- Không chỉ giao công việc cho nhóm kỹ thuật
-- Yêu cầu feedback khi thiết kế và viết thông số kỹ thuật
-- Họ là phần của quá trình đưa ra giải pháp
-
-#### 2️⃣ **Chia sẻ ngữ cảnh**
-- Thông tin chuyên sâu về khách hàng
-- Ưu tiên sản phẩm
-- Giúp kỹ sư hiểu **"lý do" đằng sau** những gì bạn xây dựng
-
-#### 3️⃣ **Tìm cách giải quyết khi có khó khăn**
-- Học cách hiểu những gì kỹ sư nói
-- Khi họ nói tính năng/timeline không thể → **trò chuyện** để khám phá
-- Tìm cách giải quyết hoặc đánh đổi
+1. **Kéo kỹ sư vào sớm** trong quá trình ra quyết định.
+2. **Chia sẻ ngữ cảnh**: user insight, business priority, constraint.
+3. **Trao đổi theo hướng giải pháp** khi có khó khăn về timeline/kỹ thuật.
 
 ---
 
-## 📝 Insight 8: Kỹ năng viết và trình bày 
+## Insight 8: Kỹ năng viết và trình bày
 
-> **71%** công ty muốn PM viết rõ ràng và trình bày ý tưởng tốt
+> Khoảng 71% công ty kỳ vọng PM viết rõ và trình bày tốt.
 
-### Kỹ năng cần phát triển:
+PM làm việc với nhiều nhóm khác nhau, nên cùng một thông điệp cần được diễn đạt khác nhau theo từng audience.
 
-- Đọc các cuốn sách về **giao tiếp hiệu quả**
-- Công việc yêu cầu làm việc với **nhiều người**
-- Đừng để thông tin trở thành **sai lệch**
+Mục tiêu của kỹ năng này là:
 
-### Bí quyết:
-
-- Với từng nhóm đối tượng → **trình bày khác nhau**
-- **Kéo sự tập trung** tới đúng chỗ
-- Đảm bảo công việc được tiến hành **đúng**
+- Giảm hiểu sai.
+- Tăng tốc đồng thuận.
+- Giữ execution đi đúng hướng.
 
 ---
 
-## 🔄 Insight 9: Tỉ lệ giữ chân khách hàng 
+## Insight 9: Retention
 
-> **Retention** hiếm khi được nhắc tới trong job postings
+Retention ít khi được nhấn mạnh trong JD, nhưng lại là chỉ số sức khỏe dài hạn của sản phẩm.
 
-### Tại sao lại quan trọng:
+Lý do:
 
-- **Retention rate** = sức khỏe của sản phẩm
-- Giá thành chiếm: Khách hàng mới **gấp nhiều lần** so với khách hàng quay lại
-- Cần theo dõi **liên tục**
+- Giữ user cũ thường rẻ hơn nhiều so với acquisition user mới.
+- Retention tốt cho thấy sản phẩm tạo ra giá trị lặp lại.
 
-### Hành động cụ thể:
+Hành động gợi ý:
 
-1. **Theo dõi chỉ số**: Người quay lại quan tâm ngành hàng nào? Mua gì?
-2. **Lập kế hoạch**: Khi nào cần làm tính năng kéo chân user quay lại?
-3. **Phù hợp hóa**: Tính năng phải phù hợp với nhóm đối tượng mục tiêu
+1. Theo dõi hành vi quay lại theo từng nhóm user.
+2. Lên roadmap cho các feature tăng khả năng quay lại.
+3. Thiết kế tính năng bám đúng phân khúc mục tiêu.
 
 ---
+
+## Kết lại
+
+Vai trò PM có thể khác nhau tùy công ty, nhưng tựu trung vẫn xoay quanh vài năng lực cốt lõi:
+
+- Làm rõ vấn đề.
+- Ưu tiên đúng.
+- Align con người.
+- Đo impact.
+- Học liên tục từ user.
+
+Làm tốt các phần này, PM không chỉ ship được nhiều mà còn ship đúng thứ tạo ra giá trị.

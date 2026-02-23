@@ -10,125 +10,115 @@ tags:
 type: post
 ---
 
-## 🤖 Giới thiệu
+## Giới thiệu
 
-Thiết kế UI/UX trong thời đại của AI đòi hỏi một sự **thay đổi tư duy** hoàn toàn.
+Trong thời đại AI, tư duy thiết kế UI/UX đang đổi khá mạnh.
 
-Không còn chỉ tối ưu hóa cho con người, mà **AI agents** cũng trở thành một "user" quan trọng của ứng dụng của bạn.
-
----
-
-## 📋 Mục lục
-
-1. [Thiết kế thân thiện với AI Agent](#-thiết-kế-thân-thiện-với-ai-agent)
-2. [Prompt Engineering là một kỹ năng](#-prompt-engineering-là-một-kỹ-năng)
-3. [Kiến trúc sản phẩm tương lai](#-kiến-trúc-sản-phẩm-tương-lai)
+Trước đây mình chỉ tối ưu trải nghiệm cho người dùng là chính. Bây giờ, ngoài con người, **AI agents** cũng là một “đối tượng sử dụng” cần được tính đến trong cách thiết kế sản phẩm.
 
 ---
 
-## 🎯 Thiết kế thân thiện với AI Agent
+## Mục lục
 
-### Thách thức mới:
+1. [Thiết kế thân thiện với AI agents](#thiết-kế-thân-thiện-với-ai-agents)
+2. [Prompt engineering là kỹ năng thật sự](#prompt-engineering-là-kỹ-năng-thật-sự)
+3. [Kiến trúc sản phẩm trong giai đoạn mới](#kiến-trúc-sản-phẩm-trong-giai-đoạn-mới)
 
-**Truyền thống** 👤
-- UX được thiết kế cho **con người** đọc hiểu
-- Cấu trúc nội dung tối ưu cho **mắt nhân loại**
+---
 
-**Thời đại AI** 🤖
-- Designers phải tính đến **cách AI xử lý nội dung**
-- API phải được thiết kế để **AI có thể hành động hiệu quả**
-- Cấu trúc nội dung phải **rõ ràng, có tổ chức**
+## Thiết kế thân thiện với AI agents
 
-### Ví dụ thực tế:
+### Bài toán mới của UX
 
-Khi bạn thiết kế một form, cần:
+Ở kỷ nguyên trước, phần lớn UI tối ưu cho mắt người và thao tác tay.
 
-✅ **Rõ ràng cho AI**:
+Ở kỷ nguyên AI, mình phải đặt thêm câu hỏi:
+
+- AI có hiểu cấu trúc nội dung này không?
+- API có đủ rõ để agent hành động không?
+- Luồng dữ liệu có nhất quán để agent đọc/ghi ổn định không?
+
+### Ví dụ đơn giản: thiết kế form
+
+Nếu muốn form vừa tốt cho người dùng vừa dễ cho AI xử lý, mình ưu tiên:
+
+```text
+- Label rõ ràng, hạn chế viết tắt khó hiểu
+- Trường bắt buộc được đánh dấu nhất quán
+- Error message chỉ đúng lỗi cụ thể
+- Format dữ liệu ổn định và có thể đoán trước
 ```
-- Nhãn trường: chi tiết, không viết tắt
-- Trường bắt buộc: đánh dấu rõ
-- Thông báo lỗi: mô tả chính xác lỗi
-- Định dạng dữ liệu: nhất quán và có thể dự đoán
-```
 
-❌ **Không nên**:
-```
-- Nhãn mơ hồ, sáng tạo
-- Trường bắt buộc không rõ ràng
-- Thông báo lỗi chung chung
-- Định dạng dữ liệu không nhất quán
+Những thứ nên tránh:
+
+```text
+- Label mơ hồ hoặc quá “sáng tạo”
+- Quy tắc bắt buộc không rõ ràng
+- Error message chung chung
+- Format dữ liệu thay đổi tùy ngữ cảnh
 ```
 
 ---
 
-## 💡 Prompt Engineering là một kỹ năng
+## Prompt engineering là kỹ năng thật sự
 
-### Sự tương đồng:
+Prompt engineering không phải “mẹo vặt”, mà là kỹ năng giao tiếp với mô hình.
 
-**Giống như kiến thức chuyên ngành**:
-- Kỹ sư dầu khí học hỏi từ kinh nghiệm → **đặt câu hỏi tốt hơn**
-- Người viết prompt học hỏi từ thử-sai → **soạn prompt tốt hơn**
+Nó giống như bất kỳ kỹ năng chuyên môn nào: càng làm nhiều, càng biết đặt câu hỏi đúng.
 
-**Làm sao để prompt tốt**?
+### 3 nguyên tắc mình thấy hiệu quả
 
-1. **Rõ ràng mục tiêu**
-   - Không "hãy viết cái gì đó hay"
-   - Thay vào đó: "viết email bán hàng 5 câu, giọng văn trang trọng"
+1. **Nói rõ mục tiêu**
+   - Tránh kiểu: “viết gì đó hay hay”.
+   - Nên cụ thể: mục tiêu, độ dài, giọng văn, audience.
 
 2. **Cung cấp bối cảnh**
-   - Cho biết đối tượng mục tiêu
-   - Cho biết hướng dẫn phong cách, giọng thương hiệu
-   - Cho biết ràng buộc (số từ, định dạng, v.v.)
+   - User là ai, thương hiệu muốn gì, ràng buộc nào phải giữ.
 
-3. **Yêu cầu cấu trúc đầu ra**
-   - "Đầu ra dưới dạng JSON với các trường: title, body, cta"
-   - Thay vì "viết cái gì đó"
+3. **Chỉ định output format**
+   - Ví dụ JSON/schema rõ ràng khi cần tích hợp workflow.
 
----
-
-## 🏗️ Kiến trúc sản phẩm tương lai
-
-### Xu hướng:
-
-> **Tương lai: Sản phẩm = Kết nối dựa trên MCP + AI điều phối**
-
-### Giải thích:
-
-**MCP** = Model Context Protocol
-- Cho phép **AI tools giao tiếp** với các services
-- Giống như **API** nhưng dành cho AI agents
-
-### Kiến trúc mới:
-
-```
-┌─────────────────┐
-│   AI Agent      │
-│  (ChatGPT, ...) │
-└────────┬────────┘
-         │
-    ┌────┴─────┐
-    │           │
-    ▼           ▼
-┌──────┐   ┌────────┐   ┌────────┐
-│ MCP  │───│Service │───│Service │
-│      │   │  API 1 │   │  API 2 │
-└──────┘   └────────┘   └────────┘
-```
-
-**Ưu điểm**:
-- ✅ AI có thể **tự động kết nối** giữa các services
-- ✅ Không cần giao diện trung gian
-- ✅ **Thực thi workflow nhanh hơn**
-- ✅ **Tích hợp liền mạch**
+Càng rõ đầu vào, đầu ra càng dễ kiểm soát.
 
 ---
 
-## 🚀 Kết luận
+## Kiến trúc sản phẩm trong giai đoạn mới
 
-**Designers năm 2025 phải**:
-1. 🤖 Hiểu AI agents hoạt động như thế nào
-2. 🔌 Thiết kế API để AI có thể tương tác
-3. 📝 Cung cấp nội dung rõ ràng, có cấu trúc
-4. 🎯 Tối ưu hóa cho **trải nghiệm AI-first**
+Một xu hướng mình quan sát được là mô hình:
 
-Đây không phải thay thế UX con người, mà là **lớp thêm** để làm sản phẩm của bạn **sẵn sàng cho AI**.
+> AI điều phối hành động qua giao thức chuẩn (như MCP), thay vì chỉ dừng ở chat.
+
+### MCP là gì
+
+**MCP (Model Context Protocol)** giúp AI tools giao tiếp có cấu trúc với các service, theo cách gần giống API contract dành riêng cho agent.
+
+### Hình dung kiến trúc
+
+```text
+AI Agent
+  ↓
+MCP layer
+  ↓
+Service APIs (nhiều hệ thống khác nhau)
+```
+
+### Điểm mạnh của kiến trúc này
+
+- AI có thể gọi service theo workflow phức tạp hơn.
+- Giảm thao tác trung gian thủ công.
+- Mở đường cho trải nghiệm AI-first mượt hơn.
+
+---
+
+## Kết luận
+
+Làm sản phẩm giai đoạn này không phải là bỏ UX cho con người, mà là **mở rộng UX để tương thích cả với AI agents**.
+
+Nếu phải tóm gọn, mình nghĩ designer và PM nên làm tốt 4 việc:
+
+1. Hiểu cách AI agents đọc và hành động.
+2. Thiết kế API/data contract rõ ràng.
+3. Viết nội dung có cấu trúc, dễ parse.
+4. Thiết kế trải nghiệm theo hướng AI-first nhưng vẫn human-friendly.
+
+Ai làm sớm phần này sẽ có lợi thế rất lớn trong 1-2 năm tới.

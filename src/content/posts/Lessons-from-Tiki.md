@@ -10,214 +10,160 @@ tags:
 type: post
 ---
 
-## 🎯 Giới thiệu
+## Giới thiệu
 
-Tôi đã dành **6+ năm** làm Product Manager tại **Tiki**, bắt đầu từ tháng 8/2018.
+Mình làm Product Manager ở **Tiki** hơn 6 năm (từ 08/2018). Khoảng thời gian đó cho mình rất nhiều bài học thực chiến, từ cách ra quyết định đến cách dẫn dắt team.
 
-Đây là những **bài học** lớn nhất mà tôi học được.
-
----
-
-## 📋 Mục lục
-
-1. [Phần 2: Nhận thức về lãnh đạo](#-phần-2-nhận-thức-về-lãnh-đạo)
-2. [Phần 1: Bài học thực tiễn](#-phần-1-bài-học-thực-tiễn)
+Bài này là những điều mình thấy giá trị nhất.
 
 ---
 
-## 🏆 Phần 2: Nhận thức về lãnh đạo
+## Mục lục
 
-### 1️⃣ **Tầm quan trọng của Leadership**
-
-Nhiều công ty focus vào **tools & processes**, nhưng:
-- ❌ Tools không giải quyết vấn đề root
-- ✅ **Leadership** tạo an toàn tâm lý
-- ✅ Với an toàn tâm lý, team tự tổ chức tốt hơn
-
-### 2️⃣ **Định vị thị trường**
-
-- 📍 Vị thế của Tiki = "tiện lợi, đáng tin, nội địa"
-- 🎯 Mọi quyết định về tính năng phải align với định vị
-- ❌ Tính năng ngoài định vị = lãng phí
-
-### 3️⃣ **Tương tác con người > Công cụ**
-
-- 💬 Trò chuyện 1-1 = lâu nhưng **hiệu quả**
-- 📹 Giao tiếp qua công cụ = nhanh nhưng **thiếu cảm xúc**
-- 🤝 Cân bằng là chìa khóa, nhưng **đừng coi nhẹ yếu tố con người**
+1. [Bài học về leadership](#bài-học-về-leadership)
+2. [Bài học thực tiễn trong vận hành sản phẩm](#bài-học-thực-tiễn-trong-vận-hành-sản-phẩm)
 
 ---
 
-## 🔧 Phần 1: Bài học thực tiễn
+## Bài học về leadership
 
-### Bài học 1️⃣: Vấn đề không cần giải pháp kịch tính ngay lập tức
+### 1) Leadership quan trọng hơn tool
 
-**Sai lầm phổ biến**:
-- Phát hiện vấn đề
-- Ngay lập tức xây giải pháp phức tạp
-- Lãng phí nguồn lực
+Nhiều nơi đầu tư rất mạnh vào tools & process, nhưng nếu thiếu leadership thì vấn đề gốc vẫn còn.
 
-**Thực tế**:
-- Bắt đầu với **giải pháp nhỏ, có mục tiêu**
-- Đo lường tác động
-- Mở rộng nếu thành công
-- Tránh xây dựng quá mức cần thiết
+Điều mình thấy khác biệt rõ nhất là:
 
-**Ví dụ**: Cải thiện luồng checkout
-- ❌ Thiết kế lại toàn bộ checkout (3 tháng)
-- ✅ Bỏ 1 điểm ma sát (2 tuần)
-- ✅ Đo lường tác động
-- ✅ Rồi quyết định bước tiếp theo
+- Leader tạo được **psychological safety**.
+- Khi team thấy an toàn để nói thật và thử nghiệm, năng lực tự tổ chức tăng lên rõ rệt.
 
----
+### 2) Luôn bám vào market positioning
 
-### Bài học 2️⃣: Chỉ số là xương sống
+Với Tiki, định vị “tiện lợi, đáng tin, nội địa” là trục xuyên suốt.
 
-**Cái gì được đo, cái đó được quản lý.**
+Mọi feature nếu không phục vụ định vị đó thì dù hay đến đâu cũng dễ thành lãng phí nguồn lực.
 
-**Chỉ số quan trọng tại Tiki**:
-- 📊 **Tỉ lệ chuyển đổi** (quan trọng nhất)
-- 🛒 **Tỉ lệ bỏ giỏ hàng**
-- ⭐ **CTR trang sản phẩm**
-- 💳 **Tỉ lệ thanh toán thành công**
-- 🚚 **Sự hài lòng về giao hàng**
+### 3) Yếu tố con người không thể thay thế
 
-**Không có chỉ số**:
-- ❌ Quyết định dựa trên "cảm giác"
-- ❌ Khó theo dõi tiến độ
-- ❌ Không thể ưu tiên
+Công cụ giúp nhanh, nhưng nhiều tình huống chỉ giải được bằng trao đổi trực tiếp, nhất là 1-1.
 
-**Có chỉ số**:
-- ✅ Quyết định dựa trên dữ liệu
-- ✅ Theo dõi tiến độ rõ ràng
-- ✅ Đồng thuận giữa các team
+Nói ngắn gọn: hãy cân bằng giữa efficiency và human connection, đừng hy sinh cái sau.
 
 ---
 
-### Bài học 3️⃣: Tương tác con người đôi khi tốt hơn công cụ
+## Bài học thực tiễn trong vận hành sản phẩm
 
-**Kịch bản**:
-- Triển khai công cụ workflow phức tạp
-- Team: "Quá phức tạp"
-- ❌ Tỉ lệ sử dụng giảm xuống 10%
+### Bài học 1: Đừng “đập lớn” ngay khi thấy vấn đề
 
-**so với:**
+Sai lầm thường gặp là vừa thấy vấn đề đã muốn làm giải pháp lớn.
 
-**Phương án khác**:
-- Cuộc họp đồng bộ 15 phút mỗi tuần
-- ✅ Tham gia nhiều hơn
-- ✅ Giải quyết vấn đề nhanh hơn
+Cách tốt hơn:
 
-**Bài học**: Đừng tự động hóa đến mức mất đi sự kết nối con người.
+- Bắt đầu từ thay đổi nhỏ, có mục tiêu rõ.
+- Đo impact.
+- Chỉ mở rộng khi dữ liệu xác nhận.
 
----
+Ví dụ checkout:
 
-### Bài học 4️⃣: Quản lý phạm vi - tránh thêm tính năng không kiểm soát
+- Làm lại toàn bộ flow 3 tháng chưa chắc hiệu quả.
+- Gỡ một friction point trong 2 tuần có thể tạo tác động sớm và chắc hơn.
 
-**Mẫu phổ biến**:
-```
-Yêu cầu tính năng → "Hãy thêm cái này nữa"
-→ "Và cái này" → "Và cái này"
-→ Timeline bùng nổ → Chất lượng giảm
+### Bài học 2: Metrics là xương sống của mọi cuộc thảo luận
+
+Nếu không có metrics, team sẽ tranh luận bằng cảm giác.
+
+Các metrics mình theo dõi sát ở Tiki:
+
+- Conversion rate
+- Cart abandonment rate
+- CTR trang sản phẩm
+- Payment success rate
+- Delivery satisfaction
+
+Khi có số đo chung, việc ưu tiên và align giữa các team dễ hơn rất nhiều.
+
+### Bài học 3: Không phải automation nào cũng hiệu quả
+
+Có lần team thử một workflow tool khá phức tạp, adoption tụt mạnh.
+
+Sau đó chuyển sang sync ngắn 15 phút mỗi tuần, kết quả lại tốt hơn: mọi người tham gia đều hơn và issue được xử lý nhanh hơn.
+
+Bài học: đừng tự động hóa đến mức workflow trơn mà con người thì rời rạc.
+
+### Bài học 4: Quản lý scope cực kỳ quan trọng
+
+Pattern quen thuộc:
+
+```text
+Có feature A
+→ thêm B
+→ thêm C
+→ timeline nở ra, chất lượng giảm
 ```
 
-**Cách tiếp cận tốt hơn**:
-- Xác định tính năng **cốt lõi** rõ ràng
-- ✅ Ship cái đó trước
-- ✅ Cải tiến trong chu kỳ tiếp theo
-- ❌ Kháng cự những thứ "nice-to-have"
+Cách mình làm:
+
+- Chốt rõ “core version” trước.
+- Ship bản cốt lõi.
+- Những phần nice-to-have đưa về vòng tiếp theo.
+
+### Bài học 5: Analytics nói “what”, user research nói “why”
+
+Analytics rất mạnh để chỉ ra chuyện gì đang xảy ra.
+
+Nhưng để hiểu gốc rễ, vẫn cần nói chuyện trực tiếp với user.
+
+Khi ghép hai nguồn này lại, giải pháp đưa ra sẽ trúng vấn đề hơn.
+
+### Bài học 6: Cẩn thận khi diễn giải metrics
+
+Một chỉ số đẹp chưa chắc là tín hiệu tốt.
+
+Ví dụ session time tăng có thể do user engaged hơn, nhưng cũng có thể do flow rối hoặc bug khiến họ mắc kẹt.
+
+Vì vậy luôn cần đặt lại câu hỏi:
+
+- Yếu tố nào đang đẩy con số này?
+- Đây là tín hiệu tích cực hay tiêu cực?
+- Có dữ liệu định tính nào xác thực không?
+
+### Bài học 7: Bảo vệ tốc độ release bằng cách giới hạn WIP
+
+Ở Tiki, sprint 2 tuần. Mỗi PM thường không ôm quá 2 dự án/sprint.
+
+Lý do rất thực dụng:
+
+- Ít context switching.
+- Team tập trung hơn.
+- Ship nhanh và debug dễ hơn.
 
 ---
 
-### Bài học 5️⃣: Tiếp xúc trực tiếp với người dùng bổ sung cho analytics
-
-**Analytics cho bạn biết ĐIỀU GÌ đã xảy ra**:
-- "Tỉ lệ chuyển đổi giảm 5%"
-
-**Phỏng vấn người dùng cho bạn biết TẠI SAO**:
-- "Vì checkout có quá nhiều bước"
-
-**Cần cả hai**:
-- Analytics: xác định vấn đề
-- Nghiên cứu người dùng: hiểu nguyên nhân gốc rễ
-- Giải pháp: giải quyết vấn đề thực sự, không phải triệu chứng
-
----
-
-### Bài học 6️⃣: Cẩn thận với cách diễn giải chỉ số
-
-**Chỉ số có thể gây hiểu nhầm**:
-
-Ví dụ:
-- **Chỉ số**: "Thời gian phiên người dùng tăng 20%"
-- **Diễn giải**: "Người dùng tương tác nhiều hơn"
-- **Thực tế**: "Tính năng mới có bug, người dùng bị rối khi cuộn"
-
-**Luôn hỏi**:
-- Điều gì đang thúc đẩy thay đổi này?
-- Đó là tốt hay xấu?
-- Cần dữ liệu định tính để xác nhận
-
----
-
-### Bài học 7️⃣: Tốc độ release - giới hạn dự án tối đa 2 sprint
-
-**Tại Tiki**:
-- Sprint = 2 tuần
-- Mỗi PM quản lý **tối đa 2 dự án mỗi sprint**
-- Hiếm khi vượt quá 2 sprint
-
-**Tại sao**:
-- ✅ Team có thể tập trung sâu
-- ✅ Ship nhanh hơn
-- ✅ Dễ debug vấn đề hơn
-- ❌ Nhiều dự án hơn = chuyển đổi ngữ cảnh = chậm hơn
-
-**Công thức**:
-```
-1-2 dự án × 2 tuần = tốc độ nhất quán
-> 3+ dự án = hỗn loạn & chậm trễ
-```
-
----
-
-## 🎓 Tóm lại
+## Tóm lại
 
 | Bài học | Điểm mấu chốt |
-|--------|-------------|
-| Vấn đề | Bắt đầu nhỏ, không kịch tính |
-| Chỉ số | Biến chúng thành ngôi sao dẫn đường |
-| Công cụ | Đừng thay thế kết nối con người |
-| Phạm vi | Cắt bỏ những thứ "nice-to-have" không thương tiếc |
-| Nghiên cứu người dùng | Bổ sung cho analytics |
-| Diễn giải | Đặt câu hỏi về ý nghĩa của chỉ số |
-| Tốc độ | Giới hạn dự án, tăng chất lượng |
+|---|---|
+| Giải pháp | Bắt đầu nhỏ, kiểm chứng rồi mới mở rộng |
+| Metrics | Dùng số liệu để ra quyết định và align |
+| Công cụ | Tool hỗ trợ, không thay thế kết nối con người |
+| Scope | Giữ bản cốt lõi, chống scope creep |
+| User research | Bổ sung cho analytics để thấy nguyên nhân thật |
+| Diễn giải | Không đọc metrics theo một chiều |
+| Tốc độ | Giới hạn dự án để giữ focus và chất lượng |
 
 ---
 
-## 🚀 Áp dụng những bài học này
+## Cách áp dụng ngay
 
-**Ngay lập tức**:
+1. Chọn 3 metrics quan trọng nhất cho sản phẩm hiện tại.
+2. Lên lịch ít nhất 1 buổi nói chuyện với user trong tuần.
+3. Tách một feature lớn thành phiên bản có thể ship trong 1 sprint.
 
-1. **Liệt kê 3 chỉ số** bạn nên theo dõi cho sản phẩm
-2. **Lên lịch 1 buổi trò chuyện với người dùng** trong tuần này
-3. **Xác định 1 tính năng** có thể ship trong 1 sprint thay vì 2
-
-**Dài hạn**:
-- Xây dựng văn hóa chỉ số trong team
-- Biến nghiên cứu người dùng thành **thực hành thường xuyên**
-- Bảo vệ sự tập trung của team
+Dài hạn hơn, hãy xây văn hóa làm việc dựa trên metrics, user insight và kỷ luật focus.
 
 ---
 
-## 💭 Chiêm nghiệm
+## Chiêm nghiệm
 
-Làm việc ở Tiki dạy tôi rằng **product management là 90% con người & quy trình, 10% công cụ**.
+Sau thời gian ở Tiki, mình tin rằng product management phần lớn là bài toán con người và vận hành. Công cụ quan trọng, nhưng không phải yếu tố quyết định.
 
-Các công ty mở rộng thành công không có công cụ xa xỉ nhất. Họ có:
-- ✅ Chỉ số rõ ràng
-- ✅ Team tập trung
-- ✅ Tiếp xúc người dùng thường xuyên
-- ✅ Lãnh đạo tốt
-
-Làm tốt 4 điều đó, và bạn sẽ vượt qua đối thủ. 🚀
+Khi có định vị rõ, metrics rõ, đội ngũ giữ focus và liên tục gần user, chất lượng quyết định sẽ khác hẳn.

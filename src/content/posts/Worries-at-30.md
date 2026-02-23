@@ -9,242 +9,156 @@ tags:
 type: post
 ---
 
-## 🎯 Mở đầu
+## Mở đầu
 
-Tuổi 30, gần 10 năm làm product management.
+Tuổi 30, sau gần 10 năm làm product, mình bắt đầu nghĩ nhiều hơn về câu hỏi: “Mình đang đi đúng hướng chưa?”
 
-Bây giờ đã đến lúc **suy ngẫm**: Điều gì thực sự quan trọng? Tôi đang đi đúng hướng không?
-
----
-
-## 📋 Mục lục
-
-1. [Ngã rẽ sự nghiệp](#-ngã-rẽ-sự-nghiệp)
-2. [Mong muốn về lối sống](#-mong-muốn-về-lối-sống)
-3. [Áp lực kinh tế](#-áp-lực-kinh-tế)
-4. [Những lo lắng cá nhân](#-những-lo-lắng-cá-nhân)
-5. [Con đường phía trước](#-con-đường-phía-trước)
+Không phải vì hết động lực, mà vì muốn sống và làm việc theo cách bền hơn.
 
 ---
 
-## 🚧 Ngã rẽ sự nghiệp
+## Mục lục
 
-### Câu hỏi lớn:
-
-> PM hay Product Designer?
-
-**Trong 10 năm qua**:
-- 📊 Hầu hết thời gian làm **Product Manager**
-- 🎨 Nhưng có deep interest với **Product Design**
-
-**Đánh đổi**:
-
-| PM | Designer |
-|-----|----------|
-| 📊 Tập trung vào chiến lược | 🎨 Tập trung vào thực thi |
-| 👥 Nhiều stakeholder | ✨ Tự do sáng tạo |
-| 📈 Dựa trên dữ liệu | 🧠 Dựa trên trực giác |
-| 💼 Quản lý | 🛠️ Craft |
-
-**Nan giải**: Chọn cái nào để **đi sâu**?
+1. [Ngã rẽ sự nghiệp](#ngã-rẽ-sự-nghiệp)
+2. [Mong muốn về lối sống](#mong-muốn-về-lối-sống)
+3. [Áp lực kinh tế](#áp-lực-kinh-tế)
+4. [Những lo lắng cá nhân](#những-lo-lắng-cá-nhân)
+5. [Con đường phía trước](#con-đường-phía-trước)
 
 ---
 
-## 🏠 Mong muốn về lối sống
+## Ngã rẽ sự nghiệp
 
-### Tôi muốn:
+Câu hỏi khiến mình trăn trở lâu nhất:
 
-#### 1️⃣ **Làm việc từ xa** 🏡
+> Tiếp tục đào sâu PM, hay chuyển mạnh sang Product Design?
 
-**Hiện tại**:
-- ❌ Phải đi làm hàng ngày
-- ❌ Tốn 2 giờ/ngày trên giao thông
-- ❌ Stress từ kẹt xe
+10 năm qua mình đi chủ yếu theo nhánh PM, nhưng vẫn có hứng thú rất lớn với design.
 
-**Mong muốn**:
-- ✅ Làm việc từ nhà
-- ✅ Linh hoạt về thời gian
-- ✅ Giảm stress & tăng hiệu suất
+Bài toán đánh đổi khá rõ:
 
-**Thực tế**:
-- Công ty VN chưa nhiều hỗ trợ làm từ xa
-- Vị trí senior → kỳ vọng đến văn phòng
+| PM | Product Designer |
+|---|---|
+| Thiên về strategy, ưu tiên, stakeholder | Thiên về craft và execution |
+| Làm việc nhiều lớp tổ chức | Tập trung sâu vào trải nghiệm |
+| Dựa nhiều vào dữ liệu và business context | Dựa nhiều vào hành vi và trực giác thiết kế |
 
-#### 2️⃣ **Thu nhập quốc tế** 💰
-
-**Bối cảnh**:
-- Lương VN ≠ Lương Mỹ/Âu
-- Tuy nhiên **chi phí sinh hoạt VN thấp hơn**
-- Nên lý tưởng = **remote + lương quốc tế**
-
-**Thách thức**:
-- Cạnh tranh với **nguồn nhân tài toàn cầu**
-- Cần kỹ năng cạnh tranh được ở quy mô toàn cầu
-
-#### 3️⃣ **Linh hoạt** ⏰
-
-**Lý tưởng**:
-- Làm việc 4-5 giờ/ngày
-- Dành thời gian cho dự án cá nhân
-- Học hỏi & phát triển
-
-**Thực tế**:
-- Vai trò senior thường = 8+ giờ/ngày
-- Nhiều stress & cuộc họp
+Không có lựa chọn nào “đúng tuyệt đối”, chỉ có lựa chọn phù hợp với giai đoạn sống.
 
 ---
 
-## 💸 Áp lực kinh tế
+## Mong muốn về lối sống
 
-### Bối cảnh:
+### 1) Làm việc từ xa
 
-**2023-2025**: Suy thoái kinh tế
-- 📉 Layoff trong ngành tech
-- 💼 Tuyển dụng senior bị đóng băng
-- 🚀 Startup khó gọi vốn
+Hiện tại đi làm onsite mỗi ngày khiến mình mất khá nhiều năng lượng cho di chuyển và context switching.
 
-### Tác động cá nhân:
+Mong muốn của mình là:
 
-#### ❌ Vấn đề 1: Khó thăng tiến
+- Làm việc remote nhiều hơn.
+- Linh hoạt thời gian hơn.
+- Dành năng lượng cho phần việc có giá trị cao.
 
-- Vị trí Senior PM **quá hiếm**
-- Công ty **cạnh tranh khốc liệt** cho vị trí senior
-- Yêu cầu **vượt ra ngoài portfolio** → cần network + may mắn
+Nhưng thực tế ở Việt Nam, nhiều vai trò senior vẫn được kỳ vọng hiện diện tại văn phòng.
 
-#### ❌ Vấn đề 2: Lo lắng về sự ổn định
+### 2) Thu nhập theo mặt bằng quốc tế
 
-- Mỗi lúc có layoff → **cảm thấy bất an**
-- Không dám nghỉ việc khi chưa có công việc khác
-- Bị **"xích vàng"**
+Lý tưởng của mình là mô hình: **sống ở Việt Nam + làm việc cho thị trường toàn cầu**.
 
-#### ❌ Vấn đề 3: Lương đạt trần
+Điều này hấp dẫn, nhưng cũng đồng nghĩa phải cạnh tranh trực tiếp với talent toàn cầu.
 
-- Trong công ty: tăng lương bị giới hạn
-- Cách duy nhất để tăng → **nhảy sang công ty khác**
-- Nhưng thị trường việc làm đang chặt
+### 3) Linh hoạt thời gian
+
+Mình muốn có nhiều khoảng trống hơn cho dự án cá nhân và học sâu.
+
+Trong khi đó, vai trò senior thường kéo theo lịch họp dày và cường độ cao, nên việc giữ nhịp bền vững không dễ.
 
 ---
 
-## 😰 Những lo lắng cá nhân
+## Áp lực kinh tế
 
-### 1️⃣ Khoảng trống bảo hiểm y tế
+Giai đoạn 2023-2025 thị trường tech biến động mạnh: layoff, tuyển senior chậm lại, startup khó gọi vốn.
 
-**Vấn đề**:
-- Nếu nghỉ việc → **mất bảo hiểm y tế**
-- VN không có hệ thống y tế quốc gia mạnh
-- Tình huống y tế khẩn cấp → **chi phí thảm họa**
+Tác động cá nhân mình cảm nhận rõ ở 3 điểm:
 
-**Thực tế**:
-- Ngoài bảo hiểm công ty → phải mua riêng
-- Đắt & không phủ hết tất cả
-
-### 2️⃣ Dễ tổn thương trước chi phí y tế
-
-**Kịch bản**:
-- Nếu bị bệnh nghiêm trọng
-- Hoặc gia đình có vấn đề sức khỏe
-- → Tiết kiệm bị cạn kiệt nhanh
-
-**Cảm giác không an tâm** khi xây dựng dự án cá nhân
-
-### 3️⃣ Cân bằng công việc - cuộc sống
-
-**Tình trạng hiện tại**:
-- 😫 Kiệt sức vì stress công việc
-- 😴 Không đủ ngủ/nghỉ ngơi
-- 😕 Thời gian cá nhân bị ăn hết
-
-**Ảnh hưởng dài hạn**:
-- Sức khỏe suy giảm
-- Sáng tạo & hiệu suất giảm
+1. **Khó thăng tiến**: vị trí senior ít hơn, cạnh tranh cao hơn.
+2. **Lo về ổn định**: có cảm giác bất an khi thị trường siết.
+3. **Thu nhập chạm trần**: tăng lương nội bộ có giới hạn, nhưng nhảy việc cũng không dễ như trước.
 
 ---
 
-## 🛤️ Con đường phía trước
+## Những lo lắng cá nhân
 
-### Hành động cần làm:
+### 1) Khoảng trống bảo hiểm y tế
 
-#### 1️⃣ **Phát triển kỹ năng**
-- 📚 Đào sâu kiến thức kỹ thuật
-- 🎨 Cải thiện kỹ năng thiết kế
-- 🌍 Học kinh doanh quốc tế
-- 📊 Phân tích dữ liệu nâng cao
+Nếu nghỉ việc, phần bảo hiểm công ty mất ngay. Đây là rủi ro lớn khi muốn thử hướng đi mới.
 
-**Lý do**: Tạo **lợi thế cạnh tranh** ở quy mô toàn cầu
+### 2) Rủi ro chi phí y tế
 
-#### 2️⃣ **Thói quen năng suất**
-- ✍️ Viết thường xuyên (như blog này)
-- 🎤 Nói chuyện tại hội thảo
-- 🔗 Xây dựng danh tiếng công khai
-- 💼 Ghi lại các case study
+Một biến cố sức khỏe có thể bào mòn tài chính rất nhanh, và điều đó khiến mình thận trọng hơn khi ra quyết định nghề nghiệp.
 
-**Lý do**: Portfolio → **offer từ công ty tốt**
+### 3) Work-life balance
 
-#### 3️⃣ **Xây dựng mạng lưới**
-- 🤝 Kết nối với PM trên toàn cầu
-- 👥 Tham gia cộng đồng PM
-- 🌐 Dự hội thảo/meetup
-- 💬 Tham gia thảo luận
-
-**Lý do**: Cơ hội đến qua **mối quan hệ**
-
-#### 4️⃣ **Chuẩn bị tài chính**
-- 💰 Xây dựng quỹ dự phòng (6-12 tháng)
-- 💼 Khám phá thu nhập phụ
-- 🏡 Lập kế hoạch thiết lập làm việc từ xa
-- 📋 Nghiên cứu các lựa chọn bảo hiểm y tế
-
-**Lý do**: **Mạng lưới an toàn** để có thể chấp nhận rủi ro
-
-#### 5️⃣ **Thử nghiệm**
-- 🚀 Thử các dự án phụ
-- 🏢 Có thể freelance bán thời gian
-- 📖 Khám phá các lĩnh vực liền kề
-- 🔬 Kiểm tra giả thuyết về lối sống
-
-**Lý do**: Khám phá **điều gì thực sự quan trọng**
+Nếu duy trì nhịp làm việc căng quá lâu, cái giá trả bằng sức khỏe và sự sáng tạo là có thật.
 
 ---
 
-## 💭 Chiêm nghiệm
+## Con đường phía trước
 
-### Những nhận ra:
+Để giảm lo và tăng quyền chủ động, mình đang tập trung vào 5 hướng:
 
-**Không phải là**:
-- ❌ Chỉ là tiền
-- ❌ Chỉ là chức danh
-- ❌ Chỉ là quy mô công ty
+### 1) Nâng cấp năng lực cốt lõi
 
-**Thực sự quan trọng**:
-- ✅ Linh hoạt & tự chủ
-- ✅ Thỏa mãn sáng tạo
-- ✅ Sức khỏe & chất lượng cuộc sống
-- ✅ Phát triển cá nhân
-- ✅ An toàn tài chính
-- ✅ Công việc có ý nghĩa
+- Kỹ năng technical để làm việc sâu hơn với engineering.
+- Kỹ năng design để tăng chất lượng quyết định sản phẩm.
+- Data và business để nhìn bài toán toàn cục hơn.
 
-### Quyết định:
+### 2) Xây thói quen tạo giá trị công khai
 
-**Mục tiêu 2025**:
-- 🎯 Tập trung xây dựng **kỹ năng cạnh tranh toàn cầu**
-- 📝 Ghi lại hành trình học hỏi
-- 🤝 Xây dựng mạng lưới mạnh
-- 💪 Cải thiện sức khỏe & năng suất
+- Viết đều.
+- Chia sẻ case study.
+- Nói chuyện ở cộng đồng khi có cơ hội.
 
-**Mục tiêu**: Đến năm 35 tuổi, có lựa chọn để:
-- 🏡 Làm việc từ xa
-- 🌍 Làm việc cho công ty toàn cầu
-- 💰 Kiếm lương quốc tế
-- ✨ Làm công việc có ý nghĩa
+Mục tiêu là biến kinh nghiệm thành portfolio sống.
+
+### 3) Mở rộng network chất lượng
+
+Cơ hội tốt thường đi qua quan hệ tin cậy, không chỉ qua CV.
+
+### 4) Chuẩn bị tài chính
+
+- Quỹ dự phòng 6-12 tháng.
+- Tìm nguồn thu bổ trợ.
+- Chủ động phương án bảo hiểm.
+
+### 5) Thử nghiệm có kiểm soát
+
+Làm side project, nhận việc part-time hoặc freelance ở mức vừa phải để kiểm tra giả thuyết nghề nghiệp/lối sống trước khi chuyển hẳn.
 
 ---
 
-## 🎓 Bài học
+## Chiêm nghiệm
 
-1. **Hỏi bản thân từ sớm**: Cái gì thực sự quan trọng?
-2. **Lập kế hoạch cho sự linh hoạt**: Đừng bị xích vàng
-3. **Đầu tư vào kỹ năng**: Kỹ năng tồn tại mãi mãi
-4. **Xây dựng hiện diện công khai**: Danh tiếng = tiền tệ
-5. **Sức khỏe trước tiên**: Không có sức khỏe thì có gì cũng vô ích
+Đến hiện tại, mình thấy điều quan trọng không chỉ là lương hay chức danh.
 
-> Tuổi 30 chưa quá muộn. Chỉ cần bắt đầu ngay hôm nay. 🚀
+Thứ mình muốn giữ lâu dài là:
+
+- Quyền tự chủ.
+- Sức khỏe tốt.
+- Công việc có ý nghĩa.
+- Không ngừng phát triển bản thân.
+- Một mức an toàn tài chính đủ để không bị “kẹt” trong lựa chọn.
+
+Mục tiêu của mình trong vài năm tới là xây đủ năng lực để có nhiều lựa chọn hơn: remote, thị trường toàn cầu, và vẫn giữ được chất lượng sống.
+
+---
+
+## Bài học cho chính mình
+
+1. Hỏi sớm điều gì là quan trọng thật sự.
+2. Đầu tư vào kỹ năng có thể mang theo suốt đời.
+3. Xây hiện diện công khai một cách bền bỉ.
+4. Lập kế hoạch tài chính để có quyền chọn.
+5. Đặt sức khỏe lên trước hiệu suất ngắn hạn.
+
+Tuổi 30 không muộn. Đây chỉ là điểm bắt đầu cho một phiên bản chủ động hơn của chính mình.
