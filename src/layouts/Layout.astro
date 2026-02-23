@@ -1,5 +1,6 @@
 ---
 import { SEO } from 'astro-seo';
+import { ClientRouter } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 import ModeToggle from '../components/ModeToggle.astro';
@@ -58,12 +59,25 @@ const navLinks = {
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="/print-resume.css" media="print" />
+		<ClientRouter />
 		<script is:inline>
 			(function() {
-				const theme = localStorage.getItem('theme');
-				if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-					document.documentElement.classList.add('dark');
+				function applyTheme() {
+					const stored = localStorage.getItem('theme');
+					const isDark = stored === 'dark' || (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+					if (isDark) {
+						document.documentElement.classList.add('dark');
+					} else {
+						document.documentElement.classList.remove('dark');
+					}
 				}
+
+				// Apply theme on initial load
+				applyTheme();
+
+				// Reapply theme on view transitions
+				document.addEventListener('astro:after-swap', applyTheme);
 			})();
 		</script>
 	</head>
@@ -394,4 +408,53 @@ const navLinks = {
 			background-color: rgb(30 58 138 / 0.2); /* blue-900/20 */
 		}
 	}
+
+	/* ── Scroll Reveal Animations ── */
+	@keyframes fade-up {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	.animate-on-scroll {
+		opacity: 0;
+	}
+	.animate-on-scroll.is-visible {
+		animation: fade-up 0.6s ease-out forwards;
+	}
+	.animate-on-scroll.fade-only.is-visible {
+		animation: fade-in 0.5s ease-out forwards;
+	}
+	/* Stagger delays */
+	.animate-on-scroll[data-delay="1"] { animation-delay: 0.1s; }
+	.animate-on-scroll[data-delay="2"] { animation-delay: 0.2s; }
+	.animate-on-scroll[data-delay="3"] { animation-delay: 0.3s; }
+	.animate-on-scroll[data-delay="4"] { animation-delay: 0.4s; }
+
+	@media (prefers-reduced-motion: reduce) {
+		.animate-on-scroll {
+			opacity: 1 !important;
+			animation: none !important;
+		}
+	}
 </style>
+<script>
+	function initScrollReveal() {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.1 });
+
+		document.querySelectorAll('.animate-on-scroll').forEach(el => {
+			observer.observe(el);
+		});
+	}
+	initScrollReveal();
+	document.addEventListener('astro:after-swap', initScrollReveal);
+</script>
