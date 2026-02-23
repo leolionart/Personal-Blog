@@ -6,6 +6,11 @@ import Experience from '../components/resume/Experience.astro';
 import Education from '../components/resume/Education.astro';
 import Skills from '../components/resume/Skills.astro';
 import Projects from '../components/resume/Projects.astro';
+import Awards from '../components/resume/Awards.astro';
+import Speaking from '../components/resume/Speaking.astro';
+import Volunteering from '../components/resume/Volunteering.astro';
+import References from '../components/resume/References.astro';
+import Languages from '../components/resume/Languages.astro';
 import cv from '@cv';
 
 const { name, label } = cv.basics;
@@ -13,18 +18,23 @@ const { name, label } = cv.basics;
 
 <Layout title={`${name} — ${label}`}>
 	<main class="resume-main wrapper mx-auto border-x-1 border-gray-200 dark:border-gray-800">
-		<div class="resume-grid grid md:grid-cols-[280px_1fr] gap-0">
+		<div class="resume-grid grid lg:grid-cols-[300px_1fr] gap-0">
 			<!-- Sidebar -->
-			<div class="resume-sidebar px-5 py-6 md:p-8 border-b-1 md:border-b-0 md:border-r-1 border-gray-200 dark:border-gray-800 space-y-6 md:space-y-8">
+			<div class="resume-sidebar px-4 sm:px-5 py-6 md:py-8 lg:p-8 border-b-1 lg:border-b-0 lg:border-r-1 border-gray-200 dark:border-gray-800 space-y-6 md:space-y-8">
 				<Hero />
 				<About />
+				<Languages />
+				<Skills />
+				<Awards />
+				<Volunteering />
+				<References />
 			</div>
 			<!-- Main Content -->
-			<div class="resume-content px-5 py-6 md:p-8 space-y-8 md:space-y-10">
+			<div class="resume-content px-4 sm:px-5 py-6 md:py-8 lg:p-8 space-y-8 md:space-y-10">
 				<Experience />
-				<div class="no-print"><Projects /></div>
-				<div class="no-print"><Skills /></div>
 				<Education />
+				<Speaking />
+				<div class="no-print"><Projects /></div>
 			</div>
 		</div>
 	</main>

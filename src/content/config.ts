@@ -19,7 +19,7 @@ const authors = defineCollection({
 const posts = defineCollection({
     type: 'content',
     schema: z.object({
-        type: z.optional(z.enum(['announcement','release','post'])),
+        type: z.optional(z.enum(['announcement','release','post','article'])),
         title: z.string(),
         description: z.optional(z.string()),
         author: reference('authors'),

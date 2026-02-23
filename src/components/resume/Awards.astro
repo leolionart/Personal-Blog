@@ -1,0 +1,24 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { awards } = cv;
+---
+
+{awards && awards.length > 0 && (
+	<Section title="Honors & Awards" class={className}>
+		<ul class="flex flex-col gap-3 print:gap-1">
+			{awards.map(({ title, subtitle, summary }) => (
+				<li>
+					<h4 class="text-sm font-semibold dark:c-gray-100">{title}</h4>
+					{subtitle && <div class="text-xs c-gray-600 dark:c-gray-400">{subtitle}</div>}
+					{summary && <p class="text-xs c-gray-500 dark:c-gray-400 mt-1">{summary}</p>}
+				</li>
+			))}
+		</ul>
+	</Section>
+)}

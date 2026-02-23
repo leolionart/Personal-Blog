@@ -53,20 +53,36 @@ const {
 </script>
 <style>
     .content-container > :global(:not(hr, .ignore-content-container, .section)) {
-        padding-inline: 1.25rem; /* 20px mobile */
+        padding-inline: 1rem; /* 16px mobile */
     }
     .content-container > :global(.inherit-content-container) {
         padding-inline: 0;
     }
     .content-container > :global(.inherit-content-container) > :global(*) {
-        padding-inline: 1.25rem; /* 20px mobile */
+        padding-inline: 1rem; /* 16px mobile */
+    }
+    @media (min-width: 640px) {
+        .content-container > :global(:not(hr, .ignore-content-container, .section)) {
+            padding-inline: 1.5rem; /* 24px sm */
+        }
+        .content-container > :global(.inherit-content-container) > :global(*) {
+            padding-inline: 1.5rem; /* 24px sm */
+        }
     }
     @media (min-width: 768px) {
         .content-container > :global(:not(hr, .ignore-content-container, .section)) {
-            padding-inline: 3.125rem; /* 50px */
+            padding-inline: 2rem; /* 32px md */
         }
         .content-container > :global(.inherit-content-container) > :global(*) {
-            padding-inline: 3.125rem; /* 50px */
+            padding-inline: 2rem; /* 32px md */
+        }
+    }
+    @media (min-width: 1024px) {
+        .content-container > :global(:not(hr, .ignore-content-container, .section)) {
+            padding-inline: 2.5rem; /* 40px lg */
+        }
+        .content-container > :global(.inherit-content-container) > :global(*) {
+            padding-inline: 2.5rem; /* 40px lg */
         }
     }
 </style>

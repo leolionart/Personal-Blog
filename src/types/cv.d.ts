@@ -11,6 +11,7 @@ export interface CV {
   interests: Array<Interests>;
   references: Array<References>;
   projects: Array<Projects>;
+  speaking: Array<Speaking>;
 }
 
 interface Basics {
@@ -60,10 +61,10 @@ interface Volunteer {
   organization: string;
   position: string;
   url: string;
-  startDate: DateStr;
-  endDate: DateStr;
+  startDate?: DateStr;
+  endDate?: DateStr;
   summary: string;
-  highlights: Highlight;
+  highlights?: Highlight;
 }
 
 interface Skills {
@@ -74,8 +75,9 @@ interface Skills {
 
 interface Awards {
   title: string;
-  date: string;
-  awarder: string;
+  subtitle?: string;
+  date?: string;
+  awarder?: string;
   summary: string;
 }
 
@@ -113,6 +115,7 @@ interface Languages {
 interface Projects {
   name: string;
   isActive: boolean;
+  isPrivate?: boolean;
   description: string;
   highlights: Highlight;
   url: string;
@@ -127,6 +130,13 @@ interface Interests {
 interface References {
   name: string;
   reference: string;
+  contact?: string;
+}
+
+interface Speaking {
+  event: string;
+  year: string;
+  summary: string;
 }
 
 type Highlight = Array<string>;

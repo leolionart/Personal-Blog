@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Tran Quang Ai",
-    "label": "Product Manager × Engineer",
+    "label": "UI/UX Designer",
     "image": "/me_avatar.jpg",
     "email": "aitran158@gmail.com",
-    "phone": "",
+    "phone": "0968801157",
     "url": "https://geek.naai.studio",
-    "summary": "Product Manager with ~10 years of experience across e-commerce, pharmacy, OTA, hospitality and POD platforms. Product × Engineer mindset, CX/UX obsession, hypothesis-driven and ROI-focused. Currently building AI-powered solutions at NA.AI STUDIO. Passionate about IoT, smart home automation, and optimizing product development processes.",
+    "summary": "Extensive experience across UI/UX Design and Product Management fosters a holistic perspective and strong product mindset. Proven ability to solve problems by collaborating effectively with cross-functional teams to devise and execute solutions.\n\nHighly dedicated to user-centric design, focusing on uncovering user insights (JTBD) through various methods, including A/B testing and internal discussions for hypothesis validation.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,293 +29,335 @@
   },
   "work": [
     {
-      "name": "NA.AI STUDIO",
+      "name": "NA.AI Studio",
       "position": "Founder",
       "location_type": "Remote",
       "location": "Ho Chi Minh, Vietnam",
       "url": "https://geek.naai.studio",
-      "startDate": "2024-01-01",
-      "endDate": null,
-      "summary": "Researching and building AI-powered solutions for testing new business models. Developing tools and platforms that leverage AI, automation, and IoT.",
-      "responsibilities": [
-        "Designing and prototyping AI-driven products from concept to MVP",
-        "Building automation workflows with n8n, RAG chatbots, and AI APIs",
-        "Developing open-source tools for smart home, media processing, and developer productivity"
-      ],
-      "achievements": [
-        "Built Create Image Studio — AI image generation tool using Gemini API",
-        "Developed Just Chat — embeddable RAG chatbot widget connected to n8n backend",
-        "Created Mac Audio Remote — native macOS app for controlling audio via iOS Shortcuts (10+ GitHub stars)"
-      ],
-      "skills": [
-        "AI/LLM",
-        "n8n",
-        "TypeScript",
-        "Swift",
-        "Docker"
-      ]
-    },
-    {
-      "name": "MWG (Mobile World Group)",
-      "position": "Product Lead",
-      "location_type": "On site",
-      "location": "Ho Chi Minh, Vietnam",
-      "url": "https://www.thegioididong.com",
       "startDate": "2023-01-01",
-      "endDate": "2023-12-01",
-      "summary": "Led product strategy for Bach Hoa Xanh online grocery and An Khang pharmacy digital platforms under Mobile World Group.",
+      "endDate": "2024-12-01",
+      "summary": "",
       "responsibilities": [
-        "Defined product roadmap and prioritized features for online grocery and pharmacy platforms",
-        "Collaborated with engineering, design, and business teams to ship features at scale",
-        "Analyzed user behavior data to drive product decisions and optimize conversion funnels"
+        "Exploring and experimenting with AI solutions in design and creativity",
+        "Consulting and developing technology products for companies in the Australian, US, and Vietnamese markets. Focusing on creating user interfaces for POS, CRM, and web/mobile app"
       ],
-      "achievements": [
-        "Led digital transformation for Bach Hoa Xanh online operations",
-        "Launched key e-pharmacy features for Nha Thuoc An Khang platform"
-      ],
-      "skills": [
-        "Product Strategy",
-        "E-commerce",
-        "Data Analysis",
-        "Agile"
-      ]
+      "achievements": [],
+      "skills": []
     },
     {
-      "name": "VinHMS (Vingroup)",
-      "position": "Product Owner",
+      "name": "Nhà thuốc An Khang & Bách hoá XANH (MWG: 13k employees)",
+      "position": "Product Design Team Lead",
       "location_type": "On site",
       "location": "Ho Chi Minh, Vietnam",
-      "url": "https://vinhms.com",
-      "startDate": "2021-01-01",
+      "url": "",
+      "startDate": "2022-01-01",
+      "endDate": "2024-12-01",
+      "summary": "",
+      "responsibilities": [
+        "Develop and execute comprehensive marketing strategies and campaigns that align with the company's goals and objectives",
+        "Lead, mentor, and manage a high-performing marketing team, fostering a collaborative and results-driven work environment",
+        "Create and manage the marketing budget, ensuring efficient allocation of resources and optimizing ROI."
+      ],
+      "achievements": [
+        "DAU 200,000 (hit x2 traffic target in half year)",
+        "Increased medicine categories revenue in October 2023 by 44.44%",
+        "Help operate O2O (online to offline) chain of 500 stores with many flexible business models"
+      ],
+      "skills": []
+    },
+    {
+      "name": "VinHMS (Vingroup Corp: 50k employees)",
+      "position": "PO & UI/UX Team Lead",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "",
+      "startDate": "2020-01-01",
       "endDate": "2022-12-01",
-      "summary": "Owned the Hospitality Management System (CiHMS) product — a comprehensive hotel/resort management platform for Vingroup's hospitality ecosystem.",
+      "summary": "",
       "responsibilities": [
-        "Managed product backlog and sprint planning for CiHMS platform development",
-        "Worked with stakeholders across Vinpearl resorts to gather requirements and validate solutions",
-        "Designed CRM, SAP integration, and booking management workflows"
+        "Oversee the entire design and quality management process for the hotel operations management platform. This includes: User Research, Design Thinking Process, Design System...",
+        "Analyze and optimize user behavior to ensure the best possible adoption of the platform. This includes: user engagement metrics, A/B testing, data-driven recommendations to improve UI"
       ],
       "achievements": [
-        "Delivered CiHMS platform serving Vingroup's hospitality chain",
-        "Integrated CRM and SAP systems for unified hotel operations"
+        "Mobile operation App 11k daily active user (DAU)",
+        "NPS = 65 overall hotel staff rating compared to the old software",
+        "Digital transformation across the chain of 36 Vinpearl hotels and 5-star hotels in half a year"
       ],
-      "skills": [
-        "HMS",
-        "CRM",
-        "SAP",
-        "Scrum"
-      ]
+      "skills": []
     },
     {
-      "name": "Tiki",
-      "position": "Product Manager — Seller Success",
+      "name": "TIKI Corporation (4k employees)",
+      "position": "Senior UI/UX of Seller Central",
       "location_type": "On site",
       "location": "Ho Chi Minh, Vietnam",
-      "url": "https://tiki.vn",
-      "startDate": "2019-01-01",
+      "url": "",
+      "startDate": "2018-01-01",
       "endDate": "2020-12-01",
-      "summary": "Managed seller acquisition and growth features on Tiki Seller Central — Vietnam's leading e-commerce marketplace.",
+      "summary": "",
       "responsibilities": [
-        "Designed and optimized seller onboarding flows to increase seller acquisition",
-        "Built growth tools and analytics dashboards for seller performance management",
-        "Collaborated with cross-functional teams to improve seller experience and retention"
+        "Seller onboarding, Seller Product Listing, Product Quality, Seller Promotion, Product Ads",
+        "Help seller success, protect customer trust, notification central (email, seller app, SMS)",
+        "Roadmap Seller App",
+        "Tracking user behavior, feedback sessions"
       ],
       "achievements": [
-        "Improved seller onboarding conversion through UX optimization",
-        "Launched seller growth tools on Tiki Seller Central platform"
+        "Reduced rejection rate of new seller for sale from 56% to 17% help grow 5x seller at end of 2020",
+        "Increasing the percentage of sellers participating in the discount program helps increase sales while recording an increase in CMV for Tiki up to 4 times in 1 campaign",
+        "Reduce seller violating from 68 to <30%/months"
       ],
-      "skills": [
-        "E-commerce",
-        "Marketplace",
-        "Growth",
-        "Analytics"
-      ]
+      "skills": []
     },
     {
-      "name": "BurgerPrints",
-      "position": "Co-founder / Product Developer",
+      "name": "Burger Prints",
+      "position": "UI/UX Designer of POD",
       "location_type": "Remote",
       "location": "Ho Chi Minh, Vietnam",
-      "url": "https://burgerprints.com",
+      "url": "",
       "startDate": "2017-01-01",
       "endDate": "2018-12-01",
-      "summary": "Built the MVP of BurgerPrint — a Print-on-Demand platform enabling sellers to create and sell custom-designed products.",
+      "summary": "",
       "responsibilities": [
-        "Developed MVP from scratch — product design, architecture, and implementation",
-        "Managed the full product lifecycle from ideation to launch"
+        "Research and design MVP product",
+        "Partner Portal (order management, product listing, customs design...)",
+        "Affiliate Portal (grow campaign)",
+        "POD portal (manage suppliers, orders, campaigns)",
+        "Analytics, UX testing"
       ],
       "achievements": [
-        "Successfully launched POD platform serving multiple sellers"
+        "Reached 10k users in the first month, until now it is still operating well from the first design version",
+        "Released the first Print on Demand product in Vietnam to reach the European and American markets, one of the leading companies in dropshipping"
       ],
-      "skills": [
-        "MVP Development",
-        "Full Stack",
-        "POD"
-      ]
+      "skills": []
+    },
+    {
+      "name": "Solazu & Shinway",
+      "position": "UI Designer",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "",
+      "startDate": "2015-01-01",
+      "endDate": "2017-12-01",
+      "summary": "",
+      "responsibilities": [
+        "Collaborate closely with Product and Engineering to define and deliver product features",
+        "Design wireframes, flows, UI",
+        "Define visual direction, art direction for products"
+      ],
+      "achievements": [
+        "2 projects are featured in Behance's global UI/UX category (only impressive projects can achieve this title). 5 projects featured in other categories",
+        "Best-selling UIkit reaching 6000 purchases and downloads. All of my products are released as designs and sold well before finalizing them as WordPress Templates."
+      ],
+      "skills": []
     }
   ],
-  "volunteer": [],
+  "volunteer": [
+    {
+      "organization": "SOSUB.org",
+      "position": "Product Owner",
+      "url": "http://sosub.org",
+      "summary": "A non-profit project that I joint cooperation. This is the product that we created http://sosub.org. The goal is to provide a social network that shares academic knowledge for Vietnamese people. SOSUB stands for Social Subtile."
+    }
+  ],
   "education": [
     {
-      "institution": "FPT Arena Multimedia",
-      "url": "https://arena.fpt.edu.vn",
-      "area": "Multimedia Design",
-      "studyType": "Diploma",
-      "startDate": "2013-01-01",
-      "endDate": "2015-12-01",
+      "institution": "FPT University",
+      "url": "",
+      "area": "Digital Communication and Media/Multimedia",
+      "studyType": "Advanced Diploma in Multimedia",
+      "startDate": "2016-01-01",
+      "endDate": "2018-12-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Eggcademy",
+      "url": "",
+      "area": "We apply leading scientific testing methods to develop products",
+      "studyType": "Product Design (UI/UX)",
+      "startDate": "2017-01-01",
+      "endDate": "2017-12-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "CTO Academy",
+      "url": "",
+      "area": "Learn from top CTOs and CEOs in Vietnam and in the CTO Network",
+      "studyType": "THE NEXTGEN CTO VIETNAM",
+      "startDate": "2023-01-01",
+      "endDate": "2024-12-01",
       "score": "",
       "courses": []
     }
   ],
-  "certificates": [],
-  "skills": [
+  "certificates": [
     {
-      "name": "Product Management",
-      "level": "Expert",
-      "keywords": ["Strategy", "Roadmap", "User Research", "Agile"]
+      "name": "THE NEXTGEN CTO VIETNAM",
+      "date": "2023-01-01",
+      "issuer": "CTO Academy",
+      "url": ""
     },
     {
-      "name": "AI/LLM",
-      "level": "Intermediate",
-      "keywords": ["Gemini", "Claude", "RAG", "Prompt Engineering"]
+      "name": "Duolingo English Fluency",
+      "date": "2023-01-01",
+      "issuer": "Duolingo",
+      "url": ""
     },
     {
-      "name": "TypeScript",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Backend", "Frontend"]
-    },
-    {
-      "name": "Python",
-      "level": "Intermediate",
-      "keywords": ["Automation", "Scripting", "AI"]
-    },
-    {
-      "name": "Home Assistant",
-      "level": "Expert",
-      "keywords": ["IoT", "Smart Home", "Automation"]
-    },
-    {
-      "name": "Docker",
-      "level": "Intermediate",
-      "keywords": ["DevOps", "Containerization"]
-    },
-    {
-      "name": "n8n",
-      "level": "Intermediate",
-      "keywords": ["Workflow Automation", "Integration"]
-    },
-    {
-      "name": "Swift",
-      "level": "Beginner",
-      "keywords": ["macOS", "iOS"]
-    },
-    {
-      "name": "Astro",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "SSG"]
-    },
-    {
-      "name": "Figma",
-      "level": "Expert",
-      "keywords": ["Design", "Prototyping", "UI/UX"]
-    },
-    {
-      "name": "Git",
-      "level": "Intermediate",
-      "keywords": ["Version Control"]
-    },
-    {
-      "name": "Grafana",
-      "level": "Intermediate",
-      "keywords": ["Monitoring", "Dashboard"]
+      "name": "Google Analytics Certification (GA4, GTM)",
+      "date": "2023-01-01",
+      "issuer": "Google",
+      "url": ""
     }
+  ],
+  "skills": [
+    { "name": "Project Management", "level": "Expert", "keywords": [] },
+    { "name": "Public Relations", "level": "Expert", "keywords": [] },
+    { "name": "Design System Thinking", "level": "Expert", "keywords": [] },
+    { "name": "Time Management", "level": "Expert", "keywords": [] },
+    { "name": "Leadership", "level": "Expert", "keywords": [] },
+    { "name": "Effective Communication", "level": "Expert", "keywords": [] },
+    { "name": "Critical Thinking", "level": "Expert", "keywords": [] }
   ],
   "languages": [
+    { "language": "English", "fluency": "Fluent" },
+    { "language": "Vietnamese", "fluency": "Native" },
+    { "language": "Prompt (AI)", "fluency": "Advanced" }
+  ],
+  "interests": [],
+  "references": [
     {
-      "language": "Vietnamese",
-      "fluency": "Native speaker"
+      "name": "Mr. Nghĩa Lê",
+      "reference": "CTO of Tiki Corp",
+      "contact": "Telegram: @nghiale86"
     },
     {
-      "language": "English",
-      "fluency": "Professional working"
-    }
-  ],
-  "interests": [
-    {
-      "name": "IoT & Smart Home",
-      "keywords": ["Home Assistant", "Network Automation", "Mikrotik"]
+      "name": "Mr. Vinh Huỳnh",
+      "reference": "CTO of VinHMS",
+      "contact": "Phone: 098 5375359"
     },
     {
-      "name": "AI & Automation",
-      "keywords": ["LLM", "Workflow Automation", "n8n"]
+      "name": "Mr. Tùng Jacob",
+      "reference": "Head of Product Department",
+      "contact": "Phone: 096 6870280"
+    },
+    {
+      "name": "Mr. Tịnh Nguyễn",
+      "reference": "Lead of Product Team",
+      "contact": "Telegram: @tinhspace"
     }
   ],
-  "references": [],
+  "awards": [
+    {
+      "title": "Adobe Award",
+      "subtitle": "ADAA 2017 Semifinalist",
+      "summary": "Annual awards for projects that achieve a lot of attention from the community and evaluation from Adobe experts for design quality"
+    },
+    {
+      "title": "Behance Portfolio Review 2017",
+      "subtitle": "Winning the UI Design category",
+      "summary": "The most impressive portfolio of 2017 voted by the Behance community, surpassing 50 other potential candidates. Organized by RIO Creative"
+    }
+  ],
+  "speaking": [
+    {
+      "event": "Behance Portfolio Review",
+      "year": "2017",
+      "summary": "How to apply the design sprint process in UI development, helping to come up with creative concepts"
+    },
+    {
+      "event": "Google I/O 2018",
+      "year": "2018",
+      "summary": "How Google applies Material Design at the DLS layer, helping products to be easy to use and develop quickly, with fast release times"
+    },
+    {
+      "event": "Private Coffee Sharing",
+      "year": "2023",
+      "summary": "Use GA, Data Studio as Excel pivot table. How data is stored and how it works when implemented on the frontend (implementing data)"
+    }
+  ],
   "projects": [
     {
-      "name": "Smart Home System",
+      "name": "Personal Blog",
       "isActive": true,
-      "description": "Complete IoT smart home system built over years — documenting everything from network setup to automation workflows.",
-      "highlights": [
-        "Home Assistant based with custom integrations",
-        "Mikrotik network monitoring with Grafana dashboards",
-        "Vietnamese news summary automation for HA"
-      ],
-      "url": "https://smarthome.naai.studio",
-      "github": "https://github.com/leolionart/smarthome"
+      "description": "A blog built with Astro and Uno CSS. Publish content with Obsidian",
+      "highlights": [],
+      "url": "https://geek.naai.studio",
+      "github": "https://github.com/leolionart/Personal-Blog"
     },
     {
-      "name": "Mac Audio Remote",
+      "name": "Behance Portfolio",
       "isActive": true,
-      "description": "Native macOS menu bar app for controlling microphone and speaker audio remotely via iOS Shortcuts.",
-      "highlights": [
-        "Built with Swift for native macOS experience",
-        "10+ GitHub stars"
-      ],
-      "url": "",
-      "github": "https://github.com/leolionart/Mac-Audio-Remote"
+      "description": "A place of splendid projects",
+      "highlights": [],
+      "url": "https://be.net/leolion",
+      "github": ""
+    },
+    {
+      "name": "Smarthome & Tech Blog",
+      "isActive": true,
+      "description": "Tất cả những gì đúc kết từ hệ thống IOT của căn nhà đầu tiên",
+      "highlights": [],
+      "url": "https://geek.naai.studio",
+      "github": "https://github.com/leolionart/smarthome"
     },
     {
       "name": "Create Image Studio",
       "isActive": true,
-      "description": "AI image creation studio using Gemini API — a creative tool for generating images with AI through VS Code.",
-      "highlights": [
-        "Built with TypeScript",
-        "Powered by Gemini API"
-      ],
+      "description": "Trạm sáng tạo AI bằng VS Code dùng API Gemini",
+      "highlights": [],
       "url": "",
       "github": "https://github.com/leolionart/Create-Image-Studio"
     },
     {
       "name": "Just Chat",
       "isActive": true,
-      "description": "Embeddable popup chat widget that connects to n8n backend for deploying RAG chatbots on any website.",
-      "highlights": [
-        "TypeScript-based widget",
-        "n8n backend integration for RAG workflows"
-      ],
-      "url": "https://geek.naai.studio",
+      "description": "Popup chat kết nối backend n8n để triển khai RAG chat bot lên website bất kỳ",
+      "highlights": [],
+      "url": "",
       "github": "https://github.com/leolionart/just-chat"
     },
     {
-      "name": "CLIProxyAPI Dashboard",
+      "name": "Vinfast × Home Assistant",
       "isActive": true,
-      "description": "Reporting system integrated into CLIProxyAPI for monitoring usage and setting up data plan limit alerts.",
-      "highlights": [
-        "Usage monitoring and alerting",
-        "5+ GitHub stars"
-      ],
+      "description": "Kết nối xe Vinfast với hệ sinh thái Smarthome/IOT thông qua Home Assistant",
+      "highlights": [],
       "url": "",
-      "github": "https://github.com/leolionart/CLIProxyAPI-Dashboard"
+      "github": "https://github.com/leolionart/vinfast"
     },
     {
-      "name": "Raycast AI Translator",
+      "name": "Pasterly",
       "isActive": true,
-      "description": "Raycast extension for AI-powered translation using proxy API.",
-      "highlights": [
-        "Built with TypeScript for Raycast ecosystem"
-      ],
+      "description": "An Obsidian plugin that auto-uploads clipboard images to Firebase Storage",
+      "highlights": [],
       "url": "",
-      "github": "https://github.com/leolionart/raycast-ai-translator"
+      "github": "https://github.com/leolionart/Pasterly"
+    },
+    {
+      "name": "Mac Audio Remote",
+      "isActive": true,
+      "description": "Native macOS menu bar app for controlling audio with iOS Shortcuts",
+      "highlights": [],
+      "url": "",
+      "github": "https://github.com/leolionart/Mac-Audio-Remote"
+    },
+    {
+      "name": "NA.AI Studio Website",
+      "isActive": true,
+      "isPrivate": true,
+      "description": "Website giới thiệu công ty NAAI STUDIO",
+      "highlights": [],
+      "url": "",
+      "github": "https://github.com/leolionart/naai-studio"
+    },
+    {
+      "name": "Obsidian Flow",
+      "isActive": true,
+      "isPrivate": true,
+      "description": "Quản trị tri thức cá nhân, làm chủ công cụ thu nạp và phát triển kiến thức",
+      "highlights": [],
+      "url": "",
+      "github": "https://github.com/leolionart/Obsidian-Flow"
     }
   ]
 }

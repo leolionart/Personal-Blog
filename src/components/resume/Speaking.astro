@@ -1,0 +1,26 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { speaking } = cv;
+---
+
+{speaking && speaking.length > 0 && (
+	<Section title="Speaking" class={className}>
+		<ul class="flex flex-col gap-3 print:gap-1">
+			{speaking.map(({ event, year, summary }) => (
+				<li class="grid sm:grid-cols-[120px_1fr] gap-1 sm:gap-4">
+					<div class="text-xs c-gray-500 dark:c-gray-400 pt-0.5">{year}</div>
+					<div>
+						<h4 class="text-sm font-semibold dark:c-gray-100">{event}</h4>
+						{summary && <p class="text-xs c-gray-500 dark:c-gray-400 mt-0.5">{summary}</p>}
+					</div>
+				</li>
+			))}
+		</ul>
+	</Section>
+)}

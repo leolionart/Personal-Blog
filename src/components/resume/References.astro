@@ -1,0 +1,24 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { references } = cv;
+---
+
+{references && references.length > 0 && (
+	<Section title="References" class={className}>
+		<ul class="flex flex-col gap-3 print:gap-1">
+			{references.map(({ name, reference, contact }) => (
+				<li>
+					<h4 class="text-sm font-semibold dark:c-gray-100">{name}</h4>
+					<div class="text-xs c-gray-600 dark:c-gray-400">{reference}</div>
+					{contact && <div class="text-xs c-gray-500 dark:c-gray-400 mt-0.5">{contact}</div>}
+				</li>
+			))}
+		</ul>
+	</Section>
+)}

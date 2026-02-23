@@ -7,63 +7,261 @@ tags:
   - PM
 type: announcement
 ---
-Mình nghĩ đa số các bạn đều rất ngại môi trường rất hustle hay chaotic, lúc này áp lực sẽ rất lớn cho tâm trí của người làm product
 
-> Stress không phải đến từ độ khó của việc đang làm mà là cảm giác biết có việc khó đang đợi nhưng chưa làm
+## 🎯 Mở đầu
 
-Trong cuốn [Làm điều quan trọng](https://www.notion.so/L-m-i-u-quan-tr-ng-a5a9ae1b6fa7451faf3f3b35dcd20823?pvs=21) có nhắc tới khái niệm “cơn lốc”. Công việc hàng ngày dễ cuốn bạn đi theo và khi bạn nhận ra điều bạn cho là quan trọng vẫn chưa thể thực hiện. Sau nhiều nỗ lực thử và sai trong việc ổn định cơn lốc, tôi có đúc rút ra một số kinh nghiệm mong được chia sẻ lại với các bạn. Rất may mắn và gửi lời cảm ơn tới những leader của tôi khi đi qua từng người tôi lại học được một cái hay ho nào đấy từ họ.
+Đa số bạn đều rất ngại **môi trường hustle hay chaotic**, lúc này **áp lực sẽ rất lớn** cho tâm trí của người làm product.
 
-# Nguyên tắc 5/25
+> **Stress không phải đến từ độ khó của việc đang làm mà là cảm giác biết có việc khó đang đợi nhưng chưa làm**
 
-Dưới đây là chia sẻ của anh Tùng Jacob truyền đạt từ kinh nghiệm của anh Trần Kinh Doanh ở MWG mà tôi áp dụng từ 2023
+---
 
-1. Lập ra danh sách 25 điều bạn muốn làm
-2. Tập trung làm tốt top 5
-3. Sau khi làm tốt top 5 bạn có thể thấy rằng 20 điều còn lại không còn quá quan trọng nữa. Tập trung 80% nỗ lực cho 20% những thứ quan trọng nhất
+## 📋 Mục lục
 
-<aside> 💡 Vậy câu hỏi đặt ra ở đây là: Điều gì là quan trọng?
+1. [Nguyên tắc 5/25](#nguyen-tac-5-25)
+2. [Đặt tất cả công việc lên bàn](#dat-tat-ca)
+3. [Sử dụng quyền trợ giúp](#su-dung-quyen-tro-giup)
+4. [Tổng kết](#tong-ket)
 
-</aside>
+---
 
-# Đặt tất cả công việc lên bàn và sắp xếp
+## 💡 Khái niệm "Cơn lốc"
 
-2 method mình thường sử dụng trong việc lập kế hoạch:
+Trong cuốn **"Làm điều quan trọng"**, có nhắc tới khái niệm **"cơn lốc"** 🌪️.
 
-- Monopoly Money
-    - Mỗi stakeholder được phân công một số tiền, họ phải sử dụng số tiền này để 'cược' vào các yêu cầu mà họ cho rằng quan trọng nhất
-    - Các team khác nhau sẽ được phân công số tiền tương ứng tuỳ thuộc mức độ impact sẽ có số điểm ở từng sprint khác nhau (VD: phụ trách ngành hàng chiến lược, tập KH lớn…)
-- Ma trận Eisenhower
-    - Phân loại công việc theo hai tiêu chí: quan trọng và khẩn cấp.
-    - Công việc được chia thành 4 loại: làm ngay (quan trọng và khẩn cấp), lập kế hoạch làm sau (quan trọng nhưng không khẩn cấp), ủy thác (khẩn cấp nhưng không quan trọng), và loại bỏ (không quan trọng và không khẩn cấp).
+**Vấn đề**:
+- Công việc hàng ngày dễ **cuốn bạn đi theo**
+- Khi nhận ra → những gì bạn cho là **quan trọng vẫn chưa thể thực hiện**
 
-Mỗi tháng mình luôn lập ra danh sách công việc của tháng, trong đó phân loại ra 2 danh sách
+**Kinh nghiệm của tôi**:
+- Sau nhiều nỗ lực **thử và sai**
+- Tôi đã đúc rút ra một số **kinh nghiệm quý báu**
+- Mong được chia sẻ với các bạn
 
-- Dự án cần follow-up đã kickoff từ tháng trước
-- Việc theo kế hoạch trong tháng: Đã commit sẽ hoàn tất hoặc được làm
-- Việc ngoài kế hoạch (ad-hoc): Những việc cần support gấp và vượt qua được filter methods bên trên, đồng thuận đưa vào kế hoạch hàng tháng
+> Rất may mắn và gửi lời cảm ơn tới những leader của tôi. Khi đi qua từng người, tôi lại học được một cái hay ho nào đấy từ họ.
+
+---
+
+## 📊 Nguyên tắc 5/25 
+
+Dưới đây là chia sẻ từ **anh Tùng Jacob** truyền đạt từ kinh nghiệm của **anh Trần Kinh Doanh** ở **MWG** - mà tôi áp dụng từ năm 2023.
+
+### 3 bước đơn giản:
+
+#### 1️⃣ **Lập danh sách 25 điều bạn muốn làm**
+- Viết ra tất cả những gì bạn muốn thực hiện
+- Không cần sắp xếp lúc này
+
+#### 2️⃣ **Tập trung làm tốt TOP 5**
+- Chọn **5 mục tiêu** quan trọng nhất từ 25 mục
+- Dồn **80% nỗ lực** vào 5 mục này
+- Đây là "**20% điều quan trọng nhất**"
+
+#### 3️⃣ **Kết quả bất ngờ**
+- Sau khi làm tốt TOP 5 → bạn sẽ thấy rằng
+- **20 mục còn lại** không còn quá quan trọng nữa
+- Bạn sẽ tự nhiên **bỏ bớt** hoặc hoãn những công việc ít quan trọng
+
+---
+
+### 💡 Câu hỏi đặt ra:
+
+> **Điều gì là quan trọng?**
+
+Đó là câu hỏi mà mỗi PM phải trả lời hàng ngày.
+
+---
+
+## 🎯 Đặt tất cả công việc lên bàn và sắp xếp 
+
+Tôi thường sử dụng **2 phương pháp** chính trong lập kế hoạch:
+
+### Phương pháp 1️⃣: **Monopoly Money** 💰
+
+**Cách hoạt động**:
+- Mỗi stakeholder được phân công một số tiền **"ảo"**
+- Họ phải sử dụng số tiền này để **"cược"** vào các yêu cầu
+- Chọn những yêu cầu họ cho là **quan trọng nhất**
+
+**Ưu điểm**:
+- Phản ánh **ưu tiên thực sự** của từng bên
+- Tạo **sự cân bằng** giữa các bộ phận
+
+**Điều chỉnh theo impact**:
+- Các team có **tác động cao** → được phân công tiền nhiều hơn
+- Ví dụ: Team phụ trách ngành hàng chiến lược, tập khách hàng lớn
+
+---
+
+### Phương pháp 2️⃣: **Ma trận Eisenhower** 📐
+
+**Phân loại công việc theo 2 tiêu chí**:
+- 🟥 **Quan trọng** (Important)
+- 🟨 **Khẩn cấp** (Urgent)
+
+**4 loại công việc**:
+
+| | **Khẩn cấp** | **Không khẩn cấp** |
+|---------|---------|---------|
+| **Quan trọng** | 🔴 **LÀMNGAY** | 🟡 **LẬP KẾHOẠCH** |
+| **Không quan trọng** | 🟠 **UỶ THác** | ⚪️ **LOẠIBỎ** |
+
+1. **Quan trọng + Khẩn cấp** 🔴
+   - → **Làm ngay**
+   - Ví dụ: Bug ảnh hưởng nhiều user
+
+2. **Quan trọng + Không khẩn cấp** 🟡
+   - → **Lập kế hoạch làm sau**
+   - Ví dụ: Refactor code, nâng cấp infrastructure
+
+3. **Không quan trọng + Khẩn cấp** 🟠
+   - → **Ủy thác** cho người khác
+   - Ví dụ: Meeting không quan trọng
+
+4. **Không quan trọng + Không khẩn cấp** ⚪️
+   - → **Loại bỏ**
+   - Ví dụ: Những thứ "nice-to-have" vô nghĩa
+
+---
+
+## 📅 Lập kế hoạch hàng tháng
+
+**Mỗi tháng mình luôn lập ra 3 danh sách công việc**:
+
+### 1️⃣ **Dự án cần follow-up**
+- Các dự án đã **kickoff từ tháng trước**
+- Đang trong quá trình thực hiện
+
+### 2️⃣ **Việc theo kế hoạch trong tháng**
+- Những công việc đã **commit**
+- Sẽ hoàn tất hoặc được làm trong tháng này
+
+### 3️⃣ **Việc ngoài kế hoạch (Ad-hoc)**
+- Những việc **cần support gấp**
+- Đã **vượt qua bộ lọc** của phương pháp 5/25 hoặc Eisenhower
+- **Được đồng thuận** để đưa vào kế hoạch hàng tháng
 
 ![](https://i.imgur.com/UIdOGNH.jpeg)
 
-Nguyên tắc sắp xếp công việc sẽ dựa theo 2 method trên, đảm bảo những công việc top đầu đều đang là ưu tiên cao nhất từ cấp quản lý cho tới cấp bộ phận. Họ chỉ cần theo dõi due date cuối cùng (thường là cuối sprint IT) để phối hợp.
+---
 
-<aside> 🚧
+### 🔑 Nguyên tắc sắp xếp công việc:
 
-Sẽ có tình huống đội ngũ engineering chưa đánh giá kỹ được nên chưa đưa được timeline bạn bắt buộc phải có một timelines tạm thời để team khác phối hợp chung. Để đảm bảo mọi thứ không đi chệch hướng cần bám theo nguyên tắc Intergrity (báo trước sớm nhất có thể (thông thường 1 ngày làm việc) nếu ước tính công việc có thể không hoàn thành đúng hạn và tái tạo cam kết deadline mới)
+**Dựa trên 2 phương pháp trên** để đảm bảo:
+- Những công việc **TOP đầu** = ưu tiên cao nhất
+- Từ cấp **quản lý** cho tới cấp **bộ phận**
+- Mọi người chỉ cần **theo dõi due date** (thường là cuối sprint IT)
+- Để **phối hợp** công việc
 
-</aside>
+---
 
-# Sử dụng quyền trợ giúp
+## ⚠️ Xử lý tình huống đặc biệt
 
-<aside> 💡 Ưu tiên của mình chưa chắc đã là ưu tiên của toàn bộ team. Align kỳ vọng là điều cực kỳ cần thiết trong phối hợp công việc
+### Khi timeline không rõ:
 
-</aside>
+> **Situation**: Đội ngũ engineering chưa đánh giá kỹ được → chưa đưa được timeline bạn yêu cầu
 
-> Anh muốn làm cái A này, em xem có bao nhiêu việc đang ưu tiên đặt hết lên bàn đi anh và em cùng lựa ra cái nào cho chậm lại để đưa thêm workload cho cái này được
+**Giải pháp**:
+- Bắt buộc có **timeline tạm thời** để team khác phối hợp
+- Để đảm bảo mọi thứ **không đi chệch hướng**
 
-Thực hành planing to unplanned nhiều giúp mình nhận ra việc kế hoạch lập ra bị chen ngang buộc thay đổi là điều bình thường trong công việc và dần có sự chuẩn bị tốt hơn để những thứ chen ngang này thuộc một phần kế hoạch. Trong kinh doanh rất dễ xảy ra tình huống một thứ đang là ưu tiên của tuần trước không còn là ưu tiên của tuần này, nếu team vận hành theo kiểu block sprints tức là các cập nhật của kinh doanh phải mất tới 2 tuần mới được áp dụng xuống, và có khi mất tới 3-4 tuần mới release được thay đổi đó, như vậy là đã tuột đi biết bao nhiêu cơ hội
+### Nguyên tắc **INTEGRITY** 🤝:
 
-Cách làm của mình là luôn có những cuộc họp được setup weekly với quản lý trực tiếp và bi-weekly với các trưởng bộ phận khác để đảm bảo rằng thứ tự mình đang ưu tiên cũng đều là thứ tự ưu tiên cao nhất của mọi người. Đồng thời cũng là một cách khoe khéo về tiến độ các công việc đang làm cũng như những vấn đề phát sinh cần giải quyết của nó. Có những thời điểm còn không có thời gian ngồi lại để họp 1h sắp xếp ưu tiên. Mình dùng luôn quyền trợ giúp là chạy vô phòng sếp và đặt lên bàn ưu tiên của mình, “anh xem giúp em với giờ tuần này e với team chỉ có thể tập trung vào 5 cái thôi a chốt danh sách giúp em”. Thường ở mỗi sprint mình chỉ có top 10 và top 5, trong đó trong top 3 là những thứ đảm bảo có impact lớn tới bộ phận khác.
+> **Báo trước sớm nhất có thể** (thường là 1 ngày làm việc)
+- Nếu ước tính công việc **có thể không hoàn thành đúng hạn**
+- **Tái tạo cam kết deadline mới**
+- Tránh bất ngờ **cuối cùng**
 
-# Tổng kết
+---
 
-Sắp xếp ưu tiên là việc cả đời, theo thống kê chưa chính thức mình thu thập được từ 2023 có [73% of Product Managers spend time on feature prioritization](https://www.notion.so/C-th-vai-tr-PM-l-g-727465776d834c00a59fe9e37a60ec91?pvs=21). Vì vậy bản thân mình vẫn luôn không ngừng cố gắng để làm việc sắp xếp làm điều quan trọng một cách tốt hơn mỗi ngày, hi vọng bạn đọc cũng thế nhé.
+## 💡 Sử dụng quyền trợ giúp 
+
+### Insight quan trọng:
+
+> **Ưu tiên của mình chưa chắc đã là ưu tiên của toàn bộ team**
+>
+> **Align kỳ vọng là điều cực kỳ cần thiết** trong phối hợp công việc
+
+---
+
+### Mô tả từ leader:
+
+> "Anh muốn làm cái A này, em xem có bao nhiêu việc đang ưu tiên đặt hết lên bàn đi anh, em cùng lựa ra cái nào cho chậm lại để đưa thêm workload cho cái này được"
+
+**Ý nghĩa**:
+- Không thể làm tất cả → phải chọn
+- Phải nói rõ **trade-off**
+- Quản lý kỳ vọng của leader
+
+---
+
+### Thực hành "Planning to Unplanned"
+
+**Kinh nghiệm**:
+- Lập kế hoạch → luôn bị chen ngang → buộc thay đổi
+- Ban đầu cảm thấy **bất ngờ**
+- Bây giờ coi là **bình thường**
+- Dần có **sự chuẩn bị tốt hơn**
+
+**Sự thật của kinh doanh**:
+- Ưu tiên của tuần trước ≠ ưu tiên của tuần này
+- Nếu chạy **block sprints** → cập nhật mất tới **2 tuần**
+- Release có khi mất tới **3-4 tuần** → **tuột biết bao nhiêu cơ hội**
+
+**Giải pháp**:
+- Luôn có những cuộc họp **thiết lập sẵn**
+
+---
+
+### 📅 Meeting schedule của tôi:
+
+#### **Weekly**: 1 on 1 với quản lý trực tiếp
+- Đảm bảo thứ tự ưu tiên
+- Còn là ưu tiên cao của họ không?
+
+#### **Bi-weekly**: Với các trưởng bộ phận khác
+- Xác nhận ưu tiên
+- Chia sẻ tiến độ
+- Giải quyết vấn đề phát sinh
+
+#### **Lợi ích thêm**:
+- Khoe khéo về **tiến độ công việc**
+- Chia sẻ những **vấn đề phát sinh**
+
+---
+
+### 🆘 "Chạy vô phòng sếp" strategy
+
+**Khi không có thời gian họp**:
+- Tôi **chạy vô phòng sếp** 😄
+- Đặt lên bàn: **"Anh xem giúp em với"**
+
+**Mô tả cụ thể**:
+> "Giờ tuần này em với team chỉ có thể tập trung vào 5 cái thôi a, chốt danh sách giúp em"
+
+**Kết quả**:
+- Mỗi sprint: TOP 10 danh sách
+- Trong đó: TOP 5 ưu tiên cao
+- TOP 3 là những công việc có **impact lớn** tới bộ phận khác
+
+---
+
+## 📝 Tổng kết 
+
+### Thực tế:
+
+> **73% of Product Managers spend time on feature prioritization**
+>
+> [Liên kết](/)
+
+**Sắp xếp ưu tiên là việc cả đời**, theo thống kê chưa chính thức tôi thu thập từ năm 2023:
+
+- Có **73%** PM dành thời gian cho việc này
+- Bản thân tôi vẫn luôn **không ngừng cố gắng**
+- Để làm việc sắp xếp ưu tiên **tốt hơn mỗi ngày**
+
+### 🎯 Lời kết:
+
+Hi vọng bạn đọc cũng sẽ như vậy. Sắp xếp ưu tiên không phải đơn giản, nhưng với những **kỹ thuật, phương pháp, và mindset đúng** → bạn sẽ **giảm stress đáng kể** và **tăng hiệu quả công việc**.
+
+**Hãy bắt đầu từ hôm nay!** 💪

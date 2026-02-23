@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+import cv from "@cv";
+
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+const { volunteer } = cv;
+---
+
+{volunteer && volunteer.length > 0 && (
+	<Section title="Volunteering" class={className}>
+		<ul class="flex flex-col gap-3 print:gap-1">
+			{volunteer.map(({ organization, position, url, summary }) => (
+				<li>
+					<h4 class="text-sm font-semibold dark:c-gray-100">
+						{position}
+						<span class="c-gray-400 dark:c-gray-500 font-normal"> @ </span>
+						{url ? (
+							<a class="c-gray-700 dark:c-gray-300 hover:c-gray-900 dark:hover:c-gray-100 underline underline-offset-3 decoration-dotted" href={url} target="_blank">{organization}</a>
+						) : (
+							<span class="c-gray-700 dark:c-gray-300">{organization}</span>
+						)}
+					</h4>
+					{summary && <p class="text-xs c-gray-500 dark:c-gray-400 mt-1">{summary}</p>}
+				</li>
+			))}
+		</ul>
+	</Section>
+)}

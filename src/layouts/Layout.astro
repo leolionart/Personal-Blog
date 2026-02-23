@@ -1,13 +1,20 @@
 ---
+import { SEO } from 'astro-seo';
 import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
 import ModeToggle from '../components/ModeToggle.astro';
-import { SITE_NAME } from '../consts';
+import { SITE_NAME, SITE_DESCRIPTION, SITE_OG_IMAGE } from '../consts';
 
 interface Props {
 	title: string;
+	description?: string;
+	ogImage?: string;
+	ogType?: 'website' | 'article';
+	noindex?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, description = SITE_DESCRIPTION, ogImage = SITE_OG_IMAGE, ogType = 'website', noindex = false } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const navLinks = {
 	"/":"Blog",
 	"/resume":"Resume"
@@ -18,15 +25,38 @@ const navLinks = {
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px"><text y=".9em" font-size="90">0️⃣</text></svg>' />
 		<meta name="generator" content={Astro.generator} />
+		<SEO
+			title={title || SITE_NAME}
+			description={description}
+			canonical={canonicalURL.href}
+			noindex={noindex}
+			openGraph={{
+				basic: {
+					title: title || SITE_NAME,
+					type: ogType,
+					image: new URL(ogImage, Astro.site).href,
+				},
+				optional: {
+					description: description,
+					siteName: SITE_NAME,
+					locale: 'vi_VN',
+				},
+			}}
+			twitter={{
+				card: 'summary_large_image',
+				title: title || SITE_NAME,
+				description: description,
+				image: new URL(ogImage, Astro.site).href,
+			}}
+		/>
+		<link rel="alternate" type="application/rss+xml" title={SITE_NAME} href={new URL('/rss.xml', Astro.site).href} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="/print-resume.css" media="print" />
-		<title>{title || SITE_NAME}</title>
 		<script is:inline>
 			(function() {
 				const theme = localStorage.getItem('theme');
@@ -38,13 +68,13 @@ const navLinks = {
 	</head>
 	<body class="font-mono bg-white dark:bg-gray-900 c-gray-900 dark:c-gray-100 transition-colors">
 		<nav class="border-b-1 border-b-gray-200 dark:border-b-gray-800">
-			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-4 md:pl-5 wrapper mx-auto">
-				<h1 class="text-base md:text-xl">AI TRAN</h1>
+			<div class="flex items-center justify-between border-x-1 border-gray-200 dark:border-gray-800 pl-3 sm:pl-4 md:pl-5 wrapper mx-auto">
+				<a href="/" class="text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-70 transition-opacity cursor-pointer font-700" title="Back to home">AI TRAN</a>
 				<div class="flex items-center">
 					<ul class={`grid grid-auto-flow-col`}>
 						{Object.entries(navLinks).map(([href, title]) => {
 							return <li class="grid-col-[span_1] block">
-								<a href={href} class="text-xs md:text-sm px-3 md:px-5 py-4 md:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
+								<a href={href} class="text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
 							</li>
 						})}
 					</ul>
@@ -53,6 +83,7 @@ const navLinks = {
 			</div>
 		</nav>
 		<slot />
+		<BackToTop />
 		<Footer />
 	</body>
 </html>

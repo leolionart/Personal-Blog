@@ -21,11 +21,11 @@ if (!post) return Astro.redirect('/');
 const author = await getEntry('authors', post.data.author.id);
 const { Content } = await post.render();
 ---
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.description} ogType="article">
     <Header>
-        <a class="absolute top-0 left-0 px-3 md:px-4 py-2 md:py-2.5 text-xs md:text-sm border-1 border-t-0 border-l-0 border-gray-200 dark:border-gray-800 hover:bg-gray-900 hover:c-gray-200 transition" href="/">Return to blog</a>
-        <h1 class="text-7 md:text-12 lg:text-20 leading-[1.15]">{post.data.title}</h1>
-        {post.data.description && <p class="text-sm md:text-base">{post.data.description}</p>}
+        <a class="absolute top-0 left-0 px-2 sm:px-3 md:px-4 py-2 md:py-2.5 text-xs md:text-sm border-1 border-t-0 border-l-0 border-gray-200 dark:border-gray-800 hover:bg-gray-900 hover:c-gray-200 transition" href="/">Return to blog</a>
+        <h1 class="text-6 sm:text-7 md:text-11 lg:text-16 xl:text-20 leading-[1.15]">{post.data.title}</h1>
+        {post.data.description && <p class="text-xs sm:text-sm md:text-base lg:text-lg">{post.data.description}</p>}
         <FormattedDate date={new Date(post.data.pubDate)} />
     </Header>
     <main>

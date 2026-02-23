@@ -1,0 +1,1 @@
+[    7416ms] [ERROR] WebSocket connection to 'ws://localhost:4321/' failed: Error during WebSocket handshake: net::ERR_CONNECTION_RESET @ http://localhost:4321/@vite/client:1671

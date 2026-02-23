@@ -1,0 +1,27 @@
+[   69407ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321//admin/:0
+[   69428ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/favicon.ico:0
+[   74529ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/admin/:0
+[   79817ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321//admin/:0
+[   84656ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/admin:0
+[   85716ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/admin:0
+[  163753ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  163754ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  170888ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  170889ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  176433ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  176433ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  194187ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  194187ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  194663ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  194663ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  202056ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  202056ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  202532ms] [ERROR] The Git Gateway backend is [not supported](https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented) in Sveltia CMS. Use one of the [supported backends](https://sveltiacms.app/en/docs/backends#supported-backends) instead. @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
+[  202532ms] [ERROR] Error: Errors found in configuration
+    at X8 (https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:347:23295) undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
