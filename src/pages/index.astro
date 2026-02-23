@@ -31,7 +31,6 @@ function slugToFilename(slug: string) {
     <main>
         {posts.map(async (post, i) => {
             const author = await getEntry('authors', post.data.author.id);
-            const { Content } = await post.render();
             return (
                 <Section
                     index
@@ -57,12 +56,6 @@ function slugToFilename(slug: string) {
                         {post.data.description && (
                             <p class="text-2.5 sm:text-3 md:text-3.5 lg:text-4 xl:text-5 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
                         )}
-                        <div class="post-content-preview mt-6 text-sm leading-[1.6] overflow-hidden c-gray-700 dark:c-gray-300">
-                            <div class="content-wrapper post-preview-inner">
-                                <Content />
-                            </div>
-                            <div class="post-fade"></div>
-                        </div>
                         <div class="mt-6 flex items-center justify-between">
                             <small class="text-xs c-gray-500">by {author?.data.name}</small>
                             <span class="text-xs flex items-center gap-1 c-gray-500 hover:c-gray-900 dark:hover:c-gray-200">
@@ -105,91 +98,6 @@ function slugToFilename(slug: string) {
         align-items: center;
         gap: 1rem;
         flex-wrap: wrap;
-    }
-    .post-content-preview {
-        max-height: 240px;
-        position: relative;
-        overflow: hidden;
-    }
-    .post-content-preview :global(img) {
-        display: none;
-    }
-    .post-content-preview :global(aside) {
-        display: none;
-    }
-    /* Hide excessive headings in preview - keep only first 1 h2 */
-    .post-content-preview :global(h2:nth-of-type(n+2)) {
-        display: none;
-    }
-    .post-content-preview :global(h3) {
-        display: none;
-    }
-    .post-preview-inner :global(:is(h1,h2,h3,h4,h5,h6)) {
-        font-size: 0.95rem;
-        font-weight: 600;
-        margin-top: 0.75em;
-    }
-    .post-preview-inner :global(p) {
-        margin-top: 0.5em;
-    }
-    .post-preview-inner :global(ul),
-    .post-preview-inner :global(ol) {
-        margin-top: 0.5em;
-        padding-left: 0;
-        list-style: none;
-    }
-    .post-preview-inner :global(li) {
-        padding-left: 1.5em;
-        position: relative;
-    }
-    .post-preview-inner :global(ul > li)::before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        opacity: 0.5;
-    }
-    .post-preview-inner :global(ol) {
-        counter-reset: ol-counter;
-    }
-    .post-preview-inner :global(ol > li) {
-        counter-increment: ol-counter;
-    }
-    .post-preview-inner :global(ol > li)::before {
-        content: counter(ol-counter) '.';
-        position: absolute;
-        left: 0;
-        font-size: 0.875em;
-        opacity: 0.5;
-    }
-    .post-preview-inner :global(blockquote) {
-        border-left: 2px solid currentColor;
-        padding-left: 1em;
-        opacity: 0.7;
-        margin-top: 0.5em;
-    }
-    .post-preview-inner :global(a) {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-    }
-    .post-preview-inner :global(:is(h1,h2,h3,h4,h5,h6)),
-    .post-preview-inner :global(p),
-    .post-preview-inner :global(ul),
-    .post-preview-inner :global(ol),
-    .post-preview-inner :global(blockquote) {
-        padding-inline: 0;
-    }
-    .post-fade {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 80px;
-        pointer-events: none;
-        z-index: 20;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,1) 100%);
-    }
-    :global(.dark) .post-fade {
-        background: linear-gradient(to bottom, rgba(17,24,39,0) 0%, rgba(17,24,39,0.6) 50%, rgba(17,24,39,1) 100%);
     }
     .post-section:hover :global(.section--source) {
         text-decoration: underline;
