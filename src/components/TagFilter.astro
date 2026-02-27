@@ -187,6 +187,11 @@ const { tags } = Astro.props;
 		color: rgb(156 163 175);
 	}
 
+	.tag-btn:active {
+		transform: scale(0.95);
+		transition: transform 0.06s ease-out;
+	}
+
 	.tag-btn:hover {
 		border-color: rgb(107 114 128);
 		color: rgb(17 24 39);

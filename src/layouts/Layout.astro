@@ -88,7 +88,7 @@ const navLinks = {
 					<ul class="grid grid-auto-flow-col list-none m-0 p-0">
 						{Object.entries(navLinks).map(([href, title]) => {
 							return <li class="grid-col-[span_1] block before:content-none p-0 m-0">
-								<a href={href} class="text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{title}</a>
+								<a href={href} class="text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 active:bg-gray-100 dark:active:bg-gray-700 transition-colors">{title}</a>
 							</li>
 						})}
 					</ul>
@@ -465,6 +465,20 @@ const navLinks = {
 			opacity: 1 !important;
 			animation: none !important;
 		}
+	}
+
+	/* Touch optimization for in-app browsers (Facebook, Zalo, etc.) */
+	a, button, [role="button"], input, select, textarea, .tag-btn {
+		touch-action: manipulation;
+	}
+
+	/* Interactive press feedback — buttons and button-like links */
+	button:not(#backToTopBtn):active,
+	[role="button"]:active,
+	nav a:active,
+	a[class*="border-"]:active {
+		transform: scale(0.97);
+		transition: transform 0.06s ease-out;
 	}
 </style>
 <script>

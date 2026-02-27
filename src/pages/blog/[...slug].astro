@@ -23,7 +23,7 @@ const { Content } = await post.render();
 ---
 <Layout title={post.data.title} description={post.data.description} ogType="article">
     <Header>
-        <a class="absolute top-0 left-0 px-2 sm:px-3 md:px-4 py-1.5 md:py-2 text-2.5 sm:text-xs md:text-sm border-1 border-t-0 border-l-0 border-gray-200 dark:border-gray-800 hover:bg-gray-900 hover:c-gray-200 transition" href="/">Return to blog</a>
+        <a class="absolute top-0 left-0 px-2 sm:px-3 md:px-4 py-1.5 md:py-2 text-2.5 sm:text-xs md:text-sm border-1 border-t-0 border-l-0 border-gray-200 dark:border-gray-800 hover:bg-gray-900 hover:c-white dark:hover:bg-gray-100 dark:hover:c-gray-900 active:bg-gray-800 active:c-white dark:active:bg-gray-300 dark:active:c-gray-900 transition" href="/">Return to blog</a>
         <h1 class="text-6 sm:text-7 md:text-11 lg:text-16 xl:text-20 leading-[1.15] mt-6 sm:mt-4 md:mt-0">{post.data.title}</h1>
         {post.data.description && <p class="text-xs sm:text-sm md:text-base lg:text-lg mt-2 md:mt-3 c-gray-600 dark:c-gray-400 font-300">{post.data.description}</p>}
         <span class="text-2.5 sm:text-xs md:text-sm mt-3 md:mt-4 c-gray-400 dark:c-gray-500">
@@ -35,7 +35,7 @@ const { Content } = await post.render();
             <Section fullWidthBorder class="post-tags-section">
                 <div class="flex flex-wrap gap-2">
                     {post.data.tags.map((tag: string) => (
-                        <a href={`/?tag=${encodeURIComponent(tag)}`} class="text-xs px-3 py-1.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
+                        <a href={`/?tag=${encodeURIComponent(tag)}`} class="text-xs px-3 py-1.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 transition cursor-pointer">
                             #{tag}
                         </a>
                     ))}

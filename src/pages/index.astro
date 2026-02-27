@@ -37,6 +37,7 @@ function slugToFilename(slug: string) {
                     fullWidthBorder
                     class="post-section animate-on-scroll"
                     data-tags={post.data.tags?.join(',') || ''}
+                    data-delay={i < 4 ? String(i + 1) : undefined}
                 >
                     <article class="relative post-article">
                         <div class="post-meta">
@@ -57,8 +58,8 @@ function slugToFilename(slug: string) {
                         )}
                         <div class="mt-6 flex items-center justify-between">
                             <small class="text-xs c-gray-500">by {author?.data.name}</small>
-                            <span class="text-xs flex items-center gap-1 c-gray-500 hover:c-gray-900 dark:hover:c-gray-200">
-                                Read more →
+                            <span class="read-more text-xs flex items-center gap-1 c-gray-500 transition-all duration-150">
+                                Read more <span class="transition-transform duration-150">→</span>
                             </span>
                         </div>
                         <a href={`/blog/${post.slug}`} class="after:content-[''] after:absolute after:inset-0 after:z-1">
@@ -73,6 +74,19 @@ function slugToFilename(slug: string) {
 <style>
     .post-section :global(.content-container) {
         position: relative;
+        transition: background-color 0.15s ease;
+    }
+    .post-section:hover :global(.content-container) {
+        background-color: rgb(243 244 246);
+    }
+    :global(.dark) .post-section:hover :global(.content-container) {
+        background-color: rgb(31 41 55);
+    }
+    .post-section:active :global(.content-container) {
+        background-color: rgb(229 231 235);
+    }
+    :global(.dark) .post-section:active :global(.content-container) {
+        background-color: rgb(55 65 81);
     }
     .post-article {
         padding-inline: 1rem;
@@ -101,4 +115,13 @@ function slugToFilename(slug: string) {
     .post-section:hover :global(.section--source) {
         text-decoration: underline;
     }
+    .post-section:hover .read-more {
+        color: rgb(17 24 39);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    :global(.dark) .post-section:hover .read-more {
+        color: rgb(229 231 235);
+    }
+
 </style>

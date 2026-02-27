@@ -67,7 +67,7 @@ const { work } = cv;
 							{(responsibilities || achievements) && (
 								<button
 									data-expand-toggle
-									class="no-print flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 cursor-pointer transition-colors w-fit"
+									class="no-print flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 hover:underline underline-offset-3 cursor-pointer transition-colors w-fit"
 								>
 									<span data-expand-text>Show more</span>
 									<svg class="expand-chevron w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -92,31 +92,31 @@ const { work } = cv;
 </Section>
 
 <script>
-	function initExpandables() {
-		document.querySelectorAll('[data-expand-toggle]').forEach(btn => {
-			btn.addEventListener('click', () => {
-				const li = btn.closest('li');
-				const content = li?.querySelector('[data-expandable]') as HTMLElement;
-				const text = btn.querySelector('[data-expand-text]');
-				const chevron = btn.querySelector('.expand-chevron');
-				if (!content) return;
+	if (!(window as any).__expandToggleInit) {
+		(window as any).__expandToggleInit = true;
+		document.addEventListener('click', (e) => {
+			const btn = (e.target as HTMLElement).closest('[data-expand-toggle]');
+			if (!btn) return;
 
-				const isExpanded = content.getAttribute('data-expanded') === 'true';
+			const li = btn.closest('li');
+			const content = li?.querySelector('[data-expandable]') as HTMLElement;
+			const text = btn.querySelector('[data-expand-text]');
+			const chevron = btn.querySelector('.expand-chevron');
+			if (!content) return;
 
-				if (isExpanded) {
-					content.style.maxHeight = '0px';
-					content.setAttribute('data-expanded', 'false');
-					if (text) text.textContent = 'Show more';
-					chevron?.classList.remove('rotate-180');
-				} else {
-					content.style.maxHeight = content.scrollHeight + 'px';
-					content.setAttribute('data-expanded', 'true');
-					if (text) text.textContent = 'Show less';
-					chevron?.classList.add('rotate-180');
-				}
-			});
+			const isExpanded = content.getAttribute('data-expanded') === 'true';
+
+			if (isExpanded) {
+				content.style.maxHeight = '0px';
+				content.setAttribute('data-expanded', 'false');
+				if (text) text.textContent = 'Show more';
+				chevron?.classList.remove('rotate-180');
+			} else {
+				content.style.maxHeight = content.scrollHeight + 'px';
+				content.setAttribute('data-expanded', 'true');
+				if (text) text.textContent = 'Show less';
+				chevron?.classList.add('rotate-180');
+			}
 		});
 	}
-	initExpandables();
-	document.addEventListener('astro:after-swap', initExpandables);
 </script>
