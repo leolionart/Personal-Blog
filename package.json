@@ -1,7 +1,7 @@
 {
   "name": "naid",
   "type": "module",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
