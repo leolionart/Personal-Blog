@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 import TagFilter from "../components/TagFilter.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
 const title = "Blog"
@@ -28,8 +28,7 @@ function slugToFilename(slug: string) {
     </Header>
     {allTags.length > 0 && <TagFilter tags={allTags} />}
     <main>
-        {posts.map(async (post, i) => {
-            const author = await getEntry('authors', post.data.author.id);
+        {posts.map((post, i) => {
             return (
                 <Section
                     index
@@ -37,6 +36,8 @@ function slugToFilename(slug: string) {
                     fullWidthBorder
                     class="post-section animate-on-scroll"
                     data-tags={post.data.tags?.join(',') || ''}
+                    data-title={post.data.title}
+                    data-description={post.data.description || ''}
                     data-delay={i < 4 ? String(i + 1) : undefined}
                 >
                     <article class="relative post-article">
@@ -56,8 +57,7 @@ function slugToFilename(slug: string) {
                         {post.data.description && (
                             <p class="text-2.5 sm:text-3 md:text-3.5 lg:text-4 xl:text-5 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
                         )}
-                        <div class="mt-6 flex items-center justify-between">
-                            <small class="text-xs c-gray-500">by {author?.data.name}</small>
+                        <div class="mt-6 flex justify-end">
                             <span class="read-more text-xs flex items-center gap-1 c-gray-500 transition-all duration-150">
                                 Read more <span class="transition-transform duration-150">→</span>
                             </span>

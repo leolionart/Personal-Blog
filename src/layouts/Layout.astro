@@ -92,6 +92,9 @@ const navLinks = {
 							</li>
 						})}
 					</ul>
+					<button id="nav-search-btn" aria-label="Search posts" class="border-1 bg-transparent border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 cursor-pointer grid place-content-center h-9 w-9 transition-colors">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+					</button>
 					<ModeToggle />
 				</div>
 			</div>
@@ -99,6 +102,35 @@ const navLinks = {
 		<slot />
 		<BackToTop />
 		<Footer />
+		<script>
+			function initNavSearch() {
+				const btn = document.getElementById('nav-search-btn');
+				if (!btn) return;
+				btn.addEventListener('click', () => {
+					const input = document.getElementById('search-input') as HTMLInputElement | null;
+					if (input) {
+						input.focus();
+						input.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+					} else {
+						window.location.href = '/?focus=search';
+					}
+				});
+				document.addEventListener('keydown', (e) => {
+					if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+						e.preventDefault();
+						const input = document.getElementById('search-input') as HTMLInputElement | null;
+						if (input) {
+							input.focus();
+							input.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+						} else {
+							window.location.href = '/?focus=search';
+						}
+					}
+				});
+			}
+			initNavSearch();
+			document.addEventListener('astro:after-swap', initNavSearch);
+		</script>
 	</body>
 </html>
 <style is:global>

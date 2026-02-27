@@ -8,6 +8,17 @@ const { tags } = Astro.props;
 
 <div class="tag-filter-container">
 	<div class="border-x-1 border-gray-200 dark:border-gray-800 wrapper mx-auto">
+		<div class="search-row">
+			<svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+			<input
+				id="search-input"
+				type="text"
+				placeholder="Search posts..."
+				autocomplete="off"
+				class="search-input"
+			/>
+			<kbd class="search-kbd"><span class="search-kbd-meta">⌘</span>K</kbd>
+		</div>
 		<div class="tag-filter-wrapper" id="tag-filter-wrapper">
 			<button class="tag-btn tag-btn-reset active" data-tag="all">All</button>
 			{tags.map((tag) => (
@@ -21,18 +32,27 @@ const { tags } = Astro.props;
 	interface Post {
 		element: HTMLElement;
 		tags: string[];
+		title: string;
+		description: string;
 	}
 
 	const posts: Post[] = [];
 	const selectedTags = new Set<string>();
+	let searchQuery = '';
+
+	function normalize(str: string) {
+		return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+	}
 
 	function collectPosts() {
 		posts.length = 0;
 		document.querySelectorAll('.post-section').forEach((section) => {
-			const tagsText = section.getAttribute('data-tags');
+			const el = section as HTMLElement;
 			posts.push({
-				element: section as HTMLElement,
-				tags: tagsText ? tagsText.split(',').map((t) => t.trim()) : [],
+				element: el,
+				tags: (el.dataset.tags || '').split(',').map(t => t.trim()).filter(Boolean),
+				title: el.dataset.title || '',
+				description: el.dataset.description || '',
 			});
 		});
 	}
@@ -41,8 +61,6 @@ const { tags } = Astro.props;
 		const wrapper = document.getElementById('tag-filter-wrapper');
 		if (!wrapper) return;
 		const allBtn = wrapper.querySelector('[data-tag="all"]')!;
-
-		// Move active tags right after "All" button
 		selectedTags.forEach(tag => {
 			const btn = wrapper.querySelector(`[data-tag="${tag}"]`);
 			if (btn) allBtn.after(btn);
@@ -52,7 +70,6 @@ const { tags } = Astro.props;
 	function updateButtonStates() {
 		const wrapper = document.getElementById('tag-filter-wrapper');
 		if (!wrapper) return;
-
 		wrapper.querySelectorAll('.tag-btn').forEach(btn => {
 			const tag = btn.getAttribute('data-tag');
 			if (tag === 'all') {
@@ -64,24 +81,33 @@ const { tags } = Astro.props;
 	}
 
 	function filterPosts() {
+		const q = normalize(searchQuery.trim());
+
 		posts.forEach((post) => {
-			if (selectedTags.size === 0) {
-				post.element.style.display = '';
-			} else {
-				const hasTag = Array.from(selectedTags).some(tag => post.tags.includes(tag));
-				post.element.style.display = hasTag ? '' : 'none';
+			let tagMatch = true;
+			let textMatch = true;
+
+			if (selectedTags.size > 0) {
+				tagMatch = Array.from(selectedTags).some(tag => post.tags.includes(tag));
 			}
+
+			if (q) {
+				const inTitle = normalize(post.title).includes(q);
+				const inDesc = normalize(post.description).includes(q);
+				const inTags = post.tags.some(t => normalize(t).includes(q));
+				textMatch = inTitle || inDesc || inTags;
+			}
+
+			post.element.style.display = (tagMatch && textMatch) ? '' : 'none';
 		});
 	}
 
 	function updateURL() {
-		if (selectedTags.size === 0) {
-			window.history.replaceState(null, '', window.location.pathname);
-		} else {
-			const params = new URLSearchParams();
-			selectedTags.forEach(tag => params.append('tag', tag));
-			window.history.replaceState(null, '', `?${params.toString()}`);
-		}
+		const params = new URLSearchParams();
+		selectedTags.forEach(tag => params.append('tag', tag));
+		if (searchQuery.trim()) params.set('q', searchQuery.trim());
+		const qs = params.toString();
+		window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname);
 	}
 
 	function handleTagAction(tag: string) {
@@ -103,7 +129,6 @@ const { tags } = Astro.props;
 		if (!wrapper || (wrapper as any).__bound) return;
 		(wrapper as any).__bound = true;
 
-		// Click handler (desktop + some mobile)
 		wrapper.addEventListener('click', (e) => {
 			const btn = (e.target as Element).closest('.tag-btn');
 			if (!btn) return;
@@ -111,11 +136,7 @@ const { tags } = Astro.props;
 			if (tag) handleTagAction(tag);
 		});
 
-		// iOS Safari / Facebook WebView fix:
-		// Touch events inside overflow-x:auto + position:sticky don't bubble
-		// to document reliably. Attach directly on the scroll container.
 		let touchStart = { x: 0, y: 0 };
-
 		wrapper.addEventListener('touchstart', (e) => {
 			if (!(e.target as Element).closest('.tag-btn')) return;
 			touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
@@ -135,18 +156,45 @@ const { tags } = Astro.props;
 		});
 	}
 
+	function bindSearch() {
+		const input = document.getElementById('search-input') as HTMLInputElement;
+		if (!input || (input as any).__bound) return;
+		(input as any).__bound = true;
+
+		input.addEventListener('input', () => {
+			searchQuery = input.value;
+			filterPosts();
+			updateURL();
+		});
+	}
+
 	function initialize() {
 		selectedTags.clear();
+		searchQuery = '';
 		collectPosts();
 		bindWrapper();
+		bindSearch();
 
 		// Restore from URL
 		const params = new URLSearchParams(window.location.search);
 		params.getAll('tag').forEach(tag => selectedTags.add(tag));
-		if (selectedTags.size > 0) {
+		const q = params.get('q') || '';
+		const input = document.getElementById('search-input') as HTMLInputElement;
+
+		if (q && input) {
+			searchQuery = q;
+			input.value = q;
+		}
+
+		if (selectedTags.size > 0 || q) {
 			reorderButtons();
 			updateButtonStates();
 			filterPosts();
+		}
+
+		// Auto-focus when navigated with ?focus=search
+		if (params.get('focus') === 'search' && input) {
+			requestAnimationFrame(() => input.focus());
 		}
 	}
 
@@ -166,6 +214,58 @@ const { tags } = Astro.props;
 	:global(.dark) .tag-filter-container {
 		background-color: rgb(17 24 39);
 		border-bottom-color: rgb(55 65 81);
+	}
+
+	.search-row {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding-inline: 1rem;
+		padding-top: 0.625rem;
+	}
+
+	@media (min-width: 640px) {
+		.search-row { padding-inline: 1.5rem; }
+	}
+	@media (min-width: 768px) {
+		.search-row { padding-inline: 2rem; }
+	}
+	@media (min-width: 1024px) {
+		.search-row { padding-inline: 2.5rem; }
+	}
+
+	.search-icon {
+		flex-shrink: 0;
+		color: rgb(156 163 175);
+	}
+
+	.search-input {
+		flex: 1;
+		border: none;
+		outline: none;
+		background: transparent;
+		font-family: inherit;
+		font-size: 0.875rem;
+		color: inherit;
+		padding: 0.375rem 0;
+	}
+
+	.search-input::placeholder {
+		color: rgb(156 163 175);
+	}
+
+	.search-kbd {
+		flex-shrink: 0;
+		font-family: inherit;
+		font-size: 0.625rem;
+		padding: 0.15em 0.5em;
+		border: 1px solid rgb(209 213 219);
+		border-radius: 3px;
+		color: rgb(156 163 175);
+	}
+
+	:global(.dark) .search-kbd {
+		border-color: rgb(75 85 99);
 	}
 
 	.tag-filter-wrapper {
