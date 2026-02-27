@@ -1,0 +1,91 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+    currentSlug: string;
+    currentTags: string[];
+    allPosts: CollectionEntry<"posts">[];
+}
+
+const { currentSlug, currentTags, allPosts } = Astro.props;
+
+const currentTagSet = new Set(currentTags);
+
+const related = allPosts
+    .filter((p) => p.slug !== currentSlug)
+    .map((p) => {
+        const matchCount = (p.data.tags || []).filter((t) =>
+            currentTagSet.has(t),
+        ).length;
+        return { post: p, matchCount };
+    })
+    .filter((r) => r.matchCount > 0)
+    .sort(
+        (a, b) =>
+            b.matchCount - a.matchCount ||
+            new Date(b.post.data.pubDate).getTime() -
+                new Date(a.post.data.pubDate).getTime(),
+    )
+    .slice(0, 2);
+---
+
+{
+    related.length > 0 && (
+        <section class="related-posts">
+            <h3 class="text-xs c-gray-400 dark:c-gray-500 uppercase tracking-widest mb-6">
+                Keep reading
+            </h3>
+            <div class:list={[
+                "grid gap-4",
+                related.length === 2 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 max-w-1/2"
+            ]}>
+                {related.map(({ post, matchCount }) => (
+                    <a
+                        href={`/blog/${post.slug}`}
+                        class="related-card group block border-1 border-gray-200 dark:border-gray-700 transition-colors duration-150 p-4 sm:p-5"
+                    >
+                        <div class="flex items-center gap-2 flex-wrap mb-3">
+                            <span class="text-xs c-gray-400 dark:c-gray-500">
+                                <FormattedDate date={new Date(post.data.pubDate)} />
+                            </span>
+                            <span class="text-xs c-gray-300 dark:c-gray-600">·</span>
+                            <span class="text-xs c-gray-400 dark:c-gray-500">
+                                {matchCount} tag{matchCount > 1 ? "s" : ""} in common
+                            </span>
+                        </div>
+                        <h4 class="text-sm sm:text-base md:text-lg font-700 leading-snug c-gray-900 dark:c-gray-100 line-clamp-2">
+                            {post.data.title}
+                        </h4>
+                        {post.data.description && (
+                            <p class="text-xs sm:text-sm mt-2 c-gray-500 dark:c-gray-400 leading-relaxed line-clamp-2">
+                                {post.data.description}
+                            </p>
+                        )}
+                        <span class="read-more inline-flex items-center gap-1 mt-3 text-xs c-gray-400 dark:c-gray-500 group-hover:c-gray-900 dark:group-hover:c-gray-100 transition-colors duration-150">
+                            Read more
+                            <span class="transition-transform duration-150 group-hover:translate-x-1">
+                                →
+                            </span>
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </section>
+    )
+}
+
+<style>
+    .related-card:hover {
+        background-color: rgb(249 250 251);
+    }
+    :global(.dark) .related-card:hover {
+        background-color: rgb(31 41 55);
+    }
+    .related-card:active {
+        background-color: rgb(243 244 246);
+    }
+    :global(.dark) .related-card:active {
+        background-color: rgb(55 65 81);
+    }
+</style>

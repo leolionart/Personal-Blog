@@ -5,6 +5,7 @@ import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
 
 export const getStaticPaths = (async () => {
     const posts = await getCollection('posts');
@@ -20,6 +21,7 @@ const post = await getEntry('posts', Astro.params.slug);
 if (!post) return Astro.redirect('/');
 const author = await getEntry('authors', post.data.author.id);
 const { Content } = await post.render();
+const allPosts = await getCollection('posts');
 ---
 <Layout title={post.data.title} description={post.data.description} ogType="article">
     <Header>
@@ -35,7 +37,7 @@ const { Content } = await post.render();
             <Section fullWidthBorder class="post-tags-section">
                 <div class="flex flex-wrap gap-2">
                     {post.data.tags.map((tag: string) => (
-                        <a href={`/?tag=${encodeURIComponent(tag)}`} class="text-xs px-3 py-1.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 transition cursor-pointer">
+                        <a href={`/?tag=${encodeURIComponent(tag)}`} class="text-xs px-2 py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 transition cursor-pointer">
                             #{tag}
                         </a>
                     ))}
@@ -45,5 +47,14 @@ const { Content } = await post.render();
         <Section source={`by ${author?.data.name}`} fullWidthBorder class="content-wrapper animate-on-scroll fade-only">
             <Content />
         </Section>
+        {post.data.tags && post.data.tags.length > 0 && (
+            <Section fullWidthBorder class="animate-on-scroll fade-only">
+                <RelatedPosts
+                    currentSlug={post.slug}
+                    currentTags={post.data.tags}
+                    allPosts={allPosts}
+                />
+            </Section>
+        )}
     </main>
 </Layout>
