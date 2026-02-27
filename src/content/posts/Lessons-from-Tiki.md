@@ -1,169 +1,138 @@
 ---
 title: Những điều học được ở Tiki
-description: Kinh nghiệm product management từ 6+ năm làm việc tại e-commerce platform hàng đầu VN
+description: Nơi khởi đầu sự nghiệp product — từ designer bước vào sự hỗn loạn của e-commerce và trưởng thành từ đó
 pubDate: 2024-06-15
 author: leolion
 tags:
   - Product Management
   - UX Design
-  - Business
+  - E-commerce
+  - Career Development
+  - Professional Growth
 type: post
 ---
 
-## Giới thiệu
+## Người đầu tiên sau nhiều năm
 
-Mình làm Product Manager ở **Tiki** hơn 6 năm (từ 08/2018). Khoảng thời gian đó cho mình rất nhiều bài học thực chiến, từ cách ra quyết định đến cách dẫn dắt team.
+Mình vào Tiki năm 2018, ở vị trí Senior UI/UX cho Seller Central. Nghe thì bình thường, nhưng thực tế là: **mình là người đầu tiên làm UI/UX cho team này sau nhiều năm họ vận hành mà không có ai ở vai trò đó**.
 
-Bài này là những điều mình thấy giá trị nhất.
+Tưởng tượng một hệ thống phục vụ hàng ngàn seller, với hàng chục tính năng từ onboarding, đăng sản phẩm, chạy promotion, đến quản lý chất lượng — tất cả được build bởi engineer và PM, không qua bất kỳ quy trình thiết kế nào. Giao diện thì chắp vá, flow thì rối, seller thì phàn nàn liên tục.
+
+Ngày đầu tiên mình mở Seller Central lên, cảm giác giống như bước vào một căn nhà đã được sửa chữa hàng chục lần mà không có bản vẽ. Mỗi phòng một phong cách, mỗi cửa mở theo một hướng khác nhau. Nhưng kỳ lạ là — căn nhà đó vẫn đứng, và người ta vẫn sống trong đó mỗi ngày.
 
 ---
 
 ## Mục lục
 
-1. [Bài học về leadership](#bài-học-về-leadership)
-2. [Bài học thực tiễn trong vận hành sản phẩm](#bài-học-thực-tiễn-trong-vận-hành-sản-phẩm)
+1. [Học từ sự hỗn loạn](#-học-từ-sự-hỗn-loạn)
+2. [Những dự án mạo hiểm](#-những-dự-án-mạo-hiểm)
+3. [Bước ngoặt: từ designer sang product owner](#-bước-ngoặt-từ-designer-sang-product-owner)
+4. [Được tiếp xúc với C-level khi còn rất bé](#-được-tiếp-xúc-với-c-level-khi-còn-rất-bé)
+5. [Những con số mình để lại](#-những-con-số-mình-để-lại)
+6. [Điều tiếc nuối](#-điều-tiếc-nuối)
+7. [Chiêm nghiệm](#-chiêm-nghiệm)
 
 ---
 
-## Bài học về leadership
+## Học từ sự hỗn loạn
 
-### 1) Leadership quan trọng hơn tool
+Tiki giai đoạn 2018–2020 đang trong cuộc đua e-commerce khốc liệt. Mỗi tuần có feature mới cần ship, mỗi tháng có chiến dịch lớn cần chạy. Quyết định product đến từ nhiều hướng — PM muốn thế này, business muốn thế kia, engineering nói chỉ đủ resource cho một nửa.
 
-Nhiều nơi đầu tư rất mạnh vào tools & process, nhưng nếu thiếu leadership thì vấn đề gốc vẫn còn.
+Hỗn loạn? Đúng. Nhưng đó là kiểu hỗn loạn của một công ty đang chạy rất nhanh, nơi mà **tốc độ là lợi thế cạnh tranh**. Không có thời gian cho perfect process. Phải ship trước, học sau, sửa tiếp.
 
-Điều mình thấy khác biệt rõ nhất là:
+Mình học được cách sống trong môi trường đó:
 
-- Leader tạo được **psychological safety**.
-- Khi team thấy an toàn để nói thật và thử nghiệm, năng lực tự tổ chức tăng lên rõ rệt.
+- **Không chờ brief hoàn hảo mới bắt tay làm**. Nhiều khi requirement chỉ là một câu nói trong meeting. Mình phải tự đào thêm context, tự nói chuyện với seller, tự nhìn data rồi đề xuất hướng đi.
+- **Ship nhỏ, đo nhanh**. Thay vì thiết kế toàn bộ flow rồi mới dev, mình quen với cách gỡ từng friction point một, đo impact, rồi mới mở rộng.
+- **Tranh luận bằng data, không bằng cảm giác**. Ở môi trường mà ai cũng có ý kiến, thứ duy nhất giúp mình — một designer trẻ — được lắng nghe là khi mình mang số liệu ra bàn.
 
-### 2) Luôn bám vào market positioning
-
-Với Tiki, định vị “tiện lợi, đáng tin, nội địa” là trục xuyên suốt.
-
-Mọi feature nếu không phục vụ định vị đó thì dù hay đến đâu cũng dễ thành lãng phí nguồn lực.
-
-### 3) Yếu tố con người không thể thay thế
-
-Công cụ giúp nhanh, nhưng nhiều tình huống chỉ giải được bằng trao đổi trực tiếp, nhất là 1-1.
-
-Nói ngắn gọn: hãy cân bằng giữa efficiency và human connection, đừng hy sinh cái sau.
+Conversion rate, cart abandonment, seller rejection rate, payment success rate — những con số đó trở thành ngôn ngữ chung. Khi mọi người nhìn vào cùng một dashboard, việc ưu tiên cái gì trước bớt cãi nhau hẳn.
 
 ---
 
-## Bài học thực tiễn trong vận hành sản phẩm
+## Những dự án mạo hiểm
 
-### Bài học 1: Đừng “đập lớn” ngay khi thấy vấn đề
+Điều mình thấy đặc biệt ở Tiki giai đoạn đó là **sự dũng cảm trong việc thử cái mới**. Không phải cái gì cũng thành công, nhưng tinh thần dám thử là thật.
 
-Sai lầm thường gặp là vừa thấy vấn đề đã muốn làm giải pháp lớn.
+### Tiki Live
 
-Cách tốt hơn:
+Livestream bán hàng bây giờ thì ai cũng làm. Nhưng thời điểm 2019, khi Tiki bắt đầu thử Tiki Live, đó là một quyết định khá mạo hiểm. Chưa ai chứng minh được mô hình này hoạt động ở thị trường Việt Nam cho e-commerce. Mình được tham gia thiết kế trải nghiệm cho tính năng này — từ flow cho người bán lên sóng, đến cách hiển thị sản phẩm trong lúc live.
 
-- Bắt đầu từ thay đổi nhỏ, có mục tiêu rõ.
-- Đo impact.
-- Chỉ mở rộng khi dữ liệu xác nhận.
+### AI nhận diện hàng giả
 
-Ví dụ checkout:
+Một dự án khác mình rất hứng thú là áp dụng AI để nhận diện hàng giả trên nền tảng. Thời điểm đó, việc dùng AI cho product quality trong e-commerce Việt Nam còn rất mới. Team phải vừa xây model vừa thiết kế quy trình vận hành đi kèm — vì AI phát hiện ra hàng giả chỉ là bước đầu, phía sau còn cả flow xử lý với seller, thông báo cho khách, và cập nhật chính sách.
 
-- Làm lại toàn bộ flow 3 tháng chưa chắc hiệu quả.
-- Gỡ một friction point trong 2 tuần có thể tạo tác động sớm và chắc hơn.
-
-### Bài học 2: Metrics là xương sống của mọi cuộc thảo luận
-
-Nếu không có metrics, team sẽ tranh luận bằng cảm giác.
-
-Các metrics mình theo dõi sát ở Tiki:
-
-- Conversion rate
-- Cart abandonment rate
-- CTR trang sản phẩm
-- Payment success rate
-- Delivery satisfaction
-
-Khi có số đo chung, việc ưu tiên và align giữa các team dễ hơn rất nhiều.
-
-### Bài học 3: Không phải automation nào cũng hiệu quả
-
-Có lần team thử một workflow tool khá phức tạp, adoption tụt mạnh.
-
-Sau đó chuyển sang sync ngắn 15 phút mỗi tuần, kết quả lại tốt hơn: mọi người tham gia đều hơn và issue được xử lý nhanh hơn.
-
-Bài học: đừng tự động hóa đến mức workflow trơn mà con người thì rời rạc.
-
-### Bài học 4: Quản lý scope cực kỳ quan trọng
-
-Pattern quen thuộc:
-
-```text
-Có feature A
-→ thêm B
-→ thêm C
-→ timeline nở ra, chất lượng giảm
-```
-
-Cách mình làm:
-
-- Chốt rõ “core version” trước.
-- Ship bản cốt lõi.
-- Những phần nice-to-have đưa về vòng tiếp theo.
-
-### Bài học 5: Analytics nói “what”, user research nói “why”
-
-Analytics rất mạnh để chỉ ra chuyện gì đang xảy ra.
-
-Nhưng để hiểu gốc rễ, vẫn cần nói chuyện trực tiếp với user.
-
-Khi ghép hai nguồn này lại, giải pháp đưa ra sẽ trúng vấn đề hơn.
-
-### Bài học 6: Cẩn thận khi diễn giải metrics
-
-Một chỉ số đẹp chưa chắc là tín hiệu tốt.
-
-Ví dụ session time tăng có thể do user engaged hơn, nhưng cũng có thể do flow rối hoặc bug khiến họ mắc kẹt.
-
-Vì vậy luôn cần đặt lại câu hỏi:
-
-- Yếu tố nào đang đẩy con số này?
-- Đây là tín hiệu tích cực hay tiêu cực?
-- Có dữ liệu định tính nào xác thực không?
-
-### Bài học 7: Bảo vệ tốc độ release bằng cách giới hạn WIP
-
-Ở Tiki, sprint 2 tuần. Mỗi PM thường không ôm quá 2 dự án/sprint.
-
-Lý do rất thực dụng:
-
-- Ít context switching.
-- Team tập trung hơn.
-- Ship nhanh và debug dễ hơn.
+Những dự án như vậy dạy mình rằng **product innovation không chỉ là idea hay — mà là khả năng biến idea thành quy trình vận hành được**. Một ý tưởng đẹp trên slide mà không ai biết cách operate thì chỉ là slide.
 
 ---
 
-## Tóm lại
+## Bước ngoặt: từ designer sang product owner
 
-| Bài học | Điểm mấu chốt |
+Đây là điều thay đổi sự nghiệp mình.
+
+Sau một thời gian làm UI/UX, mình bắt đầu muốn thử sức ở vai trò rộng hơn. Không chỉ thiết kế giao diện, mà tham gia vào việc quyết định **build cái gì** và **tại sao build cái đó**. Mình muốn ngồi ở bàn nơi quyết định được đưa ra, không chỉ nhận brief rồi execute.
+
+Và Tiki cho mình cơ hội đó.
+
+Mình được thử sức chuyển từ product design sang product owner. Đó là lần đầu tiên mình chịu trách nhiệm về outcome của một tính năng, không chỉ output. Phải nghĩ về seller adoption rate, về business impact, về cách đo thành công — những thứ mà trước đó mình chỉ nghe PM nói trong meeting.
+
+Bước chuyển đó không dễ. Mindset designer và mindset PO khác nhau khá nhiều:
+
+| Designer | Product Owner |
 |---|---|
-| Giải pháp | Bắt đầu nhỏ, kiểm chứng rồi mới mở rộng |
-| Metrics | Dùng số liệu để ra quyết định và align |
-| Công cụ | Tool hỗ trợ, không thay thế kết nối con người |
-| Scope | Giữ bản cốt lõi, chống scope creep |
-| User research | Bổ sung cho analytics để thấy nguyên nhân thật |
-| Diễn giải | Không đọc metrics theo một chiều |
-| Tốc độ | Giới hạn dự án để giữ focus và chất lượng |
+| “Flow này có mượt không?” | “Tính năng này có ai dùng không?” |
+| Tối ưu trải nghiệm | Tối ưu business outcome |
+| Depth trong một feature | Breadth qua nhiều feature |
+| Craft | Trade-off |
+
+Mình phải học cách chấp nhận rằng đôi khi **giải pháp tốt nhất cho user chưa chắc là giải pháp khả thi nhất cho business ở thời điểm đó**. Và ngược lại, một quyết định business đôi khi cần được “dịch” sang ngôn ngữ trải nghiệm để không làm hại user.
 
 ---
 
-## Cách áp dụng ngay
+## Được tiếp xúc với C-level khi còn rất bé
 
-1. Chọn 3 metrics quan trọng nhất cho sản phẩm hiện tại.
-2. Lên lịch ít nhất 1 buổi nói chuyện với user trong tuần.
-3. Tách một feature lớn thành phiên bản có thể ship trong 1 sprint.
+Một điều mình không ngờ khi vào Tiki là **được tiếp xúc với các lãnh đạo cấp cao ngay từ khi vị trí còn rất junior**.
 
-Dài hạn hơn, hãy xây văn hóa làm việc dựa trên metrics, user insight và kỷ luật focus.
+Seller Central là mảng quan trọng — nó ảnh hưởng trực tiếp đến lượng hàng hóa trên sàn và chất lượng marketplace. Nên các quyết định lớn thường có sự tham gia của C-level. Mình ngồi trong những buổi review đó, nghe cách họ đặt câu hỏi, cách họ ra quyết định, cách họ cân bằng giữa ngắn hạn và dài hạn.
+
+Những buổi đó dạy mình nhiều hơn bất kỳ khóa học nào:
+
+- **Cách frame vấn đề quyết định cách giải quyết**. Cùng một tình huống, người hỏi “seller phàn nàn gì?” sẽ ra hướng khác hoàn toàn so với người hỏi “con số nào đang bất thường?”
+- **Tốc độ ra quyết định quan trọng hơn sự hoàn hảo**. Ở quy mô Tiki, chậm một tuần có thể mất cả một chiến dịch.
+- **Leadership là cách bạn tạo không gian cho người khác**. Những leader giỏi nhất mình thấy không phải người nói nhiều nhất, mà là người đặt câu hỏi đúng rồi để team tự tìm hướng.
+
+---
+
+## Những con số mình để lại
+
+Trong 2 năm ở Tiki, team mình đạt được:
+
+- **Giảm tỷ lệ từ chối seller mới từ 56% xuống 17%** — góp phần tăng gấp 5 lần số seller vào cuối 2020
+- **Tăng tỷ lệ seller tham gia chương trình khuyến mãi** — CMV tăng gấp 4 lần trong một chiến dịch
+- **Giảm tỷ lệ seller vi phạm từ 68% xuống dưới 30%/tháng**
+
+Những con số này không phải công của mình một mình. Nhưng mình tự hào rằng mình là phần của đội đã làm được điều đó — đặc biệt khi bắt đầu từ một hệ thống không có ai làm design.
+
+---
+
+## Điều tiếc nuối
+
+Nếu được quay lại, mình sẽ làm nhiều thứ khác.
+
+**Mình tiếc vì mindset lúc đó chưa đủ trưởng thành.** Mình giỏi execute, giỏi design, nhưng chưa biết cách nhìn toàn cục. Chưa biết cách build relationship chiến lược. Chưa biết cách leverage vị trí của mình để tạo impact lớn hơn.
+
+Nếu mình có mindset như bây giờ — hiểu về business, về stakeholder management, về cách tổ chức lớn vận hành — thì 2 năm đó sẽ khác nhiều lắm. Không chỉ cho mình, mà cho cả team và sản phẩm.
+
+Nhưng có lẽ đó cũng là bản chất của sự trưởng thành: **bạn chỉ biết mình thiếu gì khi đã đi qua rồi**.
 
 ---
 
 ## Chiêm nghiệm
 
-Sau thời gian ở Tiki, mình tin rằng product management phần lớn là bài toán con người và vận hành. Công cụ quan trọng, nhưng không phải yếu tố quyết định.
+Tiki là khởi đầu cho sự nghiệp product của mình. Không phải khởi đầu êm ả — mà là khởi đầu hỗn loạn, nhanh, và đầy năng lượng.
 
-Khi có định vị rõ, metrics rõ, đội ngũ giữ focus và liên tục gần user, chất lượng quyết định sẽ khác hẳn.
+Mình học được cách sống trong sự không hoàn hảo. Học được rằng ship trước, sửa sau không phải là tùy tiện — mà là kỷ luật khi bạn đang chạy đua với thời gian. Học được rằng data là ngôn ngữ chung, và người nào mang data ra bàn thì người đó được nghe.
+
+Và điều mình trân trọng nhất: **những mối quan hệ từ Tiki vẫn còn đến tận bây giờ**. Đồng nghiệp cũ vẫn giữ liên lạc, vẫn refer nhau, vẫn nhắc lại những ngày chạy campaign đến 2h sáng. Có lẽ đó là dấu hiệu rõ nhất rằng mình đã để lại điều gì đó có giá trị — không chỉ trong sản phẩm, mà trong con người.
+
+Tiki dạy mình rằng nơi đầu tiên không cần phải hoàn hảo. Nó chỉ cần đủ hỗn loạn để bạn buộc phải lớn lên.
