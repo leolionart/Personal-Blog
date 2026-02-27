@@ -1,6 +1,6 @@
 ---
-title: Tự học kiến thức technical từ HomeLAB, IoT, DIY
-description: Hành trình tự học toàn bộ kiến thức kỹ thuật qua hands-on projects từ 2022 đến nay
+title: Tự học mọi thứ từ HomeLAB — hành trình từ YouTube đến AI
+description: Từ clip hướng dẫn đưa thiết bị lên HomeKit, tới tự flash firmware, dựng dashboard, build NAS, và cuối cùng là dùng AI để code ra tool cho chính mình
 pubDate: 2024-12-01
 author: leolion
 tags:
@@ -9,232 +9,248 @@ tags:
 type: post
 ---
 
-## Giới thiệu
+## Mở đầu
 
-Từ năm 2022, mình bắt đầu một hành trình tự học technical bằng cách làm dự án thật: HomeLAB, IoT, DIY và cả hệ năng lượng mặt trời tại nhà.
+Mình không bắt đầu hành trình HomeLAB từ một khóa học hay một lộ trình nào cả. Mình bắt đầu vì tò mò — muốn cái công tắc Tuya ở nhà nó hiện lên được trên HomeKit.
 
-Mình nhận ra một điều rất rõ: học qua thực hành cho tốc độ và độ nhớ tốt hơn hẳn chỉ đọc lý thuyết.
+Cứ thế, từ một clip YouTube, mình rơi vào cái rabbit hole kéo dài mấy năm: từ Homebridge đến flash firmware, từ MQTT đến Grafana, từ NAS đến media server, và bây giờ là dùng AI để tự code ra tool phục vụ chính mình.
+
+Không có lộ trình. Chỉ có đúng một pattern lặp đi lặp lại: **thấy thiếu → tìm cách tự làm → học được một đống thứ ngoài dự kiến.**
 
 ---
 
 ## Mục lục
 
-1. [Bắt đầu từ IoT](#bắt-đầu-từ-iot)
-2. [Đi từ thiết bị đến hệ thống](#đi-từ-thiết-bị-đến-hệ-thống)
-3. [Bài học về hạ tầng mạng](#bài-học-về-hạ-tầng-mạng)
-4. [Hệ thống năng lượng mặt trời](#hệ-thống-năng-lượng-mặt-trời)
+1. [Homebridge — điểm khởi đầu của mọi thứ](#homebridge--điểm-khởi-đầu-của-mọi-thứ)
+2. [Flash firmware — khi muốn kiểm soát hoàn toàn](#flash-firmware--khi-muốn-kiểm-soát-hoàn-toàn)
+3. [Dashboard từ dữ liệu thật](#dashboard-từ-dữ-liệu-thật)
+4. [Hạ tầng mạng — bài toán không ai nói trước](#hạ-tầng-mạng--bài-toán-không-ai-nói-trước)
+5. [Matter — nâng cấp để HomeKit mượt hơn](#matter--nâng-cấp-để-homekit-mượt-hơn)
+6. [NAS và media server tự dựng](#nas-và-media-server-tự-dựng)
+7. [Home Assistant — trung tâm điều khiển](#home-assistant--trung-tâm-điều-khiển)
+8. [AI và vibe coding — chương hiện tại](#ai-và-vibe-coding--chương-hiện-tại)
 
 ---
 
-## Bắt đầu từ IoT
+## Homebridge — điểm khởi đầu của mọi thứ
 
-### Vì sao mình chọn IoT
+Mọi chuyện bắt đầu từ mấy thiết bị smarthome giá rẻ mua trên Shopee: công tắc eWeLink, ổ cắm Tuya, remote hồng ngoại Broadlink. Mỗi cái một app riêng, không cái nào nói chuyện được với HomeKit.
 
-Lúc mới tìm hiểu nhà thông minh, mình thấy giải pháp thương mại vừa đắt, vừa khó tùy biến, lại dễ bị khóa vào hệ sinh thái của một vendor.
+Rồi mình coi được mấy clip YouTube hướng dẫn cài Homebridge trên Raspberry Pi. Chỉ cần cài đúng plugin, mấy thiết bị đó tự hiện lên Apple Home.
 
-Vậy nên mình chọn hướng tự làm:
+Lúc đó mình chưa biết gì về Linux, Node.js hay Docker. Cứ copy paste command theo clip, lỗi thì Google tiếp. Nhưng chính cái quá trình mày mò đó cho mình mấy thứ quan trọng:
 
-- Chi phí thấp hơn đáng kể.
-- Tùy biến theo nhu cầu thật của nhà mình.
-- Chủ động toàn bộ stack từ thiết bị đến dữ liệu.
+- Biết SSH vào Raspberry Pi là gì.
+- Hiểu sơ sơ về service, port, log.
+- Lần đầu thấy terminal không phải thứ đáng sợ.
 
-### Hành trình phần cứng
-
-#### 1) Arduino
-
-Arduino rất hợp để bắt đầu:
-
-- Dễ tiếp cận.
-- Chi phí thấp.
-- Cộng đồng cực lớn.
-
-Các project đầu tay mình làm: cảm biến nhiệt độ/độ ẩm, điều khiển đèn, đo mực nước.
-
-Kỹ năng nhận được: điện tử cơ bản, C cơ bản, debug phần cứng.
-
-#### 2) Raspberry Pi
-
-Sau đó mình chuyển lên Raspberry Pi để có một máy Linux hoàn chỉnh, đủ mạnh để chạy service.
-
-Project tiêu biểu: thermostat, camera an ninh, lock system.
-
-Kỹ năng tăng lên: Linux, Python, vận hành hệ thống.
-
-#### 3) ESP8266 / ESP32
-
-Đây là bước quan trọng vì có WiFi tích hợp, phù hợp cho IoT deploy thực tế.
-
-Project mình làm: trạm thời tiết gửi dữ liệu lên cloud, cảm biến chuyển động cảnh báo, điều khiển đèn từ xa.
-
-Kỹ năng học được: networking protocol, IoT programming, cloud integration.
+Homebridge là cánh cửa. Bước qua rồi thì không quay lại được.
 
 ---
 
-## Đi từ thiết bị đến hệ thống
+## Flash firmware — khi muốn kiểm soát hoàn toàn
 
-Lúc mới làm, mình nghĩ chỉ cần cảm biến chạy được là ổn. Nhưng khi số lượng thiết bị tăng, bài toán lập tức chuyển sang kiến trúc hệ thống.
+Homebridge giải quyết được vấn đề “hiện lên HomeKit”, nhưng thiết bị gốc vẫn phụ thuộc cloud của Tuya, eWeLink. Mất mạng là mất điều khiển. Muốn tùy chỉnh sâu hơn cũng không được.
 
-```text
-Thiết bị chạy được
-→ Thu thập dữ liệu
-→ Lưu trữ
-→ Trực quan hóa
-→ Vận hành ổn định
+Lúc này mình biết tới **Tasmota** và **ESPHome** — hai firmware mã nguồn mở chạy trên ESP8266/ESP32. Nạp vào là thiết bị chạy local hoàn toàn, không cần cloud.
+
+### Tasmota
+
+Mình bắt đầu với Tasmota vì nó đơn giản: flash xong là có giao diện web, cấu hình WiFi, MQTT chỉ bằng trình duyệt. Nhiều thiết bị Tuya dùng chip ESP nên flash được luôn.
+
+Qua Tasmota mình học được:
+
+- Flash firmware qua serial (UART) bằng USB-to-TTL.
+- Hiểu GPIO pin mapping — chân nào điều khiển relay, chân nào đọc nút nhấn.
+- MQTT là gì, tại sao nó quan trọng trong IoT.
+
+### ESPHome
+
+Sau đó chuyển sang ESPHome vì nó mạnh hơn: viết config bằng YAML, compile firmware riêng, OTA update không cần cắm dây.
+
+ESPHome mở ra thế giới DIY thật sự:
+
+- Tự gắn cảm biến nhiệt độ, độ ẩm, chất lượng không khí.
+- Tự làm công tắc thông minh từ board ESP32 trần.
+- Kết hợp nhiều sensor trên một board duy nhất.
+
+Kỹ năng lớn nhất mình học được giai đoạn này: **đọc datasheet, hiểu wiring diagram, và debug phần cứng khi nó không chạy đúng lần đầu** — mà nó không bao giờ chạy đúng lần đầu.
+
+---
+
+## Dashboard từ dữ liệu thật
+
+Khi nhà có chục cái sensor chạy ESPHome, tất cả đều bắn dữ liệu qua MQTT. Câu hỏi tự nhiên nảy ra: dữ liệu này đi đâu, hiển thị ở đâu?
+
+### MQTT → Prometheus → Grafana
+
+Mình dựng pipeline đơn giản:
+
+```
+Sensor (ESPHome) → MQTT Broker (Mosquitto) → mqtt2prometheus → Prometheus → Grafana
 ```
 
-### Công nghệ mình phải học thêm
+- **Mosquitto** làm message broker — nơi tất cả sensor publish dữ liệu.
+- **Prometheus** scrape metric và lưu time-series.
+- **Grafana** display thành dashboard đẹp, có alert.
 
-#### 1) Container hóa
+Lần đầu thấy biểu đồ nhiệt độ phòng khách real-time trên dashboard tự dựng, cảm giác rất phê. Không phải vì nó khó, mà vì mình hiểu từng lớp trong stack đó.
 
-Mình dùng Docker và Docker Compose để chạy database, API, dashboard theo cách nhất quán.
+### Kỹ năng mới từ việc dựng dashboard
 
-Kết quả: setup nhanh hơn, môi trường ổn định hơn, dễ tái tạo khi cần.
+- Docker Compose để orchestrate nhiều container.
+- Cách viết PromQL query.
+- Alert rules: khi nhiệt độ quá cao, khi sensor mất kết nối.
+- Retention policy: giữ data bao lâu, resolution thế nào.
 
-#### 2) Reverse proxy
-
-Dùng Nginx làm điểm vào chung để route traffic, xử lý SSL/TLS và chuẩn hóa cách truy cập service.
-
-#### 3) Load balancing
-
-Khi có nhiều request hơn, một instance không đủ, nên mình phải học cách scale nhiều instance và phân phối traffic.
-
-#### 4) Tối ưu hạ tầng
-
-Những vấn đề mình gặp: startup chậm, ngốn tài nguyên, nghẽn mạng.
-
-Các hướng xử lý hiệu quả:
-
-- Cache layer.
-- Index database.
-- Tối ưu network path.
-- Lazy loading ở chỗ phù hợp.
+Đây là lúc mình bắt đầu nghĩ theo kiểu hệ thống, không còn nghĩ theo từng thiết bị đơn lẻ nữa.
 
 ---
 
-## Bài học về hạ tầng mạng
+## Hạ tầng mạng — bài toán không ai nói trước
 
-Khi số thiết bị tăng từ vài cái lên vài chục cái, mạng trở thành điểm nghẽn lớn nhất.
+Có vài chục thiết bị IoT chạy WiFi rồi thì mình hiểu tại sao hạ tầng mạng quan trọng. Router dân dụng đơn giản không kham nổi.
 
-### 1) Độ ổn định WiFi không tự nhiên mà có
+### WiFi Mesh
 
-Mình phải học lại từ gốc:
+Nhà rộng, tường dày, một router không phủ hết. Mình chuyển sang WiFi mesh để mở rộng vùng phủ sóng mà không cần kéo dây. Qua đó học được:
 
-- 2.4GHz vs 5GHz dùng khi nào.
-- Vị trí router ảnh hưởng ra sao.
-- Khi nào cần mesh, khi nào nên kéo dây.
+- Roaming giữa các node hoạt động ra sao.
+- 2.4GHz cho IoT, 5GHz cho thiết bị chính.
+- Backhaul có dây vs không dây khác nhau thế nào.
 
-### 2) Router dân dụng có giới hạn rất nhanh
+### MikroTik — cân bằng tải và kiểm soát traffic
 
-Khi vào hệ IoT nhiều node, router phổ thông sớm chạm trần.
+Khi muốn kiểm soát sâu hơn, mình nhảy sang MikroTik. Đây là lúc mọi thứ “pro” lên rõ rệt:
 
-Giải pháp mình áp dụng:
+- Load balancing nhiều đường WAN.
+- VLAN tách riêng mạng IoT khỏi mạng chính.
+- QoS ưu tiên traffic quan trọng.
+- Firewall rules chi tiết.
 
-- Chuyển sang access point ổn định hơn.
-- Tách VLAN/SSID cho IoT.
-- Áp QoS để ưu tiên traffic quan trọng.
-- Theo dõi băng thông thường xuyên.
-
-### 3) Security là chuyện bắt buộc
-
-Các rủi ro mình từng thấy:
-
-- Thiết bị lộ trực tiếp ra internet.
-- Credential quản lý quá yếu.
-- Firmware cũ có lỗ hổng.
-
-Cách giảm rủi ro:
-
-- Firewall rule rõ ràng.
-- Truy cập từ xa qua VPN.
-- Cập nhật firmware định kỳ.
-- Cô lập mạng IoT khỏi mạng chính.
+MikroTik cho mình kiến thức network engineering thực tế mà đọc sách không bao giờ đủ. Phải ngồi debug tại sao thiết bị này không thấy thiết bị kia, tại sao DNS resolve chậm, tại sao DHCP lease bị conflict — toàn những bài toán nhỏ nhưng dạy rất nhiều.
 
 ---
 
-## Hệ thống năng lượng mặt trời
+## Matter — nâng cấp để HomeKit mượt hơn
 
-Mình bắt đầu tìm hiểu mảng này với mục tiêu giảm phụ thuộc điện lưới.
+Sau một thời gian chạy Homebridge làm cầu nối, mình nhận ra nó vẫn là một lớp trung gian. Thiết bị → Homebridge → HomeKit — mỗi lớp thêm độ trễ và điểm lỗi.
 
-### DC/AC conversion
+Khi Matter ra mắt, mình chuyển dần các thiết bị sang protocol này:
 
-Pin mặt trời sinh ra DC, trong khi đồ điện gia dụng dùng AC, nên inverter là mắt xích bắt buộc.
+- ESPHome đã hỗ trợ Matter native.
+- Thiết bị Matter nói chuyện trực tiếp với HomeKit, không cần bridge.
+- Phản hồi nhanh hơn hẳn, ít lỗi “No Response” hơn.
 
-Ở phần này mình học được:
-
-- Power electronics cơ bản.
-- Hiệu suất chuyển đổi và tổn hao nhiệt.
-- Cách chọn thiết bị theo nhu cầu tải thực tế.
-
-### Theo dõi tải và quản lý năng lượng
-
-Mình triển khai theo hướng theo dõi thời gian thực:
-
-- Mức tiêu thụ điện.
-- Sản lượng từ solar.
-- Trạng thái pin.
-- Cơ chế bật/tắt tải thông minh.
-
-Qua đó học thêm về energy management, pin behavior, và bài toán grid-tied/off-grid.
+Matter cũng dạy mình về chuẩn giao tiếp trong IoT: tại sao interoperability quan trọng, tại sao một protocol chung lại giải quyết được nhiều vấn đề đến vậy.
 
 ---
 
-## Kỹ năng tích lũy
+## NAS và media server tự dựng
 
-### Kỹ năng technical
+Song song với smarthome, mình bắt đầu mảng media server — cũng vì nhu cầu cá nhân: muốn xem phim ở nhà mà không phụ thuộc streaming service nào.
 
-| Lĩnh vực | Kỹ năng |
-|---|---|
-| Nhúng | Arduino, ESP32, C/Python cơ bản |
-| Linux | SSH, shell script, vận hành service |
-| Mạng | WiFi, TCP/IP, DNS, DHCP |
-| DevOps | Docker, Compose, automation cơ bản |
-| Điện | DC/AC conversion, quản lý tải |
-| Điện tử | Mạch cơ bản, hàn, troubleshooting |
+### Tự build NAS
 
-### Kỹ năng mềm
+Thay vì mua Synology hay QNAP, mình tự dựng NAS từ phần cứng cũ:
 
-- Giải quyết vấn đề theo hệ thống.
-- Kiên nhẫn với trial-and-error.
-- Học nhanh công nghệ mới.
-- Ghi chép để tái sử dụng kiến thức.
-- Tích hợp nhiều hệ khác nhau thành một workflow chạy được.
+- Chọn case, PSU, HDD phù hợp.
+- Cài TrueNAS hoặc OMV.
+- Setup RAID, SMB share, backup schedule.
 
----
+Qua đó học được storage fundamentals: RAID levels, filesystem, IO throughput, và bài toán backup 3-2-1.
 
-## Bài học lớn
+### Plex + Radarr + Sonarr — hệ sinh thái tải và xem phim tự động
 
-1. **Học bằng dự án thật là nhanh nhất.**
-2. **Scale khác nhau sinh ra vấn đề khác nhau.**
-3. **Open-source là đòn bẩy cực mạnh cho người tự học.**
-4. **Phần cứng dạy mình tính kỷ luật và sự khiêm tốn.**
+Đây là lúc mọi thứ bắt đầu kết nối lại:
+
+- **Plex** làm media server — stream phim đến mọi thiết bị trong nhà.
+- **Radarr** tự động tìm và tải phim theo watchlist.
+- **Sonarr** làm tương tự cho series.
+- Tất cả chạy trong Docker container trên NAS.
+
+Mình chỉ cần thêm phim vào danh sách, hệ thống tự tải, tự đổi tên, tự sắp xếp thư mục, tự thông báo khi có phim mới. Không cần động tay.
+
+Kỹ năng học được: Docker networking, volume mapping, reverse proxy (Nginx Proxy Manager), và tư duy automation — làm một lần, chạy mãi.
 
 ---
 
-## Tiếp theo mình muốn thử
+## Home Assistant — trung tâm điều khiển
 
-- Edge AI cho các thiết bị tại nhà.
-- Kubernetes cho HomeLAB.
-- Time-series database tối ưu hơn.
-- Security nâng cao cho hệ IoT.
-- Các bài toán điện dân dụng phức tạp hơn.
+Mình đến với Home Assistant khá muộn so với nhiều người chơi smarthome. Lý do đơn giản: trước đó Homebridge + ESPHome + MQTT đã đủ dùng.
 
----
+Nhưng khi hệ thống lớn dần, cần một nơi quản lý tập trung, viết automation phức tạp, và có dashboard riêng — Home Assistant trở thành lựa chọn tự nhiên.
 
-## Gợi ý cho người muốn tự học technical
+Những thứ Home Assistant giúp mình làm được mà trước đó khó:
 
-Nếu bạn muốn bắt đầu, mình gợi ý quy trình này:
+- Automation dựa trên nhiều điều kiện: giờ, trạng thái sensor, vị trí người.
+- Dashboard tùy biến sâu cho từng phòng.
+- Tích hợp mọi thứ vào một nơi: ESPHome, MQTT, Plex, camera, weather.
+- History và energy tracking dài hạn.
 
-1. Chọn một vấn đề thật trong cuộc sống của bạn.
-2. Làm phiên bản tối thiểu có thể chạy.
-3. Build sớm thay vì đọc quá lâu.
-4. Chấp nhận debug là phần học quan trọng nhất.
-5. Mở rộng dần theo từng mức scale.
-6. Viết lại hành trình để không học lại từ đầu.
+Home Assistant cũng là nơi mình nhận ra giá trị của open-source ecosystem: hàng ngàn integration, community add-on, và một cộng đồng cực kỳ active.
 
 ---
 
-## Kết luận
+## AI và vibe coding — chương hiện tại
 
-Hành trình HomeLAB cho mình một niềm tin rất rõ: khi bạn có “skin in the game” và tự tay giải quyết vấn đề thật, tốc độ trưởng thành technical sẽ tăng rất nhanh.
+Đây là giai đoạn mình đang ở. Và nó thay đổi hoàn toàn cách mình tiếp cận vấn đề.
 
-Bắt đầu nhỏ thôi, nhưng bắt đầu sớm.
+### Từ “tìm tool” sang “tự build tool”
+
+Trước đây, khi cần một chức năng mới cho media server hay smarthome, mình lên GitHub tìm có ai làm chưa. Nếu có thì dùng, không có thì chịu.
+
+Bây giờ, với AI-assisted coding (Claude, Cursor, Copilot), mình có thể tự code ra tool mình cần. Không phải dev chuyên nghiệp, nhưng đủ để build những thứ hoạt động được.
+
+### Những thứ mình đang làm với AI
+
+- **Tool kiểu Bazarr** nhưng theo logic riêng — tự match subtitle, tự fetch từ nhiều nguồn, tự đồng bộ với Plex library.
+- **Automation script** cho các tác vụ lặp lại trên media server.
+- **Ứng dụng nhỏ** phục vụ workflow cá nhân mà không có tool nào trên thị trường làm đúng ý.
+
+### Pattern mới: ý tưởng → AI → deploy
+
+Bây giờ mỗi khi mình nghĩ ra một ý tưởng — dù là tự động hóa một quy trình trong nhà, hay build một micro-tool cho media server — flow luôn là:
+
+1. Mô tả ý tưởng cho AI.
+2. Iterate qua vài vòng để có code chạy được.
+3. Đóng gói bằng Docker, deploy lên HomeLAB.
+4. Chạy và cải tiến dần.
+
+Tất cả ý tưởng nghĩ ra giờ đều được **tự động hóa hoặc công cụ hóa bằng AI**. Không còn bước “chờ ai đó build” nữa. Mình tự làm luôn.
+
+---
+
+## Nhìn lại: một pattern duy nhất
+
+Nhìn lại toàn bộ hành trình, mình thấy nó chỉ là một vòng lặp:
+
+```
+Có nhu cầu thật → Mày mò tự làm → Gặp vấn đề mới → Học thêm để giải quyết → Nhu cầu mới xuất hiện
+```
+
+Clip YouTube về Homebridge dẫn mình đến ESP32. ESP32 dẫn đến MQTT. MQTT dẫn đến Grafana. Mạng yếu dẫn đến MikroTik. Muốn xem phim dẫn đến NAS. NAS dẫn đến Radarr. Và tất cả dẫn đến việc mình ngồi dùng AI để tự code tool cho chính mình.
+
+Không có lúc nào mình ngồi nói “hôm nay mình sẽ học Docker” hay “tuần này mình học networking”. Mình học vì cần, và mình nhớ vì mình dùng.
+
+---
+
+## Gợi ý cho người muốn bắt đầu
+
+Nếu bạn đang muốn tự học technical mà không biết bắt đầu từ đâu:
+
+1. **Chọn một thứ bạn muốn nó hoạt động.** Đừng chọn thứ bạn “nên học”. Muốn đèn nhà tắt bằng giọng nói? Bắt đầu từ đó.
+2. **Làm theo clip YouTube, đừng sợ copy paste.** Ban đầu ai cũng thế. Hiểu sẽ đến sau.
+3. **Khi nó chạy được, hỏi “tại sao nó chạy”.** Đây là lúc học thật bắt đầu.
+4. **Khi nó hỏng, đừng reset từ đầu.** Debug là kỹ năng quan trọng nhất bạn sẽ học được.
+5. **Mở rộng dần, đừng nhảy cóc.** Mỗi lớp mới xây trên lớp cũ.
+
+---
+
+## Kết
+
+Mình không phải kỹ sư. Mình là một người tò mò, bắt đầu từ một clip YouTube về Homebridge.
+
+Nhưng mấy năm mày mò HomeLAB cho mình nhiều kiến thức technical hơn bất kỳ khóa học nào: Linux, Docker, networking, IoT, automation, storage, và bây giờ là AI-assisted development.
+
+Tất cả bắt đầu từ việc muốn cái công tắc Tuya nó hiện lên HomeKit. Và nó chưa có dấu hiệu dừng lại.
