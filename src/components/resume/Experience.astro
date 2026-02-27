@@ -92,30 +92,55 @@ const { work } = cv;
 </Section>
 
 <script>
+	function toggleExpand(btn: Element) {
+		const li = btn.closest('li');
+		const content = li?.querySelector('[data-expandable]') as HTMLElement;
+		const text = btn.querySelector('[data-expand-text]');
+		const chevron = btn.querySelector('.expand-chevron');
+		if (!content) return;
+
+		const isExpanded = content.getAttribute('data-expanded') === 'true';
+
+		if (isExpanded) {
+			content.style.maxHeight = '0px';
+			content.setAttribute('data-expanded', 'false');
+			if (text) text.textContent = 'Show more';
+			chevron?.classList.remove('rotate-180');
+		} else {
+			content.style.maxHeight = content.scrollHeight + 'px';
+			content.setAttribute('data-expanded', 'true');
+			if (text) text.textContent = 'Show less';
+			chevron?.classList.add('rotate-180');
+		}
+	}
+
 	if (!(window as any).__expandToggleInit) {
 		(window as any).__expandToggleInit = true;
+
+		// Desktop click
 		document.addEventListener('click', (e) => {
 			const btn = (e.target as HTMLElement).closest('[data-expand-toggle]');
 			if (!btn) return;
+			toggleExpand(btn);
+		});
 
-			const li = btn.closest('li');
-			const content = li?.querySelector('[data-expandable]') as HTMLElement;
-			const text = btn.querySelector('[data-expand-text]');
-			const chevron = btn.querySelector('.expand-chevron');
-			if (!content) return;
+		// iOS Safari / Facebook WebView: touchend fires more reliably than click
+		let touchStart = { x: 0, y: 0 };
 
-			const isExpanded = content.getAttribute('data-expanded') === 'true';
+		document.addEventListener('touchstart', (e) => {
+			if (!(e.target as Element).closest('[data-expand-toggle]')) return;
+			touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+		}, { passive: true });
 
-			if (isExpanded) {
-				content.style.maxHeight = '0px';
-				content.setAttribute('data-expanded', 'false');
-				if (text) text.textContent = 'Show more';
-				chevron?.classList.remove('rotate-180');
-			} else {
-				content.style.maxHeight = content.scrollHeight + 'px';
-				content.setAttribute('data-expanded', 'true');
-				if (text) text.textContent = 'Show less';
-				chevron?.classList.add('rotate-180');
+		document.addEventListener('touchend', (e) => {
+			const btn = (e.target as Element).closest('[data-expand-toggle]');
+			if (!btn) return;
+			const touch = e.changedTouches[0];
+			const dx = Math.abs(touch.clientX - touchStart.x);
+			const dy = Math.abs(touch.clientY - touchStart.y);
+			if (dx < 10 && dy < 10) {
+				e.preventDefault();
+				toggleExpand(btn);
 			}
 		});
 	}
