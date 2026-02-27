@@ -27,6 +27,7 @@ const { tags } = Astro.props;
 	const selectedTags = new Set<string>();
 
 	function collectPosts() {
+		posts.length = 0;
 		document.querySelectorAll('.post-section').forEach((section) => {
 			const tagsText = section.getAttribute('data-tags');
 			posts.push({
@@ -83,7 +84,7 @@ const { tags } = Astro.props;
 		}
 	}
 
-	function handleClick(tag: string) {
+	function handleTagAction(tag: string) {
 		if (tag === 'all') {
 			selectedTags.clear();
 		} else if (selectedTags.has(tag)) {
@@ -97,16 +98,46 @@ const { tags } = Astro.props;
 		updateURL();
 	}
 
-	function initialize() {
-		posts.length = 0;
-		selectedTags.clear();
+	// Event delegation — single listener, no duplicates across view transitions
+	// Touch events fix iOS Safari/WebView where click doesn't fire in scroll containers
+	if (!(window as any).__tagFilterInit) {
+		(window as any).__tagFilterInit = true;
 
-		const wrapper = document.getElementById('tag-filter-wrapper');
-		wrapper?.querySelectorAll('.tag-btn').forEach(btn => {
-			const tag = btn.getAttribute('data-tag')!;
-			btn.addEventListener('click', () => handleClick(tag));
+		// Desktop: standard click
+		document.addEventListener('click', (e) => {
+			const btn = (e.target as Element).closest('.tag-btn');
+			if (!btn) return;
+			const tag = btn.getAttribute('data-tag');
+			if (tag) handleTagAction(tag);
 		});
 
+		// iOS Safari / Facebook WebView fix:
+		// In overflow-x:auto containers, iOS may not fire click events reliably.
+		// Listen to touchend directly and distinguish tap from scroll by movement.
+		let touchStart = { x: 0, y: 0 };
+
+		document.addEventListener('touchstart', (e) => {
+			if (!(e.target as Element).closest('.tag-btn')) return;
+			touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+		}, { passive: true });
+
+		document.addEventListener('touchend', (e) => {
+			const btn = (e.target as Element).closest('.tag-btn');
+			if (!btn) return;
+			const touch = e.changedTouches[0];
+			const dx = Math.abs(touch.clientX - touchStart.x);
+			const dy = Math.abs(touch.clientY - touchStart.y);
+			// Tap = finger moved less than 10px (not a scroll gesture)
+			if (dx < 10 && dy < 10) {
+				e.preventDefault(); // prevent ghost click (would double-fire)
+				const tag = btn.getAttribute('data-tag');
+				if (tag) handleTagAction(tag);
+			}
+		});
+	}
+
+	function initialize() {
+		selectedTags.clear();
 		collectPosts();
 
 		// Restore from URL
