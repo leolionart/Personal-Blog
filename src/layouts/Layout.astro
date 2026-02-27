@@ -18,7 +18,6 @@ const { title, description = SITE_DESCRIPTION, ogImage = SITE_OG_IMAGE, ogType =
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title ? `${title} — ${SITE_NAME}` : SITE_NAME;
 const navLinks = {
-	"/":"Blog",
 	"/resume":"Resume"
 }
 ---
@@ -87,13 +86,14 @@ const navLinks = {
 				<div class="flex items-center">
 					<ul class="grid grid-auto-flow-col list-none m-0 p-0">
 						{Object.entries(navLinks).map(([href, title]) => {
+							const isActive = Astro.url.pathname === href || Astro.url.pathname.startsWith(href + '/') && href !== '/';
 							return <li class="grid-col-[span_1] block before:content-none p-0 m-0">
-								<a href={href} class="text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:bg-gray-50 dark:hover:bg-gray-800 active:bg-gray-100 dark:active:bg-gray-700 transition-colors">{title}</a>
+								<a href={href} class:list={["text-xs sm:text-xs md:text-sm px-2 sm:px-3 md:px-5 py-3 sm:py-4 md:py-6 lg:py-8 tracking-0.1 block hover:underline underline-offset-3 transition-all", isActive && "underline font-700"]}>{title}</a>
 							</li>
 						})}
 					</ul>
-					<button id="nav-search-btn" aria-label="Search posts" class="border-1 bg-transparent border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 cursor-pointer grid place-content-center h-9 w-9 transition-colors">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+					<button id="nav-search-btn" aria-label="Search posts" class="bg-transparent border-none cursor-pointer grid place-content-center px-2 sm:px-3 md:px-4 py-3 sm:py-4 md:py-6 lg:py-8 hover:opacity-70 transition-opacity c-current font-[inherit]">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
 					</button>
 					<ModeToggle />
 				</div>
