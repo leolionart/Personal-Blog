@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Tran Quang Ai",
-    "label": "UI/UX Designer",
+    "label": "Product Manager",
     "image": "/me_avatar.png",
     "email": "aitran158@gmail.com",
     "phone": "0968801157",
@@ -28,6 +28,21 @@
     ]
   },
   "work": [
+    {
+      "name": "Vexere",
+      "position": "PO of AI & Automation",
+      "location_type": "On site",
+      "location": "Ho Chi Minh, Vietnam",
+      "url": "",
+      "startDate": "2025-01-01",
+      "summary": "",
+      "responsibilities": [
+        "Product Owner of AI Agent multi-channel platform — a specialized customer care solution for the travel and transportation industry",
+        "Manage and drive the AI Agent product connecting multiple communication channels to deliver a seamless customer support experience"
+      ],
+      "achievements": [],
+      "skills": []
+    },
     {
       "name": "NA.AI Studio",
       "position": "Founder",
