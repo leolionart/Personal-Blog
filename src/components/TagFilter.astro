@@ -98,13 +98,13 @@ const { tags } = Astro.props;
 		updateURL();
 	}
 
-	// Event delegation — single listener, no duplicates across view transitions
-	// Touch events fix iOS Safari/WebView where click doesn't fire in scroll containers
-	if (!(window as any).__tagFilterInit) {
-		(window as any).__tagFilterInit = true;
+	function bindWrapper() {
+		const wrapper = document.getElementById('tag-filter-wrapper');
+		if (!wrapper || (wrapper as any).__bound) return;
+		(wrapper as any).__bound = true;
 
-		// Desktop: standard click
-		document.addEventListener('click', (e) => {
+		// Click handler (desktop + some mobile)
+		wrapper.addEventListener('click', (e) => {
 			const btn = (e.target as Element).closest('.tag-btn');
 			if (!btn) return;
 			const tag = btn.getAttribute('data-tag');
@@ -112,24 +112,23 @@ const { tags } = Astro.props;
 		});
 
 		// iOS Safari / Facebook WebView fix:
-		// In overflow-x:auto containers, iOS may not fire click events reliably.
-		// Listen to touchend directly and distinguish tap from scroll by movement.
+		// Touch events inside overflow-x:auto + position:sticky don't bubble
+		// to document reliably. Attach directly on the scroll container.
 		let touchStart = { x: 0, y: 0 };
 
-		document.addEventListener('touchstart', (e) => {
+		wrapper.addEventListener('touchstart', (e) => {
 			if (!(e.target as Element).closest('.tag-btn')) return;
 			touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
 		}, { passive: true });
 
-		document.addEventListener('touchend', (e) => {
+		wrapper.addEventListener('touchend', (e) => {
 			const btn = (e.target as Element).closest('.tag-btn');
 			if (!btn) return;
 			const touch = e.changedTouches[0];
 			const dx = Math.abs(touch.clientX - touchStart.x);
 			const dy = Math.abs(touch.clientY - touchStart.y);
-			// Tap = finger moved less than 10px (not a scroll gesture)
 			if (dx < 10 && dy < 10) {
-				e.preventDefault(); // prevent ghost click (would double-fire)
+				e.preventDefault();
 				const tag = btn.getAttribute('data-tag');
 				if (tag) handleTagAction(tag);
 			}
@@ -139,6 +138,7 @@ const { tags } = Astro.props;
 	function initialize() {
 		selectedTags.clear();
 		collectPosts();
+		bindWrapper();
 
 		// Restore from URL
 		const params = new URLSearchParams(window.location.search);

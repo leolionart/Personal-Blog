@@ -10,7 +10,7 @@ import rehypeSlug from 'rehype-slug';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://leolion.naai.studio',
-    server: { port: 4321 },
+    server: { port: 4321, host: true },
     prefetch: true,
     markdown: {
         rehypePlugins: [rehypeSlug],
