@@ -86,8 +86,20 @@ Khi nhà có chục cái sensor chạy ESPHome, tất cả đều bắn dữ li�
 
 Mình dựng pipeline đơn giản:
 
-```
-Sensor (ESPHome) → MQTT Broker (Mosquitto) → mqtt2prometheus → Prometheus → Grafana
+```text
+Sensor (ESPHome)
+  │
+  ▼
+MQTT Broker (Mosquitto)
+  │
+  ▼
+mqtt2prometheus
+  │
+  ▼
+Prometheus
+  │
+  ▼
+Grafana
 ```
 
 - **Mosquitto** làm message broker — nơi tất cả sensor publish dữ liệu.
@@ -225,8 +237,22 @@ Tất cả ý tưởng nghĩ ra giờ đều được **tự động hóa hoặc
 
 Nhìn lại toàn bộ hành trình, mình thấy nó chỉ là một vòng lặp:
 
-```
-Có nhu cầu thật → Mày mò tự làm → Gặp vấn đề mới → Học thêm để giải quyết → Nhu cầu mới xuất hiện
+```text
+Có nhu cầu thật
+  │
+  ▼
+Mày mò tự làm
+  │
+  ▼
+Gặp vấn đề mới
+  │
+  ▼
+Học thêm để giải quyết
+  │
+  ▼
+Nhu cầu mới xuất hiện
+  │
+  ╰──▶ (lặp lại)
 ```
 
 Clip YouTube về Homebridge dẫn mình đến ESP32. ESP32 dẫn đến MQTT. MQTT dẫn đến Grafana. Mạng yếu dẫn đến MikroTik. Muốn xem phim dẫn đến NAS. NAS dẫn đến Radarr. Và tất cả dẫn đến việc mình ngồi dùng AI để tự code tool cho chính mình.

@@ -17,14 +17,38 @@ type: post
 Nếu bạn là PM, designer, hay bất kỳ ai từng vẽ user flow, bạn đã quen với việc nghĩ theo luồng:
 
 ```text
-User mở app → Chọn sản phẩm → Thêm vào giỏ → Thanh toán → Nhận xác nhận
+User mở app
+  │
+  ▼
+Chọn sản phẩm
+  │
+  ▼
+Thêm vào giỏ
+  │
+  ▼
+Thanh toán
+  │
+  ▼
+Nhận xác nhận
 ```
 
 Nếu bạn từng vẽ diagram mô tả logic vận hành:
 
 ```text
-Đơn hàng mới → Kiểm tra tồn kho → Có hàng? → Xuất kho → Giao vận
-                                  → Hết hàng? → Thông báo seller → Hủy/Chờ nhập
+Đơn hàng mới
+  │
+  ▼
+Kiểm tra tồn kho
+  │
+  ├── Có hàng?
+  │     │
+  │     ▼
+  │   Xuất kho ──▶ Giao vận
+  │
+  └── Hết hàng?
+        │
+        ▼
+      Thông báo seller ──▶ Hủy/Chờ nhập
 ```
 
 Hay đơn giản là bạn từng sketch quy trình làm việc hàng ngày trên giấy, trên Miro, trên FigJam — bất kỳ đâu.
@@ -83,7 +107,26 @@ Chỉ cần 6 dòng, mình đã thấy rõ toàn bộ flow. Biết có bao nhiê
 
 ### Bước 2: Mở n8n, kéo node theo đúng sketch
 
-Giờ mới mở canvas. Kéo từng node theo thứ tự đã sketch: Email Trigger → IF → Download → AI Agent → Google Sheets → Slack.
+Giờ mới mở canvas. Kéo từng node theo thứ tự đã sketch:
+
+```text
+Email Trigger
+  │
+  ▼
+  IF
+  │
+  ▼
+Download
+  │
+  ▼
+AI Agent
+  │
+  ▼
+Google Sheets
+  │
+  ▼
+Slack
+```
 
 Chưa cần nối. Chưa cần config. Chỉ đặt node lên canvas để **nhìn thấy hình hài tổng thể** — giống như bạn đặt wireframe trước khi design chi tiết.
 
@@ -106,8 +149,17 @@ n8n có một tính năng rất hay: **Execute Node** — cho phép bạn chạy
 Quy trình test:
 
 ```text
-Config node 1 → Execute → Xem output → Đúng ý? → Sang node 2
-                                       → Sai? → Sửa lại → Execute lại
+Config node
+  │
+  ▼
+Execute
+  │
+  ▼
+Xem output
+  │
+  ├── Đúng ý? ──▶ Sang node tiếp
+  │
+  └── Sai? ──▶ Sửa lại ──▶ Execute lại
 ```
 
 Mỗi node mình đều kiểm tra:
