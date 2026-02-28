@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal blog and resume site for AI TRAN (leolion), built with Astro 5. Content is written in Vietnamese (`og:locale` = `vi_VN`). The site is fully static (SSG) — no server-side rendering.
 
-**Live site:** https://geek.naai.studio
-**Package name:** `naid` (v0.7.0)
+**Live site:** https://leolion.naai.studio
+**Package name:** `leolion` (v0.12.0)
 
 ## Commands
 
