@@ -1,5 +1,0 @@
-[    1042ms] [WARNING] The `local_backend` option is not supported in Sveltia CMS. It will be ignored. See the compatibility notes for details: https://sveltiacms.app/en/docs/migration/netlify-decap-cms#features-not-to-be-implemented @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:346
-[    2291ms] [ERROR] AbortError Failed to execute 'showDirectoryPicker' on 'Window': Intercepted by Page.setInterceptFileChooserDialog(). undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:473
-[    3369ms] [ERROR] AbortError Failed to execute 'showDirectoryPicker' on 'Window': Intercepted by Page.setInterceptFileChooserDialog(). undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:473
-[    4120ms] [ERROR] AbortError Failed to execute 'showDirectoryPicker' on 'Window': Intercepted by Page.setInterceptFileChooserDialog(). undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:473
-[   10869ms] [ERROR] AbortError Authentication aborted undefined @ https://unpkg.com/@sveltia/cms@0.141.0/dist/sveltia-cms.js:473

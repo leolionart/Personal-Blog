@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# Debug/test screenshots
+*.png
+!src/**/*.png
+!public/**/*.png
