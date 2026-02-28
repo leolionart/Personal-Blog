@@ -114,34 +114,56 @@ const { work } = cv;
 		}
 	}
 
-	if (!(window as any).__expandToggleInit) {
-		(window as any).__expandToggleInit = true;
+	// Named handlers so we can remove before re-adding (prevents duplicates)
+	function handleExpandClick(e: Event) {
+		const btn = (e.target as HTMLElement).closest('[data-expand-toggle]');
+		if (!btn) return;
+		toggleExpand(btn);
+	}
 
-		// Desktop click
-		document.addEventListener('click', (e) => {
-			const btn = (e.target as HTMLElement).closest('[data-expand-toggle]');
-			if (!btn) return;
+	let touchStart = { x: 0, y: 0 };
+
+	function handleTouchStart(e: TouchEvent) {
+		if (!(e.target as Element).closest('[data-expand-toggle]')) return;
+		touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+	}
+
+	function handleTouchEnd(e: TouchEvent) {
+		const btn = (e.target as Element).closest('[data-expand-toggle]');
+		if (!btn) return;
+		const touch = e.changedTouches[0];
+		const dx = Math.abs(touch.clientX - touchStart.x);
+		const dy = Math.abs(touch.clientY - touchStart.y);
+		if (dx < 10 && dy < 10) {
+			e.preventDefault();
 			toggleExpand(btn);
+		}
+	}
+
+	function initExpandToggles() {
+		// Remove old handlers first (prevents duplicates across navigations)
+		document.removeEventListener('click', handleExpandClick);
+		document.removeEventListener('touchstart', handleTouchStart);
+		document.removeEventListener('touchend', handleTouchEnd);
+
+		// Re-attach
+		document.addEventListener('click', handleExpandClick);
+		document.addEventListener('touchstart', handleTouchStart, { passive: true });
+		document.addEventListener('touchend', handleTouchEnd);
+
+		// Reset expandable content state for fresh DOM
+		document.querySelectorAll('[data-expandable]').forEach(el => {
+			(el as HTMLElement).style.maxHeight = '0px';
+			el.setAttribute('data-expanded', 'false');
 		});
-
-		// iOS Safari / Facebook WebView: touchend fires more reliably than click
-		let touchStart = { x: 0, y: 0 };
-
-		document.addEventListener('touchstart', (e) => {
-			if (!(e.target as Element).closest('[data-expand-toggle]')) return;
-			touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-		}, { passive: true });
-
-		document.addEventListener('touchend', (e) => {
-			const btn = (e.target as Element).closest('[data-expand-toggle]');
-			if (!btn) return;
-			const touch = e.changedTouches[0];
-			const dx = Math.abs(touch.clientX - touchStart.x);
-			const dy = Math.abs(touch.clientY - touchStart.y);
-			if (dx < 10 && dy < 10) {
-				e.preventDefault();
-				toggleExpand(btn);
-			}
+		document.querySelectorAll('[data-expand-text]').forEach(el => {
+			el.textContent = 'Show more';
+		});
+		document.querySelectorAll('.expand-chevron').forEach(el => {
+			el.classList.remove('rotate-180');
 		});
 	}
+
+	initExpandToggles();
+	document.addEventListener('astro:after-swap', initExpandToggles);
 </script>

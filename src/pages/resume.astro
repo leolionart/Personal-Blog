@@ -48,13 +48,17 @@ const { name, label } = cv.basics;
 </style>
 
 <script>
-	// Switch to light mode when printing, restore after
+	// Prepare page for printing: light mode + force all animations visible
 	function setupPrintMode() {
 		const html = document.documentElement;
 
 		window.addEventListener('beforeprint', () => {
 			html.classList.remove('dark');
 			html.dataset.wasDark = 'true';
+			// Force all animated sections visible (user may print before scrolling)
+			document.querySelectorAll('.animate-on-scroll').forEach(el => {
+				el.classList.add('is-visible');
+			});
 		});
 
 		window.addEventListener('afterprint', () => {
