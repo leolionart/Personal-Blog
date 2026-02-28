@@ -4,8 +4,8 @@ description: 'Tóm tắt "The Speed of Trust: The One Thing That Changes Everyth
   - công thức xây dựng niềm tin trong tổ chức'
 pubDate: 2024-10-01
 tags:
-- Book Summary
-- Leadership
+- Books
+- Career
 title: 'Tóm tắt sách: The Speed of Trust'
 type: post
 ---

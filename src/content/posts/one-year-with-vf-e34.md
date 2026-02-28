@@ -5,8 +5,7 @@ description: Kỷ niệm 1 năm sở hữu chiếc xe điện đầu tiên, hàn
 pubDate: 2024-12-01
 tags:
 - Personal
-- Travel
-- Electric Vehicle
+- Technology
 title: Một năm cùng VF e34 — chiếc xe đầu tiên và chuyến xuyên Việt không kế hoạch
 type: post
 ---

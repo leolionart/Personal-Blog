@@ -4,11 +4,8 @@ description: Từ product designer đến người học kinh doanh — câu chu
   Xanh và Nhà Thuốc An Khang
 pubDate: 2024-08-10
 tags:
-- Product Management
-- Leadership
-- Business Strategy
-- Retail
-- Career Development
+- Product
+- Career
 title: Nhìn lại hành trình ở MWG
 type: post
 ---

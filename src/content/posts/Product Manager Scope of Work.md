@@ -4,7 +4,7 @@ description: Bài này hay quá tôi trích dẫn lại và đưa thêm quan đi
   vào
 pubDate: 2024-11-26
 tags:
-- Product Management
+- Product
 title: Cụ thể vai trò PM là gì?
 type: announcement
 ---

@@ -3,7 +3,7 @@ author: leolion
 description: Kinh nghiệm thực tế từ Tiki về cách thực hiện user interview hiệu quả
 pubDate: 2023-02-20
 tags:
-- UX Design
+- Design
 title: Chia sẻ kinh nghiệm làm user interview của product manager
 type: announcement
 ---

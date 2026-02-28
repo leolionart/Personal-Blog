@@ -3,7 +3,7 @@ author: leolion
 description: Sắp xếp ưu tiên việc quan trọng như thế nào?
 pubDate: 2023-02-20
 tags:
-- Product Management
+- Product
 title: Học cách sắp xếp ưu tiên
 type: announcement
 ---

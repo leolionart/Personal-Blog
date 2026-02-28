@@ -4,8 +4,7 @@ description: Chiến lược sử dụng ChatGPT & AI để vượt qua procrast
   lách và đọc sách
 pubDate: 2025-02-10
 tags:
-- AI
-- Writing
+- Technology
 - Productivity
 title: Chữa bệnh lười viết bằng AI
 type: post

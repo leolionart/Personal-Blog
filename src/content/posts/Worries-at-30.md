@@ -4,7 +4,7 @@ description: Suy ngẫm về sự nghiệp, lối sống, và những lo lắng 
   product
 pubDate: 2025-01-15
 tags:
-- Product Management
+- Product
 - Career
 title: Những trăn trở tuổi 30 của người làm product
 type: post

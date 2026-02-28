@@ -4,7 +4,6 @@ description: Phân tích vì sao Stephen Strange là bậc thầy chiến lượ
   về lời nói dối lớn nhất trong Endgame
 pubDate: 2024-03-15
 tags:
-- Entertainment
 - Personal
 title: Doctor Strange — nhân vật mình yêu thích nhất trong MCU
 type: article
