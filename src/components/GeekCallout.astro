@@ -1,0 +1,32 @@
+---
+/**
+ * Cross-promotion callout for Geek Playground blog.
+ * Shown on Technology-tagged posts to drive traffic to geek.naai.studio.
+ */
+---
+<aside class="geek-callout">
+    <div class="flex items-start gap-3 sm:gap-4">
+        <span class="text-lg sm:text-xl mt-0.5 shrink-0" aria-hidden="true">&#x1f9ea;</span>
+        <div>
+            <p class="text-sm sm:text-base font-600 c-gray-900 dark:c-gray-100 leading-snug">
+                Thích mày mò công nghệ?
+            </p>
+            <p class="text-xs sm:text-sm c-gray-600 dark:c-gray-400 mt-1 leading-relaxed">
+                Mình chia sẻ chi tiết hơn về SmartHome, IoT, HomeLAB và các dự án DIY trên <a href="https://geek.naai.studio" target="_blank" rel="noopener" class="font-600 c-gray-900 dark:c-gray-100 underline underline-offset-2 hover:c-blue-600 dark:hover:c-blue-400 transition-colors">Geek Playground</a> &mdash; từ flash firmware ESP32, dựng NAS, tới điện mặt trời và xe điện.
+            </p>
+        </div>
+    </div>
+</aside>
+
+<style>
+    .geek-callout {
+        border: 1px solid rgb(209 213 219);
+        border-left: 3px solid rgb(107 114 128);
+        padding: 1rem 1.25rem;
+        margin-top: 2rem;
+    }
+    :global(.dark) .geek-callout {
+        border-color: rgb(55 65 81);
+        border-left-color: rgb(156 163 175);
+    }
+</style>

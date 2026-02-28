@@ -48,14 +48,14 @@ function slugToFilename(slug: string) {
                             {post.data.tags && (
                                 <div class="flex gap-2 flex-wrap">
                                     {post.data.tags.map((tag: string) => (
-                                        <span class="text-xs px-2 py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400">#{tag}</span>
+                                        <span class="text-xs px-2 py-1 sm:py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400">#{tag}</span>
                                     ))}
                                 </div>
                             )}
                         </div>
-                        <h2 class="text-4 sm:text-5 md:text-7 lg:text-10 xl:text-12 leading-[1.15] font-900 mt-4 c-gray-900 dark:c-gray-100">{post.data.title}</h2>
+                        <h2 class="text-5 sm:text-5 md:text-7 lg:text-10 xl:text-12 leading-[1.15] font-900 mt-4 c-gray-900 dark:c-gray-100">{post.data.title}</h2>
                         {post.data.description && (
-                            <p class="text-2.5 sm:text-3 md:text-3.5 lg:text-4 xl:text-5 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
+                            <p class="text-3 sm:text-3 md:text-3.5 lg:text-4 xl:text-5 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{post.data.description}</p>
                         )}
                         <div class="mt-6 flex justify-end">
                             <span class="read-more text-xs flex items-center gap-1 c-gray-500 transition-all duration-150">

@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
+
+const title = "Projects";
+const subtitle = "Websites & side projects";
+
+const projects = [
+	{
+		name: "Geek Playground",
+		url: "https://geek.naai.studio",
+		description: "Blog chia sẻ về SmartHome, IoT, HomeLAB, điện mặt trời, xe điện và các dự án DIY.",
+		tags: ["SmartHome", "IoT", "DIY", "Solar"],
+		image: "/projects/geek-playground.webp",
+		imageAlt: "Geek Playground - Blog về SmartHome và DIY projects",
+	},
+	{
+		name: "Creative Image Studio",
+		url: "https://create-image.naai.studio",
+		description: "Bộ sưu tập prompt tạo ảnh sáng tạo với Gemini AI, chia sẻ các prompt hay và hiệu quả cho việc generate hình ảnh.",
+		tags: ["AI", "Gemini", "Prompt", "Image Generation"],
+		image: "/projects/creative-image-studio.webp",
+		imageAlt: "Creative Image Studio - Chia sẻ prompt tạo ảnh Gemini AI",
+	},
+];
+---
+<Layout title={title}>
+	<Header gridBg>
+		<h1 class="text-6 sm:text-8 md:text-12 lg:text-18 xl:text-20 leading-[1.2] font-900">{title}</h1>
+		<h2 class="text-2.5 sm:text-3.5 md:text-5 lg:text-7 xl:text-8 leading-[1.2] c-gray-600 dark:c-gray-400 font-300">{subtitle}</h2>
+	</Header>
+	<main>
+		{projects.map((project, i) => (
+			<Section
+				index
+				fullWidthBorder
+				class="project-section animate-on-scroll"
+				data-delay={i < 4 ? String(i + 1) : undefined}
+			>
+				<article class="relative project-article">
+					<div class="flex gap-4 md:gap-6 lg:gap-8 items-start">
+						{/* Left: Thumbnail Image */}
+						{project.image && (
+							<div class="flex-shrink-0 w-32 sm:w-40 md:w-48 lg:w-56">
+								<img
+									src={project.image}
+									alt={project.imageAlt || project.name}
+									loading="lazy"
+									class="w-full h-auto rounded-lg overflow-hidden border-1 border-gray-200 dark:border-gray-700"
+								/>
+							</div>
+						)}
+
+						{/* Right: Content */}
+						<div class="flex-1 min-w-0">
+							<div class="flex gap-2 flex-wrap mb-2">
+								{project.tags.map((tag: string) => (
+									<span class="text-xs px-2 py-1 sm:py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400">#{tag}</span>
+								))}
+							</div>
+							<h2 class="text-4 sm:text-5 md:text-6 lg:text-8 xl:text-10 leading-[1.15] font-900 c-gray-900 dark:c-gray-100">{project.name}</h2>
+							<p class="text-2.5 sm:text-3 md:text-3.5 lg:text-4 leading-[1.4] mt-2 md:mt-3 c-gray-600 dark:c-gray-400">{project.description}</p>
+
+							<div class="mt-4 flex justify-end">
+								<span class="visit-link text-xs flex items-center gap-1 c-gray-500 transition-all duration-150">
+									Visit <span class="transition-transform duration-150">↗</span>
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<a href={project.url} target="_blank" rel="noopener" class="after:content-[''] after:absolute after:inset-0 after:z-1">
+						<span class="sr-only">Visit {project.name}</span>
+					</a>
+				</article>
+			</Section>
+		))}
+	</main>
+</Layout>
+<style>
+	.project-section :global(.content-container) {
+		position: relative;
+		transition: background-color 0.15s ease;
+	}
+	.project-section:hover :global(.content-container) {
+		background-color: rgb(243 244 246);
+	}
+	:global(.dark) .project-section:hover :global(.content-container) {
+		background-color: rgb(31 41 55);
+	}
+	.project-section:active :global(.content-container) {
+		background-color: rgb(229 231 235);
+	}
+	:global(.dark) .project-section:active :global(.content-container) {
+		background-color: rgb(55 65 81);
+	}
+	.project-article {
+		padding-inline: 1rem;
+	}
+	@media (min-width: 640px) {
+		.project-article {
+			padding-inline: 1.5rem;
+		}
+	}
+	@media (min-width: 768px) {
+		.project-article {
+			padding-inline: 2rem;
+		}
+	}
+	@media (min-width: 1024px) {
+		.project-article {
+			padding-inline: 2.5rem;
+		}
+	}
+	/* Responsive thumbnail sizing */
+	@media (max-width: 640px) {
+		.project-article {
+			padding-block: 1rem;
+		}
+	}
+	.project-section:hover .visit-link {
+		color: rgb(17 24 39);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	:global(.dark) .project-section:hover .visit-link {
+		color: rgb(229 231 235);
+	}
+</style>

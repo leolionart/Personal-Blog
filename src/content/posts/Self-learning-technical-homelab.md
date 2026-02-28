@@ -281,3 +281,5 @@ Mình không phải kỹ sư. Mình là một người tò mò, bắt đầu t�
 Nhưng mấy năm mày mò HomeLAB cho mình nhiều kiến thức technical hơn bất kỳ khóa học nào: Linux, Docker, networking, IoT, automation, storage, và bây giờ là AI-assisted development.
 
 Tất cả bắt đầu từ việc muốn cái công tắc Tuya nó hiện lên HomeKit. Và nó chưa có dấu hiệu dừng lại.
+
+> Nếu bạn muốn xem chi tiết từng project — cách flash firmware, dựng dashboard, setup mạng, hay build NAS từ đầu — mình có chia sẻ đầy đủ hơn trên [Geek Playground](https://geek.naai.studio).

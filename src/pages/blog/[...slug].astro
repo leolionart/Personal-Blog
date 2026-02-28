@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
+import GeekCallout from "../../components/GeekCallout.astro";
 
 export const getStaticPaths = (async () => {
     const posts = await getCollection('posts');
@@ -22,6 +23,7 @@ if (!post) return Astro.redirect('/');
 const author = await getEntry('authors', post.data.author.id);
 const { Content } = await post.render();
 const allPosts = await getCollection('posts');
+const hasTechTag = post.data.tags?.includes('Technology') ?? false;
 ---
 <Layout title={post.data.title} description={post.data.description} ogType="article">
     <Header>
@@ -47,6 +49,11 @@ const allPosts = await getCollection('posts');
         <Section source={`by ${author?.data.name}`} fullWidthBorder class="content-wrapper animate-on-scroll fade-only">
             <Content />
         </Section>
+        {hasTechTag && (
+            <Section fullWidthBorder class="animate-on-scroll fade-only">
+                <GeekCallout />
+            </Section>
+        )}
         {post.data.tags && post.data.tags.length > 0 && (
             <Section fullWidthBorder class="animate-on-scroll fade-only">
                 <RelatedPosts

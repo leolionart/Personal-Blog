@@ -3,6 +3,11 @@ import { SITE_NAME } from '../consts';
 const now = new Date();
 const formatter = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
 ---
-<footer class="py-6.25 border-t-1 border-gray-200 dark:border-gray-800 c-gray-600 dark:c-gray-400 text-xs text-center">
+<footer class="py-6.25 border-t-1 border-gray-200 dark:border-gray-800 c-gray-600 dark:c-gray-400 text-xs text-center flex flex-col items-center gap-2">
     <span>&copy; {formatter.format(now)} {SITE_NAME}</span>
+    <nav class="flex gap-3">
+        <a href="/sitemap-index.xml" class="hover:underline">Sitemap</a>
+        <span class="c-gray-300 dark:c-gray-600">·</span>
+        <a href="/rss.xml" class="hover:underline">RSS</a>
+    </nav>
 </footer>
