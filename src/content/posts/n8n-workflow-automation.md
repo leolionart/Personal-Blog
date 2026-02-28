@@ -1,14 +1,15 @@
 ---
-title: Thực thi hoá sơ đồ tư duy qua n8n
-description: Khi bạn đã quen vẽ user flow và diagram, bước tiếp theo là biến chúng thành workflow chạy được
-pubDate: 2025-02-20
 author: leolion
+description: Khi bạn đã quen vẽ user flow và diagram, bước tiếp theo là biến chúng
+  thành workflow chạy được
+pubDate: 2025-02-20
 tags:
-  - Automation
-  - Productivity
-  - Workflow
-  - n8n
-  - No-Code
+- Automation
+- Productivity
+- Workflow
+- n8n
+- No-Code
+title: Thực thi hoá sơ đồ tư duy qua n8n
 type: post
 ---
 

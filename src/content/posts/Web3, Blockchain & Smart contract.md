@@ -1,10 +1,10 @@
 ---
-title: Web3, Blockchain & Smart contract
+author: leolion
 description: Biết gì viết nấy, chắc sai nhiều
 pubDate: 2022-10-20
-author: leolion
 tags:
-  - Technology
+- Technology
+title: Web3, Blockchain & Smart contract
 type: announcement
 ---
 

@@ -1,11 +1,12 @@
 ---
-title: "Tóm tắt sách: The Speed of Trust"
-description: 'Tóm tắt "The Speed of Trust: The One Thing That Changes Everything" - công thức xây dựng niềm tin trong tổ chức'
-pubDate: 2024-10-01
 author: leolion
+description: 'Tóm tắt "The Speed of Trust: The One Thing That Changes Everything"
+  - công thức xây dựng niềm tin trong tổ chức'
+pubDate: 2024-10-01
 tags:
-  - Book Summary
-  - Leadership
+- Book Summary
+- Leadership
+title: 'Tóm tắt sách: The Speed of Trust'
 type: post
 ---
 

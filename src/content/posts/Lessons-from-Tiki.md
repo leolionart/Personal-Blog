@@ -1,14 +1,15 @@
 ---
-title: Những điều học được ở Tiki
-description: Nơi khởi đầu sự nghiệp product — từ designer bước vào sự hỗn loạn của e-commerce và trưởng thành từ đó
-pubDate: 2024-06-15
 author: leolion
+description: Nơi khởi đầu sự nghiệp product — từ designer bước vào sự hỗn loạn của
+  e-commerce và trưởng thành từ đó
+pubDate: 2024-06-15
 tags:
-  - Product Management
-  - UX Design
-  - E-commerce
-  - Career Development
-  - Professional Growth
+- Product Management
+- UX Design
+- E-commerce
+- Career Development
+- Professional Growth
+title: Những điều học được ở Tiki
 type: post
 ---
 

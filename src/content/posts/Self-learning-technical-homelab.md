@@ -1,11 +1,12 @@
 ---
-title: Tự học mọi thứ từ HomeLAB — hành trình từ YouTube đến AI
-description: Từ clip hướng dẫn đưa thiết bị lên HomeKit, tới tự flash firmware, dựng dashboard, build NAS, và cuối cùng là dùng AI để code ra tool cho chính mình
-pubDate: 2024-12-01
 author: leolion
+description: Từ clip hướng dẫn đưa thiết bị lên HomeKit, tới tự flash firmware, dựng
+  dashboard, build NAS, và cuối cùng là dùng AI để code ra tool cho chính mình
+pubDate: 2024-12-01
 tags:
-  - Technology
-  - Career
+- Technology
+- Career
+title: Tự học mọi thứ từ HomeLAB — hành trình từ YouTube đến AI
 type: post
 ---
 

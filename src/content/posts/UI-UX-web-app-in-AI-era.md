@@ -1,12 +1,13 @@
 ---
-title: UI/UX của web app trong thời đại AI
-description: Cách thiết kế giao diện phải thích ứng với AI agents - Google I/O 2025 insights
-pubDate: 2025-02-20
 author: leolion
+description: Cách thiết kế giao diện phải thích ứng với AI agents - Google I/O 2025
+  insights
+pubDate: 2025-02-20
 tags:
-  - AI
-  - UX Design
-  - Technology
+- AI
+- UX Design
+- Technology
+title: UI/UX của web app trong thời đại AI
 type: post
 ---
 

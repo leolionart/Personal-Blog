@@ -1,14 +1,15 @@
 ---
-title: Nhìn lại hành trình ở MWG
-description: Từ product designer đến người học kinh doanh — câu chuyện ở Bách Hoá Xanh và Nhà Thuốc An Khang
-pubDate: 2024-08-10
 author: leolion
+description: Từ product designer đến người học kinh doanh — câu chuyện ở Bách Hoá
+  Xanh và Nhà Thuốc An Khang
+pubDate: 2024-08-10
 tags:
-  - Product Management
-  - Leadership
-  - Business Strategy
-  - Retail
-  - Career Development
+- Product Management
+- Leadership
+- Business Strategy
+- Retail
+- Career Development
+title: Nhìn lại hành trình ở MWG
 type: post
 ---
 

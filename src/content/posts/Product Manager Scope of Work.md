@@ -1,10 +1,11 @@
 ---
-title: Cụ thể vai trò PM là gì?
-description: Bài này hay quá tôi trích dẫn lại và đưa thêm quan điểm cá nhân của mình vào
-pubDate: 2024-11-26
 author: leolion
+description: Bài này hay quá tôi trích dẫn lại và đưa thêm quan điểm cá nhân của mình
+  vào
+pubDate: 2024-11-26
 tags:
-  - Product Management
+- Product Management
+title: Cụ thể vai trò PM là gì?
 type: announcement
 ---
 

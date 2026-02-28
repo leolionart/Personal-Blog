@@ -1,12 +1,13 @@
 ---
-title: Quản lý chi tiêu theo kiểu quy hoạch hạn mức
-description: Không ghi từng ly cafe — chỉ cần phân bổ đúng từ đầu tháng và tối ưu thẻ tín dụng
-pubDate: 2026-02-27
 author: leolion
+description: Không ghi từng ly cafe — chỉ cần phân bổ đúng từ đầu tháng và tối ưu
+  thẻ tín dụng
+pubDate: 2026-02-27
 tags:
-  - Personal Development
-  - Productivity
-  - Strategy
+- Personal Development
+- Productivity
+- Strategy
+title: Quản lý chi tiêu theo kiểu quy hoạch hạn mức
 type: post
 ---
 

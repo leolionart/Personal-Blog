@@ -1,12 +1,13 @@
 ---
-title: "Tóm tắt sách: Outcomes Over Output"
-description: Tóm tắt "Outcomes Over Output" - chuyển từ đo lường output sang outcomes thực tế
-pubDate: 2024-09-20
 author: leolion
+description: Tóm tắt "Outcomes Over Output" - chuyển từ đo lường output sang outcomes
+  thực tế
+pubDate: 2024-09-20
 tags:
-  - Book Summary
-  - Product Management
-  - Business
+- Book Summary
+- Product Management
+- Business
+title: 'Tóm tắt sách: Outcomes Over Output'
 type: post
 ---
 

@@ -1,12 +1,13 @@
 ---
-title: Chữa bệnh lười viết bằng AI
-description: Chiến lược sử dụng ChatGPT & AI để vượt qua procrastination trong viết lách và đọc sách
-pubDate: 2025-02-10
 author: leolion
+description: Chiến lược sử dụng ChatGPT & AI để vượt qua procrastination trong viết
+  lách và đọc sách
+pubDate: 2025-02-10
 tags:
-  - AI
-  - Writing
-  - Productivity
+- AI
+- Writing
+- Productivity
+title: Chữa bệnh lười viết bằng AI
 type: post
 ---
 
