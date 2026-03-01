@@ -44,9 +44,9 @@ const { work } = cv;
 							)}
 
 							{(responsibilities || achievements) && (
-								<div class="expandable-content overflow-hidden transition-all duration-300 print:!overflow-visible" style="max-height: 0px;" data-expandable>
+								<div class="flex flex-col gap-3">
 									{responsibilities && (
-										<div class="flex flex-col gap-1 mb-3">
+										<div class="flex flex-col gap-1">
 											<h5 class="text-xs c-gray-500 dark:c-gray-400 uppercase">Responsibilities</h5>
 											<ul class="text-sm c-gray-600 dark:c-gray-400 list-disc ml-4 flex flex-col gap-1">
 												{responsibilities.map(r => <li>{r}</li>)}
@@ -62,16 +62,6 @@ const { work } = cv;
 										</div>
 									)}
 								</div>
-							)}
-
-							{(responsibilities || achievements) && (
-								<button
-									data-expand-toggle
-									class="no-print flex items-center gap-1 text-xs c-gray-500 dark:c-gray-400 hover:c-gray-900 dark:hover:c-gray-100 hover:underline underline-offset-3 cursor-pointer transition-colors w-fit"
-								>
-									<span data-expand-text>Show more</span>
-									<svg class="expand-chevron w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-								</button>
 							)}
 
 							{skills && skills.length > 0 && (
@@ -91,79 +81,3 @@ const { work } = cv;
 	</ul>
 </Section>
 
-<script>
-	function toggleExpand(btn: Element) {
-		const li = btn.closest('li');
-		const content = li?.querySelector('[data-expandable]') as HTMLElement;
-		const text = btn.querySelector('[data-expand-text]');
-		const chevron = btn.querySelector('.expand-chevron');
-		if (!content) return;
-
-		const isExpanded = content.getAttribute('data-expanded') === 'true';
-
-		if (isExpanded) {
-			content.style.maxHeight = '0px';
-			content.setAttribute('data-expanded', 'false');
-			if (text) text.textContent = 'Show more';
-			chevron?.classList.remove('rotate-180');
-		} else {
-			content.style.maxHeight = content.scrollHeight + 'px';
-			content.setAttribute('data-expanded', 'true');
-			if (text) text.textContent = 'Show less';
-			chevron?.classList.add('rotate-180');
-		}
-	}
-
-	// Named handlers so we can remove before re-adding (prevents duplicates)
-	function handleExpandClick(e: Event) {
-		const btn = (e.target as HTMLElement).closest('[data-expand-toggle]');
-		if (!btn) return;
-		toggleExpand(btn);
-	}
-
-	let touchStart = { x: 0, y: 0 };
-
-	function handleTouchStart(e: TouchEvent) {
-		if (!(e.target as Element).closest('[data-expand-toggle]')) return;
-		touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-	}
-
-	function handleTouchEnd(e: TouchEvent) {
-		const btn = (e.target as Element).closest('[data-expand-toggle]');
-		if (!btn) return;
-		const touch = e.changedTouches[0];
-		const dx = Math.abs(touch.clientX - touchStart.x);
-		const dy = Math.abs(touch.clientY - touchStart.y);
-		if (dx < 10 && dy < 10) {
-			e.preventDefault();
-			toggleExpand(btn);
-		}
-	}
-
-	function initExpandToggles() {
-		// Remove old handlers first (prevents duplicates across navigations)
-		document.removeEventListener('click', handleExpandClick);
-		document.removeEventListener('touchstart', handleTouchStart);
-		document.removeEventListener('touchend', handleTouchEnd);
-
-		// Re-attach
-		document.addEventListener('click', handleExpandClick);
-		document.addEventListener('touchstart', handleTouchStart, { passive: true });
-		document.addEventListener('touchend', handleTouchEnd);
-
-		// Reset expandable content state for fresh DOM
-		document.querySelectorAll('[data-expandable]').forEach(el => {
-			(el as HTMLElement).style.maxHeight = '0px';
-			el.setAttribute('data-expanded', 'false');
-		});
-		document.querySelectorAll('[data-expand-text]').forEach(el => {
-			el.textContent = 'Show more';
-		});
-		document.querySelectorAll('.expand-chevron').forEach(el => {
-			el.classList.remove('rotate-180');
-		});
-	}
-
-	initExpandToggles();
-	document.addEventListener('astro:after-swap', initExpandToggles);
-</script>
