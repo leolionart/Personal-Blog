@@ -117,7 +117,7 @@ Không phải vì design không quan trọng, mà vì ở một số bài toán,
 
 ## Agentic AI không còn là buzzword
 
-Trong buổi chia sẻ tới, mình sẽ hỏi mọi người vài câu mở đầu:
+Trong buổi chia sẻ tới, mình sẽ hỏi mọi người vài câu mở đầu (mong là mọi người tranh thủ tìm hiểu trước):
 
 - Bạn nào đã nghe về **Agentic AI**?
 - Bạn nào đã thử **OpenClaw**?
@@ -131,13 +131,12 @@ Mục tiêu là để cùng nhìn ra một thực tế: **cách chúng ta xây s
 
 ## Hẹn bạn ở workshop online
 
-Bài này là bản mở đầu.
-Trong workshop online, mình sẽ chia sẻ đầy đủ hơn:
+Bài này là bản mở đầu. Trong workshop online, mình sẽ chia sẻ đầy đủ hơn:
 
 - Cách thiết kế workflow AI-first cho team product/dev
-- Cách đặt checkpoint để nhanh mà không vỡ chất lượng
-- Cách đo lead time mới theo vòng lặp AI
-- Những sai lầm thực tế tụi mình đã gặp và cách sửa
+- In action câu chuyện product discovery bằng AI phân tích hàng nghìn dữ liệu, khám phá các giả định, tương tác với hệ thống production
+- Giới thiệu các skill, bộ quy tắc mà mình thiết lập cho workflow của mình (sẽ không share, tự mày mò sẽ dẫn các bạn đi xa hơn)
+- Những sai lầm thực tế tụi mình đã gặp và cách bọn mình đối mặt với các bài toán đấy
 
 Nếu bạn đang làm product, engineering, hoặc vận hành và cảm thấy tốc độ hiện tại chưa theo kịp thị trường, mình tin buổi này sẽ hữu ích.
 
