@@ -4,8 +4,8 @@ description: Cách thiết kế giao diện phải thích ứng với AI agents 
   insights
 pubDate: 2025-02-20
 tags:
-- Technology
-- Design
+- Product
+- Career
 title: UI/UX của web app trong thời đại AI
 type: post
 ---

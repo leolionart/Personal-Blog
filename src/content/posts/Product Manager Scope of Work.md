@@ -5,6 +5,7 @@ description: Bài này hay quá tôi trích dẫn lại và đưa thêm quan đi
 pubDate: 2024-11-26
 tags:
 - Product
+- Career
 title: Cụ thể vai trò PM là gì?
 type: announcement
 ---

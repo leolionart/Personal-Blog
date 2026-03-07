@@ -4,8 +4,8 @@ description: Tóm tắt "Outcomes Over Output" - chuyển từ đo lường outp
   thực tế
 pubDate: 2024-09-20
 tags:
-- Books
 - Product
+- Books
 title: 'Tóm tắt sách: Outcomes Over Output'
 type: post
 ---

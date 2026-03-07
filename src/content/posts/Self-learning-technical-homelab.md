@@ -4,8 +4,8 @@ description: Từ clip hướng dẫn đưa thiết bị lên HomeKit, tới t�
   dashboard, build NAS, và cuối cùng là dùng AI để code ra tool cho chính mình
 pubDate: 2024-12-01
 tags:
-- Technology
 - Career
+- Product
 title: Từ copy-paste YouTube đến làm chủ AI để build sản phẩm
 type: post
 ---

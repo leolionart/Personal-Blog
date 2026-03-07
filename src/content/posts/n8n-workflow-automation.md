@@ -4,8 +4,8 @@ description: Khi bạn đã quen vẽ user flow và diagram, bước tiếp theo
   thành workflow chạy được
 pubDate: 2025-02-20
 tags:
-- Technology
-- Productivity
+- Product
+- Career
 title: Thực thi hoá sơ đồ tư duy qua n8n
 type: post
 ---

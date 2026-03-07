@@ -3,7 +3,8 @@ author: leolion
 description: Biết gì viết nấy, chắc sai nhiều
 pubDate: 2022-10-20
 tags:
-- Technology
+- Product
+- Career
 title: Web3, Blockchain & Smart contract
 type: announcement
 ---

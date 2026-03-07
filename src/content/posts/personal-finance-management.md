@@ -4,9 +4,8 @@ description: Không ghi từng ly cafe — chỉ cần phân bổ đúng từ đ
   thẻ tín dụng
 pubDate: 2026-02-27
 tags:
-- Career
-- Productivity
-- Product
+- Finance
+- Personal
 title: Quản lý chi tiêu theo kiểu quy hoạch hạn mức
 type: post
 ---

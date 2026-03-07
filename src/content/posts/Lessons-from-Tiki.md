@@ -4,9 +4,8 @@ description: Nơi khởi đầu sự nghiệp product — từ designer bước 
   e-commerce và trưởng thành từ đó
 pubDate: 2024-06-15
 tags:
-- Product
-- Design
 - Career
+- Product
 title: Những điều học được ở Tiki
 type: post
 ---
