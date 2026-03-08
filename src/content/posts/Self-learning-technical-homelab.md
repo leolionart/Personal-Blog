@@ -6,7 +6,8 @@ pubDate: 2024-12-01
 tags:
 - Career
 - Product
-title: Từ copy-paste YouTube đến làm chủ AI để build sản phẩm
+title: Tự học mọi thứ từ HomeLAB — hành trình mày mò cài các dịch vụ selfhost cho
+  tới giai đoạn vide coding để production được ý tưởng
 type: post
 ---
 
