@@ -1,13 +1,25 @@
 ---
 author: leolion
-description: Khi bạn đã quen vẽ user flow và diagram, bước tiếp theo là biến chúng
-  thành workflow chạy được
+description: Từ PM vẽ flow đến người tự chạy workflow — hướng dẫn thực chiến dùng
+  n8n để tự động hoá công việc và cuộc sống cá nhân
 pubDate: 2025-02-20
 tags:
 - Product
 - Career
 title: Thực thi hoá sơ đồ tư duy qua n8n
 type: post
+---
+
+## Mọi automation đều bắt đầu từ 3 thứ
+
+Dù bạn dùng Automator trên macOS, Apple Shortcuts, Home Assistant cho nhà thông minh, hay n8n — mọi automation workflow đều được cấu thành từ 3 phần cơ bản:
+
+1. **Trigger** — điều gì kích hoạt workflow?
+2. **Condition** — có điều kiện gì cần kiểm tra không?
+3. **Action** — làm gì khi điều kiện thoả mãn?
+
+Đây là hình thái cơ bản nhất của quy trình vận hành bất kỳ ứng dụng nào. Sự khác nhau giữa các công cụ nằm ở **cách người ta tương tác và kiểm soát các node với nhau** để tạo ra một quy trình đủ khoa học.
+
 ---
 
 ## Bạn đã biết vẽ flow rồi — chỉ chưa biết chạy nó thôi
@@ -30,7 +42,7 @@ Thanh toán
 Nhận xác nhận
 ```
 
-Nếu bạn từng vẽ diagram mô tả logic vận hành:
+Hay diagram mô tả logic vận hành:
 
 ```text
 Đơn hàng mới
@@ -49,44 +61,46 @@ Kiểm tra tồn kho
       Thông báo seller ──▶ Hủy/Chờ nhập
 ```
 
-Hay đơn giản là bạn từng sketch quy trình làm việc hàng ngày trên giấy, trên Miro, trên FigJam — bất kỳ đâu.
-
 Thì bạn **đã biết nghĩ theo workflow rồi**. Cái thiếu duy nhất là: biến cái flow đó từ hình vẽ thành thứ chạy được thật.
 
 Đó chính xác là thứ n8n làm.
+
+Khi mình bắt đầu dùng n8n, cái "aha moment" là: **canvas của n8n trông y hệt cái flowchart mình vẫn vẽ — nhưng mỗi ô vuông đều chạy được thật**. Trigger giống cái ô "Bắt đầu". Condition giống cái hình thoi rẽ nhánh. Action giống cái ô "Gửi email" hay "Cập nhật database". Khác biệt duy nhất: ở n8n, bạn bấm Execute và nó **chạy thật**.
 
 ---
 
 ## Mục lục
 
-1. [Thay đổi tư duy: từ vẽ flow sang chạy flow](#-thay-đổi-tư-duy-từ-vẽ-flow-sang-chạy-flow)
-2. [Cách mình làm: luôn sketch trước, đấu nối sau](#-cách-mình-làm-luôn-sketch-trước-đấu-nối-sau)
-3. [Test từng bước — không đợi hoàn chỉnh mới chạy](#-test-từng-bước--không-đợi-hoàn-chỉnh-mới-chạy)
-4. [Gắn AI vào giữa luồng](#-gắn-ai-vào-giữa-luồng)
-5. [Ví dụ thực tế từ workflow của mình](#-ví-dụ-thực-tế-từ-workflow-của-mình)
-6. [Kết hợp n8n với MCP](#-kết-hợp-n8n-với-mcp)
+1. [Điều gì làm n8n trở nên đặc biệt](#điều-gì-làm-n8n-trở-nên-đặc-biệt)
+2. [Cách mình làm: luôn sketch trước, đấu nối sau](#cách-mình-làm-luôn-sketch-trước-đấu-nối-sau)
+3. [Test từng bước — không đợi hoàn chỉnh mới chạy](#test-từng-bước--không-đợi-hoàn-chỉnh-mới-chạy)
+4. [Không chỉ là condition và action — HTTP Request](#không-chỉ-là-condition-và-action--http-request)
+5. [Gắn AI vào giữa luồng](#gắn-ai-vào-giữa-luồng)
+6. [Kết nối n8n với mọi thứ — Webhook và MCP](#kết-nối-n8n-với-mọi-thứ--webhook-và-mcp)
+7. [Use case thực tế mình đang dùng](#use-case-thực-tế-mình-đang-dùng)
+8. [Lời khuyên để bắt đầu](#lời-khuyên-để-bắt-đầu)
 
 ---
 
-## Thay đổi tư duy: từ vẽ flow sang chạy flow
+## Điều gì làm n8n trở nên đặc biệt
 
-Nhiều năm làm product, mình vẽ rất nhiều diagram. User flow cho feature mới. Sequence diagram cho API integration. Flowchart mô tả quy trình xử lý đơn hàng. Sơ đồ logic cho campaign promotion.
+n8n không phải công cụ automation đầu tiên, cũng không phải duy nhất. Zapier, Make, Power Automate đều có thể làm được nhiều thứ tương tự. Vậy tại sao n8n lại lan rộng nhanh không chỉ với tech-savvy user mà còn với người yêu công nghệ nói chung?
 
-Nhưng tất cả đều dừng ở mức **tài liệu**. Vẽ xong, trình bày xong, rồi giao cho engineer đi build. Bản thân cái diagram thì nằm im trong Figma hay Confluence.
+Câu trả lời của mình nằm ở một tính năng có vẻ nhỏ nhưng thay đổi toàn bộ trải nghiệm:
 
-Khi mình bắt đầu dùng n8n, cái “aha moment” là: **canvas của n8n trông y hệt cái flowchart mình vẫn vẽ — nhưng mỗi ô vuông đều chạy được thật**.
+> **Bạn xem được input và output của một node ngay khi chạy workflow — và bạn có thể kéo trực tiếp từng field của output vào param của node tiếp theo.**
 
-Trigger giống cái ô “Bắt đầu” trong flowchart. Condition giống cái hình thoi rẽ nhánh. Action giống cái ô “Gửi email” hay “Cập nhật database” mà mình hay vẽ. Khác biệt duy nhất: ở n8n, bạn bấm Execute và nó **chạy thật**.
+Nghe đơn giản, nhưng đây là điểm đau lớn nhất khi xây automation: *"Tôi có output A từ bước trước, tôi cần chuyển thành B để đưa vào bước sau — làm thế nào?"*
 
-Tư duy không cần thay đổi nhiều. Bạn vẫn nghĩ theo luồng, vẫn phân tích input/output, vẫn xử lý ngoại lệ. Chỉ là bây giờ, thay vì vẽ xong rồi đưa người khác, **bạn tự thực thi được luôn**.
+Ở hầu hết các công cụ, bạn phải mò trong documentation, đoán tên field, rồi hardcode vào. Ở n8n, bạn chạy node, nhìn thấy output hiện ra ngay, rồi kéo field đó vào đúng chỗ cần điền. Nếu cần transform phức tạp hơn, bạn chụp màn hình output và hỏi thẳng ChatGPT: *"Tôi muốn chuyển đổi A thành B thì làm thế nào?"* — khả năng rất cao GPT sẽ đưa cho bạn hướng dẫn khớp với đúng cấu trúc data bạn đang thấy.
+
+Ví dụ đơn giản: mình cần gửi tin nhắn thông báo cho user, trong đó có các giá trị động như tên ngân hàng và số tiền. Thay vì hardcode, mình chạy node trước, thấy output có field `bank_name` và `amount`, rồi kéo thẳng vào template tin nhắn. Xong.
 
 ---
 
 ## Cách mình làm: luôn sketch trước, đấu nối sau
 
 Mình không bao giờ mở n8n lên rồi bắt đầu kéo thả node ngay. Cách đó dễ bị lạc giữa chừng vì vừa nghĩ vừa build.
-
-Quy trình của mình luôn là:
 
 ### Bước 1: Sketch ý tưởng các bước trên giấy hoặc note
 
@@ -111,10 +125,10 @@ Giờ mới mở canvas. Kéo từng node theo thứ tự đã sketch:
 Email Trigger
   │
   ▼
-  IF
+IF (filter domain)
   │
   ▼
-Download
+Download attachment
   │
   ▼
 AI Agent
@@ -142,23 +156,7 @@ Cách tiếp cận này giống hệt cách mình làm product design: **sketch 
 
 Cách mình làm: **chạy thử từng node ngay khi vừa config xong**.
 
-n8n có một tính năng rất hay: **Execute Node** — cho phép bạn chạy thử đúng một node, xem output của nó, rồi mới quyết định có đi tiếp không.
-
-Quy trình test:
-
-```text
-Config node
-  │
-  ▼
-Execute
-  │
-  ▼
-Xem output
-  │
-  ├── Đúng ý? ──▶ Sang node tiếp
-  │
-  └── Sai? ──▶ Sửa lại ──▶ Execute lại
-```
+n8n có tính năng **Execute Node** — cho phép bạn chạy thử đúng một node, xem output của nó, rồi mới quyết định có đi tiếp không.
 
 Mỗi node mình đều kiểm tra:
 
@@ -170,94 +168,131 @@ Cách test từng bước này chậm hơn lúc đầu, nhưng **tiết kiệm r
 
 ---
 
+## Không chỉ là condition và action — HTTP Request
+
+Đây là phần mà nhiều người chưa khai thác hết của n8n.
+
+Bản chất của hầu hết các hành động trên web là một **HTTPS Request**. Khi bạn bấm "Đặt vé" trên một trang web, trình duyệt thực ra đang gửi một request tới API server. Ví dụ luồng đặt vé thực chất có thể mô tả như sau:
+
+```text
+1. Gọi API lấy danh sách vé kèm giá
+2. Chọn vé đạt yêu cầu → gọi API thêm vào giỏ hàng
+3. Điền thông tin → gọi API ghi nhận vé
+4. Backend xử lý: trừ tồn, tạo record, trả về thông tin vé
+5. Giao diện hiển thị vé đã đặt
+```
+
+n8n cho phép bạn giả lập toàn bộ chuỗi đó bằng cách tái tạo các HTTP Request — về cơ bản là cơ chế QA test API khi chưa có giao diện.
+
+**Trick cực kỳ hữu dụng:** Mở trình duyệt, thực hiện hành động bạn muốn tự động hoá, vào DevTools → Network → tìm request liên quan → chuột phải → Copy as cURL → Paste thẳng vào HTTP Request node của n8n. Lập tức nó thiết lập y chang headers, method, body mà trình duyệt của bạn đã dùng.
+
+Tất nhiên, không phải lúc nào cũng cần mò cURL như vậy. n8n liên tục tích hợp native với các dịch vụ phổ biến — biến chúng thành node sẵn có. Bạn muốn ghi dữ liệu vào Google Sheet? Chỉ cần chọn node Google Sheets, chọn hành động "Add new row", nó tự lấy danh sách cột trong file và hiển thị các field để bạn điền. Không cần biết API của Google Sheet hoạt động thế nào.
+
+---
+
 ## Gắn AI vào giữa luồng
 
-Đây là phần thú vị nhất của n8n thời điểm hiện tại. Bạn có thể gắn một AI node vào **bất kỳ đâu giữa luồng** để xử lý những việc mà logic cứng không làm được.
+AI trong n8n mạnh nhất khi nó **xen vào giữa một quy trình vốn đã chạy bằng logic thông thường** — không phải ở đầu hay cuối.
 
-### AI không cần ở đầu hay cuối — nó ở giữa
-
-Nhiều người nghĩ dùng AI nghĩa là build chatbot hoặc AI assistant. Nhưng trong n8n, AI node mạnh nhất khi nó **xen giữa một quy trình vốn đã chạy bằng logic thông thường**.
-
-Ví dụ một flow xử lý feedback khách hàng:
+Ví dụ flow xử lý feedback khách hàng:
 
 ```text
 Nhận feedback từ form
-→ [AI] Phân loại: bug / feature request / complaint / compliment
+→ [AI] Phân loại: bug / feature_request / complaint / compliment
 → IF bug → Tạo ticket Jira
-→ IF feature request → Thêm vào backlog Notion
-→ IF complaint → Gửi Slack cho team support
-→ IF compliment → Gửi Slack cho team product (boost morale)
+→ IF feature_request → Thêm vào backlog Notion
+→ IF complaint → Slack cho team support
+→ IF compliment → Slack cho team product
 ```
 
-Không có AI, bạn phải viết regex hoặc keyword matching để phân loại — vừa cứng vừa hay sai. Với AI node, bạn chỉ cần prompt: *”Phân loại feedback sau vào một trong 4 nhóm: bug, feature_request, complaint, compliment. Trả về đúng 1 từ.”*
+Không có AI, bạn phải viết regex hoặc keyword matching — vừa cứng vừa hay sai. Với AI node, bạn chỉ cần prompt rõ ràng: *"Phân loại feedback sau vào một trong 4 nhóm: bug, feature_request, complaint, compliment. Trả về đúng 1 từ."*
 
-### Những chỗ mình hay gắn AI vào
+**Những chỗ mình hay gắn AI vào:**
 
 - **Trích xuất thông tin từ text phi cấu trúc**: email, chat message, PDF scan
 - **Phân loại và gắn nhãn**: phân loại nội dung, sentiment, mức độ ưu tiên
 - **Tóm tắt**: rút gọn nội dung dài thành vài bullet point
 - **Dịch hoặc chuyển đổi format**: từ ngôn ngữ này sang ngôn ngữ khác, từ free text sang JSON
 
-Nguyên tắc của mình: **AI xử lý phần “mềm” (ngôn ngữ, phân loại, suy luận), logic cứng xử lý phần còn lại (routing, lưu trữ, thông báo)**. Đừng dùng AI cho thứ mà một cái IF/ELSE làm được.
+Nguyên tắc của mình: **AI xử lý phần "mềm" (ngôn ngữ, phân loại, suy luận), logic cứng xử lý phần còn lại (routing, lưu trữ, thông báo)**. Đừng dùng AI cho thứ mà một cái IF/ELSE làm được.
 
 ---
 
-## Ví dụ thực tế từ workflow của mình
+## Kết nối n8n với mọi thứ — Webhook và MCP
 
-### 1) Tóm tắt và phân loại email vendor
+### Webhook: cho ứng dụng khác gọi vào n8n
 
-```text
-Email mới từ @vendor.com
-→ Tải attachment (invoice/quote)
-→ [AI] Trích xuất: số tiền, hạn thanh toán, hạng mục
-→ Ghi vào Google Sheet theo category
-→ Nếu hạn thanh toán < 7 ngày → Slack alert
-```
+Bạn có thể dùng cơ chế Webhook để các ứng dụng khác gọi REST API vào n8n và kích hoạt một workflow. Mình dùng cách này để n8n trở thành backend xử lý tin nhắn chat của khách hàng trên web — mỗi khi có tin nhắn mới, hệ thống gọi webhook, n8n xử lý và trả về phản hồi.
 
-Trước đây mình làm việc này bằng tay: mở email, đọc, copy số liệu vào sheet. Mất 15–20 phút mỗi ngày. Giờ flow chạy tự động, mình chỉ review kết quả.
+### MCP: chuẩn giao tiếp mới giữa AI và workflow
 
-### 2) Theo dõi bookmark và build knowledge base
+Nhưng n8n đem lại một thứ hay hơn nữa: **MCP (Model Context Protocol)** — ngôn ngữ chung để gần như tất cả AI model, AI tool giao tiếp được với workflow của bạn.
 
-```text
-Lưu bookmark mới (qua Webhook)
-→ Fetch nội dung trang
-→ [AI] Tóm tắt + trích keyword
-→ Ghi vào Notion database
-→ Gắn tag tự động theo chủ đề
-```
+Tại sao MCP lại quan trọng? So sánh trực tiếp:
 
-Đây là workflow “second brain” của mình. Mỗi link mình lưu đều được AI tóm tắt và phân loại, nên sau này tìm lại rất nhanh.
+**Với cách cũ (API trực tiếp):**
+- Bạn phải định nghĩa trước: tình huống A gọi API 1, tình huống B gọi API 2
+- Mỗi AI Agent hay tool cần cấu hình riêng
+- Khi API thay đổi, phải đi sửa ở tất cả những chỗ đã cấu hình
 
-### 3) Xử lý feedback từ nhiều nguồn
+**Với MCP:**
+- AI tool gọi tới MCP, MCP giải thích về các tool nó có — AI tự quyết định dùng cái nào, thậm chí tự biết cần kết hợp nhiều tool cùng lúc
+- MCP như một gateway trung tâm: cắm tất cả AI Agent vào một chỗ
+- Khi API thay đổi, chỉ cần sửa kết nối MCP một lần, tất cả đều được cập nhật
 
-```text
-Feedback từ form / email / Slack
-→ Gộp về format chung
-→ [AI] Phân loại + đánh mức ưu tiên
-→ Route đến đúng team
-→ Tạo ticket hoặc task tương ứng
-```
-
-Flow này giải quyết bài toán mà nhiều team product gặp: feedback đến từ khắp nơi, không ai tổng hợp kịp.
+Kết quả thực tế: bạn tách được phần **"điều phối logic"** (n8n — visual, dễ sửa) và phần **"giao tiếp tự nhiên"** (AI assistant). Mỗi bên làm tốt nhất thứ mình giỏi.
 
 ---
 
-## Kết hợp n8n với MCP
+## Use case thực tế mình đang dùng
 
-**MCP (Model Context Protocol)** cho phép AI tools gọi workflow n8n như một “tool” và nhận kết quả trả về.
+### Trong công việc
 
-Khi kết hợp:
+**1. Tóm tắt group chat tự động**
 
-```text
-User hỏi AI assistant một câu hỏi
-→ AI nhận ra cần chạy workflow
-→ Gọi n8n qua MCP endpoint
-→ n8n xử lý logic nhiều bước
-→ Trả kết quả cho AI
-→ AI tổng hợp và trả lời user
-```
+Mình có quá nhiều group dự án và cộng đồng, không có thời gian đọc từng group mà không đọc thì FOMO. Mình xây một workflow để AI âm thầm thu gom tin nhắn theo từng group, phân loại theo mức độ quan trọng, rồi cứ đầu ngày / giữa trưa / giữa chiều gửi một bản tóm tắt các ý chính. Sau khi gửi xong, workflow tự xóa hết tin nhắn đã lưu để bắt đầu lại vòng thu thập mới.
 
-Điểm hay: bạn tách được phần **”điều phối logic”** (n8n — visual, dễ sửa) và phần **”giao tiếp tự nhiên”** (AI assistant). Mỗi bên làm tốt nhất thứ mình giỏi.
+**2. Tự động hoá khai báo thuế**
+
+Hàng quý mình cần nộp nhiều hoá đơn chứng từ, và hoá đơn đầu vào cần khai báo chi tiết từng sản phẩm với mức thuế 8% hay 10%. Tổng hợp tay rất phiền. Mình xây workflow để khi có hoá đơn mới về, nó tự động điền vào các mẫu khai báo thuế theo đúng format. Cuối quý mình chỉ cần cầm đi nộp, không cần làm gì thêm.
+
+**3. Quản lý hợp đồng bằng AI**
+
+Mình ký nhiều hợp đồng có các điều khoản cần theo dõi lâu dài và các milestone với khách hàng. Thay vì đọc lại từng hợp đồng hoặc quản lý trên Excel, mình xây workflow vector hoá tất cả hợp đồng và nội dung của chúng. Bot sẽ tra cứu hàng ngày để nhắc nhở khi sắp đến hạn điều khoản. Khi cần hỏi *"làm thế này có vi phạm hợp đồng nào không?"*, AI trả lời ngay dựa trên database hợp đồng đã được index.
+
+### Trong cuộc sống cá nhân
+
+**4. Tối ưu cashflow thẻ tín dụng**
+
+Nhiều thẻ tín dụng, mỗi thẻ có kỳ sao kê và hạn thanh toán khác nhau. Nếu cứ đầu tháng có lương là trả hết thì đang bỏ phí thời gian miễn lãi — nhiều khi gần cả tháng — để sinh lời. Mình xây workflow để lưu lại và ước tính lượng tiền cần giữ lại tối thiểu cho việc trả tín dụng, tự tính ngày thanh toán tối ưu, và nhắc mình trước ít nhất 3 ngày. Nhờ vậy tối ưu được dòng tiền đáng kể.
+
+**5. Tự động phân loại chi tiêu**
+
+Mỗi khi chuyển khoản ngân hàng, workflow dựa vào nội dung chuyển khoản để xác định danh mục chi tiêu và tự động thêm vào Money Lover — không cần grant quyền truy cập ngân hàng (tránh rủi ro bảo mật), không mất phí đồng bộ, và giải quyết luôn vấn đề Money Lover chia mỗi ngân hàng thành một ví riêng gây rắc rối khi chuyển tiền nội bộ.
+
+**6. Hệ thống lưu trữ kiến thức tự động**
+
+Mình có thói quen lưu bookmark, bài viết, ghi chú từ bài chia sẻ hay — nhưng nếu phải điền nhiều thông tin là sẽ lười và dần bỏ hẳn. Vì vậy mình xây các workflow:
+
+- Bookmark → tự lưu vào Raindrop, tự đặt tiêu đề / mô tả / tags
+- Ghi chú → tự thêm vào Notion, tự gắn tag
+- Tất cả đều được vector hoá vào RAG database
+
+Khi cần tìm lại, mình chỉ nhớ mang máng *"đã từng lưu cái gì đó về chủ đề này"* là AI có thể tìm trong vector database và trích dẫn đúng thông tin, dù không nhớ chính xác từ khoá.
+
+**7. Tích hợp với Apple Siri**
+
+Khi đang lái xe hoặc bận tay, không thể mở Telegram hay chatbot để nhắn tin. Mình tích hợp n8n vào Apple Siri thông qua Apple Shortcuts: chỉ cần nói *"Hey Siri, cho tui hỏi..."* là Siri gọi n8n workflow và trả về kết quả bằng giọng nói. Không cần thao tác tay nào.
+
+**8. AI assistant cá nhân hoá**
+
+Mình xây một trợ lý kết hợp nhiều MCP server để có thể:
+- Quản lý lịch họp và nhắc nhở
+- Ghi nhớ các thông tin cá nhân theo ngữ cảnh
+- Nghiên cứu profile ai đó trên LinkedIn và Google
+- Truy vấn lịch sử hoạt động từ Home Assistant — ví dụ: *"Tối qua ai đã mở cửa Garage lúc mấy giờ?"*
+
+Khi có một kỹ năng mới mình muốn AI làm được, mình chỉ cần dựng thêm một MCP endpoint và viết kịch bản sử dụng. Mô hình này cho phép nhiều AI Agent phối hợp với nhau để hoàn thành một yêu cầu chung chung mà không cần mình phải điều phối từng bước.
 
 ---
 
