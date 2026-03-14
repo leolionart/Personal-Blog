@@ -8,8 +8,7 @@ tags:
 - Product
 - AI
 - Operations
-title: AI Chatbot đâu đâu cũng thấy, nhưng để thực sự production được thì là một chặng
-  đường dài
+title: Từ demo AI Chatbot tới production sản phẩm là cả một chặng đường dài
 type: post
 ---
 
