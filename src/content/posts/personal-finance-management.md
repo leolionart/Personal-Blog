@@ -6,7 +6,7 @@ pubDate: 2026-02-27
 tags:
 - Finance
 - Personal
-title: Quản lý chi tiêu theo kiểu quy hoạch hạn mức
+title: Quản lý chi tiêu theo kiểu chia tiền thành nhiều ví
 type: post
 ---
 
@@ -59,6 +59,9 @@ Tiêu trong hạn mức mỗi ví
 ```
 
 Không cần ghi từng giao dịch. Chỉ cần biết **mỗi ví còn bao nhiêu**.
+
+Nếu bạn muốn thử cách này ngay mà không cần tự setup từ đầu, mình có làm một app nhỏ tên **Personal Finance Assist**. Phần mình dùng nhiều nhất là nhắc các khoản nợ thẻ tín dụng và theo dõi tỉ lệ hoàn tiền (cashback):
+[personal-finance-assist.vercel.app](https://personal-finance-assist.vercel.app)
 
 ---
 
@@ -159,16 +162,17 @@ Mình review hạn mức mỗi quý. Ví nào liên tục dư nhiều → giảm
 
 Sau khi chạy phương pháp này bằng tay được vài tháng và thấy nó hoạt động, mình quyết định tự build một app nhỏ để hỗ trợ.
 
-App không thay thế phương pháp — nó chỉ **tự động hóa phần theo dõi và nhắc nhở**:
+App không thay thế phương pháp — nó chỉ **tự động hóa một phần việc theo dõi và nhắc nhở**. Với mình, hai phần dùng thường xuyên nhất là:
 
-- Hiển thị hạn mức còn lại của mỗi ví
-- Nhắc khi ví sắp cạn
-- Nhắc ngày thanh toán thẻ tín dụng
-- Theo dõi tổng cashback đã nhận
+- Nhắc ngày thanh toán và các khoản nợ thẻ tín dụng
+- Theo dõi tỷ lệ/tổng cashback đã nhận
 
 Mình không muốn app làm quá nhiều. Càng ít tính năng, càng dễ dùng, càng dễ duy trì. Điều quan trọng nhất không phải app — mà là **phương pháp đằng sau nó có đúng không**.
 
-Nếu bạn chưa muốn build app, hoàn toàn có thể chạy phương pháp này bằng một file Google Sheet đơn giản hoặc thậm chí ghi trên giấy. Công cụ không quan trọng. Tư duy quy hoạch mới quan trọng.
+Nếu bạn muốn tham khảo cách mình triển khai thực tế, có thể xem bản app mình đang dùng hằng ngày tại đây:
+[personal-finance-assist.vercel.app](https://personal-finance-assist.vercel.app)
+
+Nếu bạn chưa muốn dùng app, hoàn toàn có thể chạy phương pháp này bằng một file Google Sheet đơn giản hoặc thậm chí ghi trên giấy. Công cụ không quan trọng. Tư duy quy hoạch mới quan trọng.
 
 ---
 
@@ -183,6 +187,9 @@ Nếu bạn chưa muốn build app, hoàn toàn có thể chạy phương pháp 
 | Tiết kiệm trước, tiêu sau | Chuyển đi đầu tháng trước khi phân bổ |
 | Đơn giản là bền | Càng ít thao tác, càng dễ duy trì |
 
-Phương pháp này không hoàn hảo cho tất cả mọi người. Nếu bạn cần track chi tiết từng đồng — có nhiều app tốt cho việc đó. Nhưng nếu bạn giống mình, kiểu người biết mình cần quản lý tiền nhưng không đủ kiên nhẫn ghi chép hàng ngày, thì **quy hoạch hạn mức** có thể là cách tiếp cận phù hợp hơn.
+Phương pháp này không hoàn hảo cho tất cả mọi người. Nếu bạn cần track chi tiết từng đồng — có nhiều app tốt cho việc đó. Nhưng nếu bạn giống mình, kiểu người biết mình cần quản lý tiền nhưng không đủ kiên nhẫn ghi chép hàng ngày, thì **chia tiền thành nhiều ví** có thể là cách tiếp cận phù hợp hơn.
+
+Nếu bạn muốn bắt đầu nhanh, có thể thử **Personal Finance Assist**. Mình dùng app này chủ yếu để nhắc nợ tín dụng và theo dõi hiệu quả hoàn tiền; còn chuyện chia tiền thành nhiều ví vẫn là phương pháp mình tự vận hành song song:
+[personal-finance-assist.vercel.app](https://personal-finance-assist.vercel.app)
 
 Quản lý chi tiêu không cần phức tạp. Nó chỉ cần **đúng** và **bền**.
