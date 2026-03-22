@@ -105,9 +105,20 @@ const navLinks = {
 		<BackToTop />
 		<Footer />
 		<script>
+			type MermaidInstance = typeof import('mermaid').default;
+			let mermaidInstance: MermaidInstance | null = null;
+
+			async function getMermaidInstance(): Promise<MermaidInstance> {
+				if (mermaidInstance) return mermaidInstance;
+				const module = await import('mermaid');
+				mermaidInstance = module.default;
+				return mermaidInstance;
+			}
+
 			function initNavSearch() {
-				const btn = document.getElementById('nav-search-btn');
-				if (!btn) return;
+				const btn = document.getElementById('nav-search-btn') as (HTMLButtonElement & { __navSearchBound?: boolean }) | null;
+				if (!btn || btn.__navSearchBound) return;
+				btn.__navSearchBound = true;
 				btn.addEventListener('click', () => {
 					const input = document.getElementById('search-input') as HTMLInputElement | null;
 					if (input) {
@@ -117,6 +128,12 @@ const navLinks = {
 						window.location.href = '/?focus=search';
 					}
 				});
+			}
+
+			let navSearchHotkeyBound = false;
+			function initNavSearchHotkey() {
+				if (navSearchHotkeyBound) return;
+				navSearchHotkeyBound = true;
 				document.addEventListener('keydown', (e) => {
 					if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
 						e.preventDefault();
@@ -130,8 +147,151 @@ const navLinks = {
 					}
 				});
 			}
+
+			function isDarkTheme() {
+				return document.documentElement.classList.contains('dark');
+			}
+
+			function getMermaidThemeVariables() {
+				const darkMode = isDarkTheme();
+				return {
+					darkMode,
+					fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+					background: 'transparent',
+					mainBkg: darkMode ? '#111827' : '#ffffff',
+					secondBkg: darkMode ? '#1f2937' : '#f9fafb',
+					tertiaryColor: darkMode ? '#0f172a' : '#f3f4f6',
+					primaryColor: darkMode ? '#1f2937' : '#f9fafb',
+					primaryBorderColor: darkMode ? '#4b5563' : '#d1d5db',
+					primaryTextColor: darkMode ? '#f3f4f6' : '#111827',
+					secondaryColor: darkMode ? '#111827' : '#ffffff',
+					secondaryBorderColor: darkMode ? '#4b5563' : '#d1d5db',
+					secondaryTextColor: darkMode ? '#f3f4f6' : '#111827',
+					lineColor: darkMode ? '#9ca3af' : '#4b5563',
+					textColor: darkMode ? '#f3f4f6' : '#111827',
+					nodeBorder: darkMode ? '#6b7280' : '#9ca3af',
+					clusterBkg: darkMode ? '#111827' : '#f9fafb',
+					clusterBorder: darkMode ? '#4b5563' : '#d1d5db',
+					edgeLabelBackground: darkMode ? '#111827' : '#ffffff',
+					labelBackground: darkMode ? '#111827' : '#ffffff',
+					titleColor: darkMode ? '#f3f4f6' : '#111827',
+					actorBorder: darkMode ? '#6b7280' : '#9ca3af',
+					actorBkg: darkMode ? '#1f2937' : '#f9fafb',
+					actorTextColor: darkMode ? '#f3f4f6' : '#111827',
+					labelBoxBkgColor: darkMode ? '#111827' : '#ffffff',
+					labelBoxBorderColor: darkMode ? '#4b5563' : '#d1d5db',
+					noteBkgColor: darkMode ? '#1f2937' : '#f3f4f6',
+					noteBorderColor: darkMode ? '#4b5563' : '#d1d5db',
+					noteTextColor: darkMode ? '#f3f4f6' : '#111827',
+					activationBorderColor: darkMode ? '#9ca3af' : '#4b5563',
+					activationBkgColor: darkMode ? '#374151' : '#e5e7eb',
+					sequenceNumberColor: darkMode ? '#f3f4f6' : '#111827',
+				};
+			}
+
+			let mermaidInitialized = false;
+			async function initializeMermaid() {
+				const mermaid = await getMermaidInstance();
+				mermaid.initialize({
+					startOnLoad: false,
+					securityLevel: 'antiscript',
+					theme: 'base',
+					themeVariables: getMermaidThemeVariables(),
+					fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+					flowchart: { useMaxWidth: true, htmlLabels: true },
+					sequence: { useMaxWidth: true },
+				});
+				mermaidInitialized = true;
+			}
+
+			function collectMermaidBlocks(scope = document): HTMLPreElement[] {
+				return Array.from(scope.querySelectorAll<HTMLPreElement>('.content-wrapper pre'))
+					.filter((pre) => {
+						const code = pre.querySelector('code');
+						if (!code) return false;
+						const className = code.className || '';
+						const dataLanguage = code.getAttribute('data-language') || pre.getAttribute('data-language') || '';
+						return className.includes('language-mermaid') || dataLanguage === 'mermaid';
+					});
+			}
+
+			function upgradeMermaidBlock(pre: HTMLPreElement): HTMLDivElement | null {
+				if (pre.dataset.mermaidProcessed === 'true') {
+					const sibling = pre.nextElementSibling;
+					return sibling instanceof HTMLDivElement && sibling.classList.contains('mermaid-block') ? sibling : null;
+				}
+				const code = pre.querySelector('code');
+				if (!code) return null;
+				const definition = code.textContent?.trim();
+				if (!definition) return null;
+
+				const block = document.createElement('div');
+				block.className = 'mermaid-block';
+				block.dataset.mermaidSource = definition;
+				const container = document.createElement('div');
+				container.className = 'mermaid';
+				block.appendChild(container);
+				pre.insertAdjacentElement('afterend', block);
+				pre.dataset.mermaidProcessed = 'true';
+				pre.hidden = true;
+				return block;
+			}
+
+			async function renderMermaidDiagrams(scope = document) {
+				const blocks = collectMermaidBlocks(scope)
+					.map(upgradeMermaidBlock)
+					.filter((block): block is HTMLDivElement => block instanceof HTMLDivElement);
+				if (blocks.length === 0) return;
+				if (!mermaidInitialized) {
+					await initializeMermaid();
+				}
+				const mermaid = await getMermaidInstance();
+				mermaid.initialize({
+					startOnLoad: false,
+					securityLevel: 'antiscript',
+					theme: 'base',
+					themeVariables: getMermaidThemeVariables(),
+					fontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+					flowchart: { useMaxWidth: true, htmlLabels: true },
+					sequence: { useMaxWidth: true },
+				});
+				await Promise.all(blocks.map(async (block, index) => {
+					const container = block.querySelector('.mermaid');
+					const definition = block.dataset.mermaidSource;
+					if (!container || !definition) return;
+					try {
+						const renderId = `mermaid-${index}-${Date.now()}`;
+						const { svg } = await mermaid.render(renderId, definition);
+						container.innerHTML = svg;
+						block.dataset.mermaidRendered = 'true';
+						block.removeAttribute('data-mermaid-error');
+					} catch (error) {
+						console.error('Failed to render Mermaid diagram', error);
+						block.dataset.mermaidError = 'true';
+						container.textContent = definition;
+					}
+				}));
+			}
+
+			function scheduleMermaidRender() {
+				void renderMermaidDiagrams();
+			}
+
 			initNavSearch();
-			document.addEventListener('astro:after-swap', initNavSearch);
+			initNavSearchHotkey();
+			scheduleMermaidRender();
+			document.addEventListener('astro:after-swap', () => {
+				initNavSearch();
+				scheduleMermaidRender();
+			});
+			document.addEventListener('theme:changed', () => {
+				document.querySelectorAll('.mermaid-block').forEach((block) => {
+					block.removeAttribute('data-mermaid-rendered');
+					const container = block.querySelector('.mermaid');
+					if (container) container.innerHTML = '';
+				});
+				scheduleMermaidRender();
+			});
 		</script>
 	</body>
 </html>
@@ -333,17 +493,64 @@ const navLinks = {
 		font-size: inherit;
 	}
 
-	/* ── Images ── */
-	.content-wrapper img {
+	/* ── Images / Rich Media ── */
+	.content-wrapper img,
+	.content-wrapper iframe,
+	.content-wrapper video,
+	.content-wrapper .mermaid-block {
 		margin-top: 1.5em;
 		margin-bottom: 1.5em;
 		max-width: 100%;
-		height: auto;
 		border-radius: 4px;
 		border: 1px solid rgb(229 231 235);
 	}
-	.dark .content-wrapper img {
+	.content-wrapper img,
+	.content-wrapper video {
+		height: auto;
+		display: block;
+	}
+	.content-wrapper iframe,
+	.content-wrapper video {
+		width: 100%;
+		display: block;
+		background-color: rgb(249 250 251);
+	}
+	.content-wrapper iframe[src*="youtube.com/embed"],
+	.content-wrapper iframe[src*="youtube-nocookie.com/embed"],
+	.content-wrapper iframe[src*="player.vimeo.com/video"],
+	.content-wrapper iframe[src*="loom.com/embed"] {
+		aspect-ratio: 16 / 9;
+		height: auto;
+	}
+	.content-wrapper .mermaid-block {
+		padding: 0.75rem;
+		overflow-x: auto;
+		background-color: rgb(249 250 251);
+	}
+	@media (min-width: 768px) {
+		.content-wrapper .mermaid-block {
+			padding: 1.25rem;
+		}
+	}
+	.content-wrapper .mermaid {
+		min-width: fit-content;
+		display: flex;
+		justify-content: center;
+	}
+	.content-wrapper .mermaid svg {
+		max-width: 100%;
+		height: auto;
+	}
+	.dark .content-wrapper img,
+	.dark .content-wrapper iframe,
+	.dark .content-wrapper video,
+	.dark .content-wrapper .mermaid-block {
 		border-color: rgb(55 65 81);
+	}
+	.dark .content-wrapper iframe,
+	.dark .content-wrapper video,
+	.dark .content-wrapper .mermaid-block {
+		background-color: rgb(17 24 39);
 	}
 
 	/* ── Tables ── */

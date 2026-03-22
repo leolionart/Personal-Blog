@@ -80,8 +80,43 @@ pnpm cms              # Start with Decap CMS server
 - **Single font**: JetBrains Mono applied at `<body>` level via UnoCSS `font-mono` class. No `font-mono` scattered across components.
 - **Dark mode**: Class-based (`presetUno({ dark: 'class' })`), persisted in `localStorage`, applied before first paint via inline script.
 - **Blog layout**: Each post displayed as a numbered section with `.md` filename label, content preview with gradient fade.
-- **Markdown styles**: Full markdown support in `.content-wrapper` — headings, lists (custom `::before` markers for GitBook-style alignment), blockquotes, code blocks, tables, images, callouts.
+- **Markdown styles**: Full markdown support in `.content-wrapper` — headings, lists (custom `::before` markers for GitBook-style alignment), blockquotes, code blocks, tables, images, callouts, Mermaid diagrams, and responsive media embeds.
 - **Resume data**: Sourced from `cv.json` via TypeScript path alias `@cv`, following the JSON Resume standard.
+
+## Writing Blog Content
+
+### Mermaid diagrams
+
+Blog posts support Mermaid fenced code blocks:
+
+````md
+```mermaid
+flowchart TD
+  Idea[Ý tưởng] --> Draft[Viết nháp]
+  Draft --> Publish[Đăng bài]
+```
+````
+
+Mermaid diagrams are rendered client-side to match the site's monospace visual system and dark mode.
+
+### Video and rich embeds
+
+Blog posts also support raw HTML media embeds inside Markdown, including `<iframe>` and `<video>`.
+
+Example YouTube embed:
+
+```html
+<iframe
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  loading="lazy"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+```
+
+These embeds are styled responsively inside `.content-wrapper`. Plain video links remain normal links unless you embed them with HTML.
 
 ## License
 

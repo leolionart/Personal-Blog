@@ -23,9 +23,12 @@
 <script>
     function initModeToggle() {
         document.querySelectorAll('[data-mode-toggle]').forEach(btn => {
+            if ((btn as HTMLButtonElement & { __themeBound?: boolean }).__themeBound) return;
+            (btn as HTMLButtonElement & { __themeBound?: boolean }).__themeBound = true;
             btn.addEventListener('click', () => {
                 const isDark = document.documentElement.classList.toggle('dark');
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                document.dispatchEvent(new CustomEvent('theme:changed', { detail: { isDark } }));
             });
         });
     }
