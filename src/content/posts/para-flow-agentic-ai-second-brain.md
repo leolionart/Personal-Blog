@@ -67,40 +67,41 @@ Bản thân kho tri thức cá nhân nên phản ánh sự trưởng thành tron
 
 ---
 
-## PARA và FLOW, với mình, là các phương pháp sắp xếp
+## Đây là phương pháp tổ chức tri thức mình đang áp dụng trong project này
 
-Mình muốn nói thật rõ điểm này, vì nó là phần rất dễ bị hiểu sai:
+Nếu nhìn vào vault hiện tại, bạn sẽ thấy nó không chỉ là một đống folder được đặt tên đẹp mắt.
+Nó phản ánh một phương pháp tổ chức tri thức mà mình đã chỉnh dần qua nhiều năm và hiện đang áp dụng khá rõ trong project này.
 
-`PARA` hay `FLOW` là **phương pháp sắp xếp và tổ chức kho tri thức**.
-Chúng không phải AI.
-Chúng cũng không phải công cụ truy xuất.
+Phần khung lớn của nó đi theo tư duy `PARA`.
+Tức là mình không gom note theo kiểu lĩnh vực thật chung chung, mà sắp xếp theo ngữ cảnh sử dụng:
 
-Vai trò của chúng là giúp mình trả lời những câu hỏi như:
+- `Projects` là nơi chứa những thứ đang làm, đang thử nghiệm, đang cần output
+- `Areas` là nơi chứa những mảng trách nhiệm dài hạn cần duy trì
+- `Resources` là nơi nuôi dưỡng kiến thức nền, tài liệu tham khảo, ghi chép để học tiếp
+- `Archive` là nơi lưu lại những gì đã đi qua nhưng vẫn cần giữ có hệ thống
 
-- thông tin này nên được đặt ở đâu
-- nó thuộc nhóm nào
-- nó đang phục vụ mục tiêu gì
-- và mình sẽ nhìn lại nó theo logic nào
+Cách sắp xếp này giúp mình không bị chìm trong cảm giác "mình có rất nhiều note nhưng không biết note nào đang phục vụ việc gì".
+Mỗi thứ mình lưu lại đều có một bối cảnh sống rõ hơn.
 
-`PARA` cho mình một cách sắp xếp rõ ràng theo ngữ cảnh sử dụng:
+Còn `FLOW` là lớp mình dùng để tổ chức cách thông tin di chuyển bên trong hệ thống đó.
+Một mẩu tri thức không dừng ở việc được cất đúng chỗ, mà còn cần đi qua một vòng đời đủ rõ:
 
-- `Projects` cho những thứ đang cần hành động
-- `Areas` cho những phần đời sống và công việc cần duy trì
-- `Resources` cho tri thức nền và tài liệu tham khảo
-- `Archive` cho những gì đã qua nhưng vẫn cần lưu lại có tổ chức
+- tiếp thu từ công việc, sách, internet hay trải nghiệm thực tế
+- lưu lại khi nó còn mới
+- diễn giải lại bằng ngôn ngữ của chính mình
+- nối nó với một vấn đề, dự án hay quyết định cụ thể
+- rồi quay trở lại thành bài viết, tài liệu, prompt, workflow hoặc đầu ra thực tế
 
-Còn `FLOW`, theo cách mình dùng, là một góc nhìn để hiểu luồng di chuyển của thông tin trong kho tri thức đó.
-Tức là thông tin không chỉ được cất vào đâu, mà còn đi qua những lớp nào trước khi trở thành một thứ có ích cho công việc hay cuộc sống.
+Đó là lý do mình gọi nó là `FLOW`.
+Vì với mình, tri thức không nên nằm im.
+Nó cần được sắp xếp để có thể quay lại đúng lúc, đi vào công việc, rồi tiếp tục sinh ra tri thức mới.
 
-Nói ngắn gọn:
+Nói cách khác, phương pháp mình đang áp dụng trong project này là:
 
-- `PARA` giúp mình sắp xếp
-- `FLOW` giúp mình hình dung cách thông tin vận động
+- dùng `PARA` để giữ kho tri thức có cấu trúc rõ ràng
+- dùng `FLOW` để đảm bảo thông tin không bị chết trong kho lưu trữ
 
-Hai thứ này đều thuộc về **tư duy quản lý tri thức cá nhân**.
-
-Với mình, điều quan trọng không phải là bạn gọi nó bằng đúng tên nào.
-Điều quan trọng là bạn có đang dùng một phương pháp đủ khoa học để kho tri thức của mình bớt loạn, dễ quay lại và dễ dùng hơn hay không.
+Chính sự kết hợp đó làm cho vault này không chỉ là nơi "cất note", mà trở thành một hệ thống có thể đồng hành cùng cách mình học, nghĩ và làm việc mỗi ngày.
 
 ---
 
