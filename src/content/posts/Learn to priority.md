@@ -166,8 +166,8 @@ Sắp ưu tiên tốt không phải chuyện làm một lần là xong; đó là
 
 Điều quan trọng nhất không phải thuộc thật nhiều framework, mà là:
 
-- dám chọn,
-- dám nói trade-off,
-- và giữ nhịp align thường xuyên với các bên liên quan.
+- Dám chọn,
+- Dám nói trade-off,
+- Và giữ nhịp align thường xuyên với các bên liên quan.
 
 Làm được 3 việc đó, mức stress giảm đi rất nhiều và hiệu quả thực thi sẽ tăng rõ.

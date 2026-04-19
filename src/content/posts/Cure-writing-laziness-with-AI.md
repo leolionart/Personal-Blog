@@ -199,8 +199,7 @@ Bao gồm:
 
 > Time block cố định hiệu quả hơn quản lý task kiểu cứng.
 
-Trước đây mình coi viết là một “dự án” trong Notion nên hay bỏ qua.
-Hiện tại mình chốt một khung cố định: **thứ Tư, 9-10h sáng**.
+Trước đây mình coi viết là một “dự án” trong Notion nên hay bỏ qua. Hiện tại mình chốt một khung cố định: **thứ Tư, 9-10h sáng**.
 
 Quy tắc đi kèm:
 

@@ -83,8 +83,7 @@ Contribution metric quan trọng vì nó tạo ra tuyến tính giữa "team tô
 
 Đây là phần khó nhất và cũng hay sai nhất.
 
-**PM:**
-Nên được đo bằng product outcome, không phải output.
+**PM:** Nên được đo bằng product outcome, không phải output.
 - ✅ Feature adoption rate của tính năng X sau 30 ngày
 - ✅ Số hypothesis được test trong kỳ + learning rút ra
 - ✅ Stakeholder satisfaction với communication và delivery
@@ -92,8 +91,7 @@ Nên được đo bằng product outcome, không phải output.
 - ❌ Số PRD viết xong
 - ❌ Doanh thu (không kiểm soát được hoàn toàn)
 
-**Engineer:**
-Nên được đo bằng chất lượng và reliability, không phải số lượng.
+**Engineer:** Nên được đo bằng chất lượng và reliability, không phải số lượng.
 - ✅ Bug rate của code mình viết (critical bugs sau release)
 - ✅ Delivery predictability (estimate vs actual)
 - ✅ Technical debt được giải quyết vs technical debt tạo ra
@@ -101,8 +99,7 @@ Nên được đo bằng chất lượng và reliability, không phải số lư
 - ❌ Số dòng code
 - ❌ Doanh thu
 
-**Designer:**
-Nên được đo bằng design impact, không phải design output.
+**Designer:** Nên được đo bằng design impact, không phải design output.
 - ✅ Usability score của luồng mình design (test với user)
 - ✅ Tỉ lệ design được implement đúng so với intent
 - ✅ Số lần phải redo design vì không cân nhắc constraint kỹ
@@ -148,20 +145,15 @@ Khi team biết KPI sẽ dùng để punish, họ sẽ chơi safe — chọn tar
 
 Một quy trình đơn giản mà tôi thấy hiệu quả:
 
-**Bước 1 — Từ top down: Leadership share business target và context**
-Không chỉ con số. Cả lý do tại sao con số đó, market context, và những lever leadership nghĩ là quan trọng nhất.
+**Bước 1 — Từ top down: Leadership share business target và context** Không chỉ con số. Cả lý do tại sao con số đó, market context, và những lever leadership nghĩ là quan trọng nhất.
 
-**Bước 2 — Product team phân tích: lever nào mình có thể tác động?**
-Nhìn vào funnel, nhìn vào data hiện tại, identify 2-3 metric mà product có thể move nhiều nhất trong kỳ.
+**Bước 2 — Product team phân tích: lever nào mình có thể tác động?** Nhìn vào funnel, nhìn vào data hiện tại, identify 2-3 metric mà product có thể move nhiều nhất trong kỳ.
 
-**Bước 3 — Đề xuất product metric và argue với leadership**
-Không phải nhận KPI một chiều — mà là align về "đây là những gì team product cam kết, và đây là lý do". Nếu leadership muốn thêm, thì cần thêm resource hoặc cut scope đi chỗ khác.
+**Bước 3 — Đề xuất product metric và argue với leadership** Không phải nhận KPI một chiều — mà là align về "đây là những gì team product cam kết, và đây là lý do". Nếu leadership muốn thêm, thì cần thêm resource hoặc cut scope đi chỗ khác.
 
-**Bước 4 — Breakdown xuống squad và cá nhân**
-Từ product metric đã align, phân rã theo contribution logic. Mỗi người biết metric của họ liên kết với metric của team như thế nào.
+**Bước 4 — Breakdown xuống squad và cá nhân** Từ product metric đã align, phân rã theo contribution logic. Mỗi người biết metric của họ liên kết với metric của team như thế nào.
 
-**Bước 5 — Review định kỳ, không phải chỉ cuối kỳ**
-Monthly hoặc bi-weekly check-in về metric — không phải để report, mà để phát hiện sớm nếu có gì không đúng hướng và adjust.
+**Bước 5 — Review định kỳ, không phải chỉ cuối kỳ** Monthly hoặc bi-weekly check-in về metric — không phải để report, mà để phát hiện sớm nếu có gì không đúng hướng và adjust.
 
 ---
 

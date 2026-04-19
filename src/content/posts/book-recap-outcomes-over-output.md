@@ -84,8 +84,7 @@ Mục tiêu: tăng conversion +10%
 
 ### 1) Dễ align hơn
 
-Khi bám output, mỗi nhóm sẽ kéo theo ưu tiên riêng.
-Khi bám outcome (ví dụ retention +15%), mọi nhóm có chung đích đến dù con đường khác nhau.
+Khi bám output, mỗi nhóm sẽ kéo theo ưu tiên riêng. Khi bám outcome (ví dụ retention +15%), mọi nhóm có chung đích đến dù con đường khác nhau.
 
 ### 2) Giảm lãng phí
 
@@ -93,8 +92,7 @@ Outcome mindset buộc team test nhỏ, học nhanh, bỏ sớm những thứ kh
 
 ### 3) Học nhanh hơn
 
-Ship output xong thường chỉ biết “đã làm”.
-Theo outcome thì biết rõ “cái gì tạo tác động”, nhờ đó vòng sau quyết định tốt hơn.
+Ship output xong thường chỉ biết “đã làm”. Theo outcome thì biết rõ “cái gì tạo tác động”, nhờ đó vòng sau quyết định tốt hơn.
 
 ---
 
@@ -102,8 +100,7 @@ Theo outcome thì biết rõ “cái gì tạo tác động”, nhờ đó vòng
 
 ### 1) Customer-centered by behavior
 
-Đừng bắt đầu bằng câu hỏi “Team mình build được gì?”.
-Hãy bắt đầu bằng: “Mình muốn thay đổi hành vi nào của khách hàng?”.
+Đừng bắt đầu bằng câu hỏi “Team mình build được gì?”. Hãy bắt đầu bằng: “Mình muốn thay đổi hành vi nào của khách hàng?”.
 
 ### 2) Đo đúng thứ đáng đo
 
