@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Personal Blog Post"
+  short_description: "Draft and verify posts for the Astro personal blog."
+  default_prompt: "Write a new Vietnamese personal blog post in this repository using the established voice, frontmatter, build verification, and review-link workflow."
