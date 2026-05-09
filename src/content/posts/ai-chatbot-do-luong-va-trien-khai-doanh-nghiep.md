@@ -8,8 +8,7 @@ tags:
 - Product
 - AI
 - Metrics
-title: AI Chatbot không chết ở demo, nó chết ở cách doanh nghiệp triển khai và đo
-  lường
+title: Đánh giá chất lượng AI Agent thế nào khi đưa vào production
 type: post
 ---
 
