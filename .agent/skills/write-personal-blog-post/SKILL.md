@@ -1,6 +1,6 @@
 ---
 name: write-personal-blog-post
-description: Write, edit, review, and verify Vietnamese posts for the Astro personal blog in /Volumes/DATA/Coding Projects/Personal-blog. Use when the user asks to create a new personal-blog article, continue a previous post/theme, revise blog copy, prepare a shareable rendered-review flow such as DraftView/Colibri, produce a diff link with difit/cloudflared, or package the blog-writing workflow for repeated use.
+description: Write, edit, review, and verify Vietnamese posts for the Astro personal blog in /Volumes/DATA/Coding Projects/Personal-blog. Use when the user asks to create a new personal-blog article, continue a previous post/theme, revise blog copy, create a Plannotator preview/review link, apply Plannotator feedback, or package the blog-writing workflow for repeated use.
 ---
 
 # Write Personal Blog Post
@@ -80,41 +80,27 @@ pnpm build
 
 Report whether the build passed. If existing warnings/hints appear, identify them as pre-existing or unrelated only after checking the changed files.
 
-## Review Links
+## Plannotator Review
 
-Prefer an existing rendered-review tool over custom UI when the user wants something easy to share with non-technical reviewers.
+Always use Plannotator for the user-facing preview/review loop unless the user explicitly asks for another tool.
 
-Use DraftView first when the repo is public or a GitHub PR is acceptable:
+Use two review modes:
 
-1. Create a short-lived review branch.
-2. Commit only the reviewable blog/article changes.
-3. Push the branch and open a draft PR against `main`.
-4. Share the DraftView URL for that PR if available; otherwise share the GitHub PR and note that DraftView may require GitHub App access.
-5. After review, apply comments locally, push the next branch update, and let DraftView/GitHub show the next diff.
+- `plannotator review --git`: review current local git changes and show what changed versus the base commit.
+- `plannotator annotate <file.md>`: review/comment directly on the rendered markdown file.
 
-Try Colibri as the second option when the user wants GitHub-backed Markdown collaboration and can use its web UI. Verify that it shows both rendered content and changes versus the committed version before adopting it as the default.
+For each review round:
 
-Use Difit only when the user specifically wants a diff-first local code review:
+1. Ensure `plannotator` is available. If not, use the verified temporary binary at `/tmp/plannotator` or install the binary manually without enabling global hooks.
+2. Start `plannotator review --git` for diff review, or `plannotator annotate src/content/posts/<slug>.md` for markdown annotation.
+3. Expose the local Plannotator server with `cloudflared tunnel --url http://127.0.0.1:<port> --loglevel info`.
+4. Verify the public URL returns HTTP 200.
+5. Send the Plannotator link to the user for that review round.
+6. When the user submits feedback, read the Plannotator CLI output, apply the requested edits, run `pnpm build`, then start a new Plannotator review link for the next round.
 
-1. Start difit on a stable local port:
+Important behavior:
 
-```bash
-npx --yes difit working --include-untracked --host 127.0.0.1 --port 3939 --no-open --keep-alive --context 5
-```
-
-2. Expose it with cloudflared:
-
-```bash
-cloudflared tunnel --url http://127.0.0.1:3939 --loglevel info
-```
-
-3. Copy the `https://...trycloudflare.com` URL from cloudflared output.
-4. Verify it responds:
-
-```bash
-curl -I --max-time 15 <url>
-```
-
-5. Tell the user the link is temporary and depends on the local `difit` and `cloudflared` sessions staying alive.
-
-Note: `difit --include-untracked` may mark new files with `git add --intent-to-add` so they appear in the diff. This is expected for review, but mention it if git status matters.
+- A Plannotator link is a session for one review round, not a permanent Google Docs-style workspace.
+- After feedback is submitted, the annotate process may exit and the old Cloudflare link may stop working.
+- Create a fresh Plannotator link after every AI revision.
+- Do not push to GitHub/GitLab/shared space until the user says the review is OK.
