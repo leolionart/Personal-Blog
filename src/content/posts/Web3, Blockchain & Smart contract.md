@@ -54,7 +54,7 @@ Web 3.0 hướng tới mô hình phi tập trung hơn, giảm phụ thuộc vào
 
 Một vài khái niệm cơ bản:
 
-- **web3.js**: library giúp app/frontend giao tiếp với blockchain.
+- **Web3.js**: library giúp app/frontend giao tiếp với blockchain.
 - **Decentralization**: mức độ phi tập trung phụ thuộc vào cách network và cơ chế đồng thuận được thiết kế.
 - **Network architecture**: nhiều node tham gia xác thực thay vì một máy chủ trung tâm.
 

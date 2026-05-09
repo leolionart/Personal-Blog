@@ -20,7 +20,7 @@ Mình biết cách build product, biết cách nghiên cứu user, biết cách 
 
 MWG lúc đó đang mở rộng mạnh với Bách Hoá Xanh và Nhà Thuốc An Khang — hai chuỗi bán lẻ non-tech, vận hành offline là chính, với hàng trăm cửa hàng trên khắp cả nước. Mình xem đây là cơ hội hiếm: được vào bên trong một cỗ máy bán lẻ khổng lồ để học cách nó hoạt động.
 
-Nói thẳng: mình vào MWG không chỉ để làm product. Mình vào để **đi học**.
+Mình vào MWG không chỉ để làm product. Mình vào để **đi học**.
 
 ---
 

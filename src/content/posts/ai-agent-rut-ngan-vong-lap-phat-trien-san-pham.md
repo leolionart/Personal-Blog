@@ -132,7 +132,7 @@ Khi các tín hiệu đó không còn nằm rải rác trong nhiều tài liệu
 
 ## Workflow thực tế bọn mình đang triển khai
 
-Mình chia sẻ thẳng: đây là workflow bọn mình đang chạy thật, không phải demo.
+Đây là workflow bọn mình đang chạy thật, không phải demo.
 
 1. **Feedback hoặc ý tưởng từ khách hàng, team kinh doanh, support hay dữ liệu đi vào hệ thống**
 2. **AI hỗ trợ lọc tín hiệu, gom nhóm vấn đề, bổ sung bối cảnh và đề xuất ưu tiên**
