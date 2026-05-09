@@ -12,7 +12,9 @@ title: Đánh giá chất lượng AI Agent thế nào khi đưa vào production
 type: post
 ---
 
-Một trong những cảnh mình thấy lặp đi lặp lại trên thị trường là: demo quá đẹp, nên mọi người quên mất production là một cuộc chơi khác hẳn.
+Một trong những cảnh mình thấy lặp đi lặp lại trên thị trường là: demo quá đẹp, cả phòng vỗ tay, rồi đem về chạy luôn mà chưa thiết kế cách theo dõi bằng dữ liệu sau go-live.
+
+Không có baseline, không có cohort theo topic, không có thống kê handoff, drop-off, repeat contact hay chất lượng câu trả lời. Một thời gian sau, khách hàng rời bỏ dần, các chỉ số tệ đi dần, lúc đó team mới quay lại đọc log chat và thấy quá nhiều vấn đề. Kết quả là AI chat bị tắt, dù vấn đề ban đầu không hẳn nằm ở AI.
 
 Bot trả lời mượt trên một tập dataset lớn, coverage nhìn có vẻ rộng, dashboard thử nghiệm trông sạch sẽ, thế là nhiều công ty đi đến kết luận rằng đã có thể `go live`. Họ bỏ qua giai đoạn chạy song song, không thiết kế lớp hậu kiểm sau golive, và cũng không chuẩn bị tinh thần cho việc người dùng thật luôn tìm ra những lỗ hổng mà bộ test ban đầu chưa chạm tới.
 
