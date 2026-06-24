@@ -33,7 +33,7 @@ Hãy quay lại Doctor Strange (2016). Trước khi có phép thuật, Stephen S
 
 Anh ta giành giật bệnh nhân với đồng nghiệp không phải vì ego, mà vì tin rằng mình làm tốt hơn — và bệnh nhân xứng đáng được kết quả tốt nhất.
 
-Chính vì vậy, khi lần đầu tiên phải giết người trong trận chiến với đệ tử của Kaecilius (do Scott Adkins thủ vai), phản ứng của Strange không phải "mình đã chiến thắng" mà là **sự bức xúc và buồn bã**. Anh ta vừa phá vỡ lời thề Hippocrates — lời thề cao nhất của một bác sĩ: không gây hại.
+Chính vì vậy, khi lần đầu tiên phải giết người trong trận chiến với đệ tử của Kaecilius (do Scott Adkins thủ vai), Strange phản ứng bằng **sự bức xúc và buồn bã** thay vì cảm giác chiến thắng. Anh ta vừa phá vỡ lời thề Hippocrates — lời thề cao nhất của một bác sĩ: không gây hại.
 
 Chi tiết này nhỏ nhưng nói lên tất cả về con người Strange: **phép thuật có thể thay đổi, nhưng giá trị cốt lõi thì không**. Anh ta là bác sĩ trước, phù thủy sau.
 
@@ -61,13 +61,13 @@ Xuyên suốt MCU, Strange có một pattern hành vi rất nhất quán: **sẵ
 
 Khi Tony hỏi trước trận chiến cuối: "Đây có phải kết quả duy nhất không?" — Strange giơ một ngón tay. Mọi người hiểu đó là "chỉ có 1 cách thắng duy nhất". Nhưng mình tin câu trả lời thật là:
 
-**Không phải kết quả chiến thắng duy nhất. Mà là kết quả chiến thắng ít thiệt hại nhất**, đồng thời đạt được ba mục đích cùng lúc:
+**Đó là kết quả chiến thắng ít thiệt hại nhất**, đồng thời đạt được ba mục đích cùng lúc:
 
 1. **Cứu được gần như tất cả mọi người** — snap ngược lại mang hàng tỷ sinh mạng trở về.
 2. **Tiêu diệt cả hai Thanos** — cả Thanos hiện tại lẫn Thanos từ quá khứ.
 3. **Phá hủy Infinity Stones vĩnh viễn** — mượn tay Thanos biến các viên đá thành cấp độ nguyên tử, để không ai dùng được nữa.
 
-Chính Thanos trước khi chết cũng nói: Infinity Stones chỉ là thứ đem lại sự cám dỗ — "temptations" — để làm điều xấu. Cách tốt nhất để bảo vệ vũ trụ không phải là giấu đá, mà là **hủy đá**.
+Chính Thanos trước khi chết cũng nói: Infinity Stones chỉ là thứ đem lại sự cám dỗ — "temptations" — để làm điều xấu. Cách tốt nhất để bảo vệ vũ trụ là **hủy đá**, thay vì tiếp tục giấu chúng ở đâu đó.
 
 Ý tưởng này thực ra đã được gợi ý nhiều lần trong chính Infinity War:
 
@@ -110,6 +110,6 @@ Mình biết đây chỉ là phim. Nhưng lý do mình yêu thích Strange khôn
 
 3. **Gánh chịu cô đơn của quyết định.** Strange là người duy nhất biết kế hoạch. Không ai hiểu, không ai ủng hộ. Anh ta phải nhìn đồng đội chết, nhìn Tony nghi ngờ, và giữ im lặng — vì nói ra sẽ phá hỏng tất cả.
 
-Trong công việc và cuộc sống, mình gặp không ít tình huống tương tự — dĩ nhiên ở quy mô nhỏ hơn nhiều. Đôi khi bạn thấy bức tranh lớn mà người khác chưa thấy. Đôi khi quyết định đúng lại là quyết định khiến bạn bị hiểu lầm. Và đôi khi, điều khó nhất không phải là hành động, mà là **kiên nhẫn chờ đợi đúng thời điểm**.
+Trong công việc và cuộc sống, mình gặp không ít tình huống tương tự — dĩ nhiên ở quy mô nhỏ hơn nhiều. Đôi khi bạn thấy bức tranh lớn mà người khác chưa thấy. Đôi khi quyết định đúng lại là quyết định khiến bạn bị hiểu lầm. Và đôi khi, phần khó nhất nằm ở việc **kiên nhẫn chờ đợi đúng thời điểm**, hơn là hành động ngay.
 
-Doctor Strange dạy mình rằng: người mạnh nhất không phải người đánh mạnh nhất, mà là người **biết khi nào không cần đánh**.
+Doctor Strange dạy mình rằng: Người mạnh nhất là người **biết khi nào không cần đánh**, không nhất thiết là người đánh mạnh nhất.

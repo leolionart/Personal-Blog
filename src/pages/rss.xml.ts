@@ -1,21 +1,22 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import { getEmDashCollection } from 'emdash';
 import { SITE_NAME, SITE_DESCRIPTION } from '../consts';
+import { asEmDashPosts, getPostDate, getPostSlug, sortPostsByDate } from '../lib/emdash-posts';
 
 export async function GET(context: { site: URL }) {
-    const posts = await getCollection('posts');
+    const { entries } = await getEmDashCollection('posts', { status: 'published' });
+    const posts = sortPostsByDate(asEmDashPosts(entries));
 
     return rss({
         title: SITE_NAME,
         description: SITE_DESCRIPTION,
         site: context.site,
         items: posts
-            .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf())
             .map((post) => ({
                 title: post.data.title,
-                pubDate: new Date(post.data.pubDate),
+                pubDate: getPostDate(post),
                 description: post.data.description ?? '',
-                link: `/blog/${post.slug}/`,
+                link: `/blog/${getPostSlug(post)}/`,
             })),
     });
 }

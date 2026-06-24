@@ -21,7 +21,7 @@ Sales chốt đơn — nhìn thấy ngay. Marketing chạy campaign — thấy t
 - **Đo quá nhiều**: tracking mọi thứ, báo cáo đủ loại số, nhưng không ai hành động theo số đó.
 - **Không đo gì cả**: ship theo gut feeling, không biết feature vừa làm có tác dụng không.
 
-Cả hai đều sai. Vấn đề không phải *có đo hay không* — mà là *đo đúng thứ* và *đo đúng cách*.
+Cả hai đều sai. Vấn đề nằm ở việc *đo đúng thứ* và *đo đúng cách*, thay vì chỉ tranh luận xem có nên đo hay không.
 
 ---
 

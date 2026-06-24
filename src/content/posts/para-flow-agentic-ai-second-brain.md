@@ -90,11 +90,7 @@ Chính sự kết hợp đó làm cho vault này không chỉ là nơi "cất no
 
 ## Mình muốn mọi người hãy cứ FOMO chuyện lưu giữ tri thức đi
 
-Thật lòng mà nói, đây là một trong số ít kiểu FOMO mà mình nghĩ là nên có.
-
-Nếu bạn thấy người khác có vault, có note system, có second brain, có cách lưu lại những gì họ học được và bạn cũng cảm thấy muốn làm theo, thì theo mình đó là một kiểu FOMO đáng giá.
-
-Vì từ điểm xuất phát đó, bạn bắt đầu tạo ra một thói quen rất quan trọng: **không để trải nghiệm và hiểu biết của mình trôi mất một cách vô ích**.
+Thật lòng mà nói, đây là một trong số ít kiểu FOMO mà mình nghĩ là nên có. Nếu bạn thấy người khác có vault, có note system, có second brain, có cách lưu lại những gì họ học được và bạn cũng cảm thấy muốn làm theo, thì theo mình đó là một kiểu FOMO đáng giá. Vì từ điểm xuất phát đó, bạn bắt đầu tạo ra một thói quen rất quan trọng: **không để trải nghiệm và hiểu biết của mình trôi mất một cách vô ích**.
 
 Ban đầu chưa cần phải đẹp. Chưa cần phải có template xịn. Chưa cần biết dùng Obsidian, Notion hay bất kỳ công cụ nào thật sâu.
 

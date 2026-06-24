@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "personal-blog",
+  "account_id": "7f1b9124b94f4b19b845dfab976eddda",
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "compatibility_date": "2026-06-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "leolion.naai.studio/*",
+      "zone_name": "naai.studio"
+    }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "e944376dcd0e47efba4c0dddec7570e5"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "personal-blog-emdash-db",
+      "database_id": "ffc80b05-7090-4619-bc93-b592371afe9f"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "personal-blog-emdash-media"
+    }
+  ]
+}

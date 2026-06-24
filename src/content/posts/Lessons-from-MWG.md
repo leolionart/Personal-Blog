@@ -49,7 +49,7 @@ Mình đứng nhìn và nhận ra: **ở đây không có sprint, không có bac
 
 Ở Tiki, nếu conversion rate giảm 0.5% đã là vấn đề lớn. Ở Bách Hoá Xanh, một lô rau hư trong kho làm mất mấy triệu đồng ngay lập tức — và điều đó xảy ra mỗi ngày.
 
-Cú sốc lớn nhất không phải là tốc độ. Mà là nhận ra **mình không biết nhiều thứ như mình tưởng**. Suốt mấy năm làm tech product, mình đã sống trong một cái bong bóng mà mọi thứ đều digital, đều có log, đều đo được. Thế giới bên ngoài thì bừa bộn hơn nhiều. Và phần lớn business trên thế giới vận hành theo cách bừa bộn đó.
+Cú sốc lớn nhất là nhận ra **mình không biết nhiều thứ như mình tưởng**, hơn cả chuyện tốc độ. Suốt mấy năm làm tech product, mình đã sống trong một cái bong bóng mà mọi thứ đều digital, đều có log, đều đo được. Thế giới bên ngoài thì bừa bộn hơn nhiều. Và phần lớn business trên thế giới vận hành theo cách bừa bộn đó.
 
 ---
 

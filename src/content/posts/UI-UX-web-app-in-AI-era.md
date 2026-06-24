@@ -62,7 +62,7 @@ Những thứ nên tránh:
 
 ## Prompt engineering là kỹ năng thật sự
 
-Prompt engineering không phải “mẹo vặt”, mà là kỹ năng giao tiếp với mô hình.
+Prompt engineering là kỹ năng giao tiếp với mô hình, không nên bị xem như vài “mẹo vặt”.
 
 Nó giống như bất kỳ kỹ năng chuyên môn nào: càng làm nhiều, càng biết đặt câu hỏi đúng.
 
@@ -112,7 +112,7 @@ Service APIs (nhiều hệ thống khác nhau)
 
 ## Kết luận
 
-Làm sản phẩm giai đoạn này không phải là bỏ UX cho con người, mà là **mở rộng UX để tương thích cả với AI agents**.
+Làm sản phẩm giai đoạn này là **mở rộng UX để tương thích cả với AI agents**, trong khi vẫn giữ trải nghiệm con người ở trung tâm.
 
 Nếu phải tóm gọn, mình nghĩ designer và PM nên làm tốt 4 việc:
 

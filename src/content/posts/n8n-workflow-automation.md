@@ -84,7 +84,7 @@ Khi mình bắt đầu dùng n8n, cái "aha moment" là: **canvas của n8n trô
 
 ## Điều gì làm n8n trở nên đặc biệt
 
-n8n không phải công cụ automation đầu tiên, cũng không phải duy nhất. Zapier, Make, Power Automate đều có thể làm được nhiều thứ tương tự. Vậy tại sao n8n lại lan rộng nhanh không chỉ với tech-savvy user mà còn với người yêu công nghệ nói chung?
+n8n xuất hiện trong một thị trường vốn đã có nhiều công cụ automation như Zapier, Make hay Power Automate. Điểm đáng chú ý là nó lan rộng nhanh trong cả nhóm tech-savvy user lẫn những người yêu công nghệ nói chung.
 
 Câu trả lời của mình nằm ở một tính năng có vẻ nhỏ nhưng thay đổi toàn bộ trải nghiệm:
 

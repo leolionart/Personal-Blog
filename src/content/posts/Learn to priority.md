@@ -10,7 +10,7 @@ type: announcement
 
 ## Mở đầu
 
-Phần khó nhất của công việc PM, theo mình, không phải là nghĩ ra ý tưởng mới mà là **chọn đúng việc để làm trước**.
+Phần khó nhất của công việc PM, theo mình, nằm ở việc **chọn đúng việc để làm trước**, hơn là nghĩ ra thêm ý tưởng mới.
 
 Trong môi trường nhiều biến động, cảm giác nặng đầu thường đến từ việc biết có quá nhiều thứ quan trọng đang chờ, nhưng chưa chốt được thứ tự.
 
@@ -29,11 +29,7 @@ Trong môi trường nhiều biến động, cảm giác nặng đầu thường
 
 ## Khái niệm “cơn lốc”
 
-Trong sách *Làm điều quan trọng*, có một ý mình rất thấm: “cơn lốc vận hành” sẽ cuốn mình vào việc hằng ngày.
-
-Khi mải xử lý các đầu việc gấp, mình dễ bỏ quên những việc quan trọng hơn nhưng chưa “cháy”.
-
-Những gì mình chia sẻ dưới đây là các cách mình đúc rút được sau nhiều lần thử-sai, và cũng học được rất nhiều từ các leader đi trước.
+Trong sách *Làm điều quan trọng*, có một ý mình rất thấm: “cơn lốc vận hành” sẽ cuốn mình vào việc hằng ngày. Khi mải xử lý các đầu việc gấp, mình dễ bỏ quên những việc quan trọng hơn nhưng chưa “cháy”. Những gì mình chia sẻ dưới đây là các cách mình đúc rút được sau nhiều lần thử-sai, và cũng học được rất nhiều từ các leader đi trước.
 
 ---
 
@@ -160,11 +156,7 @@ Những cuộc họp này vừa để cập nhật tình hình, vừa để phá
 
 ## Tổng kết
 
-Theo quan sát của mình, phần lớn thời gian của PM sẽ xoay quanh ưu tiên.
-
-Sắp ưu tiên tốt không phải chuyện làm một lần là xong; đó là kỹ năng phải luyện liên tục.
-
-Điều quan trọng nhất không phải thuộc thật nhiều framework, mà là:
+Theo quan sát của mình, phần lớn thời gian của PM sẽ xoay quanh ưu tiên. Sắp ưu tiên tốt không thể làm một lần là xong; đó là kỹ năng phải luyện liên tục. Điều quan trọng nhất nằm ở ba việc:
 
 - Dám chọn,
 - Dám nói trade-off,

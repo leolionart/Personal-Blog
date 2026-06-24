@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Section from "../../components/Section.astro";
+import { AGENT_AUTH_ISSUER, AGENT_RESOURCE } from "../../lib/agent-discovery";
+---
+<Layout title="API">
+    <Header gridBg>
+        <h1 class="text-6 sm:text-8 md:text-12 lg:text-18 leading-[1.2] font-900">API</h1>
+        <h2 class="text-2.5 sm:text-3.5 md:text-5 lg:text-7 leading-[1.2] c-gray-600 dark:c-gray-400 font-300">Agent discovery and EmDash MCP access</h2>
+    </Header>
+    <main>
+        <Section fullWidthBorder source="api.md">
+            <div class="content-wrapper">
+                <h2>Discovery</h2>
+                <p>This site publishes machine-readable discovery metadata for agents.</p>
+                <ul>
+                    <li><a href="/.well-known/api-catalog">API catalog</a></li>
+                    <li><a href="/.well-known/openapi.json">OpenAPI service description</a></li>
+                    <li><a href="/.well-known/oauth-protected-resource">OAuth protected resource metadata</a></li>
+                    <li><a href="/.well-known/oauth-authorization-server">OAuth authorization server metadata</a></li>
+                    <li><a href="/auth.md">auth.md</a></li>
+                </ul>
+                <h2>EmDash MCP</h2>
+                <p>The primary agent endpoint is <code>{AGENT_RESOURCE}</code>.</p>
+                <p>Authentication is issued by <code>{AGENT_AUTH_ISSUER}</code> and uses bearer tokens in the <code>Authorization</code> header.</p>
+            </div>
+        </Section>
+    </main>
+</Layout>

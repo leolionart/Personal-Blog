@@ -97,7 +97,7 @@ Những buổi đó dạy mình nhiều hơn bất kỳ khóa học nào:
 
 - **Cách frame vấn đề quyết định cách giải quyết**. Cùng một tình huống, người hỏi “seller phàn nàn gì?” sẽ ra hướng khác hoàn toàn so với người hỏi “con số nào đang bất thường?”
 - **Tốc độ ra quyết định quan trọng hơn sự hoàn hảo**. Ở quy mô Tiki, chậm một tuần có thể mất cả một chiến dịch.
-- **Leadership là cách bạn tạo không gian cho người khác**. Những leader giỏi nhất mình thấy không phải người nói nhiều nhất, mà là người đặt câu hỏi đúng rồi để team tự tìm hướng.
+- **Leadership là cách bạn tạo không gian cho người khác**. Những leader giỏi nhất mình thấy thường đặt câu hỏi đúng rồi để team tự tìm hướng, thay vì nói nhiều nhất trong phòng.
 
 ---
 
@@ -127,9 +127,9 @@ Nhưng có lẽ đó cũng là bản chất của sự trưởng thành: **bạn
 
 ## Chiêm nghiệm
 
-Tiki là khởi đầu cho sự nghiệp product của mình. Không phải khởi đầu êm ả — mà là khởi đầu hỗn loạn, nhanh, và đầy năng lượng.
+Tiki là khởi đầu cho sự nghiệp product của mình: một khởi đầu hỗn loạn, nhanh, đầy năng lượng, và chắc chắn không êm ả.
 
-Mình học được cách sống trong sự không hoàn hảo. Học được rằng ship trước, sửa sau không phải là tùy tiện — mà là kỷ luật khi bạn đang chạy đua với thời gian. Học được rằng data là ngôn ngữ chung, và người nào mang data ra bàn thì người đó được nghe.
+Mình học được cách sống trong sự không hoàn hảo. Ship trước, sửa sau chỉ có giá trị khi đó là kỷ luật của một đội đang chạy đua với thời gian, chứ không phải sự tùy tiện. Mình cũng học được rằng data là ngôn ngữ chung, và người nào mang data ra bàn thì người đó được nghe.
 
 Và điều mình trân trọng nhất: **những mối quan hệ từ Tiki vẫn còn đến tận bây giờ**. Đồng nghiệp cũ vẫn giữ liên lạc, vẫn refer nhau, vẫn nhắc lại những ngày chạy campaign đến 2h sáng. Có lẽ đó là dấu hiệu rõ nhất rằng mình đã để lại điều gì đó có giá trị — không chỉ trong sản phẩm, mà trong con người.
 

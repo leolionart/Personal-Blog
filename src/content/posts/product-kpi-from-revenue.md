@@ -113,11 +113,7 @@ Contribution metric quan trọng vì nó tạo ra tuyến tính giữa "team tô
 
 ### Cạm bẫy 1: Giao KPI mà không giao quyền
 
-KPI chỉ có ý nghĩa khi người được giao KPI có đủ quyền để tác động vào metric đó.
-
-Nếu PM bị giao conversion rate nhưng không có quyền thay đổi pricing, không có quyền quyết định thứ tự ưu tiên engineering, và không có quyền push back yêu cầu của sales — thì conversion rate KPI đó chỉ là áp lực, không phải trách nhiệm.
-
-Trước khi giao KPI, hỏi: **"Người này có đủ công cụ và quyền hạn để tác động vào metric này không?"**
+KPI chỉ có ý nghĩa khi người được giao KPI có đủ quyền để tác động vào metric đó. Nếu PM bị giao conversion rate nhưng không có quyền thay đổi pricing, không có quyền quyết định thứ tự ưu tiên engineering, và không có quyền push back yêu cầu của sales — thì conversion rate KPI đó chỉ là áp lực, không phải trách nhiệm. Trước khi giao KPI, hỏi: **"Người này có đủ công cụ và quyền hạn để tác động vào metric này không?"**
 
 ### Cạm bẫy 2: Measure thứ dễ đo, không phải thứ quan trọng
 
@@ -131,7 +127,7 @@ Vì khó đo hơn nên nhiều team bỏ qua và chọn thứ dễ hơn. Kết q
 
 Trong startup hoặc môi trường competitive cao, context có thể thay đổi đáng kể sau một quý. KPI đặt ra từ đầu năm có thể không còn relevant.
 
-Không phải lý do để không đặt KPI — mà là lý do để có **review định kỳ** và sẵn sàng adjust khi cần, thay vì bảo vệ KPI cũ chỉ vì nó được đặt ra từ đầu năm.
+Điều đó không phủ nhận giá trị của KPI; nó nhắc team phải có **review định kỳ** và sẵn sàng adjust khi cần, thay vì bảo vệ KPI cũ chỉ vì nó được đặt ra từ đầu năm.
 
 ### Cạm bẫy 4: Dùng KPI cá nhân để punish, không phải để develop
 
@@ -149,7 +145,7 @@ Một quy trình đơn giản mà tôi thấy hiệu quả:
 
 **Bước 2 — Product team phân tích: lever nào mình có thể tác động?** Nhìn vào funnel, nhìn vào data hiện tại, identify 2-3 metric mà product có thể move nhiều nhất trong kỳ.
 
-**Bước 3 — Đề xuất product metric và argue với leadership** Không phải nhận KPI một chiều — mà là align về "đây là những gì team product cam kết, và đây là lý do". Nếu leadership muốn thêm, thì cần thêm resource hoặc cut scope đi chỗ khác.
+**Bước 3 — Đề xuất product metric và argue với leadership** Team product cần align với leadership về "đây là những gì team cam kết, và đây là lý do". Nếu leadership muốn thêm, thì cần thêm resource hoặc cut scope đi chỗ khác.
 
 **Bước 4 — Breakdown xuống squad và cá nhân** Từ product metric đã align, phân rã theo contribution logic. Mỗi người biết metric của họ liên kết với metric của team như thế nào.
 

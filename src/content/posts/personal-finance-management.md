@@ -80,7 +80,7 @@ Ví dụ:
 
 Khi cần ghi giao dịch, mình **chỉ ghi một dòng: tổng số tiền nạp hoặc thanh toán vào ví đó**. Không ghi chi tiết bên trong ví đó tiêu gì. Ví "MBBank — Gọi đồ ăn ngoài" được nạp 3 triệu đầu tháng, tiêu hết thì thôi. Mình không cần biết bữa nào bao nhiêu — chỉ cần biết ví đó còn hay cạn.
 
-Điều quan trọng nhất: **tiết kiệm và đầu tư được chuyển đi ngay đầu tháng, trước khi phân bổ chi tiêu**. Không phải "tiêu xong còn dư thì tiết kiệm" — mà là "tiết kiệm xong, phần còn lại mới chia ra tiêu."
+Điều quan trọng nhất: **tiết kiệm và đầu tư được chuyển đi ngay đầu tháng, trước khi phân bổ chi tiêu**. Mình không chờ "tiêu xong còn dư thì tiết kiệm"; mình chuyển tiền tiết kiệm trước, rồi mới chia phần còn lại để tiêu.
 
 Tại sao cách này hiệu quả? Vì **tên ví = category = hạn mức**. Ba thứ gộp làm một. Không cần app phân loại giao dịch. Không cần tag. Mở app ngân hàng lên, nhìn số dư tài khoản đó — biết ngay tháng này còn bao nhiêu cho mục đích đó. Cạn = dừng. Đơn giản vậy thôi.
 
@@ -166,7 +166,7 @@ App không thay thế phương pháp — nó chỉ **tự động hóa phần th
 - Nhắc ngày thanh toán thẻ tín dụng
 - Theo dõi tổng cashback đã nhận
 
-Mình không muốn app làm quá nhiều. Càng ít tính năng, càng dễ dùng, càng dễ duy trì. Điều quan trọng nhất không phải app — mà là **phương pháp đằng sau nó có đúng không**.
+Mình không muốn app làm quá nhiều. Càng ít tính năng, càng dễ dùng, càng dễ duy trì. App chỉ hữu ích khi **phương pháp đằng sau nó đủ đúng**.
 
 Nếu bạn chưa muốn build app, hoàn toàn có thể chạy phương pháp này bằng một file Google Sheet đơn giản hoặc thậm chí ghi trên giấy. Công cụ không quan trọng. Tư duy quy hoạch mới quan trọng.
 

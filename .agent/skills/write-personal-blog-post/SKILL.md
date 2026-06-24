@@ -62,6 +62,21 @@ Use this shape as a default, not a rigid template:
 
 For articles about AI-assisted product work, emphasize that AI scales execution only when the team's context, decision records, and review boundaries are clear.
 
+## Paragraph Presentation Rules
+
+These rules are mandatory when drafting or revising article prose:
+
+- Do not break lines continuously as if every sentence were a separate paragraph. The blog should read like a normal article.
+- If multiple sentences support the same idea, keep them in one paragraph. A normal paragraph should usually contain 2-4 sentences.
+- Split paragraphs only when changing ideas, changing rhythm, emphasizing one sentence, or before/after a heading, quote, or bullet list.
+- Avoid making the article feel fragmented like a social media status thread or chat transcript.
+- Use bullet lists only when the content is truly a list. If the piece is narrating a flow, write it as paragraphs.
+- After a colon, capitalize the first letter of the following sentence or clause. Example: `Điều mình học được là: Không phải cái gì AI làm được thì mình cũng nên làm.`
+- For Facebook-style article drafts, readable paragraph breaks are still useful, but avoid one-sentence-per-line formatting when the sentences belong to the same idea.
+- When describing feelings, avoid formulaic openings like `Nói thật là mình thấy...` or `Thật sự là...`. Describe the feeling or situation directly so readers can infer the emotion. For example, prefer `Cảm giác vui nhất là...` or `Mình thấy như được sống lại trong không gian đó.`
+- Avoid overusing contrast structures like `không phải... mà là...` or `không chỉ... mà còn...`. If contrast is needed, rewrite it as a more natural active sentence. For example, prefer `Viết đều đặn cần nhiều hơn một công cụ AI. Cái gốc vẫn là...`
+- Avoid the phrase `đi thật`, especially when writing about identity, writing, or expertise. Prefer `chân thật` or rewrite the sentence more directly.
+
 ## Editing Rules
 
 - Use `apply_patch` for manual file edits.
@@ -78,7 +93,25 @@ After adding or editing a post, run:
 pnpm build
 ```
 
-Report whether the build passed. If existing warnings/hints appear, identify them as pre-existing or unrelated only after checking the changed files.
+Production content is served from EmDash/D1, not directly from `src/content/posts/*.md`. After markdown edits, regenerate and sync the EmDash seed:
+
+```bash
+pnpm emdash:seed
+pnpm emdash:sync-sql
+pnpm wrangler d1 execute personal-blog-emdash-db --remote --file .emdash/sync-posts.sql
+```
+
+Then deploy the Cloudflare Worker so code/assets are live too:
+
+```bash
+pnpm wrangler deploy
+```
+
+Content sync and deployment are the default for this repository because the current production architecture runs through EmDash on Cloudflare Workers and D1. Skip them only when the user explicitly asks for local-only edits, review-only edits, or no deploy.
+
+After deployment, verify at least one changed post on the live site with `Accept: text/markdown` and a cache-busting query string.
+
+Report whether the build, D1 sync, deploy, and live verification passed. If existing warnings/hints appear, identify them as pre-existing or unrelated only after checking the changed files.
 
 ## Plannotator Review
 

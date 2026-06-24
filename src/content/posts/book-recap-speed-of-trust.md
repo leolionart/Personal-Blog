@@ -12,7 +12,7 @@ type: post
 
 ## Giới thiệu
 
-*The Speed of Trust* nói một điều rất thẳng: niềm tin không phải khái niệm “mềm”, mà là biến số ảnh hưởng trực tiếp đến **tốc độ**, **chi phí** và **hiệu suất** của tổ chức.
+*The Speed of Trust* nói một điều rất thẳng: niềm tin là biến số ảnh hưởng trực tiếp đến **tốc độ**, **chi phí** và **hiệu suất** của tổ chức, chứ không chỉ là một khái niệm “mềm”.
 
 Đây là cuốn sách mình thấy hữu ích cho cả người làm quản lý lẫn người làm chuyên môn.
 

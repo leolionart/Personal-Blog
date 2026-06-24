@@ -43,11 +43,7 @@ Vấn đề là phần tốn thời gian nhất nhiều khi còn chưa tới đo
 - Soi hệ thống hiện tại để hiểu constraint
 - Tìm giải pháp, thử giải pháp, rồi mới tới build
 
-Có những tính năng chỉ riêng phần này đã ngốn vài tuần, thậm chí cả tháng, trước khi dòng code đầu tiên được viết.
-
-Điều đang thay đổi rất nhanh là: một feedback từ khách hàng, hoặc thậm chí một ý tưởng từ team kinh doanh, nếu setup workflow đúng, giờ có thể đi từ tín hiệu ban đầu đến production trong **nửa ngày hoặc ít hơn**.
-
-Để dễ hình dung, đây là khác biệt giữa quy trình cũ và quy trình khi AI đã tham gia sâu hơn vào vòng lặp phát triển sản phẩm:
+Có những tính năng chỉ riêng phần này đã ngốn vài tuần, thậm chí cả tháng, trước khi dòng code đầu tiên được viết. Điều đang thay đổi rất nhanh là: một feedback từ khách hàng, hoặc thậm chí một ý tưởng từ team kinh doanh, nếu setup workflow đúng, giờ có thể đi từ tín hiệu ban đầu đến production trong **nửa ngày hoặc ít hơn**. Để dễ hình dung, đây là khác biệt giữa quy trình cũ và quy trình khi AI đã tham gia sâu hơn vào vòng lặp phát triển sản phẩm:
 
 ```mermaid
 flowchart LR
@@ -94,7 +90,7 @@ Mình thường nói vui với team:
 
 Khác biệt nằm ở prompt và process.
 
-Nhưng nói “prompt” thôi thì chưa đủ. Thứ đang thay đổi thật sự là **artifact trung tâm của team**.
+Nhưng nói “prompt” thôi vẫn chưa chạm tới phần quan trọng nhất. Thứ đang thay đổi sâu hơn là **artifact trung tâm của team**.
 
 Trước đây, mỗi vai trò giữ một mảnh context riêng: business note một chỗ, ticket một chỗ, spec một chỗ, Figma một chỗ, tech plan một chỗ. Kết quả là rất nhiều thời gian bị mất ở khâu handoff, làm rõ lại bối cảnh, và đồng bộ giữa các bên.
 

@@ -104,9 +104,8 @@ Target CR của PM nên được đặt dựa trên những input PM kiểm soá
 
 Thay vì đặt "CR = X%", mình hay dùng cách sau:
 
-**Bước 1**: Phân tích funnel hiện tại, tìm điểm drop lớn nhất.
-
-**Bước 2**: Estimate impact nếu fix điểm đó — ví dụ: "Nếu checkout step 3 giảm drop từ 40% xuống 25%, CR overall tăng khoảng 0.4%."
+- **Bước 1**: Phân tích funnel hiện tại, tìm điểm drop lớn nhất.
+- **Bước 2**: Estimate impact nếu fix điểm đó — ví dụ: "Nếu checkout step 3 giảm drop từ 40% xuống 25%, CR overall tăng khoảng 0.4%."
 
 **Bước 3**: Đặt target gắn với việc cụ thể: "Quý này target giảm checkout drop rate tại step 3 từ 40% → 28%. Kỳ vọng CR tăng ~0.3-0.4%."
 

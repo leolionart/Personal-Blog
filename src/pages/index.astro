@@ -3,18 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 import TagFilter from "../components/TagFilter.astro";
-import { getCollection } from "astro:content";
+import { getEmDashCollection } from "emdash";
 import FormattedDate from "../components/FormattedDate.astro";
+import { asEmDashPosts, getPostDate, getPostSlug, getPostTags, sortPostsByDate } from "../lib/emdash-posts";
 
 const title = "Blog"
 const subtitle = "Thoughts on product, tech & beyond"
 
-const posts = (await getCollection('posts')).sort(
-    (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
-);
+const { entries, error } = await getEmDashCollection("posts", { status: "published" });
+const posts = sortPostsByDate(asEmDashPosts(entries));
 
 const allTags = Array.from(
-    new Set(posts.flatMap(post => post.data.tags || []))
+    new Set(posts.flatMap(getPostTags))
 ).sort() as string[];
 
 function slugToFilename(slug: string) {
@@ -32,10 +32,10 @@ function slugToFilename(slug: string) {
             return (
                 <Section
                     index
-                    source={slugToFilename(post.slug)}
+                    source={slugToFilename(getPostSlug(post))}
                     fullWidthBorder
                     class="post-section animate-on-scroll"
-                    data-tags={post.data.tags?.join(',') || ''}
+                    data-tags={getPostTags(post).join(',')}
                     data-title={post.data.title}
                     data-description={post.data.description || ''}
                     data-delay={i < 4 ? String(i + 1) : undefined}
@@ -43,11 +43,11 @@ function slugToFilename(slug: string) {
                     <article class="relative post-article">
                         <div class="post-meta">
                             <span class="text-xs opacity-60">
-                                <FormattedDate date={post.data.pubDate} />
+                                <FormattedDate date={getPostDate(post)} />
                             </span>
-                            {post.data.tags && (
+                            {getPostTags(post).length > 0 && (
                                 <div class="flex gap-2 flex-wrap">
-                                    {post.data.tags.map((tag: string) => (
+                                    {getPostTags(post).map((tag: string) => (
                                         <span class="text-xs px-2 py-1 sm:py-0.5 border-1 border-gray-300 c-gray-600 dark:border-gray-600 dark:c-gray-400">#{tag}</span>
                                     ))}
                                 </div>
@@ -62,13 +62,18 @@ function slugToFilename(slug: string) {
                                 Read more <span class="transition-transform duration-150">→</span>
                             </span>
                         </div>
-                        <a href={`/blog/${post.slug}`} class="after:content-[''] after:absolute after:inset-0 after:z-1">
+                        <a href={`/blog/${getPostSlug(post)}`} class="after:content-[''] after:absolute after:inset-0 after:z-1">
                             <span class="sr-only">Read {post.data.title}</span>
                         </a>
                     </article>
                 </Section>
             )
         })}
+        {error && (
+            <Section fullWidthBorder>
+                <p class="text-sm c-red-600 dark:c-red-400">Unable to load posts from EmDash.</p>
+            </Section>
+        )}
     </main>
 </Layout>
 <style>

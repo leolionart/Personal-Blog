@@ -11,12 +11,7 @@ tags:
 title: AI đang ép quy trình phát triển sản phẩm đi quá nhanh
 type: post
 ---
-
-Ở workshop trước, mình chia sẻ nhiều hơn về việc AI đang rút ngắn vòng lặp phát triển sản phẩm như thế nào.
-
-Từ discovery, phân tích dữ liệu, viết tài liệu, lên coding plan cho tới debug, gần như bước nào cũng có thể được tăng tốc mạnh nếu team biết cách xây workflow và gom context đủ tốt.
-
-Nhưng càng đi sâu vào thực tế, mình càng thấy cần nói thêm một nửa còn lại của câu chuyện.
+Ở workshop trước, mình chia sẻ nhiều hơn về việc AI đang rút ngắn vòng lặp phát triển sản phẩm như thế nào. Từ discovery, phân tích dữ liệu, viết tài liệu, lên coding plan cho tới debug, gần như bước nào cũng có thể được tăng tốc mạnh nếu team biết cách xây workflow và gom context đủ tốt. Nhưng càng đi sâu vào thực tế, mình càng thấy cần nói thêm một nửa còn lại của câu chuyện.
 
 AI không chỉ tăng tốc execution. AI còn đang **ép toàn bộ quy trình phát triển sản phẩm đi quá nhanh**.
 
@@ -321,11 +316,7 @@ Còn nếu team coi AI như cách để:
 
 Mình không bi quan về chuyện ai cũng có thể tham gia sâu hơn vào việc làm sản phẩm. Thực ra mình thấy đó là tín hiệu rất đáng mừng.
 
-Điều mình nghĩ các team cần cẩn thận là:
-
-AI đang dân chủ hóa khả năng tạo ra giải pháp, nhưng nó không dân chủ hóa được trách nhiệm cho chất lượng cuối cùng.
-
-Vì thế, câu hỏi quan trọng nhất bây giờ không còn là:
+Điều mình nghĩ các team cần cẩn thận là: AI đang dân chủ hóa khả năng tạo ra giải pháp, nhưng nó không dân chủ hóa được trách nhiệm cho chất lượng cuối cùng. Vì thế, câu hỏi quan trọng nhất bây giờ không còn là:
 
 > "AI có thể giúp team mình làm nhanh hơn không?"
 
@@ -333,8 +324,4 @@ Mà là:
 
 > "Khi mọi người đều có thể làm nhanh hơn, team mình sẽ ra quyết định thế nào để không trượt khỏi thứ thực sự cần xây?"
 
-Có lẽ đó mới là bài toán product lớn nhất của giai đoạn này.
-
-Nếu team mình trả lời được câu hỏi đó đủ sớm, AI sẽ là đòn bẩy.
-
-Nếu không, nó sẽ chỉ làm mình đi nhanh hơn về phía những quyết định chưa đủ chín.
+Có lẽ đó mới là bài toán product lớn nhất của giai đoạn này. Nếu team mình trả lời được câu hỏi đó đủ sớm, AI sẽ là đòn bẩy. Nếu không, nó sẽ chỉ làm mình đi nhanh hơn về phía những quyết định chưa đủ chín.

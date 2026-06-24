@@ -1,4 +1,4 @@
-import { defineConfig, transformerCompileClass, transformerDirectives, presetUno } from 'unocss';
+import { defineConfig, transformerDirectives, presetUno } from 'unocss';
 
 export default defineConfig({
     presets: [
@@ -10,7 +10,7 @@ export default defineConfig({
             mono: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
         },
     },
-    transformers: import.meta.env.DEV ? [transformerDirectives()] : [transformerCompileClass(), transformerDirectives()],
+    transformers: [transformerDirectives()],
     shortcuts: [{
         wrapper: 'w-100% max-w-[100vw] sm:max-w-[calc(100vw-40px)] md:max-w-[calc(100vw-60px)] lg:max-w-[calc(100vw-80px)] xl:max-w-[1120px] mx-auto',
         title: 'text-6 sm:text-7 md:text-9 lg:text-10 leading-[1.2] dark:c-gray-100',

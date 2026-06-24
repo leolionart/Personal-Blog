@@ -128,11 +128,11 @@ Mỗi folder quan trọng nên có một `README.md`, nhưng vai trò của từ
 4. Product work nằm ở đâu?
 5. Skill dùng chung nằm ở đâu?
 
-`docs/context/README.md` nên giải thích các file nền trong context.
+- `docs/context/README.md` nên giải thích các file nền trong context.
+- `docs/by-product/<product>/README.md` nên giải thích sản phẩm đó phục vụ ai, module chính là gì, metric hoặc constraint lớn là gì.
+- `tasks/.../README.md` mới là tài liệu chính của task.
 
-`docs/by-product/<product>/README.md` nên giải thích sản phẩm đó phục vụ ai, module chính là gì, metric hoặc constraint lớn là gì.
-
-`tasks/.../README.md` mới là tài liệu chính của task. Một task đủ nghiêm túc nên có vài phần tối thiểu:
+Một task đủ nghiêm túc nên có vài phần tối thiểu:
 
 ### Bối cảnh
 
@@ -254,10 +254,6 @@ Trong quá trình làm, mọi người update vào cùng file đó. Không cần
 
 AI làm cho tốc độ tạo output tăng rất nhanh. Nhưng nếu context của team vẫn nằm rải rác, output đó sẽ kéo theo nhiều review, sửa sai và hiểu nhầm hơn.
 
-Vì vậy, trước khi kỳ vọng AI agent làm được nhiều việc hơn, team cần một nền tảng cộng tác đủ rõ.
-
-Với mình, điểm bắt đầu phù hợp không phải là một process nặng, cũng không phải một tool mới.
-
-Chỉ là một workspace biết tách phần cá nhân khỏi phần dùng chung, một `product-kb` đủ rõ để team cùng đọc, và một thói quen rất đơn giản:
+Vì vậy, trước khi kỳ vọng AI agent làm được nhiều việc hơn, team cần một nền tảng cộng tác đủ rõ. Với mình, điểm bắt đầu phù hợp không phải là một process nặng, cũng không phải một tool mới. Chỉ là một workspace biết tách phần cá nhân khỏi phần dùng chung, một `product-kb` đủ rõ để team cùng đọc, và một thói quen rất đơn giản:
 
 > Khi task cần nhiều người cùng làm, hãy để mọi người và AI cùng bắt đầu từ một nơi.

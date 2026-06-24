@@ -1,11 +1,11 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
+import { getPostDate, getPostSlug, getPostTags, type EmDashPost } from "../lib/emdash-posts";
 
 interface Props {
     currentSlug: string;
     currentTags: string[];
-    allPosts: CollectionEntry<"posts">[];
+    allPosts: EmDashPost[];
 }
 
 const { currentSlug, currentTags, allPosts } = Astro.props;
@@ -13,9 +13,9 @@ const { currentSlug, currentTags, allPosts } = Astro.props;
 const currentTagSet = new Set(currentTags);
 
 const related = allPosts
-    .filter((p) => p.slug !== currentSlug)
+    .filter((p) => getPostSlug(p) !== currentSlug)
     .map((p) => {
-        const matchCount = (p.data.tags || []).filter((t) =>
+        const matchCount = getPostTags(p).filter((t) =>
             currentTagSet.has(t),
         ).length;
         return { post: p, matchCount };
@@ -24,8 +24,8 @@ const related = allPosts
     .sort(
         (a, b) =>
             b.matchCount - a.matchCount ||
-            new Date(b.post.data.pubDate).getTime() -
-                new Date(a.post.data.pubDate).getTime(),
+            getPostDate(b.post).getTime() -
+                getPostDate(a.post).getTime(),
     )
     .slice(0, 2);
 ---
@@ -42,12 +42,12 @@ const related = allPosts
             ]}>
                 {related.map(({ post, matchCount }) => (
                     <a
-                        href={`/blog/${post.slug}`}
+                        href={`/blog/${getPostSlug(post)}`}
                         class="related-card group block border-1 border-gray-200 dark:border-gray-700 transition-colors duration-150 p-4 sm:p-5"
                     >
                         <div class="flex items-center gap-2 flex-wrap mb-3">
                             <span class="text-xs c-gray-400 dark:c-gray-500">
-                                <FormattedDate date={new Date(post.data.pubDate)} />
+                                <FormattedDate date={getPostDate(post)} />
                             </span>
                             <span class="text-xs c-gray-300 dark:c-gray-600">·</span>
                             <span class="text-xs c-gray-400 dark:c-gray-500">

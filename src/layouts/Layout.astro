@@ -148,6 +148,124 @@ const navLinks = {
 				});
 			}
 
+			type WebMcpTool = {
+				name: string;
+				description: string;
+				inputSchema: Record<string, unknown>;
+				execute: (input?: Record<string, unknown>) => Promise<unknown> | unknown;
+			};
+
+			type WebMcpContext = {
+				registerTool?: (tool: WebMcpTool, options?: { signal?: AbortSignal }) => void;
+				provideContext?: (context: { tools: WebMcpTool[] }, options?: { signal?: AbortSignal }) => void;
+			};
+
+			declare global {
+				interface Navigator {
+					modelContext?: WebMcpContext;
+				}
+
+				interface Window {
+					__leolionWebMcpController?: AbortController;
+				}
+			}
+
+			function collectPostSummaries(limit = 20) {
+				return Array.from(document.querySelectorAll<HTMLElement>('.post-section'))
+					.slice(0, limit)
+					.map((section) => {
+						const link = section.querySelector<HTMLAnchorElement>('a[href^="/blog/"]');
+						return {
+							title: section.dataset.title || section.querySelector('h2')?.textContent?.trim() || '',
+							description: section.dataset.description || '',
+							tags: (section.dataset.tags || '').split(',').filter(Boolean),
+							url: link ? new URL(link.getAttribute('href') || '/', window.location.origin).href : window.location.href,
+						};
+					})
+					.filter((post) => post.title);
+			}
+
+			function webMcpTools(): WebMcpTool[] {
+				return [
+					{
+						name: 'list_blog_posts',
+						description: 'List visible blog posts on the current page with title, description, tags, and URL.',
+						inputSchema: {
+							type: 'object',
+							properties: {
+								limit: { type: 'integer', minimum: 1, maximum: 50, default: 20 },
+							},
+							additionalProperties: false,
+						},
+						execute(input = {}) {
+							const limit = typeof input.limit === 'number' ? input.limit : 20;
+							return { posts: collectPostSummaries(limit) };
+						},
+					},
+					{
+						name: 'search_blog_posts',
+						description: 'Search visible blog posts by title, description, or tag.',
+						inputSchema: {
+							type: 'object',
+							required: ['query'],
+							properties: {
+								query: { type: 'string', minLength: 1 },
+								limit: { type: 'integer', minimum: 1, maximum: 50, default: 10 },
+							},
+							additionalProperties: false,
+						},
+						execute(input = {}) {
+							const query = String(input.query || '').toLowerCase();
+							const limit = typeof input.limit === 'number' ? input.limit : 10;
+							const posts = collectPostSummaries(50).filter((post) => {
+								return [post.title, post.description, post.tags.join(' ')]
+									.join(' ')
+									.toLowerCase()
+									.includes(query);
+							});
+							return { posts: posts.slice(0, limit) };
+						},
+					},
+					{
+						name: 'open_blog_post',
+						description: 'Navigate the browser to a blog post URL from this site.',
+						inputSchema: {
+							type: 'object',
+							required: ['url'],
+							properties: {
+								url: { type: 'string', description: 'Absolute URL or site-relative /blog/... path.' },
+							},
+							additionalProperties: false,
+						},
+						execute(input = {}) {
+							const target = new URL(String(input.url || '/'), window.location.origin);
+							if (target.origin !== window.location.origin || !target.pathname.startsWith('/blog/')) {
+								throw new Error('Only same-origin blog post URLs are supported.');
+							}
+							window.location.href = target.href;
+							return { navigated: true, url: target.href };
+						},
+					},
+				];
+			}
+
+			function registerWebMcpTools() {
+				const modelContext = navigator.modelContext;
+				if (!modelContext || window.__leolionWebMcpController) return;
+
+				const controller = new AbortController();
+				const tools = webMcpTools();
+				window.__leolionWebMcpController = controller;
+
+				if (typeof modelContext.registerTool === 'function') {
+					tools.forEach((tool) => modelContext.registerTool?.(tool, { signal: controller.signal }));
+				}
+
+				if (typeof modelContext.provideContext === 'function') {
+					modelContext.provideContext({ tools }, { signal: controller.signal });
+				}
+			}
+
 			function isDarkTheme() {
 				return document.documentElement.classList.contains('dark');
 			}
@@ -279,9 +397,11 @@ const navLinks = {
 
 			initNavSearch();
 			initNavSearchHotkey();
+			registerWebMcpTools();
 			scheduleMermaidRender();
 			document.addEventListener('astro:after-swap', () => {
 				initNavSearch();
+				registerWebMcpTools();
 				scheduleMermaidRender();
 			});
 			document.addEventListener('theme:changed', () => {
